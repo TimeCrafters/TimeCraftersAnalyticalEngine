@@ -7,6 +7,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
 public class ScoutMatchActivity extends AppCompatActivity {
 
     @Override
@@ -14,21 +18,22 @@ public class ScoutMatchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scout_match);
 
-        final Button driversButton = (Button) findViewById(R.id.team_selection);
-        driversButton.setOnClickListener(new View.OnClickListener() {
+        final Button teamSelection = (Button) findViewById(R.id.team_selection);
+
+        final Button teamsListButton = (Button) findViewById(R.id.team_selection);
+        teamsListButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PopupMenu popupMenu = new PopupMenu(ScoutMatchActivity.this, driversButton);
+                PopupMenu popupMenu = new PopupMenu(ScoutMatchActivity.this, teamsListButton);
 
-                int[] localTeamList;
-                localTeamList[0] = 8962;
-
-                for(int i = 0; i < localTeamList.length; i++) {
-                    popupMenu.getMenu().add(""+localTeamList[i]);
+                for(HashMap.Entry<Integer, String> entry : MainActivity.MainActivityContext.teamList.entrySet()) {
+                    popupMenu.getMenu().add(""+entry.getKey()+" | "+entry.getValue());
                 }
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
+                        teamSelection.setText(item.getTitle());
+                        return true;
                     }
                 });
                 popupMenu.show();

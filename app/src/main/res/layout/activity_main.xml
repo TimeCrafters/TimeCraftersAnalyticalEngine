@@ -38,7 +38,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/scout_team" />
+        android:id="@+id/scout_team"
+        android:enabled="false" />
 
     <Button
         android:text="Scout Match"
@@ -46,7 +47,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:id="@+id/scout_match" />
+        android:id="@+id/scout_match"
+        android:enabled="false" />
 
     <Button
         android:text="Team Statistics"
@@ -55,7 +57,8 @@
         android:id="@+id/team_statistics"
         android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="49dp" />
+        android:layout_marginTop="49dp"
+        android:enabled="false" />
 
     <TextView
         android:text="No List Loaded"

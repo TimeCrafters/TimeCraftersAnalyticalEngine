@@ -82,7 +82,7 @@
         android:text="In Vortex"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button6"
+        android:id="@+id/in_vortex"
         android:layout_below="@+id/textView8"
         android:layout_alignParentEnd="true" />
 
@@ -92,37 +92,37 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/hit_lightbox"
         android:layout_alignParentStart="true"
-        android:id="@+id/button7" />
+        android:id="@+id/missed" />
 
     <Button
         android:text="Missed Vortex"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button9"
+        android:layout_below="@+id/in_corner"
         android:layout_alignParentEnd="true"
-        android:id="@+id/button10" />
+        android:id="@+id/missed_vortex" />
 
     <Button
         android:text="Missed Corner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button11"
-        android:layout_below="@+id/button10"
+        android:id="@+id/missed_corner"
+        android:layout_below="@+id/missed_vortex"
         android:layout_alignParentEnd="true" />
 
     <Button
         android:text="In Corner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button9"
-        android:layout_below="@+id/button6"
+        android:id="@+id/in_corner"
+        android:layout_below="@+id/in_vortex"
         android:layout_alignParentEnd="true" />
 
     <TextView
         android:text="Parked"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button7"
+        android:layout_below="@+id/missed"
         android:layout_alignParentStart="true"
         android:id="@+id/textView10" />
 
@@ -132,37 +132,37 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView10"
         android:layout_alignParentStart="true"
-        android:id="@+id/button12" />
+        android:id="@+id/on_ramp" />
 
     <Button
         android:text="Touching Ramp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button12"
+        android:layout_below="@+id/on_ramp"
         android:layout_alignParentStart="true"
-        android:id="@+id/button13" />
+        android:id="@+id/touching_ramp" />
 
     <Button
         android:text="On Platform"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button13"
+        android:layout_below="@+id/touching_ramp"
         android:layout_alignParentStart="true"
-        android:id="@+id/button14" />
+        android:id="@+id/on_platform" />
 
     <Button
         android:text="Touching Platform"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button14"
+        android:layout_below="@+id/on_platform"
         android:layout_alignParentStart="true"
-        android:id="@+id/button15" />
+        android:id="@+id/touching_platform" />
 
     <Button
         android:text="Statistics"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button16"
+        android:id="@+id/statistics"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:textAppearance="@style/TextAppearance.AppCompat" />
