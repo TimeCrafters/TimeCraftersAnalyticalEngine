@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         Button scoutMatch = (Button) findViewById(R.id.scout_match);
         scoutMatch.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(getBaseContext(), ScoutMatchActivity.class));
+                startActivity(new Intent(getBaseContext(), ScoutMatchAutonomousActivity.class));
             }
         });
 

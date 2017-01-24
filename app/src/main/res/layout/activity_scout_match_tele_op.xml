@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_scout_match_tele_op"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="org.timecrafters.ftcscouting.ScoutMatchTeleOpActivity">
+
+    <TextView
+        android:text="Light Beacon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="23dp"
+        android:id="@+id/textView4" />
+
+    <Button
+        android:text="Claimed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentStart="true"
+        android:id="@+id/claim_beacon"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+    <Button
+        android:text="Lost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/claim_beacon"
+        android:layout_alignParentStart="true"
+        android:id="@+id/lost_beacon"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+    <TextView
+        android:text="Capball"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView4"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView9" />
+
+    <TextView
+        android:text="Particles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView9"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/textView11" />
+
+    <Button
+        android:text="Off Floor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView9"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/cap_ball_off_floor"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:backgroundTint="@android:color/holo_red_dark" />
+
+    <Button
+        android:text="Above Crossbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cap_ball_off_floor"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/cap_ball_above_crossbar"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:backgroundTint="@android:color/holo_red_dark" />
+
+    <Button
+        android:text="In Vortex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView11"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/particle_in_vortex"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+    <Button
+        android:text="Missed Corner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/particle_missed_vortex"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/particle_missed_corner"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+    <Button
+        android:text="Capped"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cap_ball_capped"
+        android:layout_below="@+id/cap_ball_above_crossbar"
+        android:layout_alignEnd="@+id/cap_ball_off_floor"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:backgroundTint="@android:color/holo_red_dark" />
+
+    <TextView
+        android:text="Team Number | Team Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/team"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textAlignment="center" />
+
+    <Button
+        android:text="Missed Vortex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/particle_missed_vortex"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:layout_below="@+id/particle_in_corner"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/particle_in_corner"
+        android:id="@+id/done" />
+
+    <TextView
+        android:text="0 pts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/score"
+        android:layout_alignBaseline="@+id/done"
+        android:layout_alignBottom="@+id/done"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+    <Button
+        android:text="Statistic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/statistics"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+    <TextView
+        android:text="TeleOp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:layout_below="@+id/team"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/score"
+        android:layout_toEndOf="@+id/statistics"
+        android:id="@+id/textView14" />
+
+    <Button
+        android:text="In Corner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/particle_in_corner"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:layout_below="@+id/particle_in_vortex"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>
