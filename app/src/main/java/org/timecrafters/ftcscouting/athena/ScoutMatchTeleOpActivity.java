@@ -1,10 +1,14 @@
-package org.timecrafters.ftcscouting;
+package org.timecrafters.ftcscouting.athena;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import org.timecrafters.ftcscouting.R;
+import org.timecrafters.ftcscouting.apollo.TeleScoresHelper;
+import org.timecrafters.ftcscouting.hermes.AppSync;
 
 public class ScoutMatchTeleOpActivity extends AppCompatActivity {
 
@@ -54,7 +58,7 @@ public class ScoutMatchTeleOpActivity extends AppCompatActivity {
         currentTeam = (TextView) findViewById(R.id.team);
         scoreText = (TextView) findViewById(R.id.score);
 
-        currentTeam.setText(""+AppSync.teamNumber+" | "+AppSync.teamName);
+        currentTeam.setText(""+ AppSync.teamNumber+" | "+AppSync.teamName);
 
         claimBeacon.setOnClickListener(new View.OnClickListener(){
             @Override

@@ -1,4 +1,4 @@
-package org.timecrafters.ftcscouting;
+package org.timecrafters.ftcscouting.hermes;
 
 /**
  * Created by cyber on 1/24/2017.

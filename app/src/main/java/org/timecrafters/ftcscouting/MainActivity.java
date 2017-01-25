@@ -11,6 +11,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.timecrafters.ftcscouting.athena.ScoutMatchAutonomousActivity;
+import org.timecrafters.ftcscouting.athena.ScoutTeamAutonomousActivity;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;

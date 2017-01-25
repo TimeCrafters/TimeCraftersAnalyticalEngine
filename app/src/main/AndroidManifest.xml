@@ -18,10 +18,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ScoutMatchAutonomousActivity"
+            android:name=".athena.ScoutMatchAutonomousActivity"
             android:configChanges="orientation|screenSize" />
-        <activity android:name=".ScoutMatchTeleOpActivity" />
-        <activity android:name=".ScoutTeamAutonomousActivity"></activity>
+        <activity android:name=".athena.ScoutMatchTeleOpActivity" />
+        <activity android:name=".athena.ScoutTeamAutonomousActivity"></activity>
     </application>
 
 </manifest>

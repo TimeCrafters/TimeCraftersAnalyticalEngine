@@ -1,9 +1,7 @@
-package org.timecrafters.ftcscouting;
+package org.timecrafters.ftcscouting.athena;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.PopupMenu;
 import android.util.Log;
@@ -12,6 +10,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.timecrafters.ftcscouting.MainActivity;
+import org.timecrafters.ftcscouting.R;
+import org.timecrafters.ftcscouting.apollo.AutoScoresHelper;
+import org.timecrafters.ftcscouting.hermes.AppSync;
 
 import java.util.HashMap;
 
