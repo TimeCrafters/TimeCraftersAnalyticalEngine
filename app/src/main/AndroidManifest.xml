@@ -19,8 +19,9 @@
         </activity>
         <activity
             android:name=".ScoutMatchAutonomousActivity"
-            android:configChanges="orientation|screenSize"></activity>
-        <activity android:name=".ScoutMatchTeleOpActivity"></activity>
+            android:configChanges="orientation|screenSize" />
+        <activity android:name=".ScoutMatchTeleOpActivity" />
+        <activity android:name=".ScoutTeamAutonomousActivity"></activity>
     </application>
 
 </manifest>

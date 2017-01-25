@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_scout_team_autonomous"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="org.timecrafters.ftcscouting.ScoutTeamAutonomousActivity">
+
+    <TextView
+        android:text="Autonomous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView12"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="59dp" />
+
+    <CheckBox
+        android:text="Score in Vortex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox"
+        android:layout_below="@+id/textView12"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:text="Score in Corner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkBox"
+        android:layout_alignParentStart="true"
+        android:id="@+id/checkBox2" />
+
+    <CheckBox
+        android:text="Capball on Floor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox3"
+        android:layout_below="@+id/checkBox2"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:text="Completely on Platform"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkBox4"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/checkBox5" />
+
+    <CheckBox
+        android:text="Park on Platform"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox4"
+        android:layout_alignBaseline="@+id/checkBox3"
+        android:layout_alignBottom="@+id/checkBox3"
+        android:layout_alignStart="@+id/checkBox5" />
+
+    <CheckBox
+        android:text="Park on Ramp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox6"
+        android:layout_below="@+id/checkBox5"
+        android:layout_alignStart="@+id/checkBox5" />
+
+    <CheckBox
+        android:text="Completely on Ramp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox7"
+        android:layout_below="@+id/checkBox6"
+        android:layout_alignStart="@+id/checkBox6" />
+
+    <Button
+        android:text="TeleOp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/button"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+    <CheckBox
+        android:text="No Autonomous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox8"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/textView12" />
+
+    <Button
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button"
+        android:layout_alignParentStart="true"
+        android:id="@+id/button2" />
+
+    <Button
+        android:text="Team Number | Team Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/button3"
+        style="@android:style/Widget.Button" />
+
+</RelativeLayout>
