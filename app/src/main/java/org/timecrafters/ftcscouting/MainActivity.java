@@ -17,21 +17,19 @@ import android.widget.Toast;
 
 import org.timecrafters.ftcscouting.athena.ScoutMatchAutonomousActivity;
 import org.timecrafters.ftcscouting.athena.ScoutTeamAutonomousActivity;
+import org.timecrafters.ftcscouting.hermes.AppSync;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Arrays;
-import java.util.TreeMap;
 
 public class MainActivity extends AppCompatActivity {
 
-    public TreeMap<Integer, String> teamList = new TreeMap<>();
     int READ_REQUEST_CODE = 42;
     int REQUEST_WRITE_PERMISSION = 70;
     int REQUEST_READ_PERMISSION = 71;
-
     String TAG = "MAIN";
     public static MainActivity MainActivityContext;
 
@@ -191,7 +189,7 @@ public class MainActivity extends AppCompatActivity {
                     teamName+=" "+_teamName[_i];
                 }
                 Log.i(TAG, "#: "+Integer.parseInt(teamNumber)+" name:"+teamName);
-                teamList.put(Integer.parseInt(teamNumber), teamName);
+                AppSync.teamsList.put(Integer.parseInt(teamNumber), teamName);
 
             }
             TextView filename = (TextView) findViewById(R.id.team_list_filename);

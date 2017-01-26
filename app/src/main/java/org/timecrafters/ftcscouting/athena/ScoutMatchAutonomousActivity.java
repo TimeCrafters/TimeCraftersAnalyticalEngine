@@ -4,14 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.PopupMenu;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.timecrafters.ftcscouting.MainActivity;
 import org.timecrafters.ftcscouting.R;
 import org.timecrafters.ftcscouting.apollo.AutoScoresHelper;
 import org.timecrafters.ftcscouting.hermes.AppSync;
@@ -106,7 +104,7 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
                 PopupMenu popupMenu = new PopupMenu(ScoutMatchAutonomousActivity.this, teamSelection);
                 popupMenu.getMenu().setQwertyMode(false);
 
-                for(HashMap.Entry<Integer, String> entry : MainActivity.MainActivityContext.teamList.entrySet()) {
+                for(HashMap.Entry<Integer, String> entry : AppSync.teamsList.entrySet()) {
                     AppSync.puts(entry.getKey().toString());
                     popupMenu.getMenu().add(""+entry.getKey()+" | "+entry.getValue());
                 }
@@ -117,7 +115,6 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
                         String[] t = teamSelection.getText().toString().split("\\|");
                         teamNumber = Integer.parseInt(t[0].replaceAll("\\s+",""));
                         teamName = t[1].substring(2); //.replace(" ","");
-                        Log.i("MAIN", "TEAM# "+teamNumber+" TEAMNAME "+teamName);
                         AppSync.teamNumber = teamNumber;
                         AppSync.teamName = teamName;
                         enableButtons();

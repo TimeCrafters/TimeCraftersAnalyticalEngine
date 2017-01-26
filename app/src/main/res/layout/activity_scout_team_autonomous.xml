@@ -11,14 +11,6 @@
     tools:context="org.timecrafters.ftcscouting.athena.ScoutTeamAutonomousActivity">
 
     <CheckBox
-        android:text="Capball on Floor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/capball_on_floor"
-        android:layout_below="@+id/score_in_corner"
-        android:layout_alignParentStart="true" />
-
-    <CheckBox
         android:text="Park on Ramp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -76,7 +68,7 @@
         android:ems="10"
         android:layout_below="@+id/textView12"
         android:layout_alignParentEnd="true"
-        android:id="@+id/editText"
+        android:id="@+id/particles_scored_in_vortex"
         android:text="0"
         android:layout_toEndOf="@+id/completely_on_platform" />
 
@@ -94,28 +86,19 @@
         android:layout_height="wrap_content"
         android:inputType="numberSigned"
         android:ems="10"
-        android:id="@+id/editText2"
         android:text="0"
-        android:layout_below="@+id/editText"
+        android:layout_below="@+id/particles_scored_in_vortex"
         android:layout_alignParentEnd="true"
-        android:layout_alignStart="@+id/editText" />
+        android:layout_alignStart="@+id/particles_scored_in_vortex"
+        android:id="@+id/particles_scored_in_corner" />
 
     <CheckBox
         android:text="Score in Vortex"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/score_in_vortex"
-        android:layout_alignBaseline="@+id/editText"
-        android:layout_alignBottom="@+id/editText"
-        android:layout_alignParentStart="true" />
-
-    <CheckBox
-        android:text="Score in Corner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/score_in_corner"
-        android:layout_alignBaseline="@+id/editText2"
-        android:layout_alignBottom="@+id/editText2"
+        android:layout_alignBaseline="@+id/particles_scored_in_vortex"
+        android:layout_alignBottom="@+id/particles_scored_in_vortex"
         android:layout_alignParentStart="true" />
 
     <CheckBox
@@ -132,6 +115,23 @@
         android:layout_height="wrap_content"
         android:id="@+id/completely_on_platform"
         android:layout_below="@+id/park_on_platform"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:text="Score in Corner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/score_in_corner"
+        android:layout_alignBaseline="@+id/particles_scored_in_corner"
+        android:layout_alignBottom="@+id/particles_scored_in_corner"
+        android:layout_alignStart="@+id/capball_on_floor" />
+
+    <CheckBox
+        android:text="Capball on Floor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/capball_on_floor"
+        android:layout_below="@+id/particles_scored_in_corner"
         android:layout_alignParentStart="true" />
 
 </RelativeLayout>

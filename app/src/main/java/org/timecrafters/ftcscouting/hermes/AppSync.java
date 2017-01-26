@@ -10,14 +10,15 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-
-import static android.os.Environment.getExternalStorageDirectory;
+import java.util.TreeMap;
 
 /**
  * Created by cyber on 1/24/2017.
  */
 
 public class AppSync {
+    public static TreeMap<Integer, String> teamsList = new TreeMap<>();
+
     public static int teamNumber;
     public static String teamName;
 
