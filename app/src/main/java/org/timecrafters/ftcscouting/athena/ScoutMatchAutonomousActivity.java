@@ -104,8 +104,10 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 PopupMenu popupMenu = new PopupMenu(ScoutMatchAutonomousActivity.this, teamSelection);
+                popupMenu.getMenu().setQwertyMode(false);
 
                 for(HashMap.Entry<Integer, String> entry : MainActivity.MainActivityContext.teamList.entrySet()) {
+                    AppSync.puts(entry.getKey().toString());
                     popupMenu.getMenu().add(""+entry.getKey()+" | "+entry.getValue());
                 }
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {

@@ -69,9 +69,6 @@ public class AppSync {
 
         try {
             puts(getMatchDir());
-            createDirectory(Environment.getExternalStorageDirectory()+File.separator+ defaultFolderPath);
-            createDirectory(Environment.getExternalStorageDirectory()+File.separator+ defaultFolderPath+ File.separator +competitionName);
-            createDirectory(Environment.getExternalStorageDirectory()+File.separator+ defaultFolderPath+ File.separator +competitionName+ File.separator +teamNumber);
             createDirectory(getMatchDir());
             try {
                 try {

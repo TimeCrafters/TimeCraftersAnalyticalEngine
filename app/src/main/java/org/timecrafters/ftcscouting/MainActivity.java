@@ -23,11 +23,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Arrays;
-import java.util.HashMap;
+import java.util.TreeMap;
 
 public class MainActivity extends AppCompatActivity {
 
-    public HashMap<Integer, String> teamList = new HashMap<>();
+    public TreeMap<Integer, String> teamList = new TreeMap<>();
     int READ_REQUEST_CODE = 42;
     int REQUEST_WRITE_PERMISSION = 70;
     int REQUEST_READ_PERMISSION = 71;
