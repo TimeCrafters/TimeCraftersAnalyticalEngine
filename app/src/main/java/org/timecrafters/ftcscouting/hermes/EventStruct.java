@@ -5,6 +5,7 @@ package org.timecrafters.ftcscouting.hermes;
  */
 
 public class EventStruct {
+    int team;
     String period;
     String type;
     String subtype;

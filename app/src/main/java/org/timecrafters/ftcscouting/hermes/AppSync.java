@@ -10,6 +10,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.TreeMap;
 
 /**
@@ -24,6 +25,8 @@ public class AppSync {
 
     public static String competitionName = "competition"; // The name of the event being tracked, E.G. North Super Regionals
     public static String defaultFolderPath = "FTCScouting";
+
+    public static ArrayList<EventStruct> eventsList = new ArrayList<>();
 
     public static void puts(String tag, String string) {
         Log.i(tag, string);
@@ -52,50 +55,45 @@ public class AppSync {
     }
 
     // Java, why do I need 20+ lines of code to simply write to a file......................... :'(
-    public static boolean addEvent(int match, String period, String type, String subtype, int points, String description) {
-        boolean failure      = false;
-        boolean writeSuccess = false;
-        JSONObject event  = new JSONObject();
+    public static void addEvent(int match, String period, String type, String subtype, int points, String description) {
+        EventStruct event = new EventStruct();
+        event.team   = teamNumber;
+        event.period = period;
+        event.type   = type;
+        event.subtype= subtype;
+        event.points = points;
+        event.description = description;
+
+        eventsList.add(event);
+    }
+
+    public static boolean writeJSON(JSONObject jsonObject, String path, boolean appendMode) {
         BufferedWriter bw = null;
-        try {
-            event.put("team", teamNumber);
-            event.put("period", period);
-            event.put("type", type);
-            event.put("subtype", subtype);
-            event.put("points", points);
-            event.put("description", description);
-        } catch(JSONException e) {
-            writeSuccess = false;
-        }
+        boolean failure = false;
+        boolean writeSuccess = false;
 
         try {
-            puts(getMatchDir());
-            createDirectory(getMatchDir());
             try {
-                try {
-                    bw = new BufferedWriter(new FileWriter(getMatchDir() + File.separator + match + ".json", true));
-                } catch (IOException error) {
-                    failure = true;
-                    puts(error.toString());
-                }
-
-                if (!failure) {
-                    bw.write(event.toString());
-                    bw.newLine();
-                    bw.flush();
-                }
+                bw = new BufferedWriter(new FileWriter(path, appendMode));
             } catch (IOException error) {
-                    // Eating fish and chips, bbl.
-                } finally {
-                if (bw != null) {
-                    bw.close();
-                }
+                failure = true;
+                puts(error.toString());
             }
 
-        } catch (IOException error){
-            writeSuccess = false;
-            // Eh.
+            if (!failure) {
+                bw.write(jsonObject.toString());
+                bw.newLine();
+                bw.flush();
+                writeSuccess = true;
+            }
+        } catch (IOException error) {
+            // Eating fish and chips, bbl.
+        } finally {
+            if (bw != null) {
+                try { bw.close(); } catch(IOException error) { puts("Ugg."); }
+            }
         }
+
         return writeSuccess;
     }
 
