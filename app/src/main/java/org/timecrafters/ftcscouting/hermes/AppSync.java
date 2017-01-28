@@ -1,10 +1,13 @@
 package org.timecrafters.ftcscouting.hermes;
 
 import android.os.Environment;
+import android.os.SystemClock;
 import android.util.Log;
+import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.timecrafters.ftcscouting.MainActivity;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -20,6 +23,7 @@ import java.util.TreeMap;
 public class AppSync {
     public static TreeMap<Integer, String> teamsList = new TreeMap<>();
 
+    public static int matchID = 0; // TODO: Ask for match (round) number.
     public static int teamNumber;
     public static String teamName;
 
@@ -55,16 +59,50 @@ public class AppSync {
     }
 
     // Java, why do I need 20+ lines of code to simply write to a file......................... :'(
-    public static void addEvent(int match, String period, String type, String subtype, int points, String description) {
+    public static void addEvent(int match, String period, String type, String subtype, String location, int points, String description) {
         EventStruct event = new EventStruct();
+        matchID = match;
         event.team   = teamNumber;
         event.period = period;
         event.type   = type;
         event.subtype= subtype;
+        event.location=location;
         event.points = points;
         event.description = description;
 
         eventsList.add(event);
+    }
+
+    public static void writeEvents() {
+        boolean overwrite = true;
+        createDirectory(getMatchDir()); // Ensure directory exists.
+
+        for(EventStruct event : eventsList) {
+            JSONObject jsonObject = new JSONObject();
+
+            try {
+                jsonObject.put("team", teamNumber);
+                jsonObject.put("period", event.period);
+                jsonObject.put("type", event.type);
+                jsonObject.put("subtype", event.subtype);
+                jsonObject.put("location", event.location);
+                jsonObject.put("points", event.points);
+                jsonObject.put("description", event.description);
+            } catch (JSONException error) {overwrite = false;}
+
+            writeJSON(jsonObject, getMatchDir()+ File.separator +""+matchID+"-"+ System.currentTimeMillis()/1000+".json", true);
+        }
+
+        if (overwrite) {
+            eventsList = new ArrayList<>();
+        } else {
+            MainActivity.MainActivityContext.runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    Toast.makeText(MainActivity.MainActivityContext.getApplicationContext(), "Failed to write events list!", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
     }
 
     public static boolean writeJSON(JSONObject jsonObject, String path, boolean appendMode) {

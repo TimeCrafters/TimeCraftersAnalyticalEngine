@@ -126,7 +126,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/particle_in_corner"
-        android:id="@+id/done" />
+        android:id="@+id/done"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
 
     <TextView
         android:text="0 pts"

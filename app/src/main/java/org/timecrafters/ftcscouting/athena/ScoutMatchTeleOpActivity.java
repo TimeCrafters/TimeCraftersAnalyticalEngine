@@ -13,7 +13,7 @@ import org.timecrafters.ftcscouting.hermes.AppSync;
 public class ScoutMatchTeleOpActivity extends AppCompatActivity {
 
     public Button claimBeacon;
-    public Button looseBeacon;
+    public Button loseBeacon;
 
     public Button capBallOffFloor;
     public Button capBallAboveCrossBar;
@@ -40,7 +40,7 @@ public class ScoutMatchTeleOpActivity extends AppCompatActivity {
         setContentView(R.layout.activity_scout_match_tele_op);
 
         claimBeacon = (Button) findViewById(R.id.claim_beacon);
-        looseBeacon = (Button) findViewById(R.id.lost_beacon);
+        loseBeacon = (Button) findViewById(R.id.lost_beacon);
 
         capBallOffFloor = (Button) findViewById(R.id.cap_ball_off_floor);
         capBallAboveCrossBar = (Button) findViewById(R.id.cap_ball_above_crossbar);
@@ -64,14 +64,18 @@ public class ScoutMatchTeleOpActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // _-Magic Smoke Required-_ \\
+                AppSync.addEvent(0, "teleop", "score", "beacon", "", TeleScoresHelper.claimBeacon, "Claim Beacon");
+
                 setScore(TeleScoresHelper.claimBeacon);
             }
         });
 
-        looseBeacon.setOnClickListener(new View.OnClickListener(){
+        loseBeacon.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 // _-Magic Smoke Required-_ \\
+                AppSync.addEvent(0, "teleop", "lose", "beacon", "", 0, "Lose Beacon");
+
                 setScore(TeleScoresHelper.claimBeacon*-1);
             }
         });
@@ -79,6 +83,8 @@ public class ScoutMatchTeleOpActivity extends AppCompatActivity {
         capBallOffFloor.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                AppSync.addEvent(0, "teleop", "score", "capball", "offground", TeleScoresHelper.capBallOffGround, "Cappball off Ground");
+
                 setScore(TeleScoresHelper.capBallOffGround);
                 lockCapball();
             }
@@ -87,6 +93,8 @@ public class ScoutMatchTeleOpActivity extends AppCompatActivity {
         capBallAboveCrossBar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                AppSync.addEvent(0, "teleop", "score", "capball", "crossbar", TeleScoresHelper.capBallAboveCrossBar, "Capball above Crossbar");
+
                 setScore(TeleScoresHelper.capBallAboveCrossBar);
                 lockCapball();
             }
@@ -95,6 +103,8 @@ public class ScoutMatchTeleOpActivity extends AppCompatActivity {
         capBallCapped.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                AppSync.addEvent(0, "teleop", "score", "capball", "capped", TeleScoresHelper.capBallCapped, "Capball Capped");
+
                 setScore(TeleScoresHelper.capBallCapped);
                 lockCapball();
             }
@@ -103,6 +113,8 @@ public class ScoutMatchTeleOpActivity extends AppCompatActivity {
         particleInVortex.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                AppSync.addEvent(0, "teleop", "score", "particle", "vortex", TeleScoresHelper.particleInVortex, "Scored Particle in Vortex");
+
                 setScore(TeleScoresHelper.particleInVortex);
             }
         });
@@ -110,6 +122,8 @@ public class ScoutMatchTeleOpActivity extends AppCompatActivity {
         particleInCorner.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                AppSync.addEvent(0, "teleop", "score", "particle", "corner", TeleScoresHelper.particleInCorner, "Scored Particle in Corner");
+
                 setScore(TeleScoresHelper.particleInCorner);
             }
         });
@@ -117,6 +131,8 @@ public class ScoutMatchTeleOpActivity extends AppCompatActivity {
         particleMissedVortex.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                AppSync.addEvent(0, "teleop", "miss", "particle", "vortex", 0, "Missed Scoring Particle in Vortex");
+
 //                setScore(TeleScoresHelper.capBallCapped);
             }
         });
@@ -124,6 +140,8 @@ public class ScoutMatchTeleOpActivity extends AppCompatActivity {
         particleMissedCorner.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                AppSync.addEvent(0, "teleop", "miss", "particle", "corner", 0, "Missed Scoring Particle in Corner");
+
 //                setScore(TeleScoresHelper.capBallCapped);
             }
         });

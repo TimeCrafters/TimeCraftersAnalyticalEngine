@@ -39,7 +39,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <TextView
-        android:text="LightBoxes"
+        android:text="Light Beacon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView6"
@@ -63,12 +63,12 @@
         android:id="@+id/textView8" />
 
     <Button
-        android:text="Hit LightBox"
+        android:text="Claim"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView6"
         android:layout_alignParentStart="true"
-        android:id="@+id/hit_lightbox"
+        android:id="@+id/claim_beacon"
         android:textAppearance="@style/TextAppearance.AppCompat" />
 
     <Button
@@ -84,7 +84,7 @@
         android:text="Missed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/hit_lightbox"
+        android:layout_below="@+id/claim_beacon"
         android:layout_alignParentStart="true"
         android:id="@+id/missed_lightbox"
         android:textAppearance="@style/TextAppearance.AppCompat" />

@@ -9,6 +9,7 @@ public class EventStruct {
     String period;
     String type;
     String subtype;
+    String location;
     int points;
     String description;
 }

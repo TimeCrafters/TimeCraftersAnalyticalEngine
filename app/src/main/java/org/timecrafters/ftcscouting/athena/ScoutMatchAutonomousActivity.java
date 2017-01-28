@@ -8,7 +8,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.timecrafters.ftcscouting.R;
 import org.timecrafters.ftcscouting.apollo.AutoScoresHelper;
@@ -63,7 +62,7 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
         onPlatform = (Button) findViewById(R.id.on_platform);
         touchingPlatform = (Button) findViewById(R.id.touching_platform);
 
-        triggerLightBox = (Button) findViewById(R.id.hit_lightbox);
+        triggerLightBox = (Button) findViewById(R.id.claim_beacon);
         missedLightBox = (Button) findViewById(R.id.missed_lightbox);
 
         particleInVortex = (Button) findViewById(R.id.in_vortex);
@@ -144,7 +143,8 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 lockTeamIn();
-                Toast.makeText(getApplicationContext(), teamNumber+" Missed Lightbox", Toast.LENGTH_SHORT).show();
+                AppSync.addEvent(0, "autonomous", "miss", "beacon", "", 0, "Missed Beacon");
+
 //                setScore(AutoScoresHelper.onPlatform);
             }
         });
@@ -154,7 +154,7 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 lockTeamIn();
-                AppSync.addEvent(0, "autonomous", "score", "parking", AutoScoresHelper.onRamp, "Parked Completely on Ramp");
+                AppSync.addEvent(0, "autonomous", "score", "parking", "on ramp", AutoScoresHelper.onRamp, "Parked Completely on Ramp");
 
                 setScore(AutoScoresHelper.onRamp);
                 disableParkedGroup();
@@ -165,7 +165,7 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 lockTeamIn();
-                AppSync.addEvent(0, "autonomous", "score", "parking", AutoScoresHelper.onPlatform, "Parked Completely on Platform");
+                AppSync.addEvent(0, "autonomous", "score", "parking", "on platform", AutoScoresHelper.onPlatform, "Parked Completely on Platform");
 
                 setScore(AutoScoresHelper.onPlatform);
                 disableParkedGroup();
@@ -176,7 +176,7 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 lockTeamIn();
-                AppSync.addEvent(0, "autonomous", "score", "parking", AutoScoresHelper.touchingRamp, "Parked on Ramp");
+                AppSync.addEvent(0, "autonomous", "score", "parking", "touching ramp", AutoScoresHelper.touchingRamp, "Parked on Ramp");
 
                 setScore(AutoScoresHelper.touchingRamp);
                 disableParkedGroup();
@@ -187,7 +187,7 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 lockTeamIn();
-                AppSync.addEvent(0, "autonomous", "score", "parking", AutoScoresHelper.touchingPlatform, "Parked on Platform");
+                AppSync.addEvent(0, "autonomous", "score", "parking", "touching platform", AutoScoresHelper.touchingPlatform, "Parked on Platform");
 
                 setScore(AutoScoresHelper.touchingPlatform);
                 disableParkedGroup();
@@ -198,7 +198,7 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 lockTeamIn();
-                AppSync.addEvent(0, "autonomous", "score", "capball", AutoScoresHelper.capBallBumped, "Capball on Floor");
+                AppSync.addEvent(0, "autonomous", "score", "capball", "floor", AutoScoresHelper.capBallBumped, "Capball on Floor");
 
                 setScore(AutoScoresHelper.capBallBumped);
                 bumpedBall.setEnabled(false);
@@ -211,7 +211,7 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
             public void onClick(View v) {
                 lockTeamIn();
 //                writeEvent("team# match#: eventtype-event name | score#");
-                AppSync.addEvent(0, "autonomous", "score", "particle", AutoScoresHelper.particleInVortex, "Scored Particle in Vortex");
+                AppSync.addEvent(0, "autonomous", "score", "particle", "vortex", AutoScoresHelper.particleInVortex, "Scored Particle in Vortex");
 
                 setScore(AutoScoresHelper.particleInVortex);
             }
@@ -221,7 +221,7 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 lockTeamIn();
-                AppSync.addEvent(0, "autonomous", "score", "particle", AutoScoresHelper.particleInCorner, "Scored Particle in Corner");
+                AppSync.addEvent(0, "autonomous", "score", "particle", "corner", AutoScoresHelper.particleInCorner, "Scored Particle in Corner");
 
                 setScore(AutoScoresHelper.particleInCorner);
             }
@@ -231,7 +231,7 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 lockTeamIn();
-                AppSync.addEvent(0, "autonomous", "score", "particle", 0, "Missed Scoring Particle in Vortex");
+                AppSync.addEvent(0, "autonomous", "miss", "particle", "vortex", 0, "Missed Scoring Particle in Vortex");
 
 //                setScore(AutoScoresHelper.particleInVortex);
             }
@@ -241,7 +241,7 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 lockTeamIn();
-                AppSync.addEvent(0, "autonomous", "score", "particle", 0, "Missed Scoring Particle in Corner");
+                AppSync.addEvent(0, "autonomous", "miss", "particle", "corner", 0, "Missed Scoring Particle in Corner");
 
 //                setScore(AutoScoresHelper.particleInCorner);
             }
@@ -258,6 +258,7 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // SAVE DATA
+                AppSync.writeEvents();
                 startActivity(new Intent(getBaseContext(), ScoutMatchTeleOpActivity.class));
             }
         });
