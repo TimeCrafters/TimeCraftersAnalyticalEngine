@@ -5,11 +5,11 @@ package org.timecrafters.ftcscouting.hermes;
  */
 
 public class EventStruct {
-    int team;
-    String period;
-    String type;
-    String subtype;
-    String location;
-    int points;
-    String description;
+    public int team;
+    public String period;
+    public String type;
+    public String subtype;
+    public String location;
+    public int points;
+    public String description;
 }

@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="org.timecrafters.ftcscouting.athena.TeamStatisticsActivity">
+    <item
+        android:id="@+id/action_reload"
+        android:orderInCategory="100"
+        android:title="Reload"
+        app:showAsAction="never|ifRoom"
+        android:icon="@android:drawable/stat_notify_sync" />
+</menu>

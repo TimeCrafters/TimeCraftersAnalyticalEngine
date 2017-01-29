@@ -202,4 +202,15 @@
         android:layout_below="@+id/textView7"
         android:layout_centerHorizontal="true" />
 
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/touching_ramp"
+        android:id="@+id/eventLog"
+        android:layout_above="@+id/teleop"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/textView7"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
+
 </RelativeLayout>

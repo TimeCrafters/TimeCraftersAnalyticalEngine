@@ -15,12 +15,15 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.TreeMap;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by cyber on 1/24/2017.
  */
 
 public class AppSync {
+    public static boolean useFilesDirectory = false;
+
     public static TreeMap<Integer, String> teamsList = new TreeMap<>();
 
     public static int matchID = 0; // TODO: Ask for match (round) number.
@@ -44,29 +47,47 @@ public class AppSync {
     }
 
     public static String getMatchDir() {
-        return Environment.getExternalStorageDirectory().toString()+File.separator+ defaultFolderPath +File.separator +competitionName+ File.separator+ teamNumber+ File.separator +"matches";
+        if (useFilesDirectory) {
+            return MainActivity.MainActivityContext.getFilesDir() + File.separator + defaultFolderPath + File.separator + competitionName + File.separator + teamNumber + File.separator + "matches";
+        } else {
+            return Environment.getExternalStorageDirectory().toString() + File.separator + defaultFolderPath + File.separator + competitionName + File.separator + teamNumber + File.separator + "matches";
+        }
     }
 
     public static String getTeamDir() {
-        return Environment.getExternalStorageDirectory().toString()+File.separator+ defaultFolderPath +File.separator +competitionName+ File.separator+ teamNumber;
+        if (useFilesDirectory) {
+            return MainActivity.MainActivityContext.getFilesDir() + File.separator + defaultFolderPath + File.separator + competitionName + File.separator + teamNumber;
+        } else {
+            return Environment.getExternalStorageDirectory().toString() + File.separator + defaultFolderPath + File.separator + competitionName + File.separator + teamNumber;
+        }
+    }
+
+    public static String getRootDir() {
+        if (useFilesDirectory) {
+            return MainActivity.MainActivityContext.getFilesDir() + File.separator + defaultFolderPath;
+        } else {
+            return Environment.getExternalStorageDirectory().toString() + File.separator + defaultFolderPath;
+        }
     }
 
     public static void createDirectory(String path) {
         File directory = new File(path);
         if (directory.mkdirs()) {
-            puts("Created path: "+path);
-        } else { puts("Failed to create directories for "+path); }
+            puts("Created path: " + path);
+        } else {
+            puts("Failed to create directories for " + path);
+        }
     }
 
     // Java, why do I need 20+ lines of code to simply write to a file......................... :'(
     public static void addEvent(int match, String period, String type, String subtype, String location, int points, String description) {
         EventStruct event = new EventStruct();
         matchID = match;
-        event.team   = teamNumber;
+        event.team = teamNumber;
         event.period = period;
-        event.type   = type;
-        event.subtype= subtype;
-        event.location=location;
+        event.type = type;
+        event.subtype = subtype;
+        event.location = location;
         event.points = points;
         event.description = description;
 
@@ -77,7 +98,7 @@ public class AppSync {
         boolean overwrite = true;
         createDirectory(getMatchDir()); // Ensure directory exists.
 
-        for(EventStruct event : eventsList) {
+        for (EventStruct event : eventsList) {
             JSONObject jsonObject = new JSONObject();
 
             try {
@@ -88,9 +109,11 @@ public class AppSync {
                 jsonObject.put("location", event.location);
                 jsonObject.put("points", event.points);
                 jsonObject.put("description", event.description);
-            } catch (JSONException error) {overwrite = false;}
+            } catch (JSONException error) {
+                overwrite = false;
+            }
 
-            writeJSON(jsonObject, getMatchDir()+ File.separator +""+matchID+"-"+ System.currentTimeMillis()/1000+".json", true);
+            writeJSON(jsonObject, getMatchDir() + File.separator + "" + matchID + "-" + System.currentTimeMillis() / 1000 + ".json", true);
         }
 
         if (overwrite) {
@@ -128,7 +151,11 @@ public class AppSync {
             // Eating fish and chips, bbl.
         } finally {
             if (bw != null) {
-                try { bw.close(); } catch(IOException error) { puts("Ugg."); }
+                try {
+                    bw.close();
+                } catch (IOException error) {
+                    puts("Ugg.");
+                }
             }
         }
 
@@ -142,7 +169,7 @@ public class AppSync {
             event.put("team", teamNumber);
             event.put("autonomous", autonomous);
             event.put("teleop", teleOp);
-        } catch(JSONException e) {
+        } catch (JSONException e) {
             writeSuccess = false;
         }
         return writeSuccess;
@@ -150,5 +177,13 @@ public class AppSync {
 
     public static boolean newMatch(int teamNumber) {
         return true;
+    }
+
+    public static void sleep(long milliseconds) {
+        try {
+            TimeUnit.MILLISECONDS.sleep(milliseconds);
+        } catch (InterruptedException errorObject) {
+            // Java, you're funny.
+        }
     }
 }

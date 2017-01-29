@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import org.timecrafters.ftcscouting.athena.ScoutMatchAutonomousActivity;
 import org.timecrafters.ftcscouting.athena.ScoutTeamAutonomousActivity;
+import org.timecrafters.ftcscouting.athena.TeamStatisticsActivity;
 import org.timecrafters.ftcscouting.hermes.AppSync;
 
 import java.io.BufferedReader;
@@ -63,38 +64,51 @@ public class MainActivity extends AppCompatActivity {
                 if (ContextCompat.checkSelfPermission(MainActivity.this,
                         Manifest.permission.WRITE_EXTERNAL_STORAGE)
                         != PERMISSION_GRANTED) {
-                    createMessageDialog("Write Permissions", "This app requires write permissions for function properly.");
 
                     // Should we show an explanation?
                     if (ActivityCompat.shouldShowRequestPermissionRationale(MainActivity.this,
                             Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-                        Toast.makeText(getApplicationContext(), "This app requires write access to write files accessible in userspace.", Toast.LENGTH_LONG).show();
 
-                        createMessageDialog("This", "Then That");
-
-                        ActivityCompat.requestPermissions(MainActivity.this,
-                                new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
-                                REQUEST_WRITE_PERMISSION);
-
-                        // Show an explanation to the user *asynchronously* -- don't block
-                        // this thread waiting for the user's response! After the user
-                        // sees the explanation, try again to request the permission.
+                        createConfirmDialog("Write Permissions", "This app requires write access to read/write files accessible in userspace.\n\n If you continue without allowing write access, you'll only be able to access the written files on a Rooted device and data will be destroyed if you uninstall the app.", new Runnable() {
+                            @Override
+                            public void run() {
+                                // Okay button clicked...
+                                ActivityCompat.requestPermissions(MainActivity.this,
+                                        new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                                        REQUEST_WRITE_PERMISSION);
+                            }
+                        }, new Runnable() {
+                            @Override
+                            public void run() {
+                                createAlertDialog("Permission not Granted", "Data will be stored in " + getFilesDir() + "\n\nData loss WILL occur if you uninstall.", new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        // Do nothing
+                                        performFileSearch();
+                                        AppSync.useFilesDirectory = true;
+                                    }
+                                });
+                            }
+                        }, "Ask", "Decline");
 
                     } else {
 
-                        // No explanation needed, we can request the permission.
-
                         ActivityCompat.requestPermissions(MainActivity.this,
                                 new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
                                 REQUEST_WRITE_PERMISSION);
 
-                        // MY_PERMISSIONS_REQUEST_READ_CONTACTS is an
-                        // app-defined int constant. The callback method gets the
-                        // result of the request.
                     }
                 } else {
                     performFileSearch();
                 }
+            }
+        });
+
+        Button teamStatistics = (Button) findViewById(R.id.team_statistics);
+        teamStatistics.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getBaseContext(), TeamStatisticsActivity.class));
             }
         });
     }
@@ -147,18 +161,55 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void createAlertDialog(String title, String message, final Runnable acceptRunner, final Runnable declineRunner) {
+    public void createConfirmDialog(String title, String message, final Runnable acceptRunner, final Runnable declineRunner, String positiveButtonText, String negativeButtonText) {
+        AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
+        alert.setTitle(title).setMessage(message);
+        alert.setNegativeButton(negativeButtonText, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                declineRunner.run();
+            }
+        });
+        alert.setPositiveButton(positiveButtonText, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                acceptRunner.run();
+            }
+        });
+
+        alert.show();
+    }
+    public void createConfirmDialog(String title, String message, final Runnable acceptRunner, final Runnable declineRunner) {
         AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
         alert.setTitle(title).setMessage(message);
         alert.setNegativeButton("Decline", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
-                puts("Nope");
                 declineRunner.run();
             }
         });
         alert.setPositiveButton("Accept", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
-                puts("Yet");
+                acceptRunner.run();
+            }
+        });
+
+        alert.show();
+    }
+
+    public void createAlertDialog(String title, String message, final Runnable acceptRunner, String positiveButtonText) {
+        AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
+        alert.setTitle(title).setMessage(message);
+        alert.setPositiveButton(positiveButtonText, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                acceptRunner.run();
+            }
+        });
+
+        alert.show();
+    }
+    public void createAlertDialog(String title, String message, final Runnable acceptRunner) {
+        AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
+        alert.setTitle(title).setMessage(message);
+        alert.setPositiveButton("Okay", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
                 acceptRunner.run();
             }
         });

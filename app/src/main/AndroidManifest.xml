@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.timecrafters.ftcscouting">
+
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
 
     <application
         android:allowBackup="true"
@@ -24,7 +24,12 @@
             android:name=".athena.ScoutMatchAutonomousActivity"
             android:configChanges="orientation|screenSize" />
         <activity android:name=".athena.ScoutMatchTeleOpActivity" />
-        <activity android:name=".athena.ScoutTeamAutonomousActivity"></activity>
+        <activity android:name=".athena.ScoutTeamAutonomousActivity" />
+        <activity android:name=".athena.ScoutTeamTeleOpActivity" />
+        <activity
+            android:name=".athena.TeamStatisticsActivity"
+            android:label="@string/title_activity_team_statistics"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
