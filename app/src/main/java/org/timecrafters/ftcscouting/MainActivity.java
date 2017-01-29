@@ -2,12 +2,13 @@ package org.timecrafters.ftcscouting;
 
 import android.Manifest;
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -25,11 +26,13 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
+import static android.content.pm.PackageManager.PERMISSION_GRANTED;
+import static org.timecrafters.ftcscouting.hermes.AppSync.puts;
+
 public class MainActivity extends AppCompatActivity {
 
     int READ_REQUEST_CODE = 42;
     int REQUEST_WRITE_PERMISSION = 70;
-    int REQUEST_READ_PERMISSION = 71;
     String TAG = "MAIN";
     public static MainActivity MainActivityContext;
 
@@ -59,12 +62,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (ContextCompat.checkSelfPermission(MainActivity.this,
                         Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                        != PackageManager.PERMISSION_GRANTED) {
+                        != PERMISSION_GRANTED) {
+                    createMessageDialog("Write Permissions", "This app requires write permissions for function properly.");
 
                     // Should we show an explanation?
                     if (ActivityCompat.shouldShowRequestPermissionRationale(MainActivity.this,
                             Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
                         Toast.makeText(getApplicationContext(), "This app requires write access to write files accessible in userspace.", Toast.LENGTH_LONG).show();
+
+                        createMessageDialog("This", "Then That");
 
                         ActivityCompat.requestPermissions(MainActivity.this,
                                 new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
@@ -86,9 +92,9 @@ public class MainActivity extends AppCompatActivity {
                         // app-defined int constant. The callback method gets the
                         // result of the request.
                     }
+                } else {
+                    performFileSearch();
                 }
-
-                performFileSearch();
             }
         });
     }
@@ -131,6 +137,39 @@ public class MainActivity extends AppCompatActivity {
                 parseTeamsList(uri);
             }
         }
+    }
+
+    public void OnRequestPermissionsResult(int requestCode, String[] permissions, int booleanInt) {
+        if (booleanInt == PERMISSION_GRANTED) {
+            performFileSearch();
+        } else {
+
+        }
+    }
+
+    public void createAlertDialog(String title, String message, final Runnable acceptRunner, final Runnable declineRunner) {
+        AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
+        alert.setTitle(title).setMessage(message);
+        alert.setNegativeButton("Decline", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                puts("Nope");
+                declineRunner.run();
+            }
+        });
+        alert.setPositiveButton("Accept", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                puts("Yet");
+                acceptRunner.run();
+            }
+        });
+
+        alert.show();
+    }
+
+    public void createMessageDialog(String title, String message) {
+        AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
+        alert.setTitle(title).setMessage(message);
+        alert.show();
     }
 
     private String[] readFileContent(Uri uri) throws IOException {
