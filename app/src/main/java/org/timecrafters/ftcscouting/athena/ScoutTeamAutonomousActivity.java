@@ -1,5 +1,6 @@
 package org.timecrafters.ftcscouting.athena;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.PopupMenu;
@@ -10,6 +11,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 
+import org.timecrafters.ftcscouting.MainActivity;
 import org.timecrafters.ftcscouting.R;
 import org.timecrafters.ftcscouting.hermes.AppSync;
 
@@ -129,6 +131,13 @@ public class ScoutTeamAutonomousActivity extends AppCompatActivity {
                 } else {
                     enableButtons();
                 }
+            }
+        });
+
+        teleOp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getBaseContext(), ScoutTeamTeleOpActivity.class));
             }
         });
     }

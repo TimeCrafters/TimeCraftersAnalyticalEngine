@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/textView15"
+        android:id="@+id/team"
         android:textAppearance="@style/TextAppearance.AppCompat" />
 
     <TextView
@@ -25,8 +25,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView13"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-        android:layout_below="@+id/textView15"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/team"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="normal|bold" />
 
     <CheckBox
         android:text="Can Claim Beacons"
@@ -34,79 +36,71 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView13"
         android:layout_alignParentStart="true"
-        android:id="@+id/checkBox2" />
+        android:id="@+id/can_claim_beacons" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/editText3"
+        android:id="@+id/max_particles_scored_in_corner"
         android:text="0"
-        android:layout_below="@+id/editText"
+        android:layout_below="@+id/max_particles_scored_in_vortex"
         android:layout_alignParentEnd="true"
-        android:layout_toEndOf="@+id/checkBox" />
+        android:layout_toEndOf="@+id/can_score_in_corner"
+        android:layout_alignStart="@+id/max_particles_scored_in_vortex" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/editText"
+        android:id="@+id/max_particles_scored_in_vortex"
         android:text="0"
-        android:layout_below="@+id/checkBox2"
-        android:layout_toEndOf="@+id/checkBox" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/editText5"
-        android:text="0"
-        android:layout_below="@+id/checkBox2"
-        android:layout_toEndOf="@+id/checkBox" />
+        android:layout_below="@+id/can_claim_beacons"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/max_beacons_claimable" />
 
     <CheckBox
         android:text="Can Score in Corner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/checkBox"
-        android:layout_alignBaseline="@+id/editText3"
-        android:layout_alignBottom="@+id/editText3"
+        android:id="@+id/can_score_in_corner"
+        android:layout_alignBaseline="@+id/max_particles_scored_in_corner"
+        android:layout_alignBottom="@+id/max_particles_scored_in_corner"
         android:layout_alignParentStart="true" />
 
     <CheckBox
         android:text="Can Score in Vortex"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/checkBox3"
-        android:layout_alignBaseline="@+id/editText"
-        android:layout_alignBottom="@+id/editText"
+        android:id="@+id/can_score_in_vortex"
+        android:layout_alignBaseline="@+id/max_particles_scored_in_vortex"
+        android:layout_alignBottom="@+id/max_particles_scored_in_vortex"
         android:layout_alignParentStart="true" />
 
     <CheckBox
         android:text="Capball off Floor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText3"
+        android:layout_below="@+id/max_particles_scored_in_corner"
         android:layout_alignParentStart="true"
-        android:id="@+id/checkBox5" />
+        android:id="@+id/capball_off_floor" />
 
     <CheckBox
         android:text="Capball Above Crossbar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/checkBox6"
-        android:layout_below="@+id/checkBox5"
+        android:id="@+id/capball_above_crossbar"
+        android:layout_below="@+id/capball_off_floor"
         android:layout_alignParentStart="true" />
 
     <CheckBox
         android:text="Capball Capped"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/checkBox4"
-        android:layout_below="@+id/checkBox6"
+        android:id="@+id/capball_capped"
+        android:layout_below="@+id/capball_above_crossbar"
         android:layout_alignParentStart="true" />
 
     <EditText
@@ -114,20 +108,33 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/editText4"
+        android:id="@+id/max_beacons_claimable"
         android:text="0"
-        android:layout_alignBaseline="@+id/checkBox2"
-        android:layout_alignBottom="@+id/checkBox2"
+        android:layout_alignBaseline="@+id/can_claim_beacons"
+        android:layout_alignBottom="@+id/can_claim_beacons"
         android:layout_alignParentEnd="true"
-        android:layout_alignStart="@+id/editText" />
+        android:layout_toEndOf="@+id/textView13" />
 
     <Button
-        android:text="Done"
+        android:text="Save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:id="@+id/button2"
+        android:id="@+id/save"
         android:textAppearance="@style/TextAppearance.AppCompat" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:layout_below="@+id/capball_capped"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="98dp"
+        android:id="@+id/teleop_notes"
+        android:layout_above="@+id/save"
+        android:layout_alignParentEnd="true"
+        android:hint="TeleOp notes..." />
 
 </RelativeLayout>

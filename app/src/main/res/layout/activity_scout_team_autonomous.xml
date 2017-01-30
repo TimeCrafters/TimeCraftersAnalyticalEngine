@@ -35,14 +35,6 @@
         android:id="@+id/teleOp"
         android:textAppearance="@style/TextAppearance.AppCompat" />
 
-    <CheckBox
-        android:text="No Autonomous"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/no_autonomous"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/textView12" />
-
     <Button
         android:text="Cancel"
         android:layout_width="wrap_content"
@@ -81,7 +73,9 @@
         android:id="@+id/textView12"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
         android:layout_below="@+id/team_selection"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/holo_red_dark"
+        android:textStyle="normal|bold" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -135,5 +129,28 @@
         android:id="@+id/capball_on_floor"
         android:layout_below="@+id/particles_scored_in_corner"
         android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:layout_below="@+id/completely_on_ramp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp"
+        android:id="@+id/autonomous_notes"
+        android:layout_above="@+id/teleOp"
+        android:layout_alignParentEnd="true"
+        android:hint="Autonomous notes..." />
+
+    <CheckBox
+        android:text="No Autonomous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/no_autonomous"
+        android:layout_alignBaseline="@+id/button"
+        android:layout_alignBottom="@+id/button"
+        android:layout_toEndOf="@+id/button"
+        android:layout_marginStart="10dp" />
 
 </RelativeLayout>

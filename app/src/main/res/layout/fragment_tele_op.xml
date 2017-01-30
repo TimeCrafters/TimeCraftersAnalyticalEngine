@@ -51,16 +51,16 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView63"
                 android:layout_alignParentEnd="true"
-                android:id="@+id/textView67"
+                android:id="@+id/beacons_claimed"
                 android:textAppearance="@style/TextAppearance.AppCompat" />
 
             <TextView
                 android:text="N/A"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView69"
+                android:id="@+id/beacons_lost"
                 android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView67"
+                android:layout_below="@+id/beacons_claimed"
                 android:layout_alignParentEnd="true" />
 
             <TextView
@@ -76,28 +76,10 @@
                 android:text="N/A"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView75"
+                android:id="@+id/beacons_success_percentage"
                 android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView69"
+                android:layout_below="@+id/beacons_lost"
                 android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="Scored in Vortex:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView72"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView70"
-                android:layout_centerHorizontal="true" />
-
-            <TextView
-                android:text="Beacons Claimed:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView66"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView63"
-                android:layout_alignStart="@+id/textView71" />
 
             <TextView
                 android:text="Success Percentage:"
@@ -141,7 +123,7 @@
                 android:text="N/A"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView76"
+                android:id="@+id/particles_scored_in_vortex"
                 android:textAppearance="@style/TextAppearance.AppCompat"
                 android:layout_above="@+id/textView73"
                 android:layout_alignParentEnd="true" />
@@ -150,27 +132,27 @@
                 android:text="N/A"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView77"
+                android:id="@+id/particles_scored_in_corner"
                 android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView76"
+                android:layout_below="@+id/particles_scored_in_vortex"
                 android:layout_alignParentEnd="true" />
 
             <TextView
                 android:text="N/A"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView78"
+                android:id="@+id/particles_missed_vortex"
                 android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView77"
+                android:layout_below="@+id/particles_scored_in_corner"
                 android:layout_alignParentEnd="true" />
 
             <TextView
                 android:text="N/A"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView97"
+                android:id="@+id/particles_missed_corner"
                 android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView78"
+                android:layout_below="@+id/particles_missed_vortex"
                 android:layout_alignParentEnd="true" />
 
             <TextView
@@ -181,25 +163,6 @@
                 android:textAppearance="@style/TextAppearance.AppCompat"
                 android:layout_below="@+id/textView81"
                 android:layout_alignStart="@+id/textView81" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView85"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_alignBaseline="@+id/textView81"
-                android:layout_alignBottom="@+id/textView81"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView106"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView85"
-                android:layout_alignParentEnd="true" />
 
             <TextView
                 android:text="Vortex Success Percentage:"
@@ -223,18 +186,18 @@
                 android:text="N/A"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView98"
+                android:id="@+id/particles_vortex_success_percentage"
                 android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView97"
+                android:layout_below="@+id/particles_missed_corner"
                 android:layout_alignParentEnd="true" />
 
             <TextView
                 android:text="N/A"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView84"
+                android:id="@+id/particles_corner_success_percentage"
                 android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView98"
+                android:layout_below="@+id/particles_vortex_success_percentage"
                 android:layout_alignParentEnd="true" />
 
             <TextView
@@ -290,30 +253,10 @@
                 android:text="N/A"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView107"
+                android:id="@+id/capball_capped"
                 android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView106"
+                android:layout_below="@+id/capball_above_crossbar"
                 android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView109"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView107"
-                android:layout_alignParentEnd="true" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/match"
-                style="@style/Widget.AppCompat.Button.Small"
-                android:background="@android:drawable/btn_dropdown"
-                android:text="ALL"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView16"
-                android:layout_alignEnd="@+id/textView74" />
 
             <TextView
                 android:text="Capped:"
@@ -334,15 +277,6 @@
                 android:textAppearance="@style/TextAppearance.AppCompat" />
 
             <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView86"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView109"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
                 android:text="Off Floor:"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -350,6 +284,71 @@
                 android:textAppearance="@style/TextAppearance.AppCompat"
                 android:layout_below="@+id/textView79"
                 android:layout_alignStart="@+id/textView71" />
+
+            <TextView
+                android:text="N/A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/capball_missed"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:layout_below="@+id/capball_capped"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:text="N/A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/capball_success_percentage"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:layout_below="@+id/capball_missed"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:text="N/A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/capball_above_crossbar"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:layout_below="@+id/capball_off_floor"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:text="N/A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/capball_off_floor"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:layout_above="@+id/textView62"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:text="Scored in Vortex:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView72"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:layout_below="@+id/textView70"
+                android:layout_alignEnd="@+id/textView70" />
+
+            <TextView
+                android:text="Beacons Claimed:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView66"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:layout_below="@+id/textView63"
+                android:layout_alignStart="@+id/textView72" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/match"
+                style="@style/Widget.AppCompat.Button.Small"
+                android:background="@android:drawable/btn_dropdown"
+                android:text="ALL"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:layout_below="@+id/textView16"
+                android:layout_centerHorizontal="true" />
 
         </RelativeLayout>
     </ScrollView>

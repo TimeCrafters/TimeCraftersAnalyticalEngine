@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -19,18 +20,6 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:id="@+id/subtitle" />
-
-    <TextView
-        android:text="Teams List"
-        android:layout_width="wrap_content"
-        android:id="@+id/textView2"
-        android:layout_row="1"
-        android:layout_column="0"
-        android:layout_height="wrap_content"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        android:layout_marginTop="63dp"
-        android:layout_below="@+id/team_number"
-        android:layout_alignParentStart="true" />
 
     <Button
         android:text="Scout Team"
@@ -64,22 +53,34 @@
         android:textAppearance="@style/TextAppearance.AppCompat" />
 
     <TextView
+        android:text="Teams List"
+        android:layout_width="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:layout_marginTop="23dp"
+        android:layout_below="@+id/subtitle"
+        android:layout_alignParentStart="true" />
+
+    <TextView
         android:text="No List Loaded"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/team_list_filename"
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:textColor="@android:color/holo_red_dark"
-        android:layout_below="@+id/textView2"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="12dp" />
+        android:layout_below="@+id/import_list"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:text="Import"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/team_list_filename"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/import_list" />
+        android:id="@+id/import_list"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
