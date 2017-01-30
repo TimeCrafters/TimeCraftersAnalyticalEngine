@@ -28,7 +28,6 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
-import static org.timecrafters.ftcscouting.hermes.AppSync.puts;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -65,39 +64,27 @@ public class MainActivity extends AppCompatActivity {
                         Manifest.permission.WRITE_EXTERNAL_STORAGE)
                         != PERMISSION_GRANTED) {
 
-                    // Should we show an explanation?
-                    if (ActivityCompat.shouldShowRequestPermissionRationale(MainActivity.this,
-                            Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
 
-                        createConfirmDialog("Write Permissions", "This app requires write access to read/write files accessible in userspace.\n\n If you continue without allowing write access, you'll only be able to access the written files on a Rooted device and data will be destroyed if you uninstall the app.", new Runnable() {
-                            @Override
-                            public void run() {
-                                // Okay button clicked...
-                                ActivityCompat.requestPermissions(MainActivity.this,
-                                        new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
-                                        REQUEST_WRITE_PERMISSION);
-                            }
-                        }, new Runnable() {
-                            @Override
-                            public void run() {
-                                createAlertDialog("Permission not Granted", "Data will be stored in " + getFilesDir() + "\n\nData loss WILL occur if you uninstall.", new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        // Do nothing
-                                        performFileSearch();
-                                        AppSync.useFilesDirectory = true;
-                                    }
-                                });
-                            }
-                        }, "Ask", "Decline");
+                    createConfirmDialog("Write Permissions", "This app requires write access to read/write files accessible in userspace.\n\n If you continue without allowing write access, you'll only be able to access the written files on a Rooted device and data will be destroyed if you uninstall the app.", new Runnable() {
+                        @Override
+                        public void run() {
+                            ActivityCompat.requestPermissions(MainActivity.this,
+                                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                                    REQUEST_WRITE_PERMISSION);
+                        }
+                    }, new Runnable() {
+                        @Override
+                        public void run() {
+                            createAlertDialog("Permission not Granted", "Data will be stored in " + getFilesDir() + "\n\nData loss WILL occur if you uninstall.", new Runnable() {
+                                @Override
+                                public void run() {
+                                    performFileSearch();
+                                    AppSync.useFilesDirectory = true;
+                                }
+                            });
+                        }
+                    }, "Ask", "Decline");
 
-                    } else {
-
-                        ActivityCompat.requestPermissions(MainActivity.this,
-                                new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
-                                REQUEST_WRITE_PERMISSION);
-
-                    }
                 } else {
                     performFileSearch();
                 }
@@ -150,14 +137,6 @@ public class MainActivity extends AppCompatActivity {
                 Log.i(TAG, "Uri: " + uri.toString());
                 parseTeamsList(uri);
             }
-        }
-    }
-
-    public void OnRequestPermissionsResult(int requestCode, String[] permissions, int booleanInt) {
-        if (booleanInt == PERMISSION_GRANTED) {
-            performFileSearch();
-        } else {
-
         }
     }
 
@@ -269,12 +248,12 @@ public class MainActivity extends AppCompatActivity {
             matchButton.setEnabled(true);
             teamButton.setEnabled(true);
             teamStatsButton.setEnabled(true);
-//            filename.setTextColor(9);
             Toast.makeText(getApplicationContext(), "Successfully parsed teams file", Toast.LENGTH_SHORT).show();
 
-            // line is not visible here.
-        } catch(IOException error) {
-            Toast.makeText(getApplicationContext(), "Could not read file", Toast.LENGTH_LONG).show();
+        } catch(IOException | NumberFormatException error) {
+            createMessageDialog("Parsing Error", "An error occurred while parsing \""+uri.getPath()+"\"\n\n   " +
+                    "This might be because of non numeric characters on the beginning of a line.\n\n" +
+                    "Error Caught: "+error.getMessage());
         }
     }
 }

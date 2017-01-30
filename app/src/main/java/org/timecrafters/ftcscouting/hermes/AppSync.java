@@ -1,7 +1,6 @@
 package org.timecrafters.ftcscouting.hermes;
 
 import android.os.Environment;
-import android.os.SystemClock;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -22,7 +21,7 @@ import java.util.concurrent.TimeUnit;
  */
 
 public class AppSync {
-    public static boolean useFilesDirectory = false;
+    public static boolean useFilesDirectory = false; // Store data in apps 'files' directory or in 'External Storage'
 
     public static TreeMap<Integer, String> teamsList = new TreeMap<>();
 
