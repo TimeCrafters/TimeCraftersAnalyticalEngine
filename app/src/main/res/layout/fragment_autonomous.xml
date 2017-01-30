@@ -9,7 +9,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="55dp">
+        android:layout_marginBottom="55dp"
+        android:fillViewport="true">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -38,7 +39,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/button4"
+                android:id="@+id/match"
                 style="@style/Widget.AppCompat.Button.Small"
                 android:background="@android:drawable/btn_dropdown"
                 android:text="ALL"
@@ -50,7 +51,7 @@
                 android:text="Beacons"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/button4"
+                android:layout_below="@+id/match"
                 android:layout_centerHorizontal="true"
                 android:id="@+id/textView63"
                 android:textAppearance="@style/TextAppearance.AppCompat"
@@ -155,7 +156,7 @@
                 android:id="@+id/textView95"
                 android:textAppearance="@style/TextAppearance.AppCompat"
                 android:layout_below="@+id/textView74"
-                android:layout_alignEnd="@+id/button4" />
+                android:layout_alignEnd="@+id/match" />
 
             <TextView
                 android:text="N/A"
@@ -192,15 +193,6 @@
                 android:textAppearance="@style/TextAppearance.AppCompat"
                 android:layout_below="@+id/textView78"
                 android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="Completely on Platform:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView81"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView79"
-                android:layout_centerHorizontal="true" />
 
             <TextView
                 android:text="Completely on Ramp:"
@@ -283,15 +275,6 @@
                 android:textAppearance="@style/TextAppearance.AppCompat"
                 android:layout_below="@+id/textView90"
                 android:layout_alignStart="@+id/textView89" />
-
-            <TextView
-                android:text="On Floor:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView90"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView88"
-                android:layout_toStartOf="@+id/textView79" />
 
             <TextView
                 android:text="N/A"
@@ -438,8 +421,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textView61"
                 android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_alignBaseline="@+id/button4"
-                android:layout_alignBottom="@+id/button4"
+                android:layout_alignBaseline="@+id/match"
+                android:layout_alignBottom="@+id/match"
                 android:layout_alignParentStart="true" />
 
             <TextView
@@ -448,9 +431,27 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/dataset"
                 android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_alignBaseline="@+id/button4"
-                android:layout_alignBottom="@+id/button4"
+                android:layout_alignBaseline="@+id/match"
+                android:layout_alignBottom="@+id/match"
                 android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:text="Completely on Platform:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView81"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:layout_below="@+id/textView79"
+                android:layout_alignStart="@+id/textView74" />
+
+            <TextView
+                android:text="On Floor:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView90"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:layout_below="@+id/textView88"
+                android:layout_alignStart="@+id/textView91" />
 
         </RelativeLayout>
     </ScrollView>

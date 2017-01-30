@@ -10,7 +10,9 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.PopupMenu;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -26,6 +28,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Arrays;
+import java.util.HashMap;
 
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 
@@ -91,11 +94,44 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button teamStatistics = (Button) findViewById(R.id.team_statistics);
+        final Button teamStatistics = (Button) findViewById(R.id.team_statistics);
         teamStatistics.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getBaseContext(), TeamStatisticsActivity.class));
+                PopupMenu popupMenu = new PopupMenu(MainActivity.this, teamStatistics);
+                popupMenu.getMenu().setQwertyMode(false);
+
+                for (HashMap.Entry<Integer, String> entry : AppSync.teamsList.entrySet()) {
+                    AppSync.puts(entry.getKey().toString());
+                    popupMenu.getMenu().add("" + entry.getKey() + " | " + entry.getValue());
+                }
+                popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+                        int teamNumber;
+                        String teamName;
+
+                        String[] t = item.getTitle().toString().split("\\|");
+                        teamNumber = Integer.parseInt(t[0].replaceAll("\\s+", ""));
+                        teamName = t[1].substring(2); //.replace(" ","");
+                        AppSync.teamNumber = teamNumber;
+                        AppSync.teamName = teamName;
+
+                        startActivity(new Intent(getBaseContext(), TeamStatisticsActivity.class));
+
+                        return true;
+                    }
+                });
+
+                popupMenu.setOnDismissListener(new PopupMenu.OnDismissListener() {
+                    @Override
+                    public void onDismiss(PopupMenu menu) {
+                        if (0 == AppSync.teamNumber) {
+                            createMessageDialog("No Team Selected", "Can't load data for a phantom team.");
+                        }
+                    }
+                });
+                popupMenu.show();
             }
         });
     }
