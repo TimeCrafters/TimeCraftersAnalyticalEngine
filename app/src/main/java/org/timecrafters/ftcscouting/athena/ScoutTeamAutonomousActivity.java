@@ -11,13 +11,17 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 
-import org.timecrafters.ftcscouting.MainActivity;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.timecrafters.ftcscouting.R;
 import org.timecrafters.ftcscouting.hermes.AppSync;
 
+import java.io.File;
 import java.util.HashMap;
 
 public class ScoutTeamAutonomousActivity extends AppCompatActivity {
+    CheckBox claimBeacons;
+    EditText beaconsClaimed;
     CheckBox scoreInVortex;
     CheckBox scoreInCorner;
     EditText particlesScoredInVortex;
@@ -41,6 +45,9 @@ public class ScoutTeamAutonomousActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scout_team_autonomous);
 
+        claimBeacons  = (CheckBox) findViewById(R.id.claim_beacons);
+        beaconsClaimed= (EditText) findViewById(R.id.beacons_claimed);
+        scoreInVortex = (CheckBox) findViewById(R.id.score_in_vortex);
         scoreInVortex = (CheckBox) findViewById(R.id.score_in_vortex);
         scoreInCorner = (CheckBox) findViewById(R.id.score_in_corner);
         particlesScoredInVortex = (EditText) findViewById(R.id.particles_scored_in_vortex);
@@ -136,8 +143,28 @@ public class ScoutTeamAutonomousActivity extends AppCompatActivity {
 
         teleOp.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
+                JSONObject scoutingData = new JSONObject();
+                try {
+                    scoutingData.put("claim_beacons", claimBeacons.isChecked());
+                    scoutingData.put("beacons_claimed", Integer.parseInt(beaconsClaimed.getText().toString()));
+                    scoutingData.put("score_in_vortex", scoreInVortex.isChecked());
+                    scoutingData.put("score_in_corner", scoreInCorner.isChecked());
+                    scoutingData.put("particles_scored_in_vortex", Integer.parseInt(particlesScoredInVortex.getText().toString()));
+                    scoutingData.put("particles_scored_in_corner", Integer.parseInt(particlesScoredInCorner.getText().toString()));
+                    scoutingData.put("capball_on_floor", capballOnFloor.isChecked());
+                    scoutingData.put("park_completely_on_platform", parkCompletelyOnPlatform.isChecked());
+                    scoutingData.put("park_on_platform", parkOnPlatform.isChecked());
+                    scoutingData.put("park_completely_on_ramp", parkCompletelyOnRamp.isChecked());
+                    scoutingData.put("park_on_ramp", parkOnRamp.isChecked());
+                    scoutingData.put("has_autonomous", noAutonomous.isChecked());
+
+                    AppSync.createDirectory(AppSync.getTeamDir()); // Ensure directory exists
+                    AppSync.writeJSON(scoutingData, AppSync.getTeamDir()+ File.separator +"autonomous.json", false);
+                } catch (JSONException error) {}
+
                 startActivity(new Intent(getBaseContext(), ScoutTeamTeleOpActivity.class));
+
             }
         });
     }

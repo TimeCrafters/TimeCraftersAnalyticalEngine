@@ -11,20 +11,12 @@
     tools:context="org.timecrafters.ftcscouting.athena.ScoutTeamAutonomousActivity">
 
     <CheckBox
-        android:text="Park on Ramp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/park_on_ramp"
-        android:layout_below="@+id/completely_on_platform"
-        android:layout_alignStart="@+id/completely_on_platform" />
-
-    <CheckBox
         android:text="Completely on Ramp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/completely_on_ramp"
-        android:layout_below="@+id/park_on_ramp"
-        android:layout_alignStart="@+id/park_on_ramp" />
+        android:layout_alignStart="@+id/park_on_ramp"
+        android:layout_below="@+id/park_on_ramp" />
 
     <Button
         android:text="TeleOp"
@@ -36,16 +28,6 @@
         android:textAppearance="@style/TextAppearance.AppCompat" />
 
     <Button
-        android:text="Cancel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/teleOp"
-        android:layout_alignParentStart="true"
-        android:id="@+id/button"
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        android:backgroundTint="@android:color/holo_orange_dark" />
-
-    <Button
         android:text="Team Number | Team Name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -54,17 +36,6 @@
         android:id="@+id/team_selection"
         style="@android:style/Widget.Button.Small"
         android:background="@android:drawable/btn_dropdown" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="numberSigned"
-        android:ems="10"
-        android:layout_below="@+id/textView12"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/particles_scored_in_vortex"
-        android:text="0"
-        android:layout_toEndOf="@+id/completely_on_platform" />
 
     <TextView
         android:text="Autonomous"
@@ -77,17 +48,6 @@
         android:textColor="@android:color/holo_red_dark"
         android:textStyle="normal|bold" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="numberSigned"
-        android:ems="10"
-        android:text="0"
-        android:layout_below="@+id/particles_scored_in_vortex"
-        android:layout_alignParentEnd="true"
-        android:layout_alignStart="@+id/particles_scored_in_vortex"
-        android:id="@+id/particles_scored_in_corner" />
-
     <CheckBox
         android:text="Score in Vortex"
         android:layout_width="wrap_content"
@@ -95,6 +55,32 @@
         android:id="@+id/score_in_vortex"
         android:layout_alignBaseline="@+id/particles_scored_in_vortex"
         android:layout_alignBottom="@+id/particles_scored_in_vortex"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:text="Claim Beacons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/claim_beacons"
+        android:layout_alignBaseline="@+id/beacons_claimed"
+        android:layout_alignBottom="@+id/beacons_claimed"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:text="Score in Corner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/score_in_corner"
+        android:layout_alignBaseline="@+id/particles_scored_in_corner"
+        android:layout_alignBottom="@+id/particles_scored_in_corner"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:text="Capball on Floor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/capball_on_floor"
+        android:layout_below="@+id/beacons_claimed"
         android:layout_alignParentStart="true" />
 
     <CheckBox
@@ -114,21 +100,54 @@
         android:layout_alignParentStart="true" />
 
     <CheckBox
-        android:text="Score in Corner"
+        android:text="Park on Ramp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/score_in_corner"
-        android:layout_alignBaseline="@+id/particles_scored_in_corner"
-        android:layout_alignBottom="@+id/particles_scored_in_corner"
-        android:layout_alignStart="@+id/capball_on_floor" />
+        android:id="@+id/park_on_ramp"
+        android:layout_below="@+id/completely_on_platform"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:ems="10"
+        android:id="@+id/particles_scored_in_vortex"
+        android:text="0"
+        android:layout_below="@+id/textView12"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/particles_scored_in_corner" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:ems="10"
+        android:text="0"
+        android:id="@+id/particles_scored_in_corner"
+        android:layout_below="@+id/particles_scored_in_vortex"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/beacons_claimed" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:ems="10"
+        android:text="0"
+        android:id="@+id/beacons_claimed"
+        android:layout_below="@+id/particles_scored_in_corner"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/completely_on_platform" />
 
     <CheckBox
-        android:text="Capball on Floor"
+        android:text="No Autonomous"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/capball_on_floor"
-        android:layout_below="@+id/particles_scored_in_corner"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/no_autonomous"
+        android:layout_alignBaseline="@+id/teleOp"
+        android:layout_alignBottom="@+id/teleOp"
+        android:layout_alignStart="@+id/textView12" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -142,15 +161,5 @@
         android:layout_above="@+id/teleOp"
         android:layout_alignParentEnd="true"
         android:hint="Autonomous notes..." />
-
-    <CheckBox
-        android:text="No Autonomous"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/no_autonomous"
-        android:layout_alignBaseline="@+id/button"
-        android:layout_alignBottom="@+id/button"
-        android:layout_toEndOf="@+id/button"
-        android:layout_marginStart="10dp" />
 
 </RelativeLayout>
