@@ -195,6 +195,21 @@ public class ScoutTeamAutonomousActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void onBackPressed() {
+        AppSync.createConfirmDialog(this, "Are you sure?", "You will lose your input from here.", new Runnable() {
+            @Override
+            public void run() {
+                finish();
+            }
+        }, new Runnable() {
+            @Override
+            public void run() {
+                // no
+            }
+        });
+    }
+
     public void enableButtons() {
         claimBeacons.setEnabled(true);
         scoreInVortex.setEnabled(true);

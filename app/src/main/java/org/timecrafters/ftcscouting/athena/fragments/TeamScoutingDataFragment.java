@@ -7,8 +7,11 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import org.timecrafters.ftcscouting.MainActivity;
 import org.timecrafters.ftcscouting.R;
+import org.timecrafters.ftcscouting.hermes.AppSync;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -19,6 +22,7 @@ import org.timecrafters.ftcscouting.R;
  * create an instance of this fragment.
  */
 public class TeamScoutingDataFragment extends Fragment {
+    TextView team;
 
     // TODO: Rename and change types of parameters
 
@@ -47,6 +51,8 @@ public class TeamScoutingDataFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        team = (TextView) container.findViewById(R.id.team);
+        team.setText(""+ AppSync.teamNumber+ " | "+ AppSync.teamName);
         return inflater.inflate(R.layout.fragment_team_scouting_data, container, false);
     }
 }

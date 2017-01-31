@@ -1,5 +1,6 @@
 package org.timecrafters.ftcscouting.athena;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -16,28 +17,45 @@ import org.timecrafters.ftcscouting.hermes.AppSync;
 import java.io.File;
 
 public class ScoutTeamTeleOpActivity extends AppCompatActivity {
+    CheckBox canClaimBeacons;
+    EditText maxBeaconsClaimable;
+
+    CheckBox canScoreInVortex;
+    EditText maxParticlesScoredInVortex;
+
+    CheckBox canScoreInCorner;
+    EditText maxParticlesScoredInCorner;
+
+    CheckBox capballOffFloor;
+    CheckBox capballAboveCrossbar;
+    CheckBox capballCapped;
+    EditText teleOpNotes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scout_team_tele_op);
-        final CheckBox canClaimBeacons = (CheckBox) findViewById(R.id.can_claim_beacons);
-        final EditText maxBeaconsClaimable = (EditText) findViewById(R.id.max_beacons_claimable);
+        canClaimBeacons = (CheckBox) findViewById(R.id.can_claim_beacons);
+        maxBeaconsClaimable = (EditText) findViewById(R.id.max_beacons_claimable);
 
-        final CheckBox canScoreInVortex = (CheckBox) findViewById(R.id.can_score_in_vortex);
-        final EditText maxParticlesScoredInVortex = (EditText) findViewById(R.id.max_particles_scored_in_vortex);
+        canScoreInVortex = (CheckBox) findViewById(R.id.can_score_in_vortex);
+        maxParticlesScoredInVortex = (EditText) findViewById(R.id.max_particles_scored_in_vortex);
 
-        final CheckBox canScoreInCorner = (CheckBox) findViewById(R.id.can_score_in_corner);
-        final EditText maxParticlesScoredInCorner = (EditText) findViewById(R.id.max_particles_scored_in_corner);
+        canScoreInCorner = (CheckBox) findViewById(R.id.can_score_in_corner);
+        maxParticlesScoredInCorner = (EditText) findViewById(R.id.max_particles_scored_in_corner);
 
-        final CheckBox capballOffFloor = (CheckBox) findViewById(R.id.capball_off_floor);
-        final CheckBox capballAboveCrossbar = (CheckBox) findViewById(R.id.capball_above_crossbar);
-        final CheckBox capballCapped = (CheckBox) findViewById(R.id.capball_capped);
+        capballOffFloor = (CheckBox) findViewById(R.id.capball_off_floor);
+        capballAboveCrossbar = (CheckBox) findViewById(R.id.capball_above_crossbar);
+        capballCapped = (CheckBox) findViewById(R.id.capball_capped);
+        teleOpNotes = (EditText) findViewById(R.id.teleop_notes);
+
+        maxBeaconsClaimable.setFocusableInTouchMode(true);
+        maxBeaconsClaimable.requestFocus();
 
 
 
-        Button done = (Button) findViewById(R.id.done);
-        done.setOnClickListener(new View.OnClickListener() {
+        Button save = (Button) findViewById(R.id.save);
+        save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 JSONObject scoutingData = new JSONObject();
@@ -55,24 +73,28 @@ public class ScoutTeamTeleOpActivity extends AppCompatActivity {
                     scoutingData.put("capball_above_crossbar", capballAboveCrossbar.isChecked());
                     scoutingData.put("capball_capped", capballCapped.isChecked());
 
+                    scoutingData.put("teleop_notes", teleOpNotes.getText());
+
                     AppSync.createDirectory(AppSync.getTeamDir()); // Ensure directory exists
                     AppSync.writeJSON(scoutingData, AppSync.getTeamDir()+ File.separator +"teleop.json", false);
                 } catch (JSONException error) {}
+                finish();
+                startActivityIfNeeded(new Intent(getBaseContext(), MainActivity.class), 99);
             }
         });
     }
 
     @Override
     public void onBackPressed() {
-        MainActivity.MainActivityContext.createConfirmDialog("Are you sure?", "You will lose your input.", new Runnable() {
+        AppSync.createConfirmDialog(this, "Are you sure?", "You will lose your input from here.", new Runnable() {
             @Override
             public void run() {
-                //
+                finish();
             }
         }, new Runnable() {
             @Override
             public void run() {
-                //
+                // no
             }
         });
     }

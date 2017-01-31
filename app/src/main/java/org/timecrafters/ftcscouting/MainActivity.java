@@ -39,6 +39,13 @@ public class MainActivity extends AppCompatActivity {
     String TAG = "MAIN";
     public static MainActivity MainActivityContext;
 
+    public TextView filename;
+    public TextView teamStatsButton;
+
+    public Button scoutTeamButton;
+    public Button scoutMatchButton;
+    public Button importButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,21 +53,32 @@ public class MainActivity extends AppCompatActivity {
 
         MainActivityContext = this;
 
-        Button scoutTeam = (Button) findViewById(R.id.scout_team);
-        scoutTeam.setOnClickListener(new View.OnClickListener() {
+        filename = (TextView) findViewById(R.id.team_list_filename);
+        teamStatsButton = (TextView) findViewById(R.id.team_statistics);
+        importButton = (Button) findViewById(R.id.import_list);
+
+        scoutTeamButton = (Button) findViewById(R.id.scout_team);
+        scoutMatchButton = (Button) findViewById(R.id.scout_match);
+
+        if (AppSync.teamsListUri != null) {
+            filename.setText(AppSync.teamsListUri.getPath());
+            scoutMatchButton.setEnabled(true);
+            scoutTeamButton.setEnabled(true);
+            teamStatsButton.setEnabled(true);
+        }
+
+        scoutTeamButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(getBaseContext(), ScoutTeamAutonomousActivity.class));
             }
         });
 
-        Button scoutMatch = (Button) findViewById(R.id.scout_match);
-        scoutMatch.setOnClickListener(new View.OnClickListener() {
+        scoutMatchButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(getBaseContext(), ScoutMatchAutonomousActivity.class));
             }
         });
 
-        Button importButton = (Button) findViewById(R.id.import_list);
         importButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (ContextCompat.checkSelfPermission(MainActivity.this,
@@ -68,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                         != PERMISSION_GRANTED) {
 
 
-                    createConfirmDialog("Write Permissions", "This app requires write access to read/write files accessible in userspace.\n\n If you continue without allowing write access, you'll only be able to access the written files on a Rooted device and data will be destroyed if you uninstall the app.", new Runnable() {
+                    AppSync.createConfirmDialog(MainActivityContext, "Write Permissions", "This app requires write access to read/write files accessible in userspace.\n\n If you continue without allowing write access, you'll only be able to access the written files on a Rooted device and data will be destroyed if you uninstall the app.", new Runnable() {
                         @Override
                         public void run() {
                             ActivityCompat.requestPermissions(MainActivity.this,
@@ -78,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
                     }, new Runnable() {
                         @Override
                         public void run() {
-                            createAlertDialog("Permission not Granted", "Data will be stored in " + getFilesDir() + "\n\nData loss WILL occur if you uninstall.", new Runnable() {
+                            AppSync.createAlertDialog(MainActivityContext, "Permission not Granted", "Data will be stored in " + getFilesDir() + "\n\nData loss WILL occur if you uninstall.", new Runnable() {
                                 @Override
                                 public void run() {
                                     performFileSearch();
@@ -94,11 +112,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        final Button teamStatistics = (Button) findViewById(R.id.team_statistics);
-        teamStatistics.setOnClickListener(new View.OnClickListener() {
+        teamStatsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PopupMenu popupMenu = new PopupMenu(MainActivity.this, teamStatistics);
+                PopupMenu popupMenu = new PopupMenu(MainActivity.this, teamStatsButton);
                 popupMenu.getMenu().setQwertyMode(false);
 
                 for (HashMap.Entry<Integer, String> entry : AppSync.teamsList.entrySet()) {
@@ -127,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onDismiss(PopupMenu menu) {
                         if (0 == AppSync.teamNumber) {
-                            createMessageDialog("No Team Selected", "Can't load data for a phantom team.");
+                            AppSync.createMessageDialog(MainActivityContext, "No Team Selected", "Can't load data for a phantom team.");
                         }
                     }
                 });
@@ -176,68 +193,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void createConfirmDialog(String title, String message, final Runnable acceptRunner, final Runnable declineRunner, String positiveButtonText, String negativeButtonText) {
-        AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
-        alert.setTitle(title).setMessage(message);
-        alert.setNegativeButton(negativeButtonText, new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                declineRunner.run();
-            }
-        });
-        alert.setPositiveButton(positiveButtonText, new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                acceptRunner.run();
-            }
-        });
-
-        alert.show();
-    }
-    public void createConfirmDialog(String title, String message, final Runnable acceptRunner, final Runnable declineRunner) {
-        AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
-        alert.setTitle(title).setMessage(message);
-        alert.setNegativeButton("Decline", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                declineRunner.run();
-            }
-        });
-        alert.setPositiveButton("Accept", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                acceptRunner.run();
-            }
-        });
-
-        alert.show();
-    }
-
-    public void createAlertDialog(String title, String message, final Runnable acceptRunner, String positiveButtonText) {
-        AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
-        alert.setTitle(title).setMessage(message);
-        alert.setPositiveButton(positiveButtonText, new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                acceptRunner.run();
-            }
-        });
-
-        alert.show();
-    }
-    public void createAlertDialog(String title, String message, final Runnable acceptRunner) {
-        AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
-        alert.setTitle(title).setMessage(message);
-        alert.setPositiveButton("Okay", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                acceptRunner.run();
-            }
-        });
-
-        alert.show();
-    }
-
-    public void createMessageDialog(String title, String message) {
-        AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
-        alert.setTitle(title).setMessage(message);
-        alert.show();
-    }
-
     private String[] readFileContent(Uri uri) throws IOException {
         String[] list = new String[1000];
         InputStream inputStream = getContentResolver().openInputStream(uri);
@@ -255,24 +210,29 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void parseTeamsList(Uri uri) {
+        boolean failed = false;
         try {
             String[] list = readFileContent(uri);
             String[] part;
             for (int i = 0; i < list.length; i++) {
-                if (list[i] == null) {break;}
+                if (list[i] == null) {
+                    break;
+                }
 
                 String line = list[i];
                 Log.i(TAG, line);
                 // process the line.
                 part = line.split(" ");
                 String teamNumber = part[0];
-                String[] _teamName   = Arrays.copyOfRange(part, 1, part.length);
+                String[] _teamName = Arrays.copyOfRange(part, 1, part.length);
                 String teamName = "";
-                for(int _i = 0; _i < _teamName.length; _i++) {
-                    if (_teamName[_i] == " " || _teamName[_i] == null) { break; }
-                    teamName+=" "+_teamName[_i];
+                for (int _i = 0; _i < _teamName.length; _i++) {
+                    if (_teamName[_i] == " " || _teamName[_i] == null) {
+                        break;
+                    }
+                    teamName += " " + _teamName[_i];
                 }
-                Log.i(TAG, "#: "+Integer.parseInt(teamNumber)+" name:"+teamName);
+                Log.i(TAG, "#: " + Integer.parseInt(teamNumber) + " name:" + teamName);
                 AppSync.teamsList.put(Integer.parseInt(teamNumber), teamName);
 
             }
@@ -286,10 +246,15 @@ public class MainActivity extends AppCompatActivity {
             teamStatsButton.setEnabled(true);
             Toast.makeText(getApplicationContext(), "Successfully parsed teams file", Toast.LENGTH_SHORT).show();
 
-        } catch(IOException | NumberFormatException error) {
-            createMessageDialog("Parsing Error", "An error occurred while parsing \""+uri.getPath()+"\"\n\n   " +
+        } catch (IOException | NumberFormatException error) {
+            failed = true;
+            AppSync.createMessageDialog(this, "Parsing Error", "An error occurred while parsing \"" + uri.getPath() + "\"\n\n   " +
                     "This might be because of non numeric characters on the beginning of a line.\n\n" +
-                    "Error Caught: "+error.getMessage());
+                    "Error Caught: " + error.getMessage());
+        }
+
+        if (!failed) {
+            AppSync.teamsListUri = uri;
         }
     }
 }

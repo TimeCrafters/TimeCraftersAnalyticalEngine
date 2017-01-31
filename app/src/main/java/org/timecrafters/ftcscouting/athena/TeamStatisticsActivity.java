@@ -80,7 +80,7 @@ public class TeamStatisticsActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_reload) {
-            MainActivity.MainActivityContext.createConfirmDialog("Are you sure?", "This will reload the parsed data and may take a moment.", new Runnable() {
+            AppSync.createConfirmDialog(this, "Are you sure?", "This will reload the parsed data and may take a moment.", new Runnable() {
                 @Override
                 public void run() {
                     // yes

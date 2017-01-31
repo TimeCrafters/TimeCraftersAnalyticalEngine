@@ -1,6 +1,10 @@
 package org.timecrafters.ftcscouting.hermes;
 
+import android.content.DialogInterface;
+import android.net.Uri;
 import android.os.Environment;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -22,6 +26,7 @@ import java.util.concurrent.TimeUnit;
 
 public class AppSync {
     public static boolean useFilesDirectory = false; // Store data in apps 'files' directory or in 'External Storage'
+    public static Uri teamsListUri;
 
     public static TreeMap<Integer, String> teamsList = new TreeMap<>();
 
@@ -184,5 +189,67 @@ public class AppSync {
         } catch (InterruptedException errorObject) {
             // Java, you're funny.
         }
+    }
+
+    public static void createConfirmDialog(AppCompatActivity activity, String title, String message, final Runnable acceptRunner, final Runnable declineRunner, String positiveButtonText, String negativeButtonText) {
+        AlertDialog.Builder alert = new AlertDialog.Builder(activity);
+        alert.setTitle(title).setMessage(message);
+        alert.setNegativeButton(negativeButtonText, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                declineRunner.run();
+            }
+        });
+        alert.setPositiveButton(positiveButtonText, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                acceptRunner.run();
+            }
+        });
+
+        alert.show();
+    }
+    public static void createConfirmDialog(AppCompatActivity activity, String title, String message, final Runnable acceptRunner, final Runnable declineRunner) {
+        AlertDialog.Builder alert = new AlertDialog.Builder(activity);
+        alert.setTitle(title).setMessage(message);
+        alert.setNegativeButton("Decline", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                declineRunner.run();
+            }
+        });
+        alert.setPositiveButton("Accept", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                acceptRunner.run();
+            }
+        });
+
+        alert.show();
+    }
+
+    public static void createAlertDialog(AppCompatActivity activity, String title, String message, final Runnable acceptRunner, String positiveButtonText) {
+        AlertDialog.Builder alert = new AlertDialog.Builder(activity);
+        alert.setTitle(title).setMessage(message);
+        alert.setPositiveButton(positiveButtonText, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                acceptRunner.run();
+            }
+        });
+
+        alert.show();
+    }
+    public static void createAlertDialog(AppCompatActivity activity, String title, String message, final Runnable acceptRunner) {
+        AlertDialog.Builder alert = new AlertDialog.Builder(activity);
+        alert.setTitle(title).setMessage(message);
+        alert.setPositiveButton("Okay", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                acceptRunner.run();
+            }
+        });
+
+        alert.show();
+    }
+
+    public static void createMessageDialog(AppCompatActivity activity, String title, String message) {
+        AlertDialog.Builder alert = new AlertDialog.Builder(activity);
+        alert.setTitle(title).setMessage(message);
+        alert.show();
     }
 }
