@@ -77,7 +77,9 @@ public class ScoutTeamTeleOpActivity extends AppCompatActivity {
 
                     AppSync.createDirectory(AppSync.getTeamDir()); // Ensure directory exists
                     AppSync.writeJSON(scoutingData, AppSync.getTeamDir()+ File.separator +"teleop.json", false);
-                } catch (JSONException error) {}
+                } catch (JSONException error) {
+                    AppSync.puts("TELE", "Failed to write teleOp data: " +error.getMessage());
+                }
                 finish();
                 startActivityIfNeeded(new Intent(getBaseContext(), MainActivity.class), 99);
             }

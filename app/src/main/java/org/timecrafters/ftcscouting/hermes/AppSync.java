@@ -214,9 +214,9 @@ public class AppSync {
         } else {return null; }
     }
 
-    public static JSONObject teamScoutingData(String peroid) {
+    public static JSONObject teamScoutingData(String period) {
         JSONObject jsonObject = null;
-        File file = new File(getTeamDir()+File.separator+peroid+".json");
+        File file = new File(getTeamDir()+File.separator+period+".json");
         ArrayList<JSONObject> objects = readJSON(file, false);
         if (objects != null) {
             jsonObject = objects.get(0);
