@@ -182,8 +182,8 @@ public class ScoutTeamAutonomousActivity extends AppCompatActivity {
                         scoutingData.put("park_on_platform", parkOnPlatform.isChecked());
                         scoutingData.put("park_completely_on_ramp", parkCompletelyOnRamp.isChecked());
                         scoutingData.put("park_on_ramp", parkOnRamp.isChecked());
-                        scoutingData.put("has_autonomous", teamHasAutonomous.isChecked());
                     }
+                    scoutingData.put("has_autonomous", teamHasAutonomous.isChecked());
                     scoutingData.put("autonomous_notes", autonomousNotes.getText()); // Notes always get written
 
                     AppSync.createDirectory(AppSync.getTeamDir()); // Ensure directory exists
