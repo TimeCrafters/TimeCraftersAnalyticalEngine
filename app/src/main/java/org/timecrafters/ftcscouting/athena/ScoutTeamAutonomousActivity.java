@@ -32,7 +32,7 @@ public class ScoutTeamAutonomousActivity extends AppCompatActivity {
     CheckBox parkCompletelyOnPlatform;
     CheckBox parkOnRamp;
     CheckBox parkCompletelyOnRamp;
-    ToggleButton noAutonomous;
+    ToggleButton teamHasAutonomous;
     EditText autonomousNotes;
 
     Button teleOp;
@@ -41,7 +41,6 @@ public class ScoutTeamAutonomousActivity extends AppCompatActivity {
     int teamNumber;
     String teamName;
     boolean hasAutonomous = true;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +59,7 @@ public class ScoutTeamAutonomousActivity extends AppCompatActivity {
         parkCompletelyOnPlatform = (CheckBox) findViewById(R.id.completely_on_platform);
         parkOnRamp = (CheckBox) findViewById(R.id.park_on_ramp);
         parkCompletelyOnRamp = (CheckBox) findViewById(R.id.completely_on_ramp);
-        noAutonomous = (ToggleButton) findViewById(R.id.no_autonomous);
+        teamHasAutonomous = (ToggleButton) findViewById(R.id.no_autonomous);
         autonomousNotes = (EditText) findViewById(R.id.autonomous_notes);
 
         teleOp = (Button) findViewById(R.id.teleOp);
@@ -78,13 +77,14 @@ public class ScoutTeamAutonomousActivity extends AppCompatActivity {
         parkCompletelyOnPlatform.setEnabled(false);
         parkOnRamp.setEnabled(false);
         parkCompletelyOnRamp.setEnabled(false);
-        noAutonomous.setEnabled(false);
+        teamHasAutonomous.setEnabled(false);
 
         teleOp.setEnabled(false);
 
-        noAutonomous.setText("Have Autonomous");
-        noAutonomous.setTextOff("No Autonomous");
-        noAutonomous.setTextOn("Have Autonomous");
+        teamHasAutonomous.setText("Have Autonomous");
+        teamHasAutonomous.setTextOff("No Autonomous");
+        teamHasAutonomous.setTextOn("Have Autonomous");
+        teamHasAutonomous.setChecked(true);
 
         // Select Team
         teamSelection.setOnClickListener(new View.OnClickListener() {
@@ -150,7 +150,7 @@ public class ScoutTeamAutonomousActivity extends AppCompatActivity {
             }
         });
 
-        noAutonomous.setOnClickListener(new View.OnClickListener() {
+        teamHasAutonomous.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (hasAutonomous) {
@@ -168,7 +168,8 @@ public class ScoutTeamAutonomousActivity extends AppCompatActivity {
             public void onClick(View view) {
                 JSONObject scoutingData = new JSONObject();
                 try {
-                    if (!noAutonomous.isChecked()) {
+                    AppSync.puts("SCOUTING_AUTO", "TEAM HAS AUTONOMOUS? "+ teamHasAutonomous.isChecked());
+                    if (teamHasAutonomous.isChecked()) {
 
                         scoutingData.put("claim_beacons", claimBeacons.isChecked());
                         scoutingData.put("beacons_claimed", Integer.parseInt(beaconsClaimed.getText().toString()));
@@ -181,9 +182,9 @@ public class ScoutTeamAutonomousActivity extends AppCompatActivity {
                         scoutingData.put("park_on_platform", parkOnPlatform.isChecked());
                         scoutingData.put("park_completely_on_ramp", parkCompletelyOnRamp.isChecked());
                         scoutingData.put("park_on_ramp", parkOnRamp.isChecked());
-                        scoutingData.put("has_autonomous", noAutonomous.isChecked());
+                        scoutingData.put("has_autonomous", teamHasAutonomous.isChecked());
                     }
-                    scoutingData.put("autonomous_notes", autonomousNotes.getText()); // Notes aways get written
+                    scoutingData.put("autonomous_notes", autonomousNotes.getText()); // Notes always get written
 
                     AppSync.createDirectory(AppSync.getTeamDir()); // Ensure directory exists
                     AppSync.writeJSON(scoutingData, AppSync.getTeamDir() + File.separator + "autonomous.json", false);
@@ -219,7 +220,7 @@ public class ScoutTeamAutonomousActivity extends AppCompatActivity {
         parkCompletelyOnPlatform.setEnabled(true);
         parkOnRamp.setEnabled(true);
         parkCompletelyOnRamp.setEnabled(true);
-        noAutonomous.setEnabled(true);
+        teamHasAutonomous.setEnabled(true);
 
         if (claimBeacons.isChecked()) { beaconsClaimed.setEnabled(true); }
         if (scoreInVortex.isChecked()) { particlesScoredInVortex.setEnabled(true); }

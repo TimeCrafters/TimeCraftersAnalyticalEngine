@@ -9,8 +9,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.timecrafters.ftcscouting.MainActivity;
 import org.timecrafters.ftcscouting.R;
+import org.timecrafters.ftcscouting.athena.TeamStatisticsActivity;
 import org.timecrafters.ftcscouting.hermes.AppSync;
 
 /**
@@ -51,8 +54,23 @@ public class TeamScoutingDataFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        team = (TextView) container.findViewById(R.id.team);
-        team.setText(""+ AppSync.teamNumber+ " | "+ AppSync.teamName);
         return inflater.inflate(R.layout.fragment_team_scouting_data, container, false);
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        team = (TextView) getView().findViewById(R.id.team);
+        team.setText(""+ AppSync.teamNumber+ " | "+ AppSync.teamName);
+
+        if (AppSync.teamHasScoutingData()) {
+            JSONObject autonomous = AppSync.teamScoutingData("autonomous");
+            JSONObject teleop     = AppSync.teamScoutingData("teleop");
+            try {
+                AppSync.puts("Scouting", autonomous.toString());
+                AppSync.puts("Scouting", autonomous.getString("claim_beacons"));
+            } catch (JSONException error) {AppSync.puts("Scouting", "JSON Error"); AppSync.puts("Scouting", error.getMessage());}
+        } else {
+            AppSync.createMessageDialog(TeamStatisticsActivity.contextForFragment, "No Scouting Data Found", "Unable to find scouting data.");
+        }
     }
 }

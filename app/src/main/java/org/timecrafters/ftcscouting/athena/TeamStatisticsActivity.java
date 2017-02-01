@@ -27,6 +27,7 @@ import org.timecrafters.ftcscouting.athena.fragments.TeleOpFragment;
 import org.timecrafters.ftcscouting.hermes.AppSync;
 
 public class TeamStatisticsActivity extends AppCompatActivity {
+    public static TeamStatisticsActivity contextForFragment;
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -61,6 +62,7 @@ public class TeamStatisticsActivity extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
+        contextForFragment = this;
     }
 
 

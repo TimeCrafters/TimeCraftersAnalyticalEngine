@@ -7,8 +7,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import org.timecrafters.ftcscouting.R;
+import org.timecrafters.ftcscouting.hermes.AppSync;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -19,6 +21,7 @@ import org.timecrafters.ftcscouting.R;
  * create an instance of this fragment.
  */
 public class AutonomousFragment extends Fragment {
+    TextView team;
 
     public AutonomousFragment() {
         // Required empty public constructor
@@ -48,5 +51,11 @@ public class AutonomousFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_autonomous, container, false);
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        team = (TextView) getView().findViewById(R.id.team);
+        team.setText(""+ AppSync.teamNumber+ " | "+ AppSync.teamName);
     }
 }

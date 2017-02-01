@@ -12,8 +12,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.timecrafters.ftcscouting.MainActivity;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -164,6 +166,108 @@ public class AppSync {
         }
 
         return writeSuccess;
+    }
+
+    // streaming means treat each line is treated as a JSONObject instead of the whole file
+    public static ArrayList<JSONObject> readJSON(File file, boolean streaming) {
+        StringBuilder text = new StringBuilder();
+        ArrayList<String> lines = new ArrayList<>();
+        ArrayList<JSONObject> jsonObjects = new ArrayList<>();
+        boolean successful = true;
+
+        if (streaming) {
+            try {
+                BufferedReader br = new BufferedReader(new FileReader(file));
+                String line;
+
+                while ((line = br.readLine()) != null) {
+                    lines.add(line);
+                }
+                br.close();
+
+                for (String here : lines) {
+                    jsonObjects.add(new JSONObject(here));
+                }
+
+            } catch (IOException | JSONException e) {
+                successful = false;
+            }
+        } else {
+            try {
+                BufferedReader br = new BufferedReader(new FileReader(file));
+                String line;
+
+                while ((line = br.readLine()) != null) {
+                    text.append(line);
+                    text.append('\n');
+                }
+                br.close();
+
+                jsonObjects.add(new JSONObject(text.toString()));
+            } catch (IOException | JSONException e) {
+                successful = false;
+            }
+        }
+
+        if (successful) {
+            return jsonObjects;
+        } else {return null; }
+    }
+
+    public static JSONObject teamScoutingData(String peroid) {
+        JSONObject jsonObject = null;
+        File file = new File(getTeamDir()+File.separator+peroid+".json");
+        ArrayList<JSONObject> objects = readJSON(file, false);
+        if (objects != null) {
+            jsonObject = objects.get(0);
+        }
+
+        return jsonObject;
+    }
+
+    public static ArrayList<EventStruct> teamMatchData() {
+        ArrayList<EventStruct> events = new ArrayList<>();
+        File[] matches = new File(getMatchDir()).listFiles();
+        for (File file : matches) {
+            ArrayList<JSONObject> objects = readJSON(file, true);
+
+            if (objects != null) {
+                for (JSONObject object : objects) {
+                    EventStruct event = new EventStruct();
+                    try {
+                        event.period     = object.getString("period");
+                        event.type       = object.getString("type");
+                        event.subtype    = object.getString("subtype");
+                        event.location   = object.getString("location");
+                        event.points     = object.getInt("points");
+                        event.description= object.getString("description");
+                        events.add(event);
+                    } catch (JSONException error) {
+                        puts("MATCH", "Error in TeamMatchData: "+error.getMessage());
+                    }
+                }
+            }
+        }
+
+        return events;
+    }
+
+    public static boolean teamHasScoutingData() {
+        boolean teamDataExists = false;
+        File auto = new File(getTeamDir()+ File.separator +"autonomous.json");
+        File tele = new File(getTeamDir()+ File.separator +"teleop.json");
+        if (auto.exists() && auto.length() > 0) { teamDataExists = true; }
+        if (tele.exists() && tele.length() > 0) { teamDataExists = true; }
+
+        return teamDataExists;
+    }
+
+    public static boolean teamHasMatchData() {
+        boolean teamDataExists = false;
+        File[] matches = new File(getMatchDir()).listFiles();
+        if (matches.length > 0) { teamDataExists = true; }
+
+        return teamDataExists;
     }
 
     public static boolean addTeam(Object[] autonomous, Object[] teleOp) {

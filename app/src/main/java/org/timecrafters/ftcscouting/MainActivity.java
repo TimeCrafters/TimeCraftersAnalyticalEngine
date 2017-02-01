@@ -119,7 +119,6 @@ public class MainActivity extends AppCompatActivity {
                 popupMenu.getMenu().setQwertyMode(false);
 
                 for (HashMap.Entry<Integer, String> entry : AppSync.teamsList.entrySet()) {
-                    AppSync.puts(entry.getKey().toString());
                     popupMenu.getMenu().add("" + entry.getKey() + " | " + entry.getValue());
                 }
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
@@ -220,7 +219,6 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 String line = list[i];
-                Log.i(TAG, line);
                 // process the line.
                 part = line.split(" ");
                 String teamNumber = part[0];
@@ -232,7 +230,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                     teamName += " " + _teamName[_i];
                 }
-                Log.i(TAG, "#: " + Integer.parseInt(teamNumber) + " name:" + teamName);
                 AppSync.teamsList.put(Integer.parseInt(teamNumber), teamName);
 
             }
