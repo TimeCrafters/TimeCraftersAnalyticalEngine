@@ -67,8 +67,6 @@ public class MainActivity extends AppCompatActivity {
             teamStatsButton.setEnabled(true);
         }
 
-        AppSync.createMessageDialog(this, "Config Data", AppSync.getConfig().toString());
-
         scoutTeamButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(getBaseContext(), ScoutTeamAutonomousActivity.class));
