@@ -11,7 +11,6 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ToggleButton;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.timecrafters.ftcscouting.R;

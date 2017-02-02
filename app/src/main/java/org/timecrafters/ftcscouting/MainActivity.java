@@ -2,13 +2,12 @@ package org.timecrafters.ftcscouting;
 
 import android.Manifest;
 import android.app.Activity;
-import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.PopupMenu;
 import android.util.Log;
@@ -34,8 +33,8 @@ import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 
 public class MainActivity extends AppCompatActivity {
 
-    int READ_REQUEST_CODE = 42;
-    int REQUEST_WRITE_PERMISSION = 70;
+    final int READ_REQUEST_CODE = 42;
+    final int REQUEST_WRITE_PERMISSION = 70;
     String TAG = "MAIN";
     public static MainActivity MainActivityContext;
 
@@ -52,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         MainActivityContext = this;
+        AppSync.getConfig();
 
         filename = (TextView) findViewById(R.id.team_list_filename);
         teamStatsButton = (TextView) findViewById(R.id.team_statistics);
@@ -66,6 +66,8 @@ public class MainActivity extends AppCompatActivity {
             scoutTeamButton.setEnabled(true);
             teamStatsButton.setEnabled(true);
         }
+
+        AppSync.createMessageDialog(this, "Config Data", AppSync.getConfig().toString());
 
         scoutTeamButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -92,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
                             ActivityCompat.requestPermissions(MainActivity.this,
                                     new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
                                     REQUEST_WRITE_PERMISSION);
+
                         }
                     }, new Runnable() {
                         @Override
@@ -99,8 +102,9 @@ public class MainActivity extends AppCompatActivity {
                             AppSync.createAlertDialog(MainActivityContext, "Permission not Granted", "Data will be stored in " + getFilesDir() + "\n\nData loss WILL occur if you uninstall.", new Runnable() {
                                 @Override
                                 public void run() {
-                                    performFileSearch();
-                                    AppSync.useFilesDirectory = true;
+                            performFileSearch();
+                            AppSync.updateConfig("use_external_storage", false);
+                            AppSync.useFilesDirectory = true;
                                 }
                             });
                         }
@@ -172,6 +176,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case REQUEST_WRITE_PERMISSION: {
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    AppSync.updateConfig("use_external_storage", true);
+                    AppSync.useFilesDirectory = false;
+                    performFileSearch();
+                } else {
+                    AppSync.updateConfig("use_external_storage", true);
+                    AppSync.useFilesDirectory = true;
+                    performFileSearch();
+                }
+            }
+        }
+    }
+
+    @Override
     public void onActivityResult(int requestCode, int resultCode, Intent resultData) {
 
         // The ACTION_OPEN_DOCUMENT intent was sent with the request code
@@ -210,6 +231,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void parseTeamsList(Uri uri) {
         boolean failed = false;
+        AppSync.teamsList.clear();
         try {
             String[] list = readFileContent(uri);
             String[] part;
@@ -231,8 +253,8 @@ public class MainActivity extends AppCompatActivity {
                     teamName += " " + _teamName[_i];
                 }
                 AppSync.teamsList.put(Integer.parseInt(teamNumber), teamName);
-
             }
+
             TextView filename = (TextView) findViewById(R.id.team_list_filename);
             TextView matchButton = (TextView) findViewById(R.id.scout_match);
             TextView teamButton = (TextView) findViewById(R.id.scout_team);
@@ -252,6 +274,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (!failed) {
             AppSync.teamsListUri = uri;
+            AppSync.updateConfig("last_used_teams_list", uri.toString());
         }
     }
 }

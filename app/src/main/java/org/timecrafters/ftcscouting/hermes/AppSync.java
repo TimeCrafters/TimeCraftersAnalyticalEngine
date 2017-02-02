@@ -27,6 +27,7 @@ import java.util.concurrent.TimeUnit;
  */
 
 public class AppSync {
+    public static JSONObject appConfig;
     public static boolean useFilesDirectory = false; // Store data in apps 'files' directory or in 'External Storage'
     public static Uri teamsListUri;
 
@@ -212,6 +213,52 @@ public class AppSync {
         if (successful) {
             return jsonObjects;
         } else {return null; }
+    }
+
+    public static JSONObject getConfig() {
+        JSONObject config = null;
+        String filePath = MainActivity.MainActivityContext.getFilesDir() + File.separator + "config.json";
+        File file = new File(filePath);
+
+        try {
+
+            if (file.exists() && file.length() > 2) {
+                config = readJSON(file, false).get(0);
+            } else {
+                config = new JSONObject();
+                config.put("last_used_teams_list", "");
+                config.put("use_external_storage", true);
+                writeJSON(config, filePath, false);
+
+                config = readJSON(file, false).get(0);
+            }
+        } catch (JSONException | NullPointerException error) {
+            puts("APPSYNC", "Error in getConfig: "+ error.getMessage());
+        }
+
+        if (config != null) { appConfig = config; }
+        return config;
+    }
+
+    public static JSONObject updateConfig(String key, Object value) {
+        String filePath = MainActivity.MainActivityContext.getFilesDir() + File.separator + "config.json";
+        File file = new File(filePath);
+        JSONObject config = getConfig();
+        try {
+            config.put(key, value);
+        } catch (JSONException error) {
+            puts("APPSYNC", "Config error: "+ error.getMessage());
+        }
+
+        try {
+            writeJSON(config, filePath, false);
+            config = readJSON(file, false).get(0);
+        } catch (NullPointerException error) {
+            puts("APPSYNC", "Error in getConfig: "+ error.getMessage());
+        }
+
+        if (config != null) { appConfig = config; }
+        return config;
     }
 
     public static JSONObject teamScoutingData(String period) {
