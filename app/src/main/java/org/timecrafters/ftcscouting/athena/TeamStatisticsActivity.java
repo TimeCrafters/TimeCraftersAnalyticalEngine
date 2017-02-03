@@ -25,23 +25,16 @@ import org.timecrafters.ftcscouting.athena.fragments.AutonomousFragment;
 import org.timecrafters.ftcscouting.athena.fragments.TeamScoutingDataFragment;
 import org.timecrafters.ftcscouting.athena.fragments.TeleOpFragment;
 import org.timecrafters.ftcscouting.hermes.AppSync;
+import org.timecrafters.ftcscouting.hermes.EventStruct;
+
+import java.util.ArrayList;
 
 public class TeamStatisticsActivity extends AppCompatActivity {
     public static TeamStatisticsActivity contextForFragment;
+    public ArrayList<EventStruct> matchData;
 
-    /**
-     * The {@link android.support.v4.view.PagerAdapter} that will provide
-     * fragments for each of the sections. We use a
-     * {@link FragmentPagerAdapter} derivative, which will keep every
-     * loaded fragment in memory. If this becomes too memory intensive, it
-     * may be best to switch to a
-     * {@link android.support.v4.app.FragmentStatePagerAdapter}.
-     */
     private SectionsPagerAdapter mSectionsPagerAdapter;
 
-    /**
-     * The {@link ViewPager} that will host the section contents.
-     */
     private ViewPager mViewPager;
 
     @Override
@@ -63,6 +56,9 @@ public class TeamStatisticsActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(mViewPager);
 
         contextForFragment = this;
+        if (AppSync.teamHasMatchData()) {
+            matchData = AppSync.teamMatchData();
+        } else { matchData = null; }
     }
 
 
@@ -99,31 +95,6 @@ public class TeamStatisticsActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    /**
-     * A placeholder fragment containing a simple view.
-     */
-//    public static class PlaceholderFragment extends Fragment {
-//        /**
-//         * The fragment argument representing the section number for this
-//         * fragment.
-//         */
-//        private static final String ARG_SECTION_NUMBER = "section_number";
-//
-//        public PlaceholderFragment() {
-//        }
-//
-//        @Override
-//        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-//                                 Bundle savedInstanceState) {
-//            View rootView = inflater.inflate(R.layout.fragment_team_statistics, container, false);
-//            return rootView;
-//        }
-//    }
-
-    /**
-     * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
-     * one of the sections/tabs/pages.
-     */
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
         public SectionsPagerAdapter(FragmentManager fm) {

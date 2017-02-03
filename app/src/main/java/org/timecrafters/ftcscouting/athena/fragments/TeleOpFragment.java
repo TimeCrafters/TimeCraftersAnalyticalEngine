@@ -12,14 +12,6 @@ import android.widget.TextView;
 import org.timecrafters.ftcscouting.R;
 import org.timecrafters.ftcscouting.hermes.AppSync;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link TeleOpFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link TeleOpFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class TeleOpFragment extends Fragment {
     TextView team;
 
@@ -27,13 +19,6 @@ public class TeleOpFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @return A new instance of fragment TeleOpFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static TeleOpFragment newInstance() {
         TeleOpFragment fragment = new TeleOpFragment();
         return fragment;

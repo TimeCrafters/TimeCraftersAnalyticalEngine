@@ -23,19 +23,10 @@ public class TeamScoutingDataFragment extends Fragment {
     int greenColor = Color.parseColor("#008800");
     int redColor   = Color.parseColor("#990000");
 
-    // TODO: Rename and change types of parameters
-
     public TeamScoutingDataFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @return A new instance of fragment TeamScoutingDataFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static TeamScoutingDataFragment newInstance() {
         TeamScoutingDataFragment fragment = new TeamScoutingDataFragment();
         return fragment;

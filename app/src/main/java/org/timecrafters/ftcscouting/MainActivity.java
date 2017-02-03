@@ -17,6 +17,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.timecrafters.ftcscouting.athena.ScoutMatchAutonomousActivity;
 import org.timecrafters.ftcscouting.athena.ScoutTeamAutonomousActivity;
 import org.timecrafters.ftcscouting.athena.TeamStatisticsActivity;
@@ -52,6 +54,12 @@ public class MainActivity extends AppCompatActivity {
 
         MainActivityContext = this;
         AppSync.getConfig();
+        try {
+            String list = AppSync.getConfig().getString("last_used_teams_list");
+            if (list != "") {
+                parseTeamsList(Uri.parse(list), true);
+            }
+        } catch (JSONException error) {/* Fault */}
 
         filename = (TextView) findViewById(R.id.team_list_filename);
         teamStatsButton = (TextView) findViewById(R.id.team_statistics);
@@ -81,9 +89,14 @@ public class MainActivity extends AppCompatActivity {
 
         importButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if (ContextCompat.checkSelfPermission(MainActivity.this,
-                        Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                        != PERMISSION_GRANTED) {
+                boolean canUseExternalStorage = true;
+                JSONObject config = AppSync.getConfig();
+                try {
+                    if (config.getBoolean("use_external_storage")) {
+                        canUseExternalStorage = true;
+                    } else { canUseExternalStorage = false; }
+                } catch (JSONException error) { AppSync.puts(TAG, "Error in Config: "+error.getMessage());}
+                if (canUseExternalStorage && ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PERMISSION_GRANTED) {
 
 
                     AppSync.createConfirmDialog(MainActivityContext, "Write Permissions", "This app requires write access to read/write files accessible in userspace.\n\n If you continue without allowing write access, you'll only be able to access the written files on a Rooted device and data will be destroyed if you uninstall the app.", new Runnable() {
@@ -121,7 +134,8 @@ public class MainActivity extends AppCompatActivity {
                 popupMenu.getMenu().setQwertyMode(false);
 
                 for (HashMap.Entry<Integer, String> entry : AppSync.teamsList.entrySet()) {
-                    popupMenu.getMenu().add("" + entry.getKey() + " | " + entry.getValue());
+                    MenuItem temp = popupMenu.getMenu().add("" + entry.getKey() + " | " + entry.getValue());
+                // TODO: Dynamically change text color if the team has scouting/match data..
                 }
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
@@ -206,7 +220,7 @@ public class MainActivity extends AppCompatActivity {
             if (resultData != null) {
                 uri = resultData.getData();
                 Log.i(TAG, "Uri: " + uri.toString());
-                parseTeamsList(uri);
+                parseTeamsList(uri, false);
             }
         }
     }
@@ -227,7 +241,7 @@ public class MainActivity extends AppCompatActivity {
         return list;
     }
 
-    public void parseTeamsList(Uri uri) {
+    public void parseTeamsList(Uri uri, boolean loadingLastUsedList) {
         boolean failed = false;
         AppSync.teamsList.clear();
         try {
@@ -261,7 +275,11 @@ public class MainActivity extends AppCompatActivity {
             matchButton.setEnabled(true);
             teamButton.setEnabled(true);
             teamStatsButton.setEnabled(true);
-            Toast.makeText(getApplicationContext(), "Successfully parsed teams file", Toast.LENGTH_SHORT).show();
+            if (loadingLastUsedList) {
+                Toast.makeText(getApplicationContext(), "Successfully parsed last used teams file", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(getApplicationContext(), "Successfully parsed teams file", Toast.LENGTH_SHORT).show();
+            }
 
         } catch (IOException | NumberFormatException error) {
             failed = true;

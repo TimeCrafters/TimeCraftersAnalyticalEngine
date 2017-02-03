@@ -316,7 +316,7 @@ public class AppSync {
     public static boolean teamHasMatchData() {
         boolean teamDataExists = false;
         File[] matches = new File(getMatchDir()).listFiles();
-        if (matches.length > 0) { teamDataExists = true; }
+        if (matches != null && matches.length > 0) { teamDataExists = true; }
 
         return teamDataExists;
     }
