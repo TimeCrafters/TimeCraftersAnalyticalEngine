@@ -87,9 +87,9 @@ public class TeamScoutingDataFragment extends Fragment {
 
         try {
             if (autonomous.getBoolean("has_autonomous")) {
-                if (autonomous.getBoolean("claim_beacons")) {
+                if (autonomous.getBoolean("can_claim_beacons")) {
                     can_claim_beacons.setText("Yes");
-                    max_beacons_claimed.setText(""+autonomous.getInt("beacons_claimed"));
+                    max_beacons_claimed.setText(""+autonomous.getInt("max_beacons_claimable"));
                     can_claim_beacons.setTextColor(greenColor);
                     max_beacons_claimed.setTextColor(greenColor);
                 } else {
@@ -100,10 +100,10 @@ public class TeamScoutingDataFragment extends Fragment {
                 }
             }
 
-            if (autonomous.getBoolean("score_in_vortex")) {
+            if (autonomous.getBoolean("can_score_in_vortex")) {
                 can_score_in_vortex.setText("Yes");
                 can_score_in_vortex.setTextColor(greenColor);
-                max_scored_in_vortex.setText(""+autonomous.getInt("particles_scored_in_vortex"));
+                max_scored_in_vortex.setText(""+autonomous.getInt("max_particles_scored_in_vortex"));
                 max_scored_in_vortex.setTextColor(greenColor);
             } else {
                 can_score_in_vortex.setText("No");
@@ -112,10 +112,10 @@ public class TeamScoutingDataFragment extends Fragment {
                 max_scored_in_vortex.setTextColor(redColor);
             }
 
-            if (autonomous.getBoolean("score_in_corner")) {
+            if (autonomous.getBoolean("can_score_in_corner")) {
                 can_score_in_corner.setText("Yes");
                 can_score_in_corner.setTextColor(greenColor);
-                max_scored_in_corner.setText(""+autonomous.getInt("particles_scored_in_corner"));
+                max_scored_in_corner.setText(""+autonomous.getInt("max_particles_scored_in_corner"));
                 max_scored_in_corner.setTextColor(greenColor);
             } else {
                 can_score_in_corner.setText("No");

@@ -132,8 +132,6 @@ public class ScoutMatchTeleOpActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 AppSync.addEvent(0, "teleop", "miss", "particle", "vortex", 0, "Missed Scoring Particle in Vortex");
-
-//                setScore(TeleScoresHelper.capBallCapped);
             }
         });
 
@@ -141,8 +139,29 @@ public class ScoutMatchTeleOpActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 AppSync.addEvent(0, "teleop", "miss", "particle", "corner", 0, "Missed Scoring Particle in Corner");
+            }
+        });
 
-//                setScore(TeleScoresHelper.capBallCapped);
+        done.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AppSync.writeEvents();
+                finish();
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed() {
+        AppSync.createConfirmDialog(this, "Are you sure?", "You will lose your input from here.", new Runnable() {
+            @Override
+            public void run() {
+                finish();
+            }
+        }, new Runnable() {
+            @Override
+            public void run() {
+                // no
             }
         });
     }

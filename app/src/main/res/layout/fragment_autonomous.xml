@@ -123,15 +123,6 @@
                 android:layout_alignStart="@+id/textView73" />
 
             <TextView
-                android:text="Missed Corner:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView95"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView74"
-                android:layout_alignEnd="@+id/match" />
-
-            <TextView
                 android:text="N/A"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -452,6 +443,15 @@
                 android:textAppearance="@style/TextAppearance.AppCompat"
                 android:layout_below="@+id/textView70"
                 android:layout_alignStart="@+id/textView64" />
+
+            <TextView
+                android:text="Missed Corner:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView95"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:layout_below="@+id/textView74"
+                android:layout_alignStart="@+id/textView74" />
 
         </RelativeLayout>
     </ScrollView>

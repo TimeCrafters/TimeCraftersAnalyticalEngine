@@ -10,10 +10,10 @@ public class AutoScoresHelper {
 
     public static int capBallBumped = 5; // Cap ball must be on playing field to be counted.
 
-    public static int onPlatform = 10;
-    public static int touchingPlatform = 5;
-    public static int onRamp = 10;
-    public static int touchingRamp = 5;
+    public static int completelyOnPlatform = 10;
+    public static int onPlatform = 5;
+    public static int completelyOnRamp = 10;
+    public static int onRamp = 5;
 
-    public static int triggerLightBox = 30;
+    public static int claimBeacon = 30;
 }

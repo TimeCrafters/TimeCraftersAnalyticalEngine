@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">TimeCrafters Analytical Engine</string>
     <string name="title_activity_team_statistics">Team Statistics</string>
+
+    <string-array name="parking_places_array">
+        <item>Not Applicable</item>
+        <item>On Platform</item>
+        <item>Completely on Platform</item>
+        <item>On Ramp</item>
+        <item>Completely on Ramp</item>
+    </string-array>
 </resources>

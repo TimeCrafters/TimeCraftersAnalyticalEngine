@@ -7,29 +7,26 @@ import android.support.v7.widget.PopupMenu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
-import org.timecrafters.ftcscouting.MainActivity;
 import org.timecrafters.ftcscouting.R;
 import org.timecrafters.ftcscouting.apollo.AutoScoresHelper;
 import org.timecrafters.ftcscouting.hermes.AppSync;
 import org.timecrafters.ftcscouting.hermes.EventStruct;
 
+import java.io.File;
 import java.util.HashMap;
 
 public class ScoutMatchAutonomousActivity extends AppCompatActivity {
 
+    EventStruct parkingEvent;
+
     Button teamSelection;
 
-
-    Button onRamp;
-    Button touchingRamp;
-
-    Button onPlatform;
-    Button touchingPlatform;
-
-    Button triggerLightBox;
-    Button missedLightBox;
+    Button claimBeacon;
+    Button missedBeacon;
 
     Button particleInVortex;
     Button particleInCorner;
@@ -37,17 +34,21 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
     Button particleMissedVortex;
     Button particleMissedCorner;
 
-    Button bumpedBall;
+    Button parkingState;
 
-    Button statistics;
+    ToggleButton bumpedBall;
+    ToggleButton deadRobot;
+
+    Button undo;
     Button teleOp;
 
     TextView eventLog;
     TextView scoreText;
+    ScrollView scrollView;
 
 
     public int score = 0;
-    public int numberOfLightBoxesHit = 0;
+    public int numberOfBeaconsHit = 0;
     public int teamNumber;
     public String teamName;
 
@@ -58,15 +59,8 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
 
        teamSelection = (Button) findViewById(R.id.team_selection);
 
-
-        onRamp = (Button) findViewById(R.id.on_ramp);
-        touchingRamp = (Button) findViewById(R.id.touching_ramp);
-
-        onPlatform = (Button) findViewById(R.id.on_platform);
-        touchingPlatform = (Button) findViewById(R.id.touching_platform);
-
-        triggerLightBox = (Button) findViewById(R.id.claim_beacon);
-        missedLightBox = (Button) findViewById(R.id.missed_lightbox);
+        claimBeacon = (Button) findViewById(R.id.claim_beacon);
+        missedBeacon = (Button) findViewById(R.id.missed_lightbox);
 
         particleInVortex = (Button) findViewById(R.id.in_vortex);
         particleInCorner = (Button) findViewById(R.id.in_corner);
@@ -74,21 +68,18 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
         particleMissedVortex = (Button) findViewById(R.id.missed_vortex);
         particleMissedCorner = (Button) findViewById(R.id.missed_corner);
 
-        bumpedBall = (Button) findViewById(R.id.bump_ball);
+        bumpedBall = (ToggleButton) findViewById(R.id.bump_ball);
+        deadRobot = (ToggleButton) findViewById(R.id.dead_robot);
 
-        statistics = (Button) findViewById(R.id.statistics);
+        parkingState = (Button) findViewById(R.id.parking_state);
+        undo   = (Button) findViewById(R.id.undo);
         teleOp = (Button) findViewById(R.id.teleop);
 
         eventLog = (TextView) findViewById(R.id.eventLog);
         scoreText = (TextView) findViewById(R.id.score);
 
-        onRamp.setEnabled(false);
-        onPlatform.setEnabled(false);
-        touchingRamp.setEnabled(false);
-        touchingPlatform.setEnabled(false);
-
-        triggerLightBox.setEnabled(false);
-        missedLightBox.setEnabled(false);
+        claimBeacon.setEnabled(false);
+        missedBeacon.setEnabled(false);
 
         particleInVortex.setEnabled(false);
         particleInCorner.setEnabled(false);
@@ -96,9 +87,20 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
         particleMissedCorner.setEnabled(false);
 
         bumpedBall.setEnabled(false);
+        bumpedBall.setText("Not on Floor");
+        bumpedBall.setTextOn("On Floor");
+        bumpedBall.setTextOff("Not on Floor");
 
-        statistics.setEnabled(false);
+        deadRobot.setEnabled(false);
+        deadRobot.setText("Alive");
+        deadRobot.setTextOn("Alive");
+        deadRobot.setTextOff("DEAD");
+
+        parkingState.setEnabled(false);
+        undo.setEnabled(false);
         teleOp.setEnabled(false);
+
+        scrollView = (ScrollView) findViewById(R.id.scrollview);
 
         // Select Team
         teamSelection.setOnClickListener(new View.OnClickListener() {
@@ -121,6 +123,8 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
                         AppSync.teamNumber = teamNumber;
                         AppSync.teamName = teamName;
                         enableButtons();
+
+                        AppSync.currentMatchPath = AppSync.getMatchDir()+ File.separator +"-"+AppSync.matchID+ System.currentTimeMillis()/1000;
                         return true;
                     }
                 });
@@ -128,23 +132,26 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
             }
         });
 
-        // Light Box
-        triggerLightBox.setOnClickListener(new View.OnClickListener() {
+        // Beacons
+        claimBeacon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 lockTeamIn();
-                numberOfLightBoxesHit++;
-                if (numberOfLightBoxesHit < 3) {
-                    setScore(AutoScoresHelper.triggerLightBox);
-                    if (numberOfLightBoxesHit == 2) { triggerLightBox.setEnabled(false); }
-                } else {
-                    triggerLightBox.setEnabled(false);
-                }
+                // Enable if necessarily
+//                numberOfBeaconsHit++;
+//                if (numberOfBeaconsHit < 3) {
+//                    setScore(AutoScoresHelper.claimBeacon);
+//                    if (numberOfBeaconsHit == 2) { claimBeacon.setEnabled(false); }
+//                } else {
+//                    claimBeacon.setEnabled(false);
+//                }
+                AppSync.addEvent(0, "autonomous", "score", "beacon", "", AutoScoresHelper.claimBeacon, "Claimed Beacon");
+
                 refreshEventLog();
             }
         });
 
-        missedLightBox.setOnClickListener(new View.OnClickListener() {
+        missedBeacon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 lockTeamIn();
@@ -154,65 +161,56 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
         });
 
         // Parking Locations
-        onRamp.setOnClickListener(new View.OnClickListener() {
+        parkingState.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                lockTeamIn();
-                AppSync.addEvent(0, "autonomous", "score", "parking", "on ramp", AutoScoresHelper.onRamp, "Parked Completely on Ramp");
-                refreshEventLog();
+                PopupMenu popupMenu = new PopupMenu(ScoutMatchAutonomousActivity.this, parkingState);
+                popupMenu.getMenuInflater().inflate(R.menu.menu_autonomous_parking, popupMenu.getMenu());
 
-                setScore(AutoScoresHelper.onRamp);
-                disableParkedGroup();
+                popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+                        lockTeamIn();
+
+                        switch (item.getItemId()) {
+                            case R.id.not_applicable: {
+                                parkingEvent = null;
+                                parkingState.setText(item.getTitle());
+                                break;
+                            }
+                            case R.id.completely_on_platform: {
+                                parkingEvent = new EventStruct(AppSync.teamNumber, "autonomous", "score", "parking", "on_platform", AutoScoresHelper.completelyOnPlatform, "Parked Completely on Platform");
+                                parkingState.setText(item.getTitle());
+                                break;
+                            }
+                            case R.id.completely_on_ramp: {
+                               parkingEvent = new EventStruct(AppSync.teamNumber, "autonomous", "score", "parking", "on_ramp", AutoScoresHelper.completelyOnRamp, "Parked on Completely on Ramp");
+                                parkingState.setText(item.getTitle());
+                                break;
+                            }
+                            case R.id.on_platform: {
+                                parkingEvent = new EventStruct(AppSync.teamNumber, "autonomous", "score", "parking", "platform", AutoScoresHelper.onPlatform, "Parked on Platform");
+                                parkingState.setText(item.getTitle());
+                                break;
+                            }
+                            case R.id.on_ramp: {
+                                parkingEvent = new EventStruct(AppSync.teamNumber, "autonomous", "score", "parking", "ramp", AutoScoresHelper.onRamp, "Parked on Ramp");
+                                parkingState.setText(item.getTitle());
+                                break;
+                            }
+                            default: {
+                                break;
+                            }
+                        }
+
+                        refreshEventLog();
+                        return true;
+                    }
+                });
+                popupMenu.show();
             }
         });
-
-        onPlatform.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                lockTeamIn();
-                AppSync.addEvent(0, "autonomous", "score", "parking", "on platform", AutoScoresHelper.onPlatform, "Parked Completely on Platform");
-                refreshEventLog();
-
-                setScore(AutoScoresHelper.onPlatform);
-                disableParkedGroup();
-            }
-        });
-
-        touchingRamp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                lockTeamIn();
-                AppSync.addEvent(0, "autonomous", "score", "parking", "touching ramp", AutoScoresHelper.touchingRamp, "Parked on Ramp");
-                refreshEventLog();
-
-                setScore(AutoScoresHelper.touchingRamp);
-                disableParkedGroup();
-            }
-        });
-
-        touchingPlatform.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                lockTeamIn();
-                AppSync.addEvent(0, "autonomous", "score", "parking", "touching platform", AutoScoresHelper.touchingPlatform, "Parked on Platform");
-                refreshEventLog();
-
-                setScore(AutoScoresHelper.touchingPlatform);
-                disableParkedGroup();
-            }
-        });
-
-        bumpedBall.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                lockTeamIn();
-                AppSync.addEvent(0, "autonomous", "score", "capball", "floor", AutoScoresHelper.capBallBumped, "Capball on Floor");
-                refreshEventLog();
-
-                setScore(AutoScoresHelper.capBallBumped);
-                bumpedBall.setEnabled(false);
-            }
-        });
+        // End
 
         // Particles
         particleInVortex.setOnClickListener(new View.OnClickListener() {
@@ -259,10 +257,13 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
             }
         });
 
-        statistics.setOnClickListener(new View.OnClickListener() {
+        undo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // DOSTUFF
+                if (AppSync.eventsList.size() > 0) {
+                    AppSync.eventsList.remove(AppSync.eventsList.size()-1);
+                    refreshEventLog();
+                }
             }
         });
 
@@ -270,11 +271,40 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // SAVE DATA
+
+                if (bumpedBall.isChecked()) {
+                    AppSync.addEvent(0, "autonomous", "score", "capball", "floor", AutoScoresHelper.capBallBumped, "Capball on Floor");
+                }
+
+                if (!deadRobot.isChecked()) { // If not checked, robot is dead.
+                    AppSync.addEvent(0, "autonomous", "miss", "robot", "", 0, "Dead Robot");
+                }
+
+                if (parkingEvent != null) {
+                    AppSync.eventsList.add(parkingEvent);
+                }
+
                 AppSync.writeEvents();
+                finish();
                 startActivity(new Intent(getBaseContext(), ScoutMatchTeleOpActivity.class));
             }
         });
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        AppSync.createConfirmDialog(this, "Are you sure?", "You will lose your input from here.", new Runnable() {
+            @Override
+            public void run() {
+                finish();
+            }
+        }, new Runnable() {
+            @Override
+            public void run() {
+                // no
+            }
+        });
     }
 
     public void lockTeamIn() {
@@ -287,7 +317,12 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
             string += "" + event.type + " " + event.subtype + " " + event.points + "pts " + event.description + "\n";
         }
 
-        eventLog.setText(string);
+        if (string.length() < 1) {
+            eventLog.setText("Autonomous Log");
+        } else {
+            eventLog.setText(string);
+        }
+        scrollView.fullScroll(View.FOCUS_DOWN);
     }
 
     public void setScore(int score1) {
@@ -295,21 +330,9 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
         scoreText.setText(""+score+" pts");
     }
 
-    public void disableParkedGroup() {
-        onRamp.setEnabled(false);
-        touchingRamp.setEnabled(false);
-        onPlatform.setEnabled(false);
-        touchingPlatform.setEnabled(false);
-    }
-
     public void enableButtons() {
-        onRamp.setEnabled(true);
-        onPlatform.setEnabled(true);
-        touchingRamp.setEnabled(true);
-        touchingPlatform.setEnabled(true);
-
-        triggerLightBox.setEnabled(true);
-        missedLightBox.setEnabled(true);
+        claimBeacon.setEnabled(true);
+        missedBeacon.setEnabled(true);
 
         particleInVortex.setEnabled(true);
         particleInCorner.setEnabled(true);
@@ -317,8 +340,10 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
         particleMissedCorner.setEnabled(true);
 
         bumpedBall.setEnabled(true);
+        deadRobot.setEnabled(true);
 
-        statistics.setEnabled(true);
+        parkingState.setEnabled(true);
+        undo.setEnabled(true);
         teleOp.setEnabled(true);
     }
 }

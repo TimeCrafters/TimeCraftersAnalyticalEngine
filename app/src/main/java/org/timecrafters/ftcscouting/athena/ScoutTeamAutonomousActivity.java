@@ -170,13 +170,17 @@ public class ScoutTeamAutonomousActivity extends AppCompatActivity {
                     AppSync.puts("SCOUTING_AUTO", "TEAM HAS AUTONOMOUS? "+ teamHasAutonomous.isChecked());
                     if (teamHasAutonomous.isChecked()) {
 
-                        scoutingData.put("claim_beacons", claimBeacons.isChecked());
-                        scoutingData.put("beacons_claimed", Integer.parseInt(beaconsClaimed.getText().toString()));
-                        scoutingData.put("score_in_vortex", scoreInVortex.isChecked());
-                        scoutingData.put("score_in_corner", scoreInCorner.isChecked());
-                        scoutingData.put("particles_scored_in_vortex", Integer.parseInt(particlesScoredInVortex.getText().toString()));
-                        scoutingData.put("particles_scored_in_corner", Integer.parseInt(particlesScoredInCorner.getText().toString()));
+                        scoutingData.put("can_claim_beacons", claimBeacons.isChecked());
+                        scoutingData.put("max_beacons_claimable", Integer.parseInt(beaconsClaimed.getText().toString()));
+
+                        scoutingData.put("can_score_in_vortex", scoreInVortex.isChecked());
+                        scoutingData.put("max_particles_scored_in_vortex", Integer.parseInt(particlesScoredInVortex.getText().toString()));
+
+                        scoutingData.put("can_score_in_corner", scoreInCorner.isChecked());
+                        scoutingData.put("max_particles_scored_in_corner", Integer.parseInt(particlesScoredInCorner.getText().toString()));
+
                         scoutingData.put("capball_on_floor", capballOnFloor.isChecked());
+
                         scoutingData.put("park_completely_on_platform", parkCompletelyOnPlatform.isChecked());
                         scoutingData.put("park_on_platform", parkOnPlatform.isChecked());
                         scoutingData.put("park_completely_on_ramp", parkCompletelyOnRamp.isChecked());

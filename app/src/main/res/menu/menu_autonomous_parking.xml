@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="None"
+        android:id="@+id/not_applicable" />
+    <item android:title="Completely on Platform"
+        android:id="@+id/completely_on_platform" />
+    <item android:title="Completely on Ramp"
+        android:id="@+id/completely_on_ramp" />
+    <item android:title="On Platform"
+        android:id="@+id/on_platform" />
+    <item android:title="On Ramp"
+        android:id="@+id/on_ramp" />
+</menu>

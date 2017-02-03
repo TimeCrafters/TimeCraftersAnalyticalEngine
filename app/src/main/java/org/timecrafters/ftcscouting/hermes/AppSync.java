@@ -39,6 +39,7 @@ public class AppSync {
 
     public static String competitionName = "competition"; // The name of the event being tracked, E.G. North Super Regionals
     public static String defaultFolderPath = "FTCScouting";
+    public static String currentMatchPath;
 
     public static ArrayList<EventStruct> eventsList = new ArrayList<>();
 
@@ -102,6 +103,14 @@ public class AppSync {
     }
 
     public static void writeEvents() {
+        if (currentMatchPath != null) {
+            writeEvents(currentMatchPath);
+        } else {
+            currentMatchPath = getMatchDir()+ File.separator +"-"+matchID+ System.currentTimeMillis()/1000; // .json will be appended below
+        }
+    }
+
+    public static void writeEvents(String path) {
         boolean overwrite = true;
         createDirectory(getMatchDir()); // Ensure directory exists.
 
@@ -118,20 +127,15 @@ public class AppSync {
                 jsonObject.put("description", event.description);
             } catch (JSONException error) {
                 overwrite = false;
+                puts("EVENTS", "Fatal error: "+error.getMessage());
             }
 
-            writeJSON(jsonObject, getMatchDir() + File.separator + "" + matchID + "-" + System.currentTimeMillis() / 1000 + ".json", true);
+            writeJSON(jsonObject, path + ".json", true);
         }
 
         if (overwrite) {
             eventsList = new ArrayList<>();
-        } else {
-            MainActivity.MainActivityContext.runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    Toast.makeText(MainActivity.MainActivityContext.getApplicationContext(), "Failed to write events list!", Toast.LENGTH_SHORT).show();
-                }
-            });
+            puts("EVENTS", "Wrote eventLog to "+path+ ".json");
         }
     }
 
