@@ -6,7 +6,6 @@ import android.os.Environment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -276,11 +275,12 @@ public class AppSync {
         return jsonObject;
     }
 
-    public static ArrayList<EventStruct> teamMatchData() {
-        ArrayList<EventStruct> events = new ArrayList<>();
-        File[] matches = new File(getMatchDir()).listFiles();
-        for (File file : matches) {
+    public static ArrayList<ArrayList<EventStruct>> teamMatchData() {
+        File[] matchesFiles = new File(getMatchDir()).listFiles();
+        ArrayList<ArrayList<EventStruct>> matches = new ArrayList<ArrayList<EventStruct>>();
+        for (File file : matchesFiles) {
             ArrayList<JSONObject> objects = readJSON(file, true);
+            ArrayList<EventStruct> events = new ArrayList<>();
 
             if (objects != null) {
                 for (JSONObject object : objects) {
@@ -298,9 +298,17 @@ public class AppSync {
                     }
                 }
             }
+            matches.add(new ArrayList<EventStruct>(events));
+            for (ArrayList event : matches) {
+                puts("STATS", "Events Size: "+event.size());
+            }
+            puts("STATS", "Added events to match list");
+            puts("STATS", "Events count: "+events.size()+" type: "+events.getClass());
+            events.clear();
         }
 
-        return events;
+        puts("STATS", "Size of matches: "+matches.size()+ " Size of match 0: "+matches.get(0).size());
+        return matches;
     }
 
     public static boolean teamHasScoutingData() {
