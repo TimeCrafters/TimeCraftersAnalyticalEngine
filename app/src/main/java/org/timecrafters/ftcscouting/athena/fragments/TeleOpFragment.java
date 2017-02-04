@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import org.timecrafters.ftcscouting.R;
@@ -16,6 +17,7 @@ import java.text.DecimalFormat;
 
 public class TeleOpFragment extends Fragment {
     TextView team;
+    Button menu;
     TextView dataset;
 
     TextView beaconsClaimed;
@@ -28,14 +30,6 @@ public class TeleOpFragment extends Fragment {
     TextView particlesMissedCorner;
     TextView particleVortexSuccessPercentage;
     TextView particleCornerSuccessPercentage;
-
-    TextView parkedCompletelyOnPlatform;
-    TextView parkedCompletelyOnRamp;
-    TextView parkedOnPlatform;
-    TextView parkedOnRamp;
-    TextView parkedMissedPlatform;
-    TextView parkedMissedRamp;
-    TextView parkedSuccessPercentage;
 
     TextView capballOffFloor;
     TextView capballAboveCrossbar;
@@ -68,6 +62,7 @@ public class TeleOpFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         team = (TextView) getView().findViewById(R.id.team);
         team.setText(""+ AppSync.teamNumber+ " | "+ AppSync.teamName);
+        menu = (Button) getView().findViewById(R.id.match);
         dataset = (TextView) getView().findViewById(R.id.dataset);
 
         beaconsClaimed = (TextView) getView().findViewById(R.id.beacons_claimed);
@@ -90,10 +85,15 @@ public class TeleOpFragment extends Fragment {
         if (AppSync.teamHasMatchData() && TeamStatisticsActivity.contextForFragment.teleOpData != null && TeamStatisticsActivity.contextForFragment.teleOpData.size() > 0) {
             dataset.setText(""+(TeamStatisticsActivity.contextForFragment.teleOpData.size()-1)+" in dataset");
 
+            populateMenu();
             populateTeleOPData(TeamStatisticsActivity.contextForFragment.teleOpData.get(TeamStatisticsActivity.contextForFragment.teleOpData.size()-1));
         } else {
             // No match data!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         }
+    }
+
+    public void populateMenu() {
+
     }
 
     public void populateTeleOPData(MatchStruct match) {

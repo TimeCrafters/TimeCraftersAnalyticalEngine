@@ -2,9 +2,12 @@ package org.timecrafters.ftcscouting.athena.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.PopupMenu;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import org.timecrafters.ftcscouting.R;
@@ -16,6 +19,7 @@ import java.text.DecimalFormat;
 
 public class AutonomousFragment extends Fragment {
     TextView team;
+    Button menu;
     TextView dataset;
 
     TextView beaconsClaimed;
@@ -40,6 +44,8 @@ public class AutonomousFragment extends Fragment {
     TextView capballOnFloor;
     TextView capballMissed;
     TextView capballSuccessPercentage;
+
+    TeamStatisticsActivity localActivity;
 
     public AutonomousFragment() {
         // Required empty public constructor
@@ -66,8 +72,11 @@ public class AutonomousFragment extends Fragment {
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
+        localActivity = TeamStatisticsActivity.contextForFragment;
+
         team = (TextView) getView().findViewById(R.id.team);
         team.setText(""+ AppSync.teamNumber+ " | "+ AppSync.teamName);
+        menu = (Button) getView().findViewById(R.id.match);
         dataset = (TextView) getView().findViewById(R.id.dataset);
 
         beaconsClaimed = (TextView) getView().findViewById(R.id.beacons_claimed);
@@ -93,16 +102,43 @@ public class AutonomousFragment extends Fragment {
         capballMissed = (TextView) getView().findViewById(R.id.capball_missed);
         capballSuccessPercentage = (TextView) getView().findViewById(R.id.capball_success_percentage);
 
-        if (AppSync.teamHasMatchData() && TeamStatisticsActivity.contextForFragment.autonomousData != null && TeamStatisticsActivity.contextForFragment.autonomousData.size() > 0) {
-            dataset.setText(""+(TeamStatisticsActivity.contextForFragment.autonomousData.size()-1)+" in dataset");
+        if (AppSync.teamHasMatchData() && localActivity.autonomousData != null && localActivity.autonomousData.size() > 0) {
+            dataset.setText(""+(localActivity.autonomousData.size()-1)+" in dataset");
 
-            populateAutonomousData(TeamStatisticsActivity.contextForFragment.autonomousData.get(TeamStatisticsActivity.contextForFragment.autonomousData.size()-1));
+            populateMenu();
+            populateAutonomousData(localActivity.autonomousData.get(localActivity.autonomousData.size()-1));
         } else {
             // No match data!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         }
     }
 
+    public void populateMenu() {
+        menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final PopupMenu popupMenu = new PopupMenu(localActivity, menu);
+                popupMenu.getMenu().setQwertyMode(false);
+
+                for (int i = 0; i < localActivity.autonomousData.size(); i++) {
+                    AppSync.puts("STATS", "I: "+(i+1));
+                    popupMenu.getMenu().add(""+ (i+1));
+                }
+                popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+                        AppSync.puts("STATS", "MENU TRIGGERED: "+item.getTitle());
+                        populateAutonomousData(localActivity.autonomousData.get(Integer.parseInt(item.getTitle().toString())-1));
+                        return true;
+                    }
+                });
+
+                popupMenu.show();
+            }
+        });
+    }
+
     public void populateAutonomousData(MatchStruct match) {
+        AppSync.puts("STATS", "Match: "+match.scoredInVortex);
         DecimalFormat decimalFormat = new DecimalFormat("###.##");
 
         int totalBeacons, totalParticlesVortex, totalParticlesCorner, totalParking, totalCapball;
