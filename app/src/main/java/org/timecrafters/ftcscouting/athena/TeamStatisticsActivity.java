@@ -1,37 +1,31 @@
 package org.timecrafters.ftcscouting.athena;
 
+import android.os.Bundle;
 import android.support.design.widget.TabLayout;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.os.Bundle;
-import android.view.LayoutInflater;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
 
-import android.widget.TextView;
-
-import org.timecrafters.ftcscouting.MainActivity;
 import org.timecrafters.ftcscouting.R;
 import org.timecrafters.ftcscouting.athena.fragments.AutonomousFragment;
 import org.timecrafters.ftcscouting.athena.fragments.TeamScoutingDataFragment;
 import org.timecrafters.ftcscouting.athena.fragments.TeleOpFragment;
 import org.timecrafters.ftcscouting.hermes.AppSync;
 import org.timecrafters.ftcscouting.hermes.EventStruct;
+import org.timecrafters.ftcscouting.hermes.MatchStruct;
 
 import java.util.ArrayList;
 
 public class TeamStatisticsActivity extends AppCompatActivity {
     public static TeamStatisticsActivity contextForFragment;
     public ArrayList<EventStruct> matchData;
+    public ArrayList<MatchStruct> autonomousData = new ArrayList<>();
+    public ArrayList<MatchStruct> teleOpData = new ArrayList<>();
 
     private SectionsPagerAdapter mSectionsPagerAdapter;
 
@@ -58,6 +52,72 @@ public class TeamStatisticsActivity extends AppCompatActivity {
         contextForFragment = this;
         if (AppSync.teamHasMatchData()) {
             matchData = AppSync.teamMatchData();
+            MatchStruct allAutonomousMatches = new MatchStruct();
+            for (EventStruct event : matchData) {
+                if (event.period.equals("autonomous")) {
+                    if (event.type.equals("score")){
+                        if (event.subtype.equals("beacon")) {
+                            allAutonomousMatches.beaconsClaimed++;
+                        }
+
+                        if (event.subtype.equals("particle")) {
+                            if (event.location.equals("vortex")) {
+                                allAutonomousMatches.scoredInVortex++;
+                            }
+                            if (event.location.equals("corner")) {
+                                allAutonomousMatches.scoredInCorner++;
+                            }
+                        }
+
+                        if (event.subtype.equals("parking")) {
+                            if (event.location.equals("on_platform")) {
+                                allAutonomousMatches.completelyOnPlatform++;
+                            }
+                            if (event.location.equals("on_ramp")) {
+                                allAutonomousMatches.completelyOnRamp++;
+                            }
+                            if (event.location.equals("platform")) {
+                                allAutonomousMatches.onPlatform++;
+                            }
+                            if (event.location.equals("ramp")) {
+                                allAutonomousMatches.onRamp++;
+                            }
+                        }
+                    }
+
+                    if (event.type.equals("miss")){
+                        if (event.subtype.equals("beacon")) {
+                            allAutonomousMatches.beaconsMissed++;
+                        }
+
+                        if (event.subtype.equals("particle")) {
+                            if (event.location.equals("vortex")) {
+                                allAutonomousMatches.missedVortex++;
+                            }
+                            if (event.location.equals("corner")) {
+                                allAutonomousMatches.missedCorner++;
+                            }
+                        }
+
+                        if (event.subtype.equals("parking")) {
+                            if (event.location.equals("on_platform")) {
+                                allAutonomousMatches.missedPlatform++;
+                            }
+                            if (event.location.equals("on_ramp")) {
+                                allAutonomousMatches.missedRamp++;
+                            }
+                            if (event.location.equals("platform")) {
+                                allAutonomousMatches.missedPlatform++;
+                            }
+                            if (event.location.equals("ramp")) {
+                                allAutonomousMatches.missedRamp++;
+                            }
+                        }
+                    }
+                }
+            }
+
+            autonomousData.add(allAutonomousMatches);
         } else { matchData = null; }
     }
 

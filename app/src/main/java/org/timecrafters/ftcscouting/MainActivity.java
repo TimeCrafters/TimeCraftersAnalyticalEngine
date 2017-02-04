@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         AppSync.getConfig();
         try {
             String list = AppSync.getConfig().getString("last_used_teams_list");
-            if (list != "") {
+            if (!list.equals("")) {
                 parseTeamsList(Uri.parse(list), true);
             }
         } catch (JSONException error) {/* Fault */}
