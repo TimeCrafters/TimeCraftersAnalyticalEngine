@@ -2,7 +2,9 @@ package org.timecrafters.ftcscouting.athena.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.PopupMenu;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -37,6 +39,8 @@ public class TeleOpFragment extends Fragment {
     TextView capballMissed;
     TextView capballSuccessPercentage;
 
+    TeamStatisticsActivity localActivity;
+
     public TeleOpFragment() {
         // Required empty public constructor
     }
@@ -60,6 +64,8 @@ public class TeleOpFragment extends Fragment {
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
+        localActivity = TeamStatisticsActivity.contextForFragment;
+
         team = (TextView) getView().findViewById(R.id.team);
         team.setText(""+ AppSync.teamNumber+ " | "+ AppSync.teamName);
         menu = (Button) getView().findViewById(R.id.match);
@@ -93,7 +99,36 @@ public class TeleOpFragment extends Fragment {
     }
 
     public void populateMenu() {
+        menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final PopupMenu popupMenu = new PopupMenu(localActivity, menu);
+                popupMenu.getMenu().setQwertyMode(false);
 
+                for (int i = 0; i < localActivity.teleOpData.size(); i++) {
+                    if ((i+1) == localActivity.teleOpData.size()) {
+                        popupMenu.getMenu().add("ALL");
+                    } else {
+                        popupMenu.getMenu().add("" + (i + 1));
+                    }
+                }
+                popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+                        if (item.getTitle().equals("ALL")) {
+                            populateTeleOPData(localActivity.teleOpData.get(localActivity.teleOpData.size()-1));
+                        } else {
+                            int index = Integer.parseInt(item.getTitle().toString()) - 1;
+                            populateTeleOPData(localActivity.teleOpData.get(index));
+                        }
+                        menu.setText(item.getTitle());
+                        return true;
+                    }
+                });
+
+                popupMenu.show();
+            }
+        });
     }
 
     public void populateTeleOPData(MatchStruct match) {

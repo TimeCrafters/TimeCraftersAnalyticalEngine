@@ -120,17 +120,22 @@ public class AutonomousFragment extends Fragment {
                 popupMenu.getMenu().setQwertyMode(false);
 
                 for (int i = 0; i < localActivity.autonomousData.size(); i++) {
-                    AppSync.puts("STATS", "I: "+(i+1)+" size: "+localActivity.autonomousData.size());
-                    popupMenu.getMenu().add(""+ (i+1));
+                    if ((i+1) == localActivity.autonomousData.size()) {
+                        popupMenu.getMenu().add("ALL");
+                    } else {
+                        popupMenu.getMenu().add("" + (i + 1));
+                    }
                 }
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
-                        int index = Integer.parseInt(item.getTitle().toString())-1;
-                        AppSync.puts("STATS", "MENU TRIGGERED: "+item.getTitle());
-                        AppSync.puts("STATS", "Menu INDEX: "+index);
-                        AppSync.puts("STATS", "Claimed Beacons: "+localActivity.autonomousData.get(index).beaconsClaimed);
-                        populateAutonomousData(localActivity.autonomousData.get(index));
+                        if (item.getTitle().equals("ALL")) {
+                            populateAutonomousData(localActivity.autonomousData.get(localActivity.autonomousData.size()-1));
+                        } else {
+                            int index = Integer.parseInt(item.getTitle().toString()) - 1;
+                            populateAutonomousData(localActivity.autonomousData.get(index));
+                        }
+                        menu.setText(item.getTitle());
                         return true;
                     }
                 });
