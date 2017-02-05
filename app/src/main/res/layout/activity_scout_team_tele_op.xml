@@ -44,11 +44,11 @@
         android:inputType="number"
         android:ems="10"
         android:id="@+id/max_particles_scored_in_corner"
-        android:text="0"
         android:layout_below="@+id/max_particles_scored_in_vortex"
         android:layout_alignParentEnd="true"
         android:layout_toEndOf="@+id/can_score_in_corner"
-        android:layout_alignStart="@+id/max_particles_scored_in_vortex" />
+        android:layout_alignStart="@+id/max_particles_scored_in_vortex"
+        android:hint="Scorable in Corner" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -56,10 +56,10 @@
         android:inputType="number"
         android:ems="10"
         android:id="@+id/max_particles_scored_in_vortex"
-        android:text="0"
         android:layout_below="@+id/can_claim_beacons"
         android:layout_alignParentEnd="true"
-        android:layout_alignStart="@+id/max_beacons_claimable" />
+        android:layout_alignStart="@+id/max_beacons_claimable"
+        android:hint="Scorable in Vortex" />
 
     <CheckBox
         android:text="Can Score in Corner"
@@ -109,11 +109,11 @@
         android:inputType="number"
         android:ems="10"
         android:id="@+id/max_beacons_claimable"
-        android:text="0"
         android:layout_alignBaseline="@+id/can_claim_beacons"
         android:layout_alignBottom="@+id/can_claim_beacons"
         android:layout_alignParentEnd="true"
-        android:layout_toEndOf="@+id/textView13" />
+        android:layout_toEndOf="@+id/textView13"
+        android:hint="Claimable Beacons" />
 
     <Button
         android:text="Save"

@@ -113,32 +113,32 @@
         android:inputType="numberSigned"
         android:ems="10"
         android:id="@+id/particles_scored_in_vortex"
-        android:text="0"
         android:layout_below="@+id/textView12"
         android:layout_alignParentEnd="true"
-        android:layout_alignStart="@+id/particles_scored_in_corner" />
+        android:layout_alignStart="@+id/particles_scored_in_corner"
+        android:hint="Scorable in Vortex" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="numberSigned"
         android:ems="10"
-        android:text="0"
         android:id="@+id/particles_scored_in_corner"
         android:layout_below="@+id/particles_scored_in_vortex"
         android:layout_alignParentEnd="true"
-        android:layout_alignStart="@+id/beacons_claimed" />
+        android:layout_alignStart="@+id/beacons_claimed"
+        android:hint="Scorable in Corner" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="numberSigned"
         android:ems="10"
-        android:text="0"
         android:id="@+id/beacons_claimed"
         android:layout_below="@+id/particles_scored_in_corner"
         android:layout_alignParentEnd="true"
-        android:layout_toEndOf="@+id/completely_on_platform" />
+        android:layout_toEndOf="@+id/completely_on_platform"
+        android:hint="Claimable Beacons" />
 
     <EditText
         android:layout_width="wrap_content"

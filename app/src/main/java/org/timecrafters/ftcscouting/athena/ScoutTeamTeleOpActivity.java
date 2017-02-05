@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 
 import org.json.JSONException;
@@ -49,10 +50,9 @@ public class ScoutTeamTeleOpActivity extends AppCompatActivity {
         capballCapped = (CheckBox) findViewById(R.id.capball_capped);
         teleOpNotes = (EditText) findViewById(R.id.teleop_notes);
 
-        maxBeaconsClaimable.setFocusableInTouchMode(true);
-        maxBeaconsClaimable.requestFocus();
-
-
+        maxBeaconsClaimable.setEnabled(false);
+        maxParticlesScoredInVortex.setEnabled(false);
+        maxParticlesScoredInCorner.setEnabled(false);
 
         Button save = (Button) findViewById(R.id.save);
         save.setOnClickListener(new View.OnClickListener() {
@@ -60,6 +60,16 @@ public class ScoutTeamTeleOpActivity extends AppCompatActivity {
             public void onClick(View view) {
                 JSONObject scoutingData = new JSONObject();
                 try {
+                    if (maxBeaconsClaimable.getText().length() < 1) {
+                        maxBeaconsClaimable.setText("0");
+                    }
+                    if (maxParticlesScoredInVortex.getText().length() < 1) {
+                        maxParticlesScoredInVortex.setText("0");
+                    }
+                    if (maxParticlesScoredInCorner.getText().length() < 1) {
+                        maxParticlesScoredInCorner.setText("0");
+                    }
+
                     scoutingData.put("can_claim_beacons", canClaimBeacons.isChecked());
                     scoutingData.put("max_beacons_claimable", Integer.parseInt(maxBeaconsClaimable.getText().toString()));
 
@@ -82,6 +92,33 @@ public class ScoutTeamTeleOpActivity extends AppCompatActivity {
                 }
                 finish();
                 startActivityIfNeeded(new Intent(getBaseContext(), MainActivity.class), 99);
+            }
+        });
+
+        canClaimBeacons.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    maxBeaconsClaimable.setEnabled(true);
+                }
+            }
+        });
+
+        canScoreInVortex.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    maxParticlesScoredInVortex.setEnabled(true);
+                }
+            }
+        });
+
+        canScoreInCorner.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    canScoreInCorner.setEnabled(true);
+                }
             }
         });
     }

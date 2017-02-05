@@ -169,6 +169,15 @@ public class ScoutTeamAutonomousActivity extends AppCompatActivity {
                 try {
                     AppSync.puts("SCOUTING_AUTO", "TEAM HAS AUTONOMOUS? "+ teamHasAutonomous.isChecked());
                     if (teamHasAutonomous.isChecked()) {
+                        if (beaconsClaimed.getText().length() < 1) {
+                            beaconsClaimed.setText("0");
+                        }
+                        if (particlesScoredInVortex.getText().length() < 1) {
+                            particlesScoredInVortex.setText("0");
+                        }
+                        if (particlesScoredInCorner.getText().length() < 1) {
+                            particlesScoredInCorner.setText("0");
+                        }
 
                         scoutingData.put("can_claim_beacons", claimBeacons.isChecked());
                         scoutingData.put("max_beacons_claimable", Integer.parseInt(beaconsClaimed.getText().toString()));
