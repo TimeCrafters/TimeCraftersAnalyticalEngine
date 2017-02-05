@@ -120,14 +120,17 @@ public class AutonomousFragment extends Fragment {
                 popupMenu.getMenu().setQwertyMode(false);
 
                 for (int i = 0; i < localActivity.autonomousData.size(); i++) {
-                    AppSync.puts("STATS", "I: "+(i+1));
+                    AppSync.puts("STATS", "I: "+(i+1)+" size: "+localActivity.autonomousData.size());
                     popupMenu.getMenu().add(""+ (i+1));
                 }
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
+                        int index = Integer.parseInt(item.getTitle().toString())-1;
                         AppSync.puts("STATS", "MENU TRIGGERED: "+item.getTitle());
-                        populateAutonomousData(localActivity.autonomousData.get(Integer.parseInt(item.getTitle().toString())-1));
+                        AppSync.puts("STATS", "Menu INDEX: "+index);
+                        AppSync.puts("STATS", "Claimed Beacons: "+localActivity.autonomousData.get(index).beaconsClaimed);
+                        populateAutonomousData(localActivity.autonomousData.get(index));
                         return true;
                     }
                 });

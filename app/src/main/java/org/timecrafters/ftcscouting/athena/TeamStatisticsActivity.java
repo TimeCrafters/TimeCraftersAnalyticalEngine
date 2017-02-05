@@ -56,12 +56,13 @@ public class TeamStatisticsActivity extends AppCompatActivity {
             matchData = AppSync.teamMatchData();
             MatchStruct allAutonomousMatches = new MatchStruct();
             MatchStruct allTeleOpMatches = new MatchStruct();
-            MatchStruct autonomousMatch = new MatchStruct();
-            MatchStruct teleOpMatch = new MatchStruct();
 
             for (ArrayList events : matchData) {
                 AppSync.puts("STATS", "Is matchData reached? - list size: " + events.size());
                 AppSync.puts("STATS", "Is List reached?");
+
+                MatchStruct autonomousMatch = new MatchStruct();
+                MatchStruct teleOpMatch = new MatchStruct();
 
                 for (int n = 0; n < events.size(); n++) {
                     AppSync.puts("STATS", "Is Events reached?");
@@ -218,13 +219,9 @@ public class TeamStatisticsActivity extends AppCompatActivity {
                 }
                 autonomousData.add(autonomousMatch);
                 teleOpData.add(teleOpMatch);
-                AppSync.puts("STATS", autonomousMatch.toString());
-//                teleOpData.add(teleOpMatch);
             }
             autonomousData.add(allAutonomousMatches);
             teleOpData.add(allTeleOpMatches);
-//            AppSync.puts("STATS", "All Autonomous Matches "+allAutonomousMatches.toString());
-//            AppSync.puts("STATS", ""+autonomousData.toString());
         } else { matchData = null; AppSync.puts("STATS", "No Team Match Data!"); }
     }
 
