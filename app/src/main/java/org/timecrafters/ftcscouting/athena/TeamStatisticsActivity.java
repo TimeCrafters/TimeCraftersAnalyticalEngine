@@ -58,21 +58,15 @@ public class TeamStatisticsActivity extends AppCompatActivity {
             MatchStruct allTeleOpMatches = new MatchStruct();
 
             for (ArrayList events : matchData) {
-                AppSync.puts("STATS", "Is matchData reached? - list size: " + events.size());
-                AppSync.puts("STATS", "Is List reached?");
-
                 MatchStruct autonomousMatch = new MatchStruct();
                 MatchStruct teleOpMatch = new MatchStruct();
 
                 for (int n = 0; n < events.size(); n++) {
-                    AppSync.puts("STATS", "Is Events reached?");
                     EventStruct event = (EventStruct) events.get(n);
 
                     if (event.period.equals("autonomous")) {
-                        AppSync.puts("STATS", "Is an autonomous cake? true");
                         if (event.type.equals("score")) {
                             if (event.subtype.equals("beacon")) {
-                                AppSync.puts("STATS", "Score Beacon");
                                 allAutonomousMatches.beaconsClaimed++;
                                 autonomousMatch.beaconsClaimed++;
                             }

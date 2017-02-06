@@ -188,18 +188,6 @@
                 android:layout_marginTop="17dp" />
 
             <TextView
-                android:text="TeleOp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView42"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:textColor="@android:color/holo_blue_dark"
-                android:textStyle="normal|bold"
-                android:layout_marginTop="17dp"
-                android:layout_below="@+id/textView41"
-                android:layout_alignEnd="@+id/textView39" />
-
-            <TextView
                 android:text="Autonomous"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -452,6 +440,60 @@
                 android:textAppearance="@style/TextAppearance.AppCompat"
                 android:layout_below="@+id/textView20"
                 android:layout_alignEnd="@+id/textView17" />
+
+            <TextView
+                android:text="Notes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView19"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textStyle="normal|bold"
+                android:layout_below="@+id/textView41"
+                android:layout_alignEnd="@+id/textView56"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:text="N/A"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/autonomous_notes"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:layout_below="@+id/textView19"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center" />
+
+            <TextView
+                android:text="TeleOp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView42"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textStyle="normal|bold"
+                android:layout_marginTop="21dp"
+                android:layout_below="@+id/autonomous_notes"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:text="N/A"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/teleop_notes"
+                android:layout_below="@+id/textView29"
+                android:layout_centerHorizontal="true"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textAlignment="center" />
+
+            <TextView
+                android:text="Notes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView29"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textStyle="normal|bold"
+                android:layout_marginTop="16dp"
+                android:layout_below="@+id/textView54"
+                android:layout_alignEnd="@+id/textView56" />
         </RelativeLayout>
     </ScrollView>
 

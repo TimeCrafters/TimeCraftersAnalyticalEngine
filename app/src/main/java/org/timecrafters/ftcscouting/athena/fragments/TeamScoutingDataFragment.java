@@ -76,6 +76,8 @@ public class TeamScoutingDataFragment extends Fragment {
 
         TextView can_put_capball_on_floor = (TextView) getView().findViewById(R.id.autonomous_can_put_capball_on_floor);
 
+        TextView autonomous_notes = (TextView) getView().findViewById(R.id.autonomous_notes);
+
         try {
             if (autonomous.getBoolean("has_autonomous")) {
                 if (autonomous.getBoolean("can_claim_beacons")) {
@@ -154,6 +156,10 @@ public class TeamScoutingDataFragment extends Fragment {
                 can_put_capball_on_floor.setText("No");
                 can_put_capball_on_floor.setTextColor(redColor);
             }
+
+            if (autonomous.getString("autonomous_notes").length() > 0) {
+                autonomous_notes.setText(autonomous.getString("autonomous_notes"));
+            }
         } catch (JSONException error) {
             AppSync.puts("AUTO", "JSON Exception Error: "+error.getMessage());
             Toast.makeText(TeamStatisticsActivity.contextForFragment, "Failed to process Autonomous data!", Toast.LENGTH_LONG).show();
@@ -171,6 +177,8 @@ public class TeamScoutingDataFragment extends Fragment {
         TextView capball_off_floor      = (TextView) getView().findViewById(R.id.teleop_capball_off_floor);
         TextView capball_above_crossbar = (TextView) getView().findViewById(R.id.teleop_capball_above_crossbar);
         TextView capball_capped         = (TextView) getView().findViewById(R.id.teleop_capball_capped);
+
+        TextView telep_notes            = (TextView) getView().findViewById(R.id.teleop_notes);
 
         try {
             if (teleOp.getBoolean("can_claim_beacons")) {
@@ -226,6 +234,9 @@ public class TeamScoutingDataFragment extends Fragment {
                 capball_capped.setTextColor(redColor);
             }
 
+            if (teleOp.getString("teleop_notes").length() > 0) {
+                telep_notes.setText(teleOp.getString("teleop_notes"));
+            }
         } catch (JSONException error) {
             AppSync.puts("TELE", "JSON Exception Error: "+error.getMessage());
             AppSync.puts("TELE", "JSON Data: "+teleOp.toString());

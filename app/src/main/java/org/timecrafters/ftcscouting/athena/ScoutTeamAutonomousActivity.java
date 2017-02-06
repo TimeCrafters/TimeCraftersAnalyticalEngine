@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -106,6 +107,8 @@ public class ScoutTeamAutonomousActivity extends AppCompatActivity {
                         AppSync.teamNumber = teamNumber;
                         AppSync.teamName = teamName;
                         enableButtons();
+
+                        populateFields();
                         return true;
                     }
                 });
@@ -221,6 +224,71 @@ public class ScoutTeamAutonomousActivity extends AppCompatActivity {
                 // no
             }
         });
+    }
+
+    public void populateFields() {
+        if (AppSync.teamHasScoutingData()) {
+            JSONObject data = AppSync.teamScoutingData("autonomous");
+
+            if (data != null) {
+                try {
+                    if (data.getBoolean("has_autonomous")) {
+                        if (data.getBoolean("can_claim_beacons")) {
+                            claimBeacons.setChecked(true);
+                            beaconsClaimed.setText("" + data.getInt("max_beacons_claimable"));
+                        }
+                        if (data.getBoolean("can_score_in_vortex")) {
+                            scoreInVortex.setChecked(true);
+                            particlesScoredInVortex.setText("" + data.getInt("max_particles_scored_in_vortex"));
+                        }
+                        if (data.getBoolean("can_score_in_corner")) {
+                            scoreInCorner.setChecked(true);
+                            particlesScoredInCorner.setText("" + data.getInt("max_particles_scored_in_corner"));
+                        }
+                        if (data.getBoolean("capball_on_floor")) {
+                            capballOnFloor.setChecked(true);
+                        }
+                        if (data.getBoolean("park_completely_on_platform")) {
+                            parkCompletelyOnPlatform.setChecked(true);
+                        }
+                        if (data.getBoolean("park_completely_on_ramp")) {
+                            parkCompletelyOnRamp.setChecked(true);
+                        }
+                        if (data.getBoolean("park_on_platform")) {
+                            parkOnPlatform.setChecked(true);
+                        }
+                        if (data.getBoolean("park_on_ramp")) {
+                            parkOnRamp.setChecked(true);
+                        }
+                        if (data.getString("autonomous_notes").length() > 0) {
+                            autonomousNotes.setText(data.getString("autonomous_notes"));
+                        }
+                    } else {
+                        hasNoAutonomous();
+                        teamHasAutonomous.setChecked(false);
+                    }
+                } catch (JSONException | NullPointerException error) {
+                    Toast.makeText(this, "An error occurred: " + error.getMessage(), Toast.LENGTH_LONG).show();
+                }
+            } else {
+                claimBeacons.setChecked(false);
+                beaconsClaimed.setText("");
+
+                scoreInVortex.setChecked(false);
+                particlesScoredInVortex.setText("");
+                scoreInCorner.setChecked(false);
+                particlesScoredInCorner.setText("");
+
+                capballOnFloor.setChecked(false);
+
+                parkCompletelyOnPlatform.setChecked(false);
+                parkCompletelyOnRamp.setChecked(false);
+                parkOnPlatform.setChecked(false);
+                parkOnRamp.setChecked(false);
+
+                autonomousNotes.setText("");
+            }
+        }
     }
 
     public void enableButtons() {

@@ -25,4 +25,11 @@ public class EventStruct {
 
     public EventStruct() {
     }
+
+    public String toString() {
+        String string = "";
+        string+="EventStruct";
+        string+="\nTeam: " +team+ " Period: " +period+ " Type: " +type+ " Subtype: " +subtype+ " Location: " +location+ " Points: " +points+ " Description: " +description;
+        return string;
+    }
 }
