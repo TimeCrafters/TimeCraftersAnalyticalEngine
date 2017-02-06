@@ -17,7 +17,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:id="@+id/team"
-        android:textAppearance="@style/TextAppearance.AppCompat" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
     <TextView
         android:text="TeleOp"
@@ -48,18 +48,7 @@
         android:layout_alignParentEnd="true"
         android:layout_toEndOf="@+id/can_score_in_corner"
         android:layout_alignStart="@+id/max_particles_scored_in_vortex"
-        android:hint="Scorable in Corner" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/max_particles_scored_in_vortex"
-        android:layout_below="@+id/can_claim_beacons"
-        android:layout_alignParentEnd="true"
-        android:layout_alignStart="@+id/max_beacons_claimable"
-        android:hint="Scorable in Vortex" />
+        android:hint="Particles in Corner" />
 
     <CheckBox
         android:text="Can Score in Corner"
@@ -103,18 +92,6 @@
         android:layout_below="@+id/capball_above_crossbar"
         android:layout_alignParentStart="true" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/max_beacons_claimable"
-        android:layout_alignBaseline="@+id/can_claim_beacons"
-        android:layout_alignBottom="@+id/can_claim_beacons"
-        android:layout_alignParentEnd="true"
-        android:layout_toEndOf="@+id/textView13"
-        android:hint="Claimable Beacons" />
-
     <Button
         android:text="Save"
         android:layout_width="wrap_content"
@@ -136,5 +113,27 @@
         android:layout_above="@+id/save"
         android:layout_alignParentEnd="true"
         android:hint="TeleOp notes..." />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/max_particles_scored_in_vortex"
+        android:hint="Particles in Vortex"
+        android:layout_below="@+id/max_beacons_claimable"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/max_beacons_claimable" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/max_beacons_claimable"
+        android:hint="Claimable Beacons"
+        android:layout_below="@+id/textView13"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/capball_above_crossbar" />
 
 </RelativeLayout>
