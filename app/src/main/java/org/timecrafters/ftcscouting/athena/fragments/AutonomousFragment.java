@@ -1,5 +1,7 @@
 package org.timecrafters.ftcscouting.athena.fragments;
 
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.PopupMenu;
@@ -45,7 +47,11 @@ public class AutonomousFragment extends Fragment {
     TextView capballMissed;
     TextView capballSuccessPercentage;
 
+    TextView robotDead;
+
     TeamStatisticsActivity localActivity;
+
+    boolean monoMatch = false;
 
     public AutonomousFragment() {
         // Required empty public constructor
@@ -102,6 +108,8 @@ public class AutonomousFragment extends Fragment {
         capballMissed = (TextView) getView().findViewById(R.id.capball_missed);
         capballSuccessPercentage = (TextView) getView().findViewById(R.id.capball_success_percentage);
 
+        robotDead = (TextView) getView().findViewById(R.id.robot_dead);
+
         if (AppSync.teamHasMatchData() && localActivity.autonomousData != null && localActivity.autonomousData.size() > 0) {
             dataset.setText(""+(localActivity.autonomousData.size()-1)+" in dataset");
 
@@ -130,9 +138,11 @@ public class AutonomousFragment extends Fragment {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
                         if (item.getTitle().equals("ALL")) {
+                            monoMatch = false;
                             populateAutonomousData(localActivity.autonomousData.get(localActivity.autonomousData.size()-1));
                         } else {
                             int index = Integer.parseInt(item.getTitle().toString()) - 1;
+                            monoMatch = true;
                             populateAutonomousData(localActivity.autonomousData.get(index));
                         }
                         menu.setText(item.getTitle());
@@ -194,5 +204,18 @@ public class AutonomousFragment extends Fragment {
         capballOnFloor.setText(""+match.capballOnFloor);
         capballMissed.setText(""+match.capballMissed);
         capballSuccessPercentage.setText(""+decimalFormat.format(capballPercentage)+"%");
+
+        if (monoMatch) {
+            if (match.is_deadRobot) {
+                robotDead.setText("Yes");
+                robotDead.setTextColor(Color.RED);
+            } else {
+                robotDead.setText("No");
+                robotDead.setTextColor(Color.BLACK);
+            }
+        } else {
+            robotDead.setText(""+match.deadRobot);
+            robotDead.setTextColor(Color.BLACK);
+        }
     }
 }

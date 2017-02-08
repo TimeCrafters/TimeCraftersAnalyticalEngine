@@ -192,7 +192,7 @@
     <ToggleButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/dead_robot"
+        android:id="@+id/robot_dead"
         android:checked="true"
         android:layout_below="@+id/textView15"
         android:layout_centerHorizontal="true"
@@ -203,7 +203,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView7"
-        android:layout_alignEnd="@+id/dead_robot"
+        android:layout_alignEnd="@+id/robot_dead"
         android:id="@+id/capball_state"
         style="@android:style/Widget.Button"
         android:background="@android:drawable/btn_dropdown" />

@@ -70,7 +70,7 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
         particleMissedCorner = (Button) findViewById(R.id.missed_corner);
 
         capballState = (Button) findViewById(R.id.capball_state);
-        deadRobot = (ToggleButton) findViewById(R.id.dead_robot);
+        deadRobot = (ToggleButton) findViewById(R.id.robot_dead);
 
         parkingState = (Button) findViewById(R.id.parking_state);
         undo   = (Button) findViewById(R.id.undo);

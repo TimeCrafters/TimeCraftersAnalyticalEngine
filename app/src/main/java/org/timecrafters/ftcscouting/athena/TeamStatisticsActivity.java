@@ -149,6 +149,12 @@ public class TeamStatisticsActivity extends AppCompatActivity {
                                 allAutonomousMatches.capballMissed++;
                                 autonomousMatch.capballMissed++;
                             }
+
+                            if (event.subtype.equals("robot")) {
+                                allAutonomousMatches.deadRobot++;
+                                autonomousMatch.deadRobot++;
+                                autonomousMatch.is_deadRobot = true;
+                            }
                         }
                     } else {
                         if (event.type.equals("score")) {
@@ -207,6 +213,12 @@ public class TeamStatisticsActivity extends AppCompatActivity {
                             if (event.subtype.equals("capball")) {
                                 allTeleOpMatches.capballMissed++;
                                 teleOpMatch.capballMissed++;
+                            }
+
+                            if (event.subtype.equals("robot")) {
+                                allTeleOpMatches.deadRobot++;
+                                teleOpMatch.deadRobot++;
+                                teleOpMatch.is_deadRobot = true;
                             }
                         }
                     }

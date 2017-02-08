@@ -11,7 +11,6 @@ import android.widget.TextView;
 import android.widget.ToggleButton;
 
 import org.timecrafters.ftcscouting.R;
-import org.timecrafters.ftcscouting.apollo.AutoScoresHelper;
 import org.timecrafters.ftcscouting.apollo.TeleScoresHelper;
 import org.timecrafters.ftcscouting.hermes.AppSync;
 import org.timecrafters.ftcscouting.hermes.EventStruct;
@@ -53,7 +52,7 @@ public class ScoutMatchTeleOpActivity extends AppCompatActivity {
 
         capballState = (Button) findViewById(R.id.capball_state);
 
-        deadRobot = (ToggleButton) findViewById(R.id.dead_robot);
+        deadRobot = (ToggleButton) findViewById(R.id.robot_dead);
 
         particleInVortex = (Button) findViewById(R.id.particle_in_vortex);
         particleInCorner = (Button) findViewById(R.id.particle_in_corner);

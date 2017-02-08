@@ -57,7 +57,11 @@ public class MainActivity extends AppCompatActivity {
         try {
             String list = AppSync.getConfig().getString("last_used_teams_list");
             if (!list.equals("")) {
-                parseTeamsList(Uri.parse(list), true);
+                try {
+                    parseTeamsList(Uri.parse(list), true);
+                } catch (SecurityException error) {
+                    AppSync.puts("LIST", "Failed to load list.\n"+error.getMessage());
+                }
             }
         } catch (JSONException error) {/* Fault */}
 

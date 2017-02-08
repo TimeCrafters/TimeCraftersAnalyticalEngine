@@ -453,6 +453,35 @@
                 android:layout_below="@+id/textView74"
                 android:layout_alignStart="@+id/textView74" />
 
+            <TextView
+                android:text="Robot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView14"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textStyle="normal|bold"
+                android:layout_marginTop="19dp"
+                android:layout_below="@+id/textView89"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:text="Dead Robot:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView27"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:layout_below="@+id/textView14"
+                android:layout_alignStart="@+id/textView89" />
+
+            <TextView
+                android:text="N/A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textView27"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/robot_dead"
+                android:textAppearance="@style/TextAppearance.AppCompat" />
+
         </RelativeLayout>
     </ScrollView>
 
