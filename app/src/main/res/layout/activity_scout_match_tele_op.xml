@@ -54,26 +54,6 @@
         android:id="@+id/textView11" />
 
     <Button
-        android:text="Off Floor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView9"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/cap_ball_off_floor"
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        android:backgroundTint="@android:color/holo_red_dark" />
-
-    <Button
-        android:text="Above Crossbar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/cap_ball_off_floor"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/cap_ball_above_crossbar"
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        android:backgroundTint="@android:color/holo_red_dark" />
-
-    <Button
         android:text="In Vortex"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -90,16 +70,6 @@
         android:layout_alignParentEnd="true"
         android:id="@+id/particle_missed_corner"
         android:textAppearance="@style/TextAppearance.AppCompat" />
-
-    <Button
-        android:text="Capped"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/cap_ball_capped"
-        android:layout_below="@+id/cap_ball_above_crossbar"
-        android:layout_alignEnd="@+id/cap_ball_off_floor"
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        android:backgroundTint="@android:color/holo_red_dark" />
 
     <Button
         android:text="Missed Vortex"
@@ -130,13 +100,14 @@
         android:textAppearance="@style/TextAppearance.AppCompat" />
 
     <Button
-        android:text="Statistic"
+        android:text="Undo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/statistics"
-        android:textAppearance="@style/TextAppearance.AppCompat" />
+        android:id="@+id/undo"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:backgroundTint="@android:color/holo_red_dark" />
 
     <TextView
         android:text="TeleOp"
@@ -146,14 +117,6 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
         android:layout_below="@+id/team"
         android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:text="Score"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/score"
-        android:layout_toEndOf="@+id/statistics"
-        android:id="@+id/textView14" />
 
     <Button
         android:text="In Corner"
@@ -173,4 +136,55 @@
         android:textAlignment="center"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="None"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView9"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_marginTop="10dp"
+        android:id="@+id/capball_state"
+        android:background="@android:drawable/btn_dropdown"
+        style="@android:style/Widget.Button" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/particle_missed_corner"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/done"
+        android:id="@+id/scrollview">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:text="TeleOp Log"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/teleop_log"
+                android:textAppearance="@style/TextAppearance.AppCompat" />
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:text="Robot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView26"
+        android:layout_alignBaseline="@+id/lost_beacon"
+        android:layout_alignBottom="@+id/lost_beacon"
+        android:layout_centerHorizontal="true" />
+
+    <ToggleButton
+        android:text="ToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dead_robot"
+        android:checked="true"
+        android:layout_below="@+id/textView26"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

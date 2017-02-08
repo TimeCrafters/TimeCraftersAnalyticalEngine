@@ -140,7 +140,6 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
                 // Enable if necessarily
 //                numberOfBeaconsHit++;
 //                if (numberOfBeaconsHit < 3) {
-//                    setScore(AutoScoresHelper.claimBeacon);
 //                    if (numberOfBeaconsHit == 2) { claimBeacon.setEnabled(false); }
 //                } else {
 //                    claimBeacon.setEnabled(false);
@@ -220,8 +219,6 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
 //                writeEvent("team# match#: eventtype-event name | score#");
                 AppSync.addEvent(0, "autonomous", "score", "particle", "vortex", AutoScoresHelper.particleInVortex, "Scored Particle in Vortex");
                 refreshEventLog();
-
-                setScore(AutoScoresHelper.particleInVortex);
             }
         });
 
@@ -231,8 +228,6 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
                 lockTeamIn();
                 AppSync.addEvent(0, "autonomous", "score", "particle", "corner", AutoScoresHelper.particleInCorner, "Scored Particle in Corner");
                 refreshEventLog();
-
-                setScore(AutoScoresHelper.particleInCorner);
             }
         });
 
@@ -242,8 +237,6 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
                 lockTeamIn();
                 AppSync.addEvent(0, "autonomous", "miss", "particle", "vortex", 0, "Missed Scoring Particle in Vortex");
                 refreshEventLog();
-
-//                setScore(AutoScoresHelper.particleInVortex);
             }
         });
 
@@ -252,8 +245,6 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
             public void onClick(View v) {
                 lockTeamIn();
                 AppSync.addEvent(0, "autonomous", "miss", "particle", "corner", 0, "Missed Scoring Particle in Corner");
-
-//                setScore(AutoScoresHelper.particleInCorner);
             }
         });
 
@@ -313,9 +304,22 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
 
     public void refreshEventLog() {
         String string = "";
+        int tally = 0;
+
         for (EventStruct event : AppSync.eventsList) {
             string += "" + event.type + " " + event.subtype + " " + event.points + "pts " + event.description + "\n";
+            tally+=event.points;
         }
+
+        if (parkingEvent != null) {
+            tally += parkingEvent.points;
+        }
+
+        if (bumpedBall.isChecked()) {
+            tally+=AutoScoresHelper.capBallBumped;
+        }
+
+        setScore(tally);
 
         if (string.length() < 1) {
             eventLog.setText("Autonomous Log");
@@ -326,7 +330,7 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
     }
 
     public void setScore(int score1) {
-        score+=score1;
+        score = score1;
         scoreText.setText(""+score+" pts");
     }
 

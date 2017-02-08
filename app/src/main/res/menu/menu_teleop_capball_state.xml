@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="None"
+        android:id="@+id/none" />
+    <item android:title="Off Floor"
+        android:id="@+id/off_floor" />
+    <item android:title="Above Crossbar"
+        android:id="@+id/above_crossbar" />
+    <item android:title="Capped"
+        android:id="@+id/capped" />
+    <item android:title="Missed/Dropped"
+        android:id="@+id/missed" />
+</menu>
