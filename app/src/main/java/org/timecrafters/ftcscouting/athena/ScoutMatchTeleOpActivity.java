@@ -1,5 +1,7 @@
 package org.timecrafters.ftcscouting.athena;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.PopupMenu;
@@ -14,6 +16,8 @@ import org.timecrafters.ftcscouting.R;
 import org.timecrafters.ftcscouting.apollo.TeleScoresHelper;
 import org.timecrafters.ftcscouting.hermes.AppSync;
 import org.timecrafters.ftcscouting.hermes.EventStruct;
+
+import java.io.File;
 
 public class ScoutMatchTeleOpActivity extends AppCompatActivity {
     EventStruct capballEvent;
@@ -199,6 +203,10 @@ public class ScoutMatchTeleOpActivity extends AppCompatActivity {
                     AppSync.eventsList.add(capballEvent);
                 }
                 AppSync.writeEvents();
+
+                Intent intent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+                intent.setData(Uri.fromFile(new File(AppSync.getMatchDir() + File.separator + AppSync.currentMatchPath +".json")));
+                sendBroadcast(intent);
                 finish();
             }
         });

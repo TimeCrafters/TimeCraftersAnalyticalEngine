@@ -1,6 +1,7 @@
 package org.timecrafters.ftcscouting.athena;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.PopupMenu;
@@ -235,6 +236,11 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
                                 parkingState.setText(item.getTitle());
                                 break;
                             }
+                            case R.id.missed: {
+                                parkingEvent = new EventStruct(AppSync.teamNumber, "autonomous", "miss", "parking", "", 0, "Missed Parking Goal");
+                                parkingState.setText(item.getTitle());
+                                break;
+                            }
                             default: {
                                 break;
                             }
@@ -310,6 +316,10 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
                 }
 
                 AppSync.writeEvents();
+                Intent intent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+                intent.setData(Uri.fromFile(new File(AppSync.getMatchDir() + File.separator + AppSync.currentMatchPath +".json")));
+                sendBroadcast(intent);
+
                 finish();
                 startActivity(new Intent(getBaseContext(), ScoutMatchTeleOpActivity.class));
             }

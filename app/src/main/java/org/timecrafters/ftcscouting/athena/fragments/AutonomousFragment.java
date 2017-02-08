@@ -39,8 +39,7 @@ public class AutonomousFragment extends Fragment {
     TextView parkedCompletelyOnRamp;
     TextView parkedOnPlatform;
     TextView parkedOnRamp;
-    TextView parkedMissedPlatform;
-    TextView parkedMissedRamp;
+    TextView parkedMissed;
     TextView parkedSuccessPercentage;
 
     TextView capballOnFloor;
@@ -100,8 +99,7 @@ public class AutonomousFragment extends Fragment {
         parkedCompletelyOnRamp = (TextView) getView().findViewById(R.id.parking_completely_on_ramp);
         parkedOnPlatform = (TextView) getView().findViewById(R.id.parking_on_platform);
         parkedOnRamp = (TextView) getView().findViewById(R.id.parking_on_ramp);
-        parkedMissedPlatform = (TextView) getView().findViewById(R.id.parking_missed_platform);
-        parkedMissedRamp = (TextView) getView().findViewById(R.id.parking_missed_ramp);
+        parkedMissed = (TextView) getView().findViewById(R.id.parking_missed);
         parkedSuccessPercentage = (TextView) getView().findViewById(R.id.parking_success_percentage);
 
         capballOnFloor = (TextView) getView().findViewById(R.id.capball_on_floor);
@@ -199,6 +197,7 @@ public class AutonomousFragment extends Fragment {
         parkedCompletelyOnRamp.setText(""+match.completelyOnRamp);
         parkedOnPlatform.setText(""+match.onPlatform);
         parkedOnRamp.setText(""+match.onRamp);
+        parkedMissed.setText(""+match.missedParking);
         parkedSuccessPercentage.setText(""+decimalFormat.format(parkingPercentage)+"%");
 
         capballOnFloor.setText(""+match.capballOnFloor);

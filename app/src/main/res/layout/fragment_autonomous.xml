@@ -304,31 +304,13 @@
                 android:layout_alignParentEnd="true" />
 
             <TextView
-                android:text="Missed Platform:"
+                android:text="Missed:"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView100"
                 android:textAppearance="@style/TextAppearance.AppCompat"
                 android:layout_below="@+id/textView99"
                 android:layout_alignStart="@+id/textView99" />
-
-            <TextView
-                android:text="Missed Ramp:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView101"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView100"
-                android:layout_alignStart="@+id/textView100" />
-
-            <TextView
-                android:text="Parking Success Percentage:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView80"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView101"
-                android:layout_alignStart="@+id/textView101" />
 
             <TextView
                 android:text="Parking"
@@ -356,27 +338,9 @@
                 android:text="N/A"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/parking_missed_platform"
+                android:id="@+id/parking_missed"
                 android:textAppearance="@style/TextAppearance.AppCompat"
                 android:layout_below="@+id/parking_on_ramp"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/parking_missed_ramp"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/parking_missed_platform"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/parking_success_percentage"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/parking_missed_ramp"
                 android:layout_alignParentEnd="true" />
 
             <TextView
@@ -481,6 +445,24 @@
                 android:layout_alignParentEnd="true"
                 android:id="@+id/robot_dead"
                 android:textAppearance="@style/TextAppearance.AppCompat" />
+
+            <TextView
+                android:text="N/A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/parking_success_percentage"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:layout_below="@+id/parking_missed"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:text="Parking Success Percentage:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView80"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:layout_below="@+id/textView100"
+                android:layout_alignStart="@+id/textView100" />
 
         </RelativeLayout>
     </ScrollView>

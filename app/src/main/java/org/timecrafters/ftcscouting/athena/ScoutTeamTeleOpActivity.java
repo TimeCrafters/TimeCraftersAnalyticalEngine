@@ -1,6 +1,7 @@
 package org.timecrafters.ftcscouting.athena;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -96,6 +97,10 @@ public class ScoutTeamTeleOpActivity extends AppCompatActivity {
 
                     AppSync.createDirectory(AppSync.getTeamDir()); // Ensure directory exists
                     AppSync.writeJSON(scoutingData, AppSync.getTeamDir()+ File.separator +"teleop.json", false);
+
+                    Intent intent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+                    intent.setData(Uri.fromFile(new File(AppSync.getTeamDir() + File.separator + "teleop.json")));
+                    sendBroadcast(intent);
                 } catch (JSONException error) {
                     AppSync.puts("TELE", "Failed to write teleOp data: " +error.getMessage());
                 }
