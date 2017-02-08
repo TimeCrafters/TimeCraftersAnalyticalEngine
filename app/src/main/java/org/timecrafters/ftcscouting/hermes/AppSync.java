@@ -320,10 +320,26 @@ public class AppSync {
 
         return teamDataExists;
     }
+    public static boolean teamHasScoutingData(int _teamNumber) {
+        boolean teamDataExists = false;
+        File auto = new File(getRootDir()+ File.separator+ competitionName+ File.separator + _teamNumber+ File.separator +"autonomous.json");
+        File tele = new File(getRootDir()+ File.separator+ competitionName+ File.separator +_teamNumber+ File.separator +"teleop.json");
+        if (auto.exists() && auto.length() > 0) { teamDataExists = true; }
+        if (tele.exists() && tele.length() > 0) { teamDataExists = true; }
+
+        return teamDataExists;
+    }
 
     public static boolean teamHasMatchData() {
         boolean teamDataExists = false;
         File[] matches = new File(getMatchDir()).listFiles();
+        if (matches != null && matches.length > 0) { teamDataExists = true; }
+
+        return teamDataExists;
+    }
+    public static boolean teamHasMatchData(int _teamNumber) {
+        boolean teamDataExists = false;
+        File[] matches = new File(getRootDir()+ File.separator+ competitionName+ File.separator+ _teamNumber+ File.separator +"matches").listFiles();
         if (matches != null && matches.length > 0) { teamDataExists = true; }
 
         return teamDataExists;

@@ -127,22 +127,8 @@ public class TeamStatisticsActivity extends AppCompatActivity {
                             }
 
                             if (event.subtype.equals("parking")) {
-                                if (event.location.equals("on_platform")) {
-                                    allAutonomousMatches.missedPlatform++;
-                                    autonomousMatch.missedPlatform++;
-                                }
-                                if (event.location.equals("on_ramp")) {
-                                    allAutonomousMatches.missedRamp++;
-                                    autonomousMatch.missedRamp++;
-                                }
-                                if (event.location.equals("platform")) {
-                                    allAutonomousMatches.missedPlatform++;
-                                    autonomousMatch.missedPlatform++;
-                                }
-                                if (event.location.equals("ramp")) {
-                                    allAutonomousMatches.missedRamp++;
-                                    autonomousMatch.missedRamp++;
-                                }
+                                allAutonomousMatches.missedParking++;
+                                autonomousMatch.missedParking++;
                             }
 
                             if (event.subtype.equals("capball")) {

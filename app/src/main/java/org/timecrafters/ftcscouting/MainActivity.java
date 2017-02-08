@@ -4,12 +4,17 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.text.TextUtilsCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.PopupMenu;
+import android.text.SpannableString;
+import android.text.TextUtils;
+import android.text.style.ForegroundColorSpan;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -139,7 +144,19 @@ public class MainActivity extends AppCompatActivity {
 
                 for (HashMap.Entry<Integer, String> entry : AppSync.teamsList.entrySet()) {
                     MenuItem temp = popupMenu.getMenu().add("" + entry.getKey() + " | " + entry.getValue());
-                // TODO: Dynamically change text color if the team has scouting/match data..
+                    SpannableString team_number = new SpannableString(""+entry.getKey());
+                    SpannableString team_name   = new SpannableString(""+entry.getValue());
+                    if (AppSync.teamHasScoutingData(entry.getKey())) {
+                        team_number.setSpan(new ForegroundColorSpan(Color.rgb(0, 150, 0)), 0, team_number.length(), 0);
+                    } else {
+                        team_number.setSpan(new ForegroundColorSpan(Color.DKGRAY), 0, team_number.length(), 0);
+                    }
+                    if (AppSync.teamHasMatchData(entry.getKey())) {
+                        team_name.setSpan(new ForegroundColorSpan(Color.rgb(200, 80, 0)), 0, team_name.length(), 0);
+                    } else {
+                        team_name.setSpan(new ForegroundColorSpan(Color.DKGRAY), 0, team_name.length(), 0);
+                    }
+                    temp.setTitle(TextUtils.concat(team_number, " | ", team_name));
                 }
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
@@ -163,7 +180,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onDismiss(PopupMenu menu) {
                         if (0 == AppSync.teamNumber) {
-                            AppSync.createMessageDialog(MainActivityContext, "No Team Selected", "Can't load data for a phantom team.");
+//                            AppSync.createMessageDialog(MainActivityContext, "No Team Selected", "Can't load data for a phantom team.");
                         }
                     }
                 });

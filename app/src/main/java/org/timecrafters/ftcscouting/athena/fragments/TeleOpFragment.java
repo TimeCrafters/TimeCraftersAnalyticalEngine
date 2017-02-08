@@ -144,10 +144,8 @@ public class TeleOpFragment extends Fragment {
 
         int totalBeacons, totalParticlesVortex, totalParticlesCorner, totalCapball;
         double beaconsPercentage;
-        double particlesPercentage;
         double particlesVortexPercentage;
         double particlesCornerPercentage;
-        double parkingPercentage;
         double capballPercentage;
 
         totalBeacons = match.beaconsClaimed+match.beaconsMissed;

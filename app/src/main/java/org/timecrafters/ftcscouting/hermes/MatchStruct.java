@@ -8,7 +8,7 @@ public class MatchStruct {
     // Counters for Tally
     public int beaconsClaimed, beaconsMissed, beaconsStolen = 0;
     public int scoredInVortex, scoredInCorner, missedVortex,  missedCorner = 0;
-    public int completelyOnPlatform, completelyOnRamp, onPlatform, onRamp, missedPlatform, missedRamp = 0;
+    public int completelyOnPlatform, completelyOnRamp, onPlatform, onRamp, missedParking = 0;
     public int capballOnFloor, capballMissed, capballOffFloor, capballAboveCrossbar, capballCapped = 0;
     public int deadRobot = 0;
 
@@ -20,7 +20,7 @@ public class MatchStruct {
         String string = "MatchScruct";
         string+="\nBeacons: claimed:"+beaconsClaimed+" missed: "+beaconsMissed+" stolen: "+beaconsStolen;
         string+="\nParticles: Scored: vortex: "+scoredInVortex+" corner: "+scoredInCorner+" Missed: vortex: "+missedVortex+" corner: "+missedCorner;
-        string+="\nParking: score: completely on platform: "+completelyOnPlatform+" completely on ramp: "+completelyOnRamp+" on platform: "+onPlatform+" on ramp: "+onRamp+" missed: platform: "+missedPlatform+" missed ramp: "+missedRamp;
+        string+="\nParking: score: completely on platform: "+completelyOnPlatform+" completely on ramp: "+completelyOnRamp+" on platform: "+onPlatform+" on ramp: "+onRamp+" missed: "+missedParking;
         string+="\nCapball: score: on floor: "+capballOnFloor+" off floor: "+capballOffFloor+" above crossbar: "+capballAboveCrossbar+" capped: "+capballCapped+" missed: "+capballMissed;
         string+="\nDead Robot: "+deadRobot;
         string+="\nBooleans: capball: on floor: "+is_capballOnFloor+" off floor:"+is_capbalOffFloor+" above crossbar: "+is_capballAboveCrossbar+" capped: "+is_capballCapped+" robot: dead robot: "+is_deadRobot;

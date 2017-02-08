@@ -178,7 +178,7 @@ public class AutonomousFragment extends Fragment {
 
         particlesPercentage = ((double) match.missedVortex+match.missedCorner) / (double) totalParticlesVortex+totalParticlesCorner * 100;
 
-        totalParking = match.completelyOnPlatform+match.completelyOnRamp + match.onPlatform+match.onRamp + match.missedPlatform+match.missedRamp;
+        totalParking = match.completelyOnPlatform+match.completelyOnRamp + match.onPlatform+match.onRamp + match.missedParking;
         parkingPercentage = (double) (match.completelyOnPlatform+match.completelyOnRamp + match.onPlatform+match.onRamp) / (double) totalParking * 100;
 
         totalCapball = match.capballOnFloor+match.capballMissed;
