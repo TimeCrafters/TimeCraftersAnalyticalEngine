@@ -32,7 +32,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat" />
 
     <Button
-        android:text="Scout Match"
+        android:text="Track Match"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

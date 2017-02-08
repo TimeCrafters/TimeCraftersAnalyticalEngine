@@ -229,13 +229,15 @@ public class ScoutMatchTeleOpActivity extends AppCompatActivity {
         String string = "";
         int tally = 0;
 
+        if (capballEvent != null) {
+            string += "" + capballEvent.type + " " + capballEvent.subtype + " " + capballEvent.points + "pts " + capballEvent.description + "\n";
+
+            tally += capballEvent.points;
+        }
+
         for (EventStruct event : AppSync.eventsList) {
             string += "" + event.type + " " + event.subtype + " " + event.points + "pts " + event.description + "\n";
             tally+=event.points;
-        }
-
-        if (capballEvent != null) {
-            tally += capballEvent.points;
         }
 
         setScore(tally);

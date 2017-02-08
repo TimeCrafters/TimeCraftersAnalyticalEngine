@@ -8,7 +8,7 @@ public class AutoScoresHelper {
     public static int particleInVortex = 15;
     public static int particleInCorner = 5;
 
-    public static int capBallBumped = 5; // Cap ball must be on playing field to be counted.
+    public static int capBallOnFloor = 5; // Cap ball must be on playing field to be counted.
 
     public static int completelyOnPlatform = 10;
     public static int onPlatform = 5;

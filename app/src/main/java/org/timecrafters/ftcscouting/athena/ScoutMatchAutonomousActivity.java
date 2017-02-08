@@ -22,6 +22,7 @@ import java.util.HashMap;
 public class ScoutMatchAutonomousActivity extends AppCompatActivity {
 
     EventStruct parkingEvent;
+    EventStruct capballEvent;
 
     Button teamSelection;
 
@@ -36,7 +37,7 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
 
     Button parkingState;
 
-    ToggleButton bumpedBall;
+    Button capballState;
     ToggleButton deadRobot;
 
     Button undo;
@@ -68,7 +69,7 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
         particleMissedVortex = (Button) findViewById(R.id.missed_vortex);
         particleMissedCorner = (Button) findViewById(R.id.missed_corner);
 
-        bumpedBall = (ToggleButton) findViewById(R.id.bump_ball);
+        capballState = (Button) findViewById(R.id.capball_state);
         deadRobot = (ToggleButton) findViewById(R.id.dead_robot);
 
         parkingState = (Button) findViewById(R.id.parking_state);
@@ -86,10 +87,7 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
         particleMissedVortex.setEnabled(false);
         particleMissedCorner.setEnabled(false);
 
-        bumpedBall.setEnabled(false);
-        bumpedBall.setText("Not on Floor");
-        bumpedBall.setTextOn("On Floor");
-        bumpedBall.setTextOff("Not on Floor");
+        capballState.setEnabled(false);
 
         deadRobot.setEnabled(false);
         deadRobot.setText("Alive");
@@ -110,7 +108,6 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
                 popupMenu.getMenu().setQwertyMode(false);
 
                 for(HashMap.Entry<Integer, String> entry : AppSync.teamsList.entrySet()) {
-                    AppSync.puts(entry.getKey().toString());
                     popupMenu.getMenu().add(""+entry.getKey()+" | "+entry.getValue());
                 }
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
@@ -156,6 +153,47 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
                 lockTeamIn();
                 AppSync.addEvent(0, "autonomous", "miss", "beacon", "", 0, "Missed Beacon");
                 refreshEventLog();
+            }
+        });
+
+        capballState.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PopupMenu popupMenu = new PopupMenu(ScoutMatchAutonomousActivity.this, capballState);
+                popupMenu.getMenuInflater().inflate(R.menu.menu_autonomous_capball_state, popupMenu.getMenu());
+
+                popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+                        switch (item.getItemId()) {
+                            case R.id.none: {
+                                capballEvent = null;
+                                capballState.setText(item.getTitle());
+                                refreshEventLog();
+                                break;
+                            }
+                            case R.id.on_floor: {
+                                capballEvent = new EventStruct(AppSync.teamNumber, "autonomous", "score", "capball", "floor", AutoScoresHelper.capBallOnFloor, "Capball on Floor");
+                                capballState.setText(item.getTitle());
+                                refreshEventLog();
+                                break;
+                            }
+                            case R.id.missed: {
+                                capballEvent = new EventStruct(AppSync.teamNumber, "autonomous", "miss", "capball", "", 0, "Missed Capball");
+                                capballState.setText(item.getTitle());
+                                refreshEventLog();
+                                break;
+                            }
+                            default: {
+                                break;
+                            }
+                        }
+
+                        refreshEventLog();
+                        return true;
+                    }
+                });
+                popupMenu.show();
             }
         });
 
@@ -263,10 +301,6 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // SAVE DATA
 
-                if (bumpedBall.isChecked()) {
-                    AppSync.addEvent(0, "autonomous", "score", "capball", "floor", AutoScoresHelper.capBallBumped, "Capball on Floor");
-                }
-
                 if (!deadRobot.isChecked()) { // If not checked, robot is dead.
                     AppSync.addEvent(0, "autonomous", "miss", "robot", "", 0, "Dead Robot");
                 }
@@ -285,17 +319,21 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        AppSync.createConfirmDialog(this, "Are you sure?", "You will lose your input from here.", new Runnable() {
-            @Override
-            public void run() {
-                finish();
-            }
-        }, new Runnable() {
-            @Override
-            public void run() {
-                // no
-            }
-        });
+        if (AppSync.eventsList.size() > 0) {
+            AppSync.createConfirmDialog(this, "Are you sure?", "You will lose your input from here.", new Runnable() {
+                @Override
+                public void run() {
+                    finish();
+                }
+            }, new Runnable() {
+                @Override
+                public void run() {
+                    // no
+                }
+            });
+        } else {
+            finish();
+        }
     }
 
     public void lockTeamIn() {
@@ -306,17 +344,21 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
         String string = "";
         int tally = 0;
 
-        for (EventStruct event : AppSync.eventsList) {
-            string += "" + event.type + " " + event.subtype + " " + event.points + "pts " + event.description + "\n";
-            tally+=event.points;
+        if (capballEvent != null) {
+            string += "" + capballEvent.type + " " + capballEvent.subtype + " " + capballEvent.points + "pts " + capballEvent.description + "\n";
+
+            tally+=capballEvent.points;
         }
 
         if (parkingEvent != null) {
+            string += "" + parkingEvent.type + " " + parkingEvent.subtype + " " + parkingEvent.points + "pts " + parkingEvent.description + "\n";
+
             tally += parkingEvent.points;
         }
 
-        if (bumpedBall.isChecked()) {
-            tally+=AutoScoresHelper.capBallBumped;
+        for (EventStruct event : AppSync.eventsList) {
+            string += "" + event.type + " " + event.subtype + " " + event.points + "pts " + event.description + "\n";
+            tally+=event.points;
         }
 
         setScore(tally);
@@ -343,7 +385,7 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
         particleMissedVortex.setEnabled(true);
         particleMissedCorner.setEnabled(true);
 
-        bumpedBall.setEnabled(true);
+        capballState.setEnabled(true);
         deadRobot.setEnabled(true);
 
         parkingState.setEnabled(true);

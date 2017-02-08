@@ -105,7 +105,7 @@ public class AppSync {
         if (currentMatchPath != null) {
             writeEvents(currentMatchPath);
         } else {
-            currentMatchPath = getMatchDir()+ File.separator +"-"+matchID+ System.currentTimeMillis()/1000; // .json will be appended below
+            currentMatchPath = getMatchDir()+ File.separator +matchID+"-"+ System.currentTimeMillis()/1000; // .json will be appended below
         }
     }
 

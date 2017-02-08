@@ -219,40 +219,6 @@ public class TeamStatisticsActivity extends AppCompatActivity {
         } else { matchData = null; AppSync.puts("STATS", "No Team Match Data!"); }
     }
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_team_statistics, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_reload) {
-            AppSync.createConfirmDialog(this, "Are you sure?", "This will reload the parsed data and may take a moment.", new Runnable() {
-                @Override
-                public void run() {
-                    // yes
-                }
-            }, new Runnable() {
-                @Override
-                public void run() {
-                    // no
-                }
-            });
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
         public SectionsPagerAdapter(FragmentManager fm) {
