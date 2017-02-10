@@ -1,10 +1,14 @@
 package org.timecrafters.ftcscouting.athena;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.PopupMenu;
+import android.text.SpannableString;
+import android.text.TextUtils;
+import android.text.style.ForegroundColorSpan;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -96,7 +100,17 @@ public class ScoutTeamAutonomousActivity extends AppCompatActivity {
 
                 for(HashMap.Entry<Integer, String> entry : AppSync.teamsList.entrySet()) {
                     AppSync.puts(entry.getKey().toString());
-                    popupMenu.getMenu().add(""+entry.getKey()+" | "+entry.getValue());
+                    MenuItem temp = popupMenu.getMenu().add("");
+                    SpannableString team_number = new SpannableString(""+entry.getKey()+ " | " +""+entry.getValue());
+
+                    if (AppSync.teamHasScoutingData(entry.getKey())) {
+                        team_number.setSpan(new ForegroundColorSpan(Color.rgb(0, 150, 0)), 0, team_number.length(), 0);
+                    } else {
+                        team_number.setSpan(new ForegroundColorSpan(Color.DKGRAY), 0, team_number.length(), 0);
+                    }
+
+                    temp.setTitle(TextUtils.concat(team_number));
+
                 }
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
