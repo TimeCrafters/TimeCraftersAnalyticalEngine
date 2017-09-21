@@ -13,13 +13,13 @@
     tools:context="org.timecrafters.ftcscouting.MainActivity">
 
     <TextView
+        android:id="@+id/subtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Scouting App for Velocity Vortex"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/subtitle" />
+        android:text="Scouting App for Relic Recovery"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
     <Button
         android:text="Scout Team"

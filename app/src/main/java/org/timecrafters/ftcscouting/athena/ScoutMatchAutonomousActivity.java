@@ -27,18 +27,16 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
 
     Button teamSelection;
 
-    Button claimBeacon;
-    Button missedBeacon;
+    Button jewelScored;
+    Button jewelMissed;
 
-    Button particleInVortex;
-    Button particleInCorner;
+    Button glyphScored;
+    Button glyphMissed;
+    Button glyphCryptokey;
 
-    Button particleMissedVortex;
-    Button particleMissedCorner;
+    Button parkingSafeZone;
+    Button parkingMissed;
 
-    Button parkingState;
-
-    Button capballState;
     ToggleButton deadRobot;
 
     Button undo;
@@ -50,7 +48,6 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
 
 
     public int score = 0;
-    public int numberOfBeaconsHit = 0;
     public int teamNumber;
     public String teamName;
 
@@ -61,41 +58,39 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
 
        teamSelection = (Button) findViewById(R.id.team_selection);
 
-        claimBeacon = (Button) findViewById(R.id.claim_beacon);
-        missedBeacon = (Button) findViewById(R.id.missed_lightbox);
+        glyphScored = (Button) findViewById(R.id.glyph_scored);
+        glyphMissed = (Button) findViewById(R.id.glyph_missed);
+        glyphCryptokey = (Button) findViewById(R.id.glyph_crytokey);
 
-        particleInVortex = (Button) findViewById(R.id.in_vortex);
-        particleInCorner = (Button) findViewById(R.id.in_corner);
+        parkingSafeZone = (Button) findViewById(R.id.parking_safezone);
+        parkingMissed   = (Button) findViewById(R.id.parking_missed);
 
-        particleMissedVortex = (Button) findViewById(R.id.missed_vortex);
-        particleMissedCorner = (Button) findViewById(R.id.missed_corner);
+        jewelScored = (Button) findViewById(R.id.jewel_scored);
+        jewelMissed = (Button) findViewById(R.id.jewel_missed);
 
-        capballState = (Button) findViewById(R.id.capball_state);
         deadRobot = (ToggleButton) findViewById(R.id.robot_dead);
 
-        parkingState = (Button) findViewById(R.id.parking_state);
         undo   = (Button) findViewById(R.id.undo);
         teleOp = (Button) findViewById(R.id.teleop);
 
         eventLog = (TextView) findViewById(R.id.eventLog);
         scoreText = (TextView) findViewById(R.id.score);
 
-        claimBeacon.setEnabled(false);
-        missedBeacon.setEnabled(false);
+        glyphScored.setEnabled(false);
+        glyphMissed.setEnabled(false);
+        glyphCryptokey.setEnabled(false);
 
-        particleInVortex.setEnabled(false);
-        particleInCorner.setEnabled(false);
-        particleMissedVortex.setEnabled(false);
-        particleMissedCorner.setEnabled(false);
+        parkingSafeZone.setEnabled(false);
+        parkingMissed.setEnabled(false);
 
-        capballState.setEnabled(false);
+        jewelScored.setEnabled(false);
+        jewelMissed.setEnabled(false);
 
         deadRobot.setEnabled(false);
         deadRobot.setText("Alive");
         deadRobot.setTextOn("Alive");
         deadRobot.setTextOff("DEAD");
 
-        parkingState.setEnabled(false);
         undo.setEnabled(false);
         teleOp.setEnabled(false);
 
@@ -130,172 +125,87 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
             }
         });
 
-        // Beacons
-        claimBeacon.setOnClickListener(new View.OnClickListener() {
+        // Glyph
+        glyphScored.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 lockTeamIn();
-                // Enable if necessarily
-//                numberOfBeaconsHit++;
-//                if (numberOfBeaconsHit < 3) {
-//                    if (numberOfBeaconsHit == 2) { claimBeacon.setEnabled(false); }
-//                } else {
-//                    claimBeacon.setEnabled(false);
-//                }
-                AppSync.addEvent(0, "autonomous", "score", "beacon", "", AutoScoresHelper.claimBeacon, "Claimed Beacon");
-
+                AppSync.addEvent(0, "autonomous", "score", "glyph", "glyph", AutoScoresHelper.glyphScored, "Scored Glyph");
                 refreshEventLog();
             }
         });
 
-        missedBeacon.setOnClickListener(new View.OnClickListener() {
+        glyphMissed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 lockTeamIn();
-                AppSync.addEvent(0, "autonomous", "miss", "beacon", "", 0, "Missed Beacon");
+                AppSync.addEvent(0, "autonomous", "miss", "glyph", "", 0, "Missed Glyph");
                 refreshEventLog();
             }
         });
 
-        capballState.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                PopupMenu popupMenu = new PopupMenu(ScoutMatchAutonomousActivity.this, capballState);
-                popupMenu.getMenuInflater().inflate(R.menu.menu_autonomous_capball_state, popupMenu.getMenu());
-
-                popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-                    @Override
-                    public boolean onMenuItemClick(MenuItem item) {
-                        switch (item.getItemId()) {
-                            case R.id.none: {
-                                capballEvent = null;
-                                capballState.setText(item.getTitle());
-                                refreshEventLog();
-                                break;
-                            }
-                            case R.id.on_floor: {
-                                capballEvent = new EventStruct(AppSync.teamNumber, "autonomous", "score", "capball", "floor", AutoScoresHelper.capBallOnFloor, "Capball on Floor");
-                                capballState.setText(item.getTitle());
-                                refreshEventLog();
-                                break;
-                            }
-                            case R.id.missed: {
-                                capballEvent = new EventStruct(AppSync.teamNumber, "autonomous", "miss", "capball", "", 0, "Missed Capball");
-                                capballState.setText(item.getTitle());
-                                refreshEventLog();
-                                break;
-                            }
-                            default: {
-                                break;
-                            }
-                        }
-
-                        refreshEventLog();
-                        return true;
-                    }
-                });
-                popupMenu.show();
-            }
-        });
-
-        // Parking Locations
-        parkingState.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                PopupMenu popupMenu = new PopupMenu(ScoutMatchAutonomousActivity.this, parkingState);
-                popupMenu.getMenuInflater().inflate(R.menu.menu_autonomous_parking, popupMenu.getMenu());
-
-                popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-                    @Override
-                    public boolean onMenuItemClick(MenuItem item) {
-                        lockTeamIn();
-
-                        switch (item.getItemId()) {
-                            case R.id.not_applicable: {
-                                parkingEvent = null;
-                                parkingState.setText(item.getTitle());
-                                break;
-                            }
-                            case R.id.completely_on_platform: {
-                                parkingEvent = new EventStruct(AppSync.teamNumber, "autonomous", "score", "parking", "on_platform", AutoScoresHelper.completelyOnPlatform, "Parked Completely on Platform");
-                                parkingState.setText(item.getTitle());
-                                break;
-                            }
-                            case R.id.completely_on_ramp: {
-                               parkingEvent = new EventStruct(AppSync.teamNumber, "autonomous", "score", "parking", "on_ramp", AutoScoresHelper.completelyOnRamp, "Parked on Completely on Ramp");
-                                parkingState.setText(item.getTitle());
-                                break;
-                            }
-                            case R.id.on_platform: {
-                                parkingEvent = new EventStruct(AppSync.teamNumber, "autonomous", "score", "parking", "platform", AutoScoresHelper.onPlatform, "Parked on Platform");
-                                parkingState.setText(item.getTitle());
-                                break;
-                            }
-                            case R.id.on_ramp: {
-                                parkingEvent = new EventStruct(AppSync.teamNumber, "autonomous", "score", "parking", "ramp", AutoScoresHelper.onRamp, "Parked on Ramp");
-                                parkingState.setText(item.getTitle());
-                                break;
-                            }
-                            case R.id.missed: {
-                                parkingEvent = new EventStruct(AppSync.teamNumber, "autonomous", "miss", "parking", "", 0, "Missed Parking Goal");
-                                parkingState.setText(item.getTitle());
-                                break;
-                            }
-                            default: {
-                                break;
-                            }
-                        }
-
-                        refreshEventLog();
-                        return true;
-                    }
-                });
-                popupMenu.show();
-            }
-        });
-        // End
-
-        // Particles
-        particleInVortex.setOnClickListener(new View.OnClickListener() {
+        glyphCryptokey.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 lockTeamIn();
-//                writeEvent("team# match#: eventtype-event name | score#");
-                AppSync.addEvent(0, "autonomous", "score", "particle", "vortex", AutoScoresHelper.particleInVortex, "Scored Particle in Vortex");
+                AppSync.addEvent(0, "autonomous", "score", "glyph", "cryptokey", AutoScoresHelper.glyphScoreCryptokey, "Score Glyph Cryptokey");
+                glyphCryptokey.setEnabled(false);
                 refreshEventLog();
             }
         });
 
-        particleInCorner.setOnClickListener(new View.OnClickListener() {
+        // Parking
+        parkingSafeZone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 lockTeamIn();
-                AppSync.addEvent(0, "autonomous", "score", "particle", "corner", AutoScoresHelper.particleInCorner, "Scored Particle in Corner");
+                AppSync.addEvent(0, "autonomous", "scored", "parking", "", AutoScoresHelper.parkingSafeZone, "Parked in Safe Zone");
+                parkingSafeZone.setEnabled(false);
+                parkingMissed.setEnabled(false);
                 refreshEventLog();
             }
         });
 
-        particleMissedVortex.setOnClickListener(new View.OnClickListener() {
+        parkingMissed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 lockTeamIn();
-                AppSync.addEvent(0, "autonomous", "miss", "particle", "vortex", 0, "Missed Scoring Particle in Vortex");
+                AppSync.addEvent(0, "autonomous", "missed", "parking", "", 0, "Missed parking in Safe Zone");
+                parkingSafeZone.setEnabled(false);
+                parkingMissed.setEnabled(false);
                 refreshEventLog();
             }
         });
 
-        particleMissedCorner.setOnClickListener(new View.OnClickListener() {
+        // Jewel
+        jewelScored.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 lockTeamIn();
-                AppSync.addEvent(0, "autonomous", "miss", "particle", "corner", 0, "Missed Scoring Particle in Corner");
+                AppSync.addEvent(0, "autonomous", "scored", "jewel", "", 0, "Scored jewel");
+                jewelScored.setEnabled(false);
+                jewelMissed.setEnabled(false);
+                refreshEventLog();
             }
         });
 
+        jewelMissed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lockTeamIn();
+                AppSync.addEvent(0, "autonomous", "missed", "jewel", "", 0, "Missed jewel");
+                jewelScored.setEnabled(false);
+                jewelMissed.setEnabled(false);
+                refreshEventLog();
+            }
+        });
+
+        // Undo button
         undo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (AppSync.eventsList.size() > 0) {
+                    reenableButton(AppSync.eventsList.get(AppSync.eventsList.size()-1));
                     AppSync.eventsList.remove(AppSync.eventsList.size()-1);
                     refreshEventLog();
                 }
@@ -354,18 +264,6 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
         String string = "";
         int tally = 0;
 
-        if (capballEvent != null) {
-            string += "" + capballEvent.type + " " + capballEvent.subtype + " " + capballEvent.points + "pts " + capballEvent.description + "\n";
-
-            tally+=capballEvent.points;
-        }
-
-        if (parkingEvent != null) {
-            string += "" + parkingEvent.type + " " + parkingEvent.subtype + " " + parkingEvent.points + "pts " + parkingEvent.description + "\n";
-
-            tally += parkingEvent.points;
-        }
-
         for (EventStruct event : AppSync.eventsList) {
             string += "" + event.type + " " + event.subtype + " " + event.points + "pts " + event.description + "\n";
             tally+=event.points;
@@ -387,19 +285,23 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
     }
 
     public void enableButtons() {
-        claimBeacon.setEnabled(true);
-        missedBeacon.setEnabled(true);
+        glyphScored.setEnabled(true);
+        glyphMissed.setEnabled(true);
+        glyphCryptokey.setEnabled(true);
 
-        particleInVortex.setEnabled(true);
-        particleInCorner.setEnabled(true);
-        particleMissedVortex.setEnabled(true);
-        particleMissedCorner.setEnabled(true);
+        parkingSafeZone.setEnabled(true);
+        parkingMissed.setEnabled(true);
 
-        capballState.setEnabled(true);
+        jewelScored.setEnabled(true);
+        jewelMissed.setEnabled(true);
+
         deadRobot.setEnabled(true);
 
-        parkingState.setEnabled(true);
         undo.setEnabled(true);
         teleOp.setEnabled(true);
+    }
+
+    public void reenableButton(EventStruct event) {
+        // TODO; Make me do helpful things.
     }
 }

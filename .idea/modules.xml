@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FTCScouting.iml" filepath="$PROJECT_DIR$/FTCScouting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TimeCraftersAnalyticalEngine.iml" filepath="$PROJECT_DIR$/TimeCraftersAnalyticalEngine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
