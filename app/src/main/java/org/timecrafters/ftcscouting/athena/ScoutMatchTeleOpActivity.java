@@ -20,20 +20,20 @@ import org.timecrafters.ftcscouting.hermes.EventStruct;
 import java.io.File;
 
 public class ScoutMatchTeleOpActivity extends AppCompatActivity {
-    EventStruct capballEvent;
+    EventStruct relicEvent;
 
-    public Button claimBeacon;
-    public Button loseBeacon;
+    public Button glyphScored;
+    public Button glyphCompletedRow;
+    public Button glyphCompletedColumn;
+    public Button glyphMissed;
 
-    public Button capballState;
+    public Button robotBalanced;
+    public Button robotFailedToBalance;
+
+    public Button relic;
+    public ToggleButton relicUpright;
 
     public ToggleButton deadRobot;
-
-    public Button particleInVortex;
-    public Button particleInCorner;
-
-    public Button particleMissedVortex;
-    public Button particleMissedCorner;
 
     public Button undo;
     public Button done;
@@ -51,18 +51,18 @@ public class ScoutMatchTeleOpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scout_match_tele_op);
 
-        claimBeacon = (Button) findViewById(R.id.claim_beacon);
-        loseBeacon = (Button) findViewById(R.id.lost_beacon);
-
-        capballState = (Button) findViewById(R.id.capball_state);
+        robotBalanced        = (Button) findViewById(R.id.robot_balanced);
+        robotFailedToBalance = (Button) findViewById(R.id.robot_failed_balance);
 
         deadRobot = (ToggleButton) findViewById(R.id.robot_dead);
 
-        particleInVortex = (Button) findViewById(R.id.particle_in_vortex);
-        particleInCorner = (Button) findViewById(R.id.particle_in_corner);
+        glyphScored          = (Button) findViewById(R.id.glyph_scored);
+        glyphCompletedRow    = (Button) findViewById(R.id.glyph_completed_row);
+        glyphCompletedColumn = (Button) findViewById(R.id.glyph_completed_column);
+        glyphMissed          = (Button) findViewById(R.id.glyph_missed);
 
-        particleMissedVortex = (Button) findViewById(R.id.particle_missed_vortex);
-        particleMissedCorner = (Button) findViewById(R.id.particle_missed_corner);
+        relic        = (Button) findViewById(R.id.relic);
+        relicUpright = (ToggleButton) findViewById(R.id.relic_upright);
 
         undo = (Button) findViewById(R.id.undo);
         done = (Button) findViewById(R.id.done);
@@ -79,61 +79,91 @@ public class ScoutMatchTeleOpActivity extends AppCompatActivity {
         deadRobot.setTextOn("Alive");
         deadRobot.setTextOff("DEAD");
 
-        claimBeacon.setOnClickListener(new View.OnClickListener(){
+        glyphScored.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                // _-Magic Smoke Required-_ \\
-                AppSync.addEvent(0, "teleop", "score", "beacon", "", TeleScoresHelper.claimBeacon, "Claim Beacon");
+                AppSync.addEvent(0, "teleop", "score", "glyph", "", TeleScoresHelper.glyphScored, "Scored a glyph");
                 refreshEventLog();
             }
         });
 
-        loseBeacon.setOnClickListener(new View.OnClickListener(){
+        glyphCompletedRow.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                // _-Magic Smoke Required-_ \\
-                AppSync.addEvent(0, "teleop", "lose", "beacon", "", 0, "Lose Beacon");
+                AppSync.addEvent(0, "teleop", "score", "glyph", "row", TeleScoresHelper.glyphRowCompleted, "Completed Row of in Cryptobox");
                 refreshEventLog();
             }
         });
 
-        capballState.setOnClickListener(new View.OnClickListener() {
+        glyphCompletedRow.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                PopupMenu popupMenu = new PopupMenu(ScoutMatchTeleOpActivity.this, capballState);
-                popupMenu.getMenuInflater().inflate(R.menu.menu_teleop_capball_state, popupMenu.getMenu());
+                AppSync.addEvent(0, "teleop", "score", "glyph", "column", TeleScoresHelper.glyphColumnCompleted, "Completed Column in Cryptobox");
+                refreshEventLog();
+            }
+        });
+
+        glyphMissed.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                AppSync.addEvent(0, "teleop", "miss", "glyph", "", 0, "Missed Scoring Glyph in Cryptobox");
+                refreshEventLog();
+            }
+        });
+
+        robotBalanced.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                AppSync.addEvent(0, "teleop", "score", "balance", "", TeleScoresHelper.robotBanlanced, "Robot Balanced on Stone");
+                refreshEventLog();
+            }
+        });
+
+        robotFailedToBalance.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                AppSync.addEvent(0, "teleop", "miss", "balance", "", 0, "Robot Failed to Balance on Stone");
+                refreshEventLog();
+            }
+        });
+
+        relic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PopupMenu popupMenu = new PopupMenu(ScoutMatchTeleOpActivity.this, relic);
+                popupMenu.getMenuInflater().inflate(R.menu.menu_teleop_relic_state, popupMenu.getMenu());
 
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.none: {
-                                capballEvent = null;
-                                capballState.setText(item.getTitle());
+                                relicEvent = null;
+                                relic.setText(item.getTitle());
                                 refreshEventLog();
                                 break;
                             }
-                            case R.id.off_floor: {
-                                capballEvent = new EventStruct(AppSync.teamNumber, "teleop", "score", "capball", "off_floor", TeleScoresHelper.capBallOffGround, "Capball off Floor");
-                                capballState.setText(item.getTitle());
+                            case R.id.relic_zone_one: {
+                                relicEvent = new EventStruct(AppSync.teamNumber, "teleop", "score", "relic", "zone_one", TeleScoresHelper.relicInZoneOne, "Relic Scored in Zone 1");
+                                relic.setText(item.getTitle());
                                 refreshEventLog();
                                 break;
                             }
-                            case R.id.above_crossbar: {
-                                capballEvent = new EventStruct(AppSync.teamNumber, "teleop", "score", "capball", "above_crossbar", TeleScoresHelper.capBallAboveCrossBar, "Capball Above Crossbar");
-                                capballState.setText(item.getTitle());
+                            case R.id.relic_zone_two: {
+                                relicEvent = new EventStruct(AppSync.teamNumber, "teleop", "score", "relic", "zone_two", TeleScoresHelper.relicInZoneTwo, "Relic Scored in Zone 2");
+                                relic.setText(item.getTitle());
                                 refreshEventLog();
                                 break;
                             }
-                            case R.id.capped: {
-                                capballEvent = new EventStruct(AppSync.teamNumber, "teleop", "score", "capball", "capped", TeleScoresHelper.capBallCapped, "Capball Capped");
-                                capballState.setText(item.getTitle());
+                            case R.id.relic_zone_three: {
+                                relicEvent = new EventStruct(AppSync.teamNumber, "teleop", "score", "relic", "zone_three", TeleScoresHelper.relicInZoneThree, "Relic Scored in Zone 3");
+                                relic.setText(item.getTitle());
                                 refreshEventLog();
                                 break;
                             }
                             case R.id.missed: {
-                                capballEvent = new EventStruct(AppSync.teamNumber, "teleop", "miss", "capball", "", 0, "Missed/Dropped Capball");
-                                capballState.setText(item.getTitle());
+                                relicEvent = new EventStruct(AppSync.teamNumber, "teleop", "miss", "relic", "", 0, "Missed/Dropped Relic");
+                                relic.setText(item.getTitle());
                                 refreshEventLog();
                                 break;
                             }
@@ -150,37 +180,9 @@ public class ScoutMatchTeleOpActivity extends AppCompatActivity {
             }
         });
 
-        particleInVortex.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                AppSync.addEvent(0, "teleop", "score", "particle", "vortex", TeleScoresHelper.particleInVortex, "Scored Particle in Vortex");
-                refreshEventLog();
-            }
-        });
-
-        particleInCorner.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                AppSync.addEvent(0, "teleop", "score", "particle", "corner", TeleScoresHelper.particleInCorner, "Scored Particle in Corner");
-                refreshEventLog();
-            }
-        });
-
-        particleMissedVortex.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                AppSync.addEvent(0, "teleop", "miss", "particle", "vortex", 0, "Missed Scoring Particle in Vortex");
-                refreshEventLog();
-            }
-        });
-
-        particleMissedCorner.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                AppSync.addEvent(0, "teleop", "miss", "particle", "corner", 0, "Missed Scoring Particle in Corner");
-                refreshEventLog();
-            }
-        });
+        relicUpright.setText("Toppled");
+        relicUpright.setTextOn("Upright");
+        relicUpright.setTextOff("Toppled");
 
         undo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -199,8 +201,11 @@ public class ScoutMatchTeleOpActivity extends AppCompatActivity {
                     AppSync.addEvent(0, "teleop", "miss", "robot", "", 0, "Dead Robot");
                 }
 
-                if (capballEvent != null) {
-                    AppSync.eventsList.add(capballEvent);
+                if (relicEvent != null) {
+                    if (relicUpright.isChecked()) { // If checked, relic is upright.
+                        AppSync.addEvent(0, "teleop", "score", "relic", "upright", TeleScoresHelper.relicUpright, "Relic Upright");
+                    }
+                    AppSync.eventsList.add(relicEvent);
                 }
                 AppSync.writeEvents();
 
@@ -236,10 +241,10 @@ public class ScoutMatchTeleOpActivity extends AppCompatActivity {
         String string = "";
         int tally = 0;
 
-        if (capballEvent != null) {
-            string += "" + capballEvent.type + " " + capballEvent.subtype + " " + capballEvent.points + "pts " + capballEvent.description + "\n";
+        if (relicEvent != null) {
+            string += "" + relicEvent.type + " " + relicEvent.subtype + " " + relicEvent.points + "pts " + relicEvent.description + "\n";
 
-            tally += capballEvent.points;
+            tally += relicEvent.points;
         }
 
         for (EventStruct event : AppSync.eventsList) {

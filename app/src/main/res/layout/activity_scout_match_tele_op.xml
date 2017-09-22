@@ -11,83 +11,74 @@
     tools:context="org.timecrafters.ftcscouting.athena.ScoutMatchTeleOpActivity">
 
     <TextView
-        android:text="Light Beacon"
+        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/textView3"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="23dp"
-        android:id="@+id/textView4" />
+        android:text="Robot Balanced" />
 
     <Button
-        android:text="Claimed"
+        android:id="@+id/robot_balanced"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/textView4"
-        android:layout_alignParentStart="true"
-        android:id="@+id/claim_beacon"
+        android:text="Successful"
         android:textAppearance="@style/TextAppearance.AppCompat" />
 
     <Button
-        android:text="Lost"
+        android:id="@+id/robot_failed_balance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/claim_beacon"
         android:layout_alignParentStart="true"
-        android:id="@+id/lost_beacon"
+        android:layout_below="@+id/robot_balanced"
+        android:text="Failed"
         android:textAppearance="@style/TextAppearance.AppCompat" />
 
     <TextView
-        android:text="Capball"
+        android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/textView4"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/textView9" />
-
-    <TextView
-        android:text="Particles"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView9"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/textView11" />
-
-    <Button
-        android:text="In Vortex"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView11"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/particle_in_vortex"
-        android:textAppearance="@style/TextAppearance.AppCompat" />
-
-    <Button
-        android:text="Missed Corner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/particle_missed_vortex"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/particle_missed_corner"
-        android:textAppearance="@style/TextAppearance.AppCompat" />
-
-    <Button
-        android:text="Missed Vortex"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/particle_missed_vortex"
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        android:layout_below="@+id/particle_in_corner"
+        android:text="Glyph"
+        android:layout_below="@+id/textView3"
         android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/glyph_scored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/textView11"
+        android:text="Scored Glyph"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+    <Button
+        android:id="@+id/glyph_missed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/glyph_completed_column"
+        android:text="Missed"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+    <Button
+        android:id="@+id/glyph_completed_column"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/glyph_completed_row"
+        android:text="Completed Column"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
 
     <Button
         android:text="Done"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/particle_in_corner"
         android:id="@+id/done"
-        android:textAppearance="@style/TextAppearance.AppCompat" />
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:text="0 pts"
@@ -119,13 +110,13 @@
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:text="In Corner"
+        android:id="@+id/glyph_completed_row"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/particle_in_corner"
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        android:layout_below="@+id/particle_in_vortex"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/glyph_scored"
+        android:text="Completed Row"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
 
     <TextView
         android:text="Team Number | Team Name"
@@ -137,24 +128,13 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
 
-    <Button
-        android:text="None"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView9"
-        android:layout_alignStart="@+id/textView3"
-        android:layout_marginTop="10dp"
-        android:id="@+id/capball_state"
-        android:background="@android:drawable/btn_dropdown"
-        style="@android:style/Widget.Button" />
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/particle_missed_corner"
         android:layout_alignParentStart="true"
         android:layout_above="@+id/done"
-        android:id="@+id/scrollview">
+        android:id="@+id/scrollview"
+        android:layout_below="@+id/relic_upright">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -175,9 +155,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView26"
-        android:layout_alignBaseline="@+id/lost_beacon"
-        android:layout_alignBottom="@+id/lost_beacon"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/textView3"
+        android:layout_alignStart="@+id/score" />
 
     <ToggleButton
         android:text="ToggleButton"
@@ -187,4 +166,32 @@
         android:checked="true"
         android:layout_below="@+id/textView26"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/robot_failed_balance"
+        android:text="Relic" />
+
+    <Button
+        android:id="@+id/relic"
+        style="@android:style/Widget.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView7"
+        android:background="@android:drawable/btn_dropdown"
+        android:text="Relic"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+    <ToggleButton
+        android:id="@+id/relic_upright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upright"
+        android:layout_below="@+id/relic"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>
