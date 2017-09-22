@@ -1,5 +1,7 @@
 # TimeCraftersAnalyticalEngine
-For Velocity Vortex
+**_BROKEN:_ This is being updated for Relic Recovery and at present is effectively useless. **
+
+For Relic Recovery
 
 Android App for Scouting Teams and Tracking Matches
 
