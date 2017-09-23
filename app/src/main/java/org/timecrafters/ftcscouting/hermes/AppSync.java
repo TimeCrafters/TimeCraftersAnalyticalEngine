@@ -37,7 +37,7 @@ public class AppSync {
     public static String teamName;
 
     public static String competitionName = "competition"; // The name of the event being tracked, E.G. North Super Regionals
-    public static String defaultFolderPath = "FTCScouting";
+    public static String defaultFolderPath = "TimeCraftersAnalyticalEngine";
     public static String currentMatchPath;
 
     public static ArrayList<EventStruct> eventsList = new ArrayList<>();
@@ -86,7 +86,6 @@ public class AppSync {
         }
     }
 
-    // Java, why do I need 20+ lines of code to simply write to a file......................... :'(
     public static void addEvent(int match, String period, String type, String subtype, String location, int points, String description) {
         EventStruct event = new EventStruct();
         matchID = match;
