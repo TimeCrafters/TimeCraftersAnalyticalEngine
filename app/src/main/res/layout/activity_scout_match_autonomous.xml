@@ -38,31 +38,148 @@
         android:id="@+id/textView5"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_below="@+id/textView5"
-        android:text="Glyph" />
+        android:layout_above="@+id/scrollview">
 
-    <Button
-        android:id="@+id/glyph_scored"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView8"
-        android:text="Scored"
-        android:textAppearance="@style/TextAppearance.AppCompat" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/glyph_missed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/glyph_scored"
-        android:text="Missed"
-        android:textAppearance="@style/TextAppearance.AppCompat" />
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView5"
+                android:text="Jewel" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/jewel_missed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/jewel_scored"
+                    android:layout_below="@+id/jewel_scored"
+                    android:layout_weight="1"
+                    android:text="Missed"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <Button
+                    android:id="@+id/jewel_scored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textView10"
+                    android:layout_weight="1"
+                    android:text="Scored"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/jewel_missed"
+                android:text="Glyph" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/glyph_scored"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textView8"
+                    android:layout_weight="1"
+                    android:text="Scored"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <Button
+                    android:id="@+id/glyph_crytokey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/glyph_missed"
+                    android:layout_weight="1"
+                    android:text="Crypokey"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <Button
+                    android:id="@+id/glyph_missed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/glyph_scored"
+                    android:layout_weight="1"
+                    android:text="Missed"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/robot_dead"
+                android:text="Parking" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/parking_safezone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/robot_dead"
+                    android:layout_below="@+id/textView6"
+                    android:layout_weight="1"
+                    android:text="Safe Zone"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <Button
+                    android:id="@+id/parking_missed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/teleop"
+                    android:layout_below="@+id/parking_safezone"
+                    android:layout_weight="1"
+                    android:text="Missed"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/textView5"
+                android:text="Robot" />
+
+            <ToggleButton
+                android:id="@+id/robot_dead"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/textView15"
+                android:checked="true"
+                android:textAppearance="@style/TextAppearance.AppCompat" />
+
+        </LinearLayout>
+    </ScrollView>
 
     <Button
         android:text="Undo"
@@ -94,105 +211,26 @@
         android:layout_toStartOf="@+id/score" />
 
     <ScrollView
+        android:id="@+id/scrollview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/missed_corner"
-        android:layout_alignParentStart="true"
+        android:layout_height="65dp"
         android:layout_above="@+id/teleop"
-        android:id="@+id/scrollview">
+        android:layout_alignParentStart="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <TextView
-                android:text="Autonomous Log"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
                 android:id="@+id/eventLog"
-                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
                 android:layout_above="@+id/teleop"
-                android:layout_alignParentStart="true" />
+                android:layout_alignParentStart="true"
+                android:text="Autonomous Log"
+                android:textAppearance="@style/TextAppearance.AppCompat" />
         </LinearLayout>
     </ScrollView>
-
-    <ToggleButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/robot_dead"
-        android:checked="true"
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        android:layout_below="@+id/textView15"
-        android:layout_alignParentEnd="true" />
-
-    <TextView
-        android:text="Robot"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView15"
-        android:layout_below="@+id/textView5"
-        android:layout_alignParentEnd="true" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Parking"
-        android:layout_below="@+id/robot_dead"
-        android:layout_alignParentEnd="true" />
-
-    <Button
-        android:id="@+id/parking_safezone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/robot_dead"
-        android:layout_below="@+id/textView6"
-        android:text="Safe Zone"
-        android:textAppearance="@style/TextAppearance.AppCompat" />
-
-    <Button
-        android:id="@+id/parking_missed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/teleop"
-        android:layout_below="@+id/parking_safezone"
-        android:text="Missed"
-        android:textAppearance="@style/TextAppearance.AppCompat" />
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Jewel"
-        android:layout_below="@+id/glyph_crytokey"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:id="@+id/jewel_scored"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView10"
-        android:text="Scored"
-        android:textAppearance="@style/TextAppearance.AppCompat" />
-
-    <Button
-        android:id="@+id/jewel_missed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/jewel_scored"
-        android:text="Missed"
-        android:textAppearance="@style/TextAppearance.AppCompat" />
-
-    <Button
-        android:id="@+id/glyph_crytokey"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/glyph_missed"
-        android:text="Crypokey"
-        android:textAppearance="@style/TextAppearance.AppCompat" />
 
 </RelativeLayout>
