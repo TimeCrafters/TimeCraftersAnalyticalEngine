@@ -127,6 +127,7 @@ public class ScoutMatchTeleOpActivity extends AppCompatActivity {
             public void onClick(View v) {
                 AppSync.addEvent(0, "teleop", "scored", "balance", "", TeleScoresHelper.robotBanlanced, "Robot Balanced on Stone");
                 robotBalanced.setEnabled(false);
+                robotFailedToBalance.setEnabled(false);
                 refreshEventLog();
             }
         });
@@ -134,7 +135,8 @@ public class ScoutMatchTeleOpActivity extends AppCompatActivity {
         robotFailedToBalance.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                AppSync.addEvent(0, "teleop", "miss", "balance", "", 0, "Robot Failed to Balance on Stone");
+                AppSync.addEvent(0, "teleop", "missed", "balance", "", 0, "Robot Failed to Balance on Stone");
+                robotBalanced.setEnabled(false);
                 robotFailedToBalance.setEnabled(false);
                 refreshEventLog();
             }
@@ -201,6 +203,7 @@ public class ScoutMatchTeleOpActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (AppSync.eventsList.size() > 0) {
+                    reenableButton(AppSync.eventsList.get(AppSync.eventsList.size()-1));
                     AppSync.eventsList.remove(AppSync.eventsList.size()-1);
                     refreshEventLog();
                 }
@@ -273,5 +276,31 @@ public class ScoutMatchTeleOpActivity extends AppCompatActivity {
             eventLog.setText(string);
         }
         scrollView.fullScroll(View.FOCUS_DOWN);
+    }
+
+    public void reenableButton(EventStruct event) {
+        // TODO; Make me do helpful things.
+        AppSync.puts(""+event);
+        if (event.type == "scored") {
+            switch (event.subtype) {
+                case "balance":
+                    robotBalanced.setEnabled(true);
+                    robotFailedToBalance.setEnabled(true);
+                    break;
+                case "glyph":
+                    if (event.location == "cipher") {glyphCompletedCipher.setEnabled(true);}
+                    break;
+                default: {break;}
+            }
+
+
+        } else if (event.type == "missed") {
+            switch (event.subtype) {
+                case "balance":
+                    robotBalanced.setEnabled(true);
+                    robotFailedToBalance.setEnabled(true);
+                default: {break;}
+            }
+        }
     }
 }

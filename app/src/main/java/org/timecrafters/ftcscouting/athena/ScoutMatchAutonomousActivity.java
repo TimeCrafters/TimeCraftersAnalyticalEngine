@@ -302,8 +302,6 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
     }
 
     public void reenableButton(EventStruct event) {
-        // TODO; Make me do helpful things.
-        AppSync.puts(""+event);
         if (event.type == "scored") {
             switch (event.subtype) {
                 case "parking":
