@@ -25,6 +25,7 @@ public class ScoutMatchTeleOpActivity extends AppCompatActivity {
     public Button glyphScored;
     public Button glyphCompletedRow;
     public Button glyphCompletedColumn;
+    public Button glyphCompletedCipher;
     public Button glyphMissed;
 
     public Button robotBalanced;
@@ -59,6 +60,7 @@ public class ScoutMatchTeleOpActivity extends AppCompatActivity {
         glyphScored          = (Button) findViewById(R.id.glyph_scored);
         glyphCompletedRow    = (Button) findViewById(R.id.glyph_completed_row);
         glyphCompletedColumn = (Button) findViewById(R.id.glyph_completed_column);
+        glyphCompletedCipher = (Button) findViewById(R.id.glyph_completed_cipher);
         glyphMissed          = (Button) findViewById(R.id.glyph_missed);
 
         relic        = (Button) findViewById(R.id.relic);
@@ -82,7 +84,7 @@ public class ScoutMatchTeleOpActivity extends AppCompatActivity {
         glyphScored.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                AppSync.addEvent(0, "teleop", "score", "glyph", "", TeleScoresHelper.glyphScored, "Scored a glyph");
+                AppSync.addEvent(0, "teleop", "scored", "glyph", "", TeleScoresHelper.glyphScored, "Scored a glyph");
                 refreshEventLog();
             }
         });
@@ -90,15 +92,24 @@ public class ScoutMatchTeleOpActivity extends AppCompatActivity {
         glyphCompletedRow.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                AppSync.addEvent(0, "teleop", "score", "glyph", "row", TeleScoresHelper.glyphRowCompleted, "Completed Row of in Cryptobox");
+                AppSync.addEvent(0, "teleop", "scored", "glyph", "row", TeleScoresHelper.glyphRowCompleted, "Completed Row of in Cryptobox");
                 refreshEventLog();
             }
         });
 
-        glyphCompletedRow.setOnClickListener(new View.OnClickListener(){
+        glyphCompletedColumn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                AppSync.addEvent(0, "teleop", "score", "glyph", "column", TeleScoresHelper.glyphColumnCompleted, "Completed Column in Cryptobox");
+                AppSync.addEvent(0, "teleop", "scored", "glyph", "column", TeleScoresHelper.glyphColumnCompleted, "Completed Column in Cryptobox");
+                refreshEventLog();
+            }
+        });
+
+        glyphCompletedCipher.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                AppSync.addEvent(0, "teleop", "scored", "glyph", "cipher", TeleScoresHelper.glyphCipherCompleted, "Completed Cryptobox Cipher");
+                glyphCompletedCipher.setEnabled(false);
                 refreshEventLog();
             }
         });
@@ -106,7 +117,7 @@ public class ScoutMatchTeleOpActivity extends AppCompatActivity {
         glyphMissed.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                AppSync.addEvent(0, "teleop", "miss", "glyph", "", 0, "Missed Scoring Glyph in Cryptobox");
+                AppSync.addEvent(0, "teleop", "missed", "glyph", "", 0, "Missed Scoring Glyph in Cryptobox");
                 refreshEventLog();
             }
         });
@@ -114,7 +125,8 @@ public class ScoutMatchTeleOpActivity extends AppCompatActivity {
         robotBalanced.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                AppSync.addEvent(0, "teleop", "score", "balance", "", TeleScoresHelper.robotBanlanced, "Robot Balanced on Stone");
+                AppSync.addEvent(0, "teleop", "scored", "balance", "", TeleScoresHelper.robotBanlanced, "Robot Balanced on Stone");
+                robotBalanced.setEnabled(false);
                 refreshEventLog();
             }
         });
@@ -123,6 +135,7 @@ public class ScoutMatchTeleOpActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 AppSync.addEvent(0, "teleop", "miss", "balance", "", 0, "Robot Failed to Balance on Stone");
+                robotFailedToBalance.setEnabled(false);
                 refreshEventLog();
             }
         });
@@ -144,25 +157,25 @@ public class ScoutMatchTeleOpActivity extends AppCompatActivity {
                                 break;
                             }
                             case R.id.relic_zone_one: {
-                                relicEvent = new EventStruct(AppSync.teamNumber, "teleop", "score", "relic", "zone_one", TeleScoresHelper.relicInZoneOne, "Relic Scored in Zone 1");
+                                relicEvent = new EventStruct(AppSync.teamNumber, "teleop", "scored", "relic", "zone_one", TeleScoresHelper.relicInZoneOne, "Relic Scored in Zone 1");
                                 relic.setText(item.getTitle());
                                 refreshEventLog();
                                 break;
                             }
                             case R.id.relic_zone_two: {
-                                relicEvent = new EventStruct(AppSync.teamNumber, "teleop", "score", "relic", "zone_two", TeleScoresHelper.relicInZoneTwo, "Relic Scored in Zone 2");
+                                relicEvent = new EventStruct(AppSync.teamNumber, "teleop", "scored", "relic", "zone_two", TeleScoresHelper.relicInZoneTwo, "Relic Scored in Zone 2");
                                 relic.setText(item.getTitle());
                                 refreshEventLog();
                                 break;
                             }
                             case R.id.relic_zone_three: {
-                                relicEvent = new EventStruct(AppSync.teamNumber, "teleop", "score", "relic", "zone_three", TeleScoresHelper.relicInZoneThree, "Relic Scored in Zone 3");
+                                relicEvent = new EventStruct(AppSync.teamNumber, "teleop", "scored", "relic", "zone_three", TeleScoresHelper.relicInZoneThree, "Relic Scored in Zone 3");
                                 relic.setText(item.getTitle());
                                 refreshEventLog();
                                 break;
                             }
                             case R.id.missed: {
-                                relicEvent = new EventStruct(AppSync.teamNumber, "teleop", "miss", "relic", "", 0, "Missed/Dropped Relic");
+                                relicEvent = new EventStruct(AppSync.teamNumber, "teleop", "missed", "relic", "", 0, "Missed/Dropped Relic");
                                 relic.setText(item.getTitle());
                                 refreshEventLog();
                                 break;
@@ -198,12 +211,12 @@ public class ScoutMatchTeleOpActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!deadRobot.isChecked()) { // If not checked, robot is dead.
-                    AppSync.addEvent(0, "teleop", "miss", "robot", "", 0, "Dead Robot");
+                    AppSync.addEvent(0, "teleop", "missed", "robot", "", 0, "Dead Robot");
                 }
 
                 if (relicEvent != null) {
                     if (relicUpright.isChecked()) { // If checked, relic is upright.
-                        AppSync.addEvent(0, "teleop", "score", "relic", "upright", TeleScoresHelper.relicUpright, "Relic Upright");
+                        AppSync.addEvent(0, "teleop", "scored", "relic", "upright", TeleScoresHelper.relicUpright, "Relic Upright");
                     }
                     AppSync.eventsList.add(relicEvent);
                 }

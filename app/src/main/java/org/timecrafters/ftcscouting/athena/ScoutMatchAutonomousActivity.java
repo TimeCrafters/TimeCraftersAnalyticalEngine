@@ -3,6 +3,7 @@ package org.timecrafters.ftcscouting.athena;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.PopupMenu;
 import android.view.MenuItem;
@@ -23,7 +24,6 @@ import java.util.HashMap;
 public class ScoutMatchAutonomousActivity extends AppCompatActivity {
 
     EventStruct parkingEvent;
-    EventStruct capballEvent;
 
     Button teamSelection;
 
@@ -130,7 +130,7 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 lockTeamIn();
-                AppSync.addEvent(0, "autonomous", "score", "glyph", "glyph", AutoScoresHelper.glyphScored, "Scored Glyph");
+                AppSync.addEvent(0, "autonomous", "scored", "glyph", "glyph", AutoScoresHelper.glyphScored, "Scored Glyph");
                 refreshEventLog();
             }
         });
@@ -139,7 +139,7 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 lockTeamIn();
-                AppSync.addEvent(0, "autonomous", "miss", "glyph", "", 0, "Missed Glyph");
+                AppSync.addEvent(0, "autonomous", "missed", "glyph", "", 0, "Missed Glyph");
                 refreshEventLog();
             }
         });
@@ -148,7 +148,7 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 lockTeamIn();
-                AppSync.addEvent(0, "autonomous", "score", "glyph", "cryptokey", AutoScoresHelper.glyphScoreCryptokey, "Score Glyph Cryptokey");
+                AppSync.addEvent(0, "autonomous", "scored", "glyph", "cryptokey", AutoScoresHelper.glyphScoreCryptokey, "Score Glyph Cryptokey");
                 glyphCryptokey.setEnabled(false);
                 refreshEventLog();
             }
@@ -218,7 +218,7 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
                 // SAVE DATA
 
                 if (!deadRobot.isChecked()) { // If not checked, robot is dead.
-                    AppSync.addEvent(0, "autonomous", "miss", "robot", "", 0, "Dead Robot");
+                    AppSync.addEvent(0, "autonomous", "missed", "robot", "", 0, "Dead Robot");
                 }
 
                 if (parkingEvent != null) {
@@ -303,5 +303,36 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
 
     public void reenableButton(EventStruct event) {
         // TODO; Make me do helpful things.
+        AppSync.puts(""+event);
+        if (event.type == "scored") {
+            switch (event.subtype) {
+                case "parking":
+                    parkingSafeZone.setEnabled(true);
+                    parkingMissed.setEnabled(true);
+                    break;
+                case "jewel":
+                    jewelScored.setEnabled(true);
+                    jewelMissed.setEnabled(true);
+                    break;
+                case "glyph":
+                    if (event.location == "cryptokey") {glyphCryptokey.setEnabled(true);}
+                    break;
+                default: {break;}
+            }
+
+
+        } else if (event.type == "missed") {
+            switch (event.subtype) {
+                case "parking":
+                    parkingSafeZone.setEnabled(true);
+                    parkingMissed.setEnabled(true);
+                    break;
+                case "jewel":
+                    jewelScored.setEnabled(true);
+                    jewelMissed.setEnabled(true);
+                    break;
+                default: {break;}
+            }
+        }
     }
 }

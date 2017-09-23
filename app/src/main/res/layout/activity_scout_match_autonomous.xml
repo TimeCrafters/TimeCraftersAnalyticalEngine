@@ -30,13 +30,15 @@
         android:textAppearance="@style/TextAppearance.AppCompat" />
 
     <TextView
-        android:text="Autonomous"
+        android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/team_selection"
         android:layout_centerHorizontal="true"
-        android:id="@+id/textView5"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+        android:text="Autonomous"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textColor="@android:color/holo_red_dark"
+        android:textStyle="bold" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -63,6 +65,16 @@
                 android:orientation="horizontal">
 
                 <Button
+                    android:id="@+id/jewel_scored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textView10"
+                    android:layout_weight="1"
+                    android:text="Scored"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <Button
                     android:id="@+id/jewel_missed"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -72,15 +84,6 @@
                     android:text="Missed"
                     android:textAppearance="@style/TextAppearance.AppCompat" />
 
-                <Button
-                    android:id="@+id/jewel_scored"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/textView10"
-                    android:layout_weight="1"
-                    android:text="Scored"
-                    android:textAppearance="@style/TextAppearance.AppCompat" />
             </LinearLayout>
 
             <TextView
@@ -225,7 +228,7 @@
             <TextView
                 android:id="@+id/eventLog"
                 android:layout_width="match_parent"
-                android:layout_height="65dp"
+                android:layout_height="match_parent"
                 android:layout_above="@+id/teleop"
                 android:layout_alignParentStart="true"
                 android:text="Autonomous Log"
