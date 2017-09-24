@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.timecrafters.ftcscouting">
+    package="org.timecrafters.analyticalengine">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="org.timecrafters.analyticalengine.MainActivity"
             android:configChanges="orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,13 +21,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".athena.ScoutMatchAutonomousActivity"
+            android:name="org.timecrafters.analyticalengine.athena.ScoutMatchAutonomousActivity"
             android:configChanges="orientation|screenSize" />
-        <activity android:name=".athena.ScoutMatchTeleOpActivity" />
-        <activity android:name=".athena.ScoutTeamAutonomousActivity" />
-        <activity android:name=".athena.ScoutTeamTeleOpActivity" />
+        <activity android:name="org.timecrafters.analyticalengine.athena.ScoutMatchTeleOpActivity" />
+        <activity android:name="org.timecrafters.analyticalengine.athena.ScoutTeamAutonomousActivity" />
+        <activity android:name="org.timecrafters.analyticalengine.athena.ScoutTeamTeleOpActivity" />
         <activity
-            android:name=".athena.TeamStatisticsActivity"
+            android:name="org.timecrafters.analyticalengine.athena.TeamStatisticsActivity"
             android:label="@string/title_activity_team_statistics"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>

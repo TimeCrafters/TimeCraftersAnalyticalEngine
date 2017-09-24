@@ -1,4 +1,4 @@
-package org.timecrafters.ftcscouting.athena;
+package org.timecrafters.analyticalengine.athena;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -12,10 +12,10 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
-import org.timecrafters.ftcscouting.R;
-import org.timecrafters.ftcscouting.apollo.TeleScoresHelper;
-import org.timecrafters.ftcscouting.hermes.AppSync;
-import org.timecrafters.ftcscouting.hermes.EventStruct;
+import org.timecrafters.analyticalengine.R;
+import org.timecrafters.analyticalengine.apollo.TeleScoresHelper;
+import org.timecrafters.analyticalengine.hermes.AppSync;
+import org.timecrafters.analyticalengine.hermes.EventStruct;
 
 import java.io.File;
 

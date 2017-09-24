@@ -1,4 +1,4 @@
-package org.timecrafters.ftcscouting;
+package org.timecrafters.analyticalengine;
 
 import android.Manifest;
 import android.app.Activity;
@@ -9,7 +9,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
-import android.support.v4.text.TextUtilsCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.PopupMenu;
 import android.text.SpannableString;
@@ -24,10 +23,10 @@ import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.timecrafters.ftcscouting.athena.ScoutMatchAutonomousActivity;
-import org.timecrafters.ftcscouting.athena.ScoutTeamAutonomousActivity;
-import org.timecrafters.ftcscouting.athena.TeamStatisticsActivity;
-import org.timecrafters.ftcscouting.hermes.AppSync;
+import org.timecrafters.analyticalengine.athena.ScoutMatchAutonomousActivity;
+import org.timecrafters.analyticalengine.athena.ScoutTeamAutonomousActivity;
+import org.timecrafters.analyticalengine.athena.TeamStatisticsActivity;
+import org.timecrafters.analyticalengine.hermes.AppSync;
 
 import java.io.BufferedReader;
 import java.io.IOException;

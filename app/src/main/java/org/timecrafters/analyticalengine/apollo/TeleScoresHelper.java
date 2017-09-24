@@ -1,4 +1,4 @@
-package org.timecrafters.ftcscouting.apollo;
+package org.timecrafters.analyticalengine.apollo;
 
 /**
  * Created by cyber on 1/24/2017.

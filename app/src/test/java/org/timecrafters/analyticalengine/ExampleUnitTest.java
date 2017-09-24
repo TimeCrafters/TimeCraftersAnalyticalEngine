@@ -1,4 +1,4 @@
-package org.timecrafters.ftcscouting;
+package org.timecrafters.analyticalengine;
 
 import org.junit.Test;
 

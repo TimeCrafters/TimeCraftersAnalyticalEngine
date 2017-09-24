@@ -1,4 +1,4 @@
-package org.timecrafters.ftcscouting.athena;
+package org.timecrafters.analyticalengine.athena;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -14,9 +14,9 @@ import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.timecrafters.ftcscouting.MainActivity;
-import org.timecrafters.ftcscouting.R;
-import org.timecrafters.ftcscouting.hermes.AppSync;
+import org.timecrafters.analyticalengine.MainActivity;
+import org.timecrafters.analyticalengine.R;
+import org.timecrafters.analyticalengine.hermes.AppSync;
 
 import java.io.File;
 

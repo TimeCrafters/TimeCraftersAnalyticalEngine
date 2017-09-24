@@ -1,4 +1,4 @@
-package org.timecrafters.ftcscouting.athena.fragments;
+package org.timecrafters.analyticalengine.athena.fragments;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -11,20 +11,20 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import org.timecrafters.ftcscouting.R;
-import org.timecrafters.ftcscouting.athena.TeamStatisticsActivity;
-import org.timecrafters.ftcscouting.hermes.AppSync;
-import org.timecrafters.ftcscouting.hermes.MatchStruct;
+import org.timecrafters.analyticalengine.R;
+import org.timecrafters.analyticalengine.athena.TeamStatisticsActivity;
+import org.timecrafters.analyticalengine.hermes.AppSync;
+import org.timecrafters.analyticalengine.hermes.MatchStruct;
 
 import java.text.DecimalFormat;
 
-public class TeleOpFragment extends Fragment {
+public class AutonomousFragment extends Fragment {
     TextView team;
     Button menu;
     TextView dataset;
 
     TextView beaconsClaimed;
-    TextView beaconsStolen;
+    TextView beaconsMissed;
     TextView beaconsSuccessPercentage;
 
     TextView particlesScoredInVortex;
@@ -34,36 +34,44 @@ public class TeleOpFragment extends Fragment {
     TextView particleVortexSuccessPercentage;
     TextView particleCornerSuccessPercentage;
 
-    TextView capballOffFloor;
-    TextView capballAboveCrossbar;
-    TextView capballCapped;
+    TextView parkedCompletelyOnPlatform;
+    TextView parkedCompletelyOnRamp;
+    TextView parkedOnPlatform;
+    TextView parkedOnRamp;
+    TextView parkedMissed;
+    TextView parkedSuccessPercentage;
+
+    TextView capballOnFloor;
     TextView capballMissed;
     TextView capballSuccessPercentage;
 
     TextView robotDead;
-    boolean monoMatch = false;
 
     TeamStatisticsActivity localActivity;
 
-    public TeleOpFragment() {
+    boolean monoMatch = false;
+
+    public AutonomousFragment() {
         // Required empty public constructor
     }
 
-    public static TeleOpFragment newInstance() {
-        TeleOpFragment fragment = new TeleOpFragment();
+    public static AutonomousFragment newInstance() {
+        AutonomousFragment fragment = new AutonomousFragment();
         return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+        }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tele_op, container, false);
+        return inflater.inflate(R.layout.fragment_autonomous, container, false);
     }
 
     @Override
@@ -76,7 +84,7 @@ public class TeleOpFragment extends Fragment {
         dataset = (TextView) getView().findViewById(R.id.dataset);
 
         beaconsClaimed = (TextView) getView().findViewById(R.id.beacons_claimed);
-        beaconsStolen = (TextView) getView().findViewById(R.id.beacons_lost);
+        beaconsMissed = (TextView) getView().findViewById(R.id.beacons_missed);
         beaconsSuccessPercentage = (TextView) getView().findViewById(R.id.beacons_success_percentage);
 
         particlesScoredInVortex = (TextView) getView().findViewById(R.id.particles_scored_in_vortex);
@@ -86,19 +94,24 @@ public class TeleOpFragment extends Fragment {
         particleVortexSuccessPercentage = (TextView) getView().findViewById(R.id.particles_vortex_success_percentage);
         particleCornerSuccessPercentage = (TextView) getView().findViewById(R.id.particles_corner_success_percentage);
 
-        capballOffFloor = (TextView) getView().findViewById(R.id.capball_off_floor);
-        capballAboveCrossbar = (TextView) getView().findViewById(R.id.capball_above_crossbar);
-        capballCapped = (TextView) getView().findViewById(R.id.capball_capped);
+        parkedCompletelyOnPlatform = (TextView) getView().findViewById(R.id.parking_completely_on_platform);
+        parkedCompletelyOnRamp = (TextView) getView().findViewById(R.id.parking_completely_on_ramp);
+        parkedOnPlatform = (TextView) getView().findViewById(R.id.parking_on_platform);
+        parkedOnRamp = (TextView) getView().findViewById(R.id.parking_on_ramp);
+        parkedMissed = (TextView) getView().findViewById(R.id.parking_missed);
+        parkedSuccessPercentage = (TextView) getView().findViewById(R.id.parking_success_percentage);
+
+        capballOnFloor = (TextView) getView().findViewById(R.id.capball_on_floor);
         capballMissed = (TextView) getView().findViewById(R.id.capball_missed);
         capballSuccessPercentage = (TextView) getView().findViewById(R.id.capball_success_percentage);
 
         robotDead = (TextView) getView().findViewById(R.id.robot_dead);
 
-        if (AppSync.teamHasMatchData() && TeamStatisticsActivity.contextForFragment.teleOpData != null && TeamStatisticsActivity.contextForFragment.teleOpData.size() > 0) {
-            dataset.setText(""+(TeamStatisticsActivity.contextForFragment.teleOpData.size()-1)+" in dataset");
+        if (AppSync.teamHasMatchData() && localActivity.autonomousData != null && localActivity.autonomousData.size() > 0) {
+            dataset.setText(""+(localActivity.autonomousData.size()-1)+" in dataset");
 
             populateMenu();
-            populateTeleOPData(TeamStatisticsActivity.contextForFragment.teleOpData.get(TeamStatisticsActivity.contextForFragment.teleOpData.size()-1));
+            populateAutonomousData(localActivity.autonomousData.get(localActivity.autonomousData.size()-1));
         } else {
             // No match data!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         }
@@ -111,8 +124,8 @@ public class TeleOpFragment extends Fragment {
                 final PopupMenu popupMenu = new PopupMenu(localActivity, menu);
                 popupMenu.getMenu().setQwertyMode(false);
 
-                for (int i = 0; i < localActivity.teleOpData.size(); i++) {
-                    if ((i+1) == localActivity.teleOpData.size()) {
+                for (int i = 0; i < localActivity.autonomousData.size(); i++) {
+                    if ((i+1) == localActivity.autonomousData.size()) {
                         popupMenu.getMenu().add("ALL");
                     } else {
                         popupMenu.getMenu().add("" + (i + 1));
@@ -123,11 +136,11 @@ public class TeleOpFragment extends Fragment {
                     public boolean onMenuItemClick(MenuItem item) {
                         if (item.getTitle().equals("ALL")) {
                             monoMatch = false;
-                            populateTeleOPData(localActivity.teleOpData.get(localActivity.teleOpData.size()-1));
+                            populateAutonomousData(localActivity.autonomousData.get(localActivity.autonomousData.size()-1));
                         } else {
                             int index = Integer.parseInt(item.getTitle().toString()) - 1;
                             monoMatch = true;
-                            populateTeleOPData(localActivity.teleOpData.get(index));
+                            populateAutonomousData(localActivity.autonomousData.get(index));
                         }
                         menu.setText(item.getTitle());
                         return true;
@@ -139,13 +152,16 @@ public class TeleOpFragment extends Fragment {
         });
     }
 
-    public void populateTeleOPData(MatchStruct match) {
+    public void populateAutonomousData(MatchStruct match) {
+        AppSync.puts("STATS", "Match: "+match.scoredInVortex);
         DecimalFormat decimalFormat = new DecimalFormat("###.##");
 
-        int totalBeacons, totalParticlesVortex, totalParticlesCorner, totalCapball;
+        int totalBeacons, totalParticlesVortex, totalParticlesCorner, totalParking, totalCapball;
         double beaconsPercentage;
+        double particlesPercentage;
         double particlesVortexPercentage;
         double particlesCornerPercentage;
+        double parkingPercentage;
         double capballPercentage;
 
         totalBeacons = match.beaconsClaimed+match.beaconsMissed;
@@ -157,24 +173,33 @@ public class TeleOpFragment extends Fragment {
         totalParticlesCorner = match.scoredInCorner+match.missedCorner;
         particlesCornerPercentage = (double) match.scoredInCorner / (double) totalParticlesCorner * 100;
 
+        particlesPercentage = ((double) match.missedVortex+match.missedCorner) / (double) totalParticlesVortex+totalParticlesCorner * 100;
 
-        totalCapball = match.capballOffFloor + match.capballAboveCrossbar + match.capballCapped + match.capballMissed;
-        capballPercentage = ((double) match.capballOffFloor + (double) match.capballAboveCrossbar + (double) match.capballCapped) / (double) totalCapball * 100;
+        totalParking = match.completelyOnPlatform+match.completelyOnRamp + match.onPlatform+match.onRamp + match.missedParking;
+        parkingPercentage = (double) (match.completelyOnPlatform+match.completelyOnRamp + match.onPlatform+match.onRamp) / (double) totalParking * 100;
+
+        totalCapball = match.capballOnFloor+match.capballMissed;
+        capballPercentage = ((double) match.capballOnFloor) / totalCapball * 100;
 
         beaconsClaimed.setText(""+match.beaconsClaimed);
-        beaconsStolen.setText(""+match.beaconsStolen);
+        beaconsMissed.setText(""+match.beaconsMissed);
         beaconsSuccessPercentage.setText(""+decimalFormat.format(beaconsPercentage)+"%");
 
         particlesScoredInVortex.setText(""+match.scoredInVortex);
         particlesScoredInCorner.setText(""+match.scoredInCorner);
         particlesMissedVortex.setText(""+match.missedVortex);
-        particlesScoredInCorner.setText(""+match.missedCorner);
+        particlesMissedCorner.setText(""+match.missedCorner);
         particleVortexSuccessPercentage.setText(""+decimalFormat.format(particlesVortexPercentage)+"%");
         particleCornerSuccessPercentage.setText(""+decimalFormat.format(particlesCornerPercentage)+"%");
 
-        capballOffFloor.setText(""+match.capballOffFloor);
-        capballAboveCrossbar.setText(""+match.capballAboveCrossbar);
-        capballCapped.setText(""+match.capballCapped);
+        parkedCompletelyOnPlatform.setText(""+match.completelyOnPlatform);
+        parkedCompletelyOnRamp.setText(""+match.completelyOnRamp);
+        parkedOnPlatform.setText(""+match.onPlatform);
+        parkedOnRamp.setText(""+match.onRamp);
+        parkedMissed.setText(""+match.missedParking);
+        parkedSuccessPercentage.setText(""+decimalFormat.format(parkingPercentage)+"%");
+
+        capballOnFloor.setText(""+match.capballOnFloor);
         capballMissed.setText(""+match.capballMissed);
         capballSuccessPercentage.setText(""+decimalFormat.format(capballPercentage)+"%");
 

@@ -1,4 +1,4 @@
-package org.timecrafters.ftcscouting.athena;
+package org.timecrafters.analyticalengine.athena;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -8,16 +8,14 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
 
-import org.timecrafters.ftcscouting.R;
-import org.timecrafters.ftcscouting.athena.fragments.AutonomousFragment;
-import org.timecrafters.ftcscouting.athena.fragments.TeamScoutingDataFragment;
-import org.timecrafters.ftcscouting.athena.fragments.TeleOpFragment;
-import org.timecrafters.ftcscouting.hermes.AppSync;
-import org.timecrafters.ftcscouting.hermes.EventStruct;
-import org.timecrafters.ftcscouting.hermes.MatchStruct;
+import org.timecrafters.analyticalengine.R;
+import org.timecrafters.analyticalengine.athena.fragments.AutonomousFragment;
+import org.timecrafters.analyticalengine.athena.fragments.TeamScoutingDataFragment;
+import org.timecrafters.analyticalengine.athena.fragments.TeleOpFragment;
+import org.timecrafters.analyticalengine.hermes.AppSync;
+import org.timecrafters.analyticalengine.hermes.EventStruct;
+import org.timecrafters.analyticalengine.hermes.MatchStruct;
 
 import java.util.ArrayList;
 

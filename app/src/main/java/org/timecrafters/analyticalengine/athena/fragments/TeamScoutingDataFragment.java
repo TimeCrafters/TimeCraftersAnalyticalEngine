@@ -1,8 +1,6 @@
-package org.timecrafters.ftcscouting.athena.fragments;
+package org.timecrafters.analyticalengine.athena.fragments;
 
-import android.content.Context;
 import android.graphics.Color;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -13,10 +11,9 @@ import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.timecrafters.ftcscouting.MainActivity;
-import org.timecrafters.ftcscouting.R;
-import org.timecrafters.ftcscouting.athena.TeamStatisticsActivity;
-import org.timecrafters.ftcscouting.hermes.AppSync;
+import org.timecrafters.analyticalengine.R;
+import org.timecrafters.analyticalengine.athena.TeamStatisticsActivity;
+import org.timecrafters.analyticalengine.hermes.AppSync;
 
 public class TeamScoutingDataFragment extends Fragment {
     TextView team;

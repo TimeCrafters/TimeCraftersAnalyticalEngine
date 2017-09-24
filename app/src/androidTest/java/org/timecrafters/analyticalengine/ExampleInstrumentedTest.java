@@ -1,4 +1,4 @@
-package org.timecrafters.ftcscouting;
+package org.timecrafters.analyticalengine;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("org.timecrafters.ftcscouting", appContext.getPackageName());
+        assertEquals("org.timecrafters.analyticalengine", appContext.getPackageName());
     }
 }

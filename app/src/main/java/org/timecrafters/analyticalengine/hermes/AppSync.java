@@ -1,4 +1,4 @@
-package org.timecrafters.ftcscouting.hermes;
+package org.timecrafters.analyticalengine.hermes;
 
 import android.content.DialogInterface;
 import android.net.Uri;
@@ -9,7 +9,7 @@ import android.util.Log;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.timecrafters.ftcscouting.MainActivity;
+import org.timecrafters.analyticalengine.MainActivity;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
