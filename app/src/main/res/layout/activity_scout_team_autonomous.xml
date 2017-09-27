@@ -10,14 +10,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="org.timecrafters.analyticalengine.athena.ScoutTeamAutonomousActivity">
 
-    <CheckBox
-        android:text="Completely on Ramp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/completely_on_ramp"
-        android:layout_alignStart="@+id/park_on_ramp"
-        android:layout_below="@+id/park_on_ramp" />
-
     <Button
         android:text="TeleOp"
         android:layout_width="wrap_content"
@@ -48,42 +40,82 @@
         android:textColor="@android:color/holo_red_dark"
         android:textStyle="normal|bold" />
 
-    <CheckBox
-        android:text="Park on Platform"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/park_on_platform"
-        android:layout_below="@+id/capball_on_floor"
-        android:layout_alignParentStart="true" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/textView12">
 
-    <CheckBox
-        android:text="Completely on Platform"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/completely_on_platform"
-        android:layout_below="@+id/park_on_platform"
-        android:layout_alignParentStart="true" />
+        <TextView
+            android:id="@+id/textView46"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jewel" />
 
-    <CheckBox
-        android:text="Park on Ramp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/park_on_ramp"
-        android:layout_below="@+id/completely_on_platform"
-        android:layout_alignParentStart="true" />
+        <CheckBox
+            android:id="@+id/can_score_jewel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Score Jewel" />
+
+        <TextView
+            android:id="@+id/textView52"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cryptobox" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/can_score_in_cryptobox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Score in Cryptobox" />
+
+            <CheckBox
+                android:id="@+id/can_read_cryptobox_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Read Cryptobox Key" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/max_glyphs_scorable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Max Glyphs Scored"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/textView47"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Parking" />
+
+        <CheckBox
+            android:id="@+id/can_park_in_safe_zone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Park in Safe Zone" />
+
+    </LinearLayout>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
         android:ems="10"
-        android:layout_below="@+id/completely_on_ramp"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="25dp"
         android:id="@+id/autonomous_notes"
+        android:hint="Autonomous notes..."
         android:layout_above="@+id/teleOp"
-        android:layout_alignParentEnd="true"
-        android:hint="Autonomous notes..." />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
 
     <ToggleButton
         android:text="ToggleButton"
@@ -93,73 +125,5 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/no_autonomous"
         android:checked="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="numberSigned"
-        android:ems="10"
-        android:id="@+id/beacons_claimed"
-        android:hint="Claimable Beacons"
-        android:layout_below="@+id/textView12"
-        android:layout_alignParentEnd="true"
-        android:layout_toEndOf="@+id/completely_on_platform" />
-
-    <CheckBox
-        android:text="Can Claim Beacons"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/claim_beacons"
-        android:layout_alignBaseline="@+id/beacons_claimed"
-        android:layout_alignBottom="@+id/beacons_claimed"
-        android:layout_alignParentStart="true" />
-
-    <CheckBox
-        android:text="Capball on Floor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/capball_on_floor"
-        android:layout_below="@+id/particles_scored_in_corner"
-        android:layout_alignStart="@+id/score_in_vortex" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="numberSigned"
-        android:ems="10"
-        android:id="@+id/particles_scored_in_vortex"
-        android:hint="Particles in Vortex"
-        android:layout_below="@+id/beacons_claimed"
-        android:layout_alignParentEnd="true"
-        android:layout_alignStart="@+id/beacons_claimed" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="numberSigned"
-        android:ems="10"
-        android:id="@+id/particles_scored_in_corner"
-        android:hint="Particles in Corner"
-        android:layout_below="@+id/particles_scored_in_vortex"
-        android:layout_alignParentEnd="true"
-        android:layout_alignStart="@+id/particles_scored_in_vortex" />
-
-    <CheckBox
-        android:text="Can Score in Vortex"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/score_in_vortex"
-        android:layout_alignBaseline="@+id/particles_scored_in_vortex"
-        android:layout_alignBottom="@+id/particles_scored_in_vortex"
-        android:layout_alignEnd="@+id/score_in_corner" />
-
-    <CheckBox
-        android:text="Can Score in Corner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/score_in_corner"
-        android:layout_alignBaseline="@+id/particles_scored_in_corner"
-        android:layout_alignBottom="@+id/particles_scored_in_corner"
-        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

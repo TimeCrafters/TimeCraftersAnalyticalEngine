@@ -26,17 +26,6 @@ import java.io.File;
 import java.util.HashMap;
 
 public class ScoutTeamAutonomousActivity extends AppCompatActivity {
-    CheckBox claimBeacons;
-    EditText beaconsClaimed;
-    CheckBox scoreInVortex;
-    CheckBox scoreInCorner;
-    EditText particlesScoredInVortex;
-    EditText particlesScoredInCorner;
-    CheckBox capballOnFloor;
-    CheckBox parkOnPlatform;
-    CheckBox parkCompletelyOnPlatform;
-    CheckBox parkOnRamp;
-    CheckBox parkCompletelyOnRamp;
     ToggleButton teamHasAutonomous;
     EditText autonomousNotes;
 
@@ -52,18 +41,6 @@ public class ScoutTeamAutonomousActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scout_team_autonomous);
 
-        claimBeacons  = (CheckBox) findViewById(R.id.claim_beacons);
-        beaconsClaimed= (EditText) findViewById(R.id.beacons_claimed);
-        scoreInVortex = (CheckBox) findViewById(R.id.score_in_vortex);
-        scoreInVortex = (CheckBox) findViewById(R.id.score_in_vortex);
-        scoreInCorner = (CheckBox) findViewById(R.id.score_in_corner);
-        particlesScoredInVortex = (EditText) findViewById(R.id.particles_scored_in_vortex);
-        particlesScoredInCorner = (EditText) findViewById(R.id.particles_scored_in_corner);
-        capballOnFloor = (CheckBox) findViewById(R.id.capball_on_floor);
-        parkOnPlatform = (CheckBox) findViewById(R.id.park_on_platform);
-        parkCompletelyOnPlatform = (CheckBox) findViewById(R.id.completely_on_platform);
-        parkOnRamp = (CheckBox) findViewById(R.id.park_on_ramp);
-        parkCompletelyOnRamp = (CheckBox) findViewById(R.id.completely_on_ramp);
         teamHasAutonomous = (ToggleButton) findViewById(R.id.no_autonomous);
         autonomousNotes = (EditText) findViewById(R.id.autonomous_notes);
 
@@ -71,17 +48,6 @@ public class ScoutTeamAutonomousActivity extends AppCompatActivity {
 
         teamSelection = (Button) findViewById(R.id.team_selection);
 
-        claimBeacons.setEnabled(false);
-        beaconsClaimed.setEnabled(false);
-        scoreInVortex.setEnabled(false);
-        scoreInCorner.setEnabled(false);
-        particlesScoredInVortex.setEnabled(false);
-        particlesScoredInCorner.setEnabled(false);
-        capballOnFloor.setEnabled(false);
-        parkOnPlatform.setEnabled(false);
-        parkCompletelyOnPlatform.setEnabled(false);
-        parkOnRamp.setEnabled(false);
-        parkCompletelyOnRamp.setEnabled(false);
         teamHasAutonomous.setEnabled(false);
 
         teleOp.setEnabled(false);
@@ -132,41 +98,6 @@ public class ScoutTeamAutonomousActivity extends AppCompatActivity {
 
         });
 
-        scoreInVortex.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                AppSync.puts("TeamAuto", "ScoreInVortex state: "+b);
-                if (b) {
-                    particlesScoredInVortex.setEnabled(true);
-                } else {
-                    particlesScoredInVortex.setEnabled(false);
-                }
-            }
-        });
-
-        scoreInCorner.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                AppSync.puts("TeamAuto", "ScoreInCorner state: "+b);
-                if (b) {
-                    particlesScoredInCorner.setEnabled(true);
-                } else {
-                    particlesScoredInCorner.setEnabled(false);
-                }
-            }
-        });
-
-        claimBeacons.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b) {
-                    beaconsClaimed.setEnabled(true);
-                } else {
-                    beaconsClaimed.setEnabled(false);
-                }
-            }
-        });
-
         teamHasAutonomous.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -187,32 +118,9 @@ public class ScoutTeamAutonomousActivity extends AppCompatActivity {
                 try {
                     AppSync.puts("SCOUTING_AUTO", "TEAM HAS AUTONOMOUS? "+ teamHasAutonomous.isChecked());
                     if (teamHasAutonomous.isChecked()) {
-                        if (beaconsClaimed.getText().length() < 1) {
-                            beaconsClaimed.setText("0");
-                        }
-                        if (particlesScoredInVortex.getText().length() < 1) {
-                            particlesScoredInVortex.setText("0");
-                        }
-                        if (particlesScoredInCorner.getText().length() < 1) {
-                            particlesScoredInCorner.setText("0");
-                        }
-
-                        scoutingData.put("can_claim_beacons", claimBeacons.isChecked());
-                        scoutingData.put("max_beacons_claimable", Integer.parseInt(beaconsClaimed.getText().toString()));
-
-                        scoutingData.put("can_score_in_vortex", scoreInVortex.isChecked());
-                        scoutingData.put("max_particles_scored_in_vortex", Integer.parseInt(particlesScoredInVortex.getText().toString()));
-
-                        scoutingData.put("can_score_in_corner", scoreInCorner.isChecked());
-                        scoutingData.put("max_particles_scored_in_corner", Integer.parseInt(particlesScoredInCorner.getText().toString()));
-
-                        scoutingData.put("capball_on_floor", capballOnFloor.isChecked());
-
-                        scoutingData.put("park_completely_on_platform", parkCompletelyOnPlatform.isChecked());
-                        scoutingData.put("park_on_platform", parkOnPlatform.isChecked());
-                        scoutingData.put("park_completely_on_ramp", parkCompletelyOnRamp.isChecked());
-                        scoutingData.put("park_on_ramp", parkOnRamp.isChecked());
+//                        scoutingData.put("can_claim_beacons", claimBeacons.isChecked());
                     }
+
                     scoutingData.put("has_autonomous", teamHasAutonomous.isChecked());
                     scoutingData.put("autonomous_notes", autonomousNotes.getText()); // Notes always get written
 
@@ -253,33 +161,9 @@ public class ScoutTeamAutonomousActivity extends AppCompatActivity {
             if (data != null) {
                 try {
                     if (data.getBoolean("has_autonomous")) {
-                        if (data.getBoolean("can_claim_beacons")) {
-                            claimBeacons.setChecked(true);
-                            beaconsClaimed.setText("" + data.getInt("max_beacons_claimable"));
-                        }
-                        if (data.getBoolean("can_score_in_vortex")) {
-                            scoreInVortex.setChecked(true);
-                            particlesScoredInVortex.setText("" + data.getInt("max_particles_scored_in_vortex"));
-                        }
-                        if (data.getBoolean("can_score_in_corner")) {
-                            scoreInCorner.setChecked(true);
-                            particlesScoredInCorner.setText("" + data.getInt("max_particles_scored_in_corner"));
-                        }
-                        if (data.getBoolean("capball_on_floor")) {
-                            capballOnFloor.setChecked(true);
-                        }
-                        if (data.getBoolean("park_completely_on_platform")) {
-                            parkCompletelyOnPlatform.setChecked(true);
-                        }
-                        if (data.getBoolean("park_completely_on_ramp")) {
-                            parkCompletelyOnRamp.setChecked(true);
-                        }
-                        if (data.getBoolean("park_on_platform")) {
-                            parkOnPlatform.setChecked(true);
-                        }
-                        if (data.getBoolean("park_on_ramp")) {
-                            parkOnRamp.setChecked(true);
-                        }
+//                        if (data.getBoolean("park_on_ramp")) {
+//                            parkOnRamp.setChecked(true);
+//                        }
                         if (data.getString("autonomous_notes").length() > 0) {
                             autonomousNotes.setText(data.getString("autonomous_notes"));
                         }
@@ -291,56 +175,19 @@ public class ScoutTeamAutonomousActivity extends AppCompatActivity {
                     Toast.makeText(this, "An error occurred: " + error.getMessage(), Toast.LENGTH_LONG).show();
                 }
             } else {
-                claimBeacons.setChecked(false);
-                beaconsClaimed.setText("");
-
-                scoreInVortex.setChecked(false);
-                particlesScoredInVortex.setText("");
-                scoreInCorner.setChecked(false);
-                particlesScoredInCorner.setText("");
-
-                capballOnFloor.setChecked(false);
-
-                parkCompletelyOnPlatform.setChecked(false);
-                parkCompletelyOnRamp.setChecked(false);
-                parkOnPlatform.setChecked(false);
-                parkOnRamp.setChecked(false);
-
                 autonomousNotes.setText("");
             }
         }
     }
 
     public void enableButtons() {
-        claimBeacons.setEnabled(true);
-        scoreInVortex.setEnabled(true);
-        scoreInCorner.setEnabled(true);
-        capballOnFloor.setEnabled(true);
-        parkOnPlatform.setEnabled(true);
-        parkCompletelyOnPlatform.setEnabled(true);
-        parkOnRamp.setEnabled(true);
-        parkCompletelyOnRamp.setEnabled(true);
         teamHasAutonomous.setEnabled(true);
-
-        if (claimBeacons.isChecked()) { beaconsClaimed.setEnabled(true); }
-        if (scoreInVortex.isChecked()) { particlesScoredInVortex.setEnabled(true); }
-        if (scoreInCorner.isChecked()) { particlesScoredInCorner.setEnabled(true); }
 
         teleOp.setEnabled(true);
     }
 
     public void hasNoAutonomous() {
-        claimBeacons.setEnabled(false);
-        beaconsClaimed.setEnabled(false);
-        scoreInVortex.setEnabled(false);
-        particlesScoredInVortex.setEnabled(false);
-        scoreInCorner.setEnabled(false);
-        particlesScoredInCorner.setEnabled(false);
-        capballOnFloor.setEnabled(false);
-        parkOnPlatform.setEnabled(false);
-        parkCompletelyOnPlatform.setEnabled(false);
-        parkOnRamp.setEnabled(false);
-        parkCompletelyOnRamp.setEnabled(false);
+//        claimBeacons.setEnabled(false);
 
         teleOp.setEnabled(true);
     }
