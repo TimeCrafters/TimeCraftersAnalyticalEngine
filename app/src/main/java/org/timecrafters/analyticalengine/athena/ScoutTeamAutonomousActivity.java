@@ -26,6 +26,12 @@ import java.io.File;
 import java.util.HashMap;
 
 public class ScoutTeamAutonomousActivity extends AppCompatActivity {
+    CheckBox canScoreJewel;
+    CheckBox canScoreInCryptobox;
+    CheckBox canReadCryptoboxKey;
+    EditText maxGlyphsScorable;
+    CheckBox canParkInSafeZone;
+
     ToggleButton teamHasAutonomous;
     EditText autonomousNotes;
 
@@ -41,8 +47,14 @@ public class ScoutTeamAutonomousActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scout_team_autonomous);
 
+        canScoreJewel       = (CheckBox) findViewById(R.id.can_score_jewel);
+        canScoreInCryptobox = (CheckBox) findViewById(R.id.can_score_in_cryptobox);
+        canReadCryptoboxKey = (CheckBox) findViewById(R.id.can_read_cryptobox_key);
+        maxGlyphsScorable   = (EditText) findViewById(R.id.max_glyphs_scorable);
+        canParkInSafeZone   = (CheckBox) findViewById(R.id.can_park_in_safe_zone);
+
         teamHasAutonomous = (ToggleButton) findViewById(R.id.no_autonomous);
-        autonomousNotes = (EditText) findViewById(R.id.autonomous_notes);
+        autonomousNotes   = (EditText) findViewById(R.id.autonomous_notes);
 
         teleOp = (Button) findViewById(R.id.teleOp);
 
@@ -118,7 +130,10 @@ public class ScoutTeamAutonomousActivity extends AppCompatActivity {
                 try {
                     AppSync.puts("SCOUTING_AUTO", "TEAM HAS AUTONOMOUS? "+ teamHasAutonomous.isChecked());
                     if (teamHasAutonomous.isChecked()) {
-//                        scoutingData.put("can_claim_beacons", claimBeacons.isChecked());
+                        scoutingData.put("can_score_jewel", canScoreJewel.isChecked());
+                        scoutingData.put("can_score__in_cryptobox", canScoreInCryptobox.isChecked());
+                        scoutingData.put("max_glyphs_scorable", Integer.parseInt(maxGlyphsScorable.getText().toString()));
+                        scoutingData.put("can_park_in_safe_zone", canParkInSafeZone.isChecked());
                     }
 
                     scoutingData.put("has_autonomous", teamHasAutonomous.isChecked());
@@ -161,9 +176,19 @@ public class ScoutTeamAutonomousActivity extends AppCompatActivity {
             if (data != null) {
                 try {
                     if (data.getBoolean("has_autonomous")) {
-//                        if (data.getBoolean("park_on_ramp")) {
-//                            parkOnRamp.setChecked(true);
-//                        }
+                        if (data.getBoolean("can_score_jewel")) {
+                            canScoreJewel.setChecked(true);
+                        }
+                        if (data.getBoolean("can_score_in_cryptobox")) {
+                            canScoreInCryptobox.setChecked(true);
+                        }
+                        if (data.getInt("max_glyphs_scorable") != 0) {
+                            maxGlyphsScorable.setText("" + data.getInt("max_glyphs_scorable"));
+                        }
+                        if (data.getBoolean("can_park_in_safe_zone")) {
+                            canParkInSafeZone.setChecked(true);
+                        }
+
                         if (data.getString("autonomous_notes").length() > 0) {
                             autonomousNotes.setText(data.getString("autonomous_notes"));
                         }
