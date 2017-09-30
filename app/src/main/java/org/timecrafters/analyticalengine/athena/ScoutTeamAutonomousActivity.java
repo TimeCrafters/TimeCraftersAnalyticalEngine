@@ -154,6 +154,7 @@ public class ScoutTeamAutonomousActivity extends AppCompatActivity {
                         }
                         scoutingData.put("can_score_jewel", canScoreJewel.isChecked());
                         scoutingData.put("can_score_in_cryptobox", canScoreInCryptobox.isChecked());
+                        scoutingData.put("can_read_cryptobox_key", canReadCryptoboxKey.isChecked());
                         scoutingData.put("max_glyphs_scorable", Integer.parseInt(maxGlyphsScorable.getText().toString()));
                         scoutingData.put("can_park_in_safe_zone", canParkInSafeZone.isChecked());
                     }
@@ -204,6 +205,9 @@ public class ScoutTeamAutonomousActivity extends AppCompatActivity {
                         if (data.getBoolean("can_score_in_cryptobox")) {
                             canScoreInCryptobox.setChecked(true);
                         }
+                        if (data.getBoolean("can_read_cryptobox_key")) {
+                            canReadCryptoboxKey.setChecked(true);
+                        }
                         if (data.getInt("max_glyphs_scorable") != 0) {
                             maxGlyphsScorable.setText("" + data.getInt("max_glyphs_scorable"));
                         }
@@ -238,7 +242,11 @@ public class ScoutTeamAutonomousActivity extends AppCompatActivity {
     }
 
     public void hasNoAutonomous() {
-//        claimBeacons.setEnabled(false);
+        canScoreJewel.setEnabled(false);
+        canScoreInCryptobox.setEnabled(false);
+        canReadCryptoboxKey.setEnabled(false);
+        maxGlyphsScorable.setText("");
+        canParkInSafeZone.setChecked(false);
 
         teleOp.setEnabled(true);
     }

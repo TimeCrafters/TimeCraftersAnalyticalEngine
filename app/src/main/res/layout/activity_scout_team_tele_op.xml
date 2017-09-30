@@ -30,68 +30,6 @@
         android:textColor="@color/colorPrimaryDark"
         android:textStyle="normal|bold" />
 
-    <CheckBox
-        android:text="Can Claim Beacons"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView13"
-        android:layout_alignParentStart="true"
-        android:id="@+id/can_claim_beacons" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/max_particles_scored_in_corner"
-        android:layout_below="@+id/max_particles_scored_in_vortex"
-        android:layout_alignParentEnd="true"
-        android:layout_toEndOf="@+id/can_score_in_corner"
-        android:layout_alignStart="@+id/max_particles_scored_in_vortex"
-        android:hint="Particles in Corner" />
-
-    <CheckBox
-        android:text="Can Score in Corner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/can_score_in_corner"
-        android:layout_alignBaseline="@+id/max_particles_scored_in_corner"
-        android:layout_alignBottom="@+id/max_particles_scored_in_corner"
-        android:layout_alignParentStart="true" />
-
-    <CheckBox
-        android:text="Can Score in Vortex"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/can_score_in_vortex"
-        android:layout_alignBaseline="@+id/max_particles_scored_in_vortex"
-        android:layout_alignBottom="@+id/max_particles_scored_in_vortex"
-        android:layout_alignParentStart="true" />
-
-    <CheckBox
-        android:text="Capball off Floor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/max_particles_scored_in_corner"
-        android:layout_alignParentStart="true"
-        android:id="@+id/capball_off_floor" />
-
-    <CheckBox
-        android:text="Capball Above Crossbar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/capball_above_crossbar"
-        android:layout_below="@+id/capball_off_floor"
-        android:layout_alignParentStart="true" />
-
-    <CheckBox
-        android:text="Capball Capped"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/capball_capped"
-        android:layout_below="@+id/capball_above_crossbar"
-        android:layout_alignParentStart="true" />
-
     <Button
         android:text="Save"
         android:layout_width="wrap_content"
@@ -102,38 +40,113 @@
         android:textAppearance="@style/TextAppearance.AppCompat" />
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
-        android:ems="10"
-        android:layout_below="@+id/capball_capped"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="98dp"
         android:id="@+id/teleop_notes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_above="@+id/save"
-        android:layout_alignParentEnd="true"
-        android:hint="TeleOp notes..." />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
+        android:layout_toStartOf="@+id/save"
         android:ems="10"
-        android:id="@+id/max_particles_scored_in_vortex"
-        android:hint="Particles in Vortex"
-        android:layout_below="@+id/max_beacons_claimable"
-        android:layout_alignParentEnd="true"
-        android:layout_alignStart="@+id/max_beacons_claimable" />
+        android:hint="TeleOp notes..."
+        android:inputType="textMultiLine"
+        android:layout_alignParentEnd="true" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/max_beacons_claimable"
-        android:hint="Claimable Beacons"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/textView13"
-        android:layout_alignParentEnd="true"
-        android:layout_toEndOf="@+id/capball_above_crossbar" />
+        android:orientation="vertical"
+        android:layout_above="@+id/teleop_notes">
+
+        <TextView
+            android:id="@+id/textView36"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Glyph" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/glyph_can_score"
+                android:layout_width="178dp"
+                android:layout_height="wrap_content"
+                android:text="Can Score Glyphs" />
+
+            <EditText
+                android:id="@+id/glyph_max_scorable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Max Glyphs"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/glyph_can_complete_cipher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Can Complete Cipher" />
+
+        <TextView
+            android:id="@+id/textView38"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Relic" />
+
+        <CheckBox
+            android:id="@+id/relic_can_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Can Score Relic" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/relic_zone_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Zone 1" />
+
+            <CheckBox
+                android:id="@+id/relic_zone_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Zone 2" />
+
+            <CheckBox
+                android:id="@+id/relic_zone_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Zone 3" />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/relic_upright"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Upright Relic" />
+
+        <TextView
+            android:id="@+id/textView40"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Balance" />
+
+        <CheckBox
+            android:id="@+id/balance_on_stone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Can Balance on Stone" />
+    </LinearLayout>
 
 </RelativeLayout>

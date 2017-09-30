@@ -22,18 +22,18 @@ import java.io.File;
 
 public class ScoutTeamTeleOpActivity extends AppCompatActivity {
     TextView team;
-    CheckBox canClaimBeacons;
-    EditText maxBeaconsClaimable;
+    CheckBox glyphCanScoreGlyphs;
+    EditText glyphMaxScorable;
+    CheckBox glyphCanCompleteCipher;
 
-    CheckBox canScoreInVortex;
-    EditText maxParticlesScoredInVortex;
+    CheckBox relicCanScoreRelic;
+    CheckBox relicZoneOne;
+    CheckBox relicZoneTwo;
+    CheckBox relicZoneThree;
+    CheckBox relicUpright;
 
-    CheckBox canScoreInCorner;
-    EditText maxParticlesScoredInCorner;
+    CheckBox balanceCanBalance;
 
-    CheckBox capballOffFloor;
-    CheckBox capballAboveCrossbar;
-    CheckBox capballCapped;
     EditText teleOpNotes;
 
     @Override
@@ -42,26 +42,31 @@ public class ScoutTeamTeleOpActivity extends AppCompatActivity {
         setContentView(R.layout.activity_scout_team_tele_op);
 
         team = (TextView) findViewById(R.id.team);
-        canClaimBeacons = (CheckBox) findViewById(R.id.can_claim_beacons);
-        maxBeaconsClaimable = (EditText) findViewById(R.id.max_beacons_claimable);
 
-        canScoreInVortex = (CheckBox) findViewById(R.id.can_score_in_vortex);
-        maxParticlesScoredInVortex = (EditText) findViewById(R.id.max_particles_scored_in_vortex);
+        glyphCanScoreGlyphs   = (CheckBox) findViewById(R.id.glyph_can_score);
+        glyphMaxScorable      = (EditText) findViewById(R.id.glyph_max_scorable);
+        glyphCanCompleteCipher= (CheckBox) findViewById(R.id.glyph_can_complete_cipher);
 
-        canScoreInCorner = (CheckBox) findViewById(R.id.can_score_in_corner);
-        maxParticlesScoredInCorner = (EditText) findViewById(R.id.max_particles_scored_in_corner);
+        relicCanScoreRelic = (CheckBox) findViewById(R.id.relic_can_score);
+        relicZoneOne       = (CheckBox) findViewById(R.id.relic_zone_1);
+        relicZoneTwo       = (CheckBox) findViewById(R.id.relic_zone_2);
+        relicZoneThree     = (CheckBox) findViewById(R.id.relic_zone_3);
+        relicUpright       = (CheckBox) findViewById(R.id.relic_upright);
 
-        capballOffFloor = (CheckBox) findViewById(R.id.capball_off_floor);
-        capballAboveCrossbar = (CheckBox) findViewById(R.id.capball_above_crossbar);
-        capballCapped = (CheckBox) findViewById(R.id.capball_capped);
+        balanceCanBalance = (CheckBox) findViewById(R.id.balance_on_stone);
+
         teleOpNotes = (EditText) findViewById(R.id.teleop_notes);
 
         Button save = (Button) findViewById(R.id.save);
 
         team.setText(""+AppSync.teamNumber+" | "+ AppSync.teamName);
-        maxBeaconsClaimable.setEnabled(false);
-        maxParticlesScoredInVortex.setEnabled(false);
-        maxParticlesScoredInCorner.setEnabled(false);
+        glyphMaxScorable.setEnabled(false);
+        glyphCanCompleteCipher.setEnabled(false);
+
+        relicZoneOne.setEnabled(false);
+        relicZoneTwo.setEnabled(false);
+        relicZoneThree.setEnabled(false);
+        relicUpright.setEnabled(false);
 
         populateFields();
 
@@ -70,28 +75,21 @@ public class ScoutTeamTeleOpActivity extends AppCompatActivity {
             public void onClick(View view) {
                 JSONObject scoutingData = new JSONObject();
                 try {
-                    if (maxBeaconsClaimable.getText().length() < 1) {
-                        maxBeaconsClaimable.setText("0");
-                    }
-                    if (maxParticlesScoredInVortex.getText().length() < 1) {
-                        maxParticlesScoredInVortex.setText("0");
-                    }
-                    if (maxParticlesScoredInCorner.getText().length() < 1) {
-                        maxParticlesScoredInCorner.setText("0");
+                    if (glyphMaxScorable.getText().length() < 1) {
+                        glyphMaxScorable.setText("0");
                     }
 
-                    scoutingData.put("can_claim_beacons", canClaimBeacons.isChecked());
-                    scoutingData.put("max_beacons_claimable", Integer.parseInt(maxBeaconsClaimable.getText().toString()));
+                    scoutingData.put("can_score_in_cryptobox", glyphCanScoreGlyphs.isChecked());
+                    scoutingData.put("max_scorable_glyphs", Integer.parseInt(glyphMaxScorable.getText().toString()));
+                    scoutingData.put("can_complete_cipher", glyphCanCompleteCipher.isChecked());
 
-                    scoutingData.put("can_score_in_vortex", canScoreInVortex.isChecked());
-                    scoutingData.put("max_particles_scored_in_vortex", Integer.parseInt(maxParticlesScoredInVortex.getText().toString()));
+                    scoutingData.put("can_score_relic", relicCanScoreRelic.isChecked());
+                    scoutingData.put("relic_zone_1", relicZoneOne.isChecked());
+                    scoutingData.put("relic_zone_2", relicZoneTwo.isChecked());
+                    scoutingData.put("relic_zone_3", relicZoneThree.isChecked());
+                    scoutingData.put("relic_upright", relicUpright.isChecked());
 
-                    scoutingData.put("can_score_in_corner", canScoreInCorner.isChecked());
-                    scoutingData.put("max_particles_scored_in_corner", Integer.parseInt(maxParticlesScoredInCorner.getText().toString()));
-
-                    scoutingData.put("capball_off_floor", capballOffFloor.isChecked());
-                    scoutingData.put("capball_above_crossbar", capballAboveCrossbar.isChecked());
-                    scoutingData.put("capball_capped", capballCapped.isChecked());
+                    scoutingData.put("can_balance_on_stone", balanceCanBalance.isChecked());
 
                     scoutingData.put("teleop_notes", teleOpNotes.getText());
 
@@ -109,35 +107,32 @@ public class ScoutTeamTeleOpActivity extends AppCompatActivity {
             }
         });
 
-        canClaimBeacons.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        glyphCanScoreGlyphs.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    maxBeaconsClaimable.setEnabled(true);
+                    glyphMaxScorable.setEnabled(true);
+                    glyphCanCompleteCipher.setEnabled(true);
                 } else {
-                    maxBeaconsClaimable.setEnabled(false);
+                    glyphMaxScorable.setEnabled(false);
+                    glyphCanCompleteCipher.setEnabled(false);
                 }
             }
         });
 
-        canScoreInVortex.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        relicCanScoreRelic.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    maxParticlesScoredInVortex.setEnabled(true);
+                    relicZoneOne.setEnabled(true);
+                    relicZoneTwo.setEnabled(true);
+                    relicZoneThree.setEnabled(true);
+                    relicUpright.setEnabled(true);
                 } else {
-                    maxParticlesScoredInVortex.setEnabled(false);
-                }
-            }
-        });
-
-        canScoreInCorner.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    maxParticlesScoredInCorner.setEnabled(true);
-                } else {
-                    maxParticlesScoredInCorner.setEnabled(false);
+                    relicZoneOne.setEnabled(false);
+                    relicZoneTwo.setEnabled(false);
+                    relicZoneThree.setEnabled(false);
+                    relicUpright.setEnabled(false);
                 }
             }
         });
@@ -164,29 +159,36 @@ public class ScoutTeamTeleOpActivity extends AppCompatActivity {
 
             if (data != null) {
                 try {
-                    if (data.getBoolean("can_claim_beacons")) {
-                        canClaimBeacons.setChecked(true);
-                        maxBeaconsClaimable.setText("" + data.getInt("max_beacons_claimable"));
-                        maxBeaconsClaimable.setEnabled(true);
+                    if (data.getBoolean("can_score_in_cryptobox")) {
+                        glyphCanScoreGlyphs.setChecked(true);
+                        glyphMaxScorable.setText("" + data.getInt("max_scorable_glyphs"));
+                        glyphMaxScorable.setEnabled(true);
+                        glyphCanCompleteCipher.setEnabled(true);
                     }
-                    if (data.getBoolean("can_score_in_vortex")) {
-                        canScoreInVortex.setChecked(true);
-                        maxParticlesScoredInVortex.setText("" + data.getInt("max_particles_scored_in_vortex"));
-                        maxParticlesScoredInVortex.setEnabled(true);
+                    if (data.getBoolean("can_complete_cipher")) {
+                        glyphCanCompleteCipher.setChecked(true);
                     }
-                    if (data.getBoolean("can_score_in_corner")) {
-                        canScoreInCorner.setChecked(true);
-                        maxParticlesScoredInCorner.setText("" + data.getInt("max_particles_scored_in_corner"));
-                        maxParticlesScoredInCorner.setEnabled(true);
+                    if (data.getBoolean("can_score_relic")) {
+                        relicCanScoreRelic.setChecked(true);
+                        relicZoneOne.setEnabled(true);
+                        relicZoneTwo.setEnabled(true);
+                        relicZoneThree.setEnabled(true);
+                        relicUpright.setEnabled(true);
                     }
-                    if (data.getBoolean("capball_off_floor")) {
-                        capballOffFloor.setChecked(true);
+                    if (data.getBoolean("relic_zone_1")) {
+                        relicZoneOne.setChecked(true);
                     }
-                    if (data.getBoolean("capball_above_crossbar")) {
-                        capballAboveCrossbar.setChecked(true);
+                    if (data.getBoolean("relic_zone_2")) {
+                        relicZoneTwo.setChecked(true);
                     }
-                    if (data.getBoolean("capball_capped")) {
-                        capballCapped.setChecked(true);
+                    if (data.getBoolean("relic_zone_3")) {
+                        relicZoneThree.setChecked(true);
+                    }
+                    if (data.getBoolean("relic_upright")) {
+                        relicUpright.setChecked(true);
+                    }
+                    if (data.getBoolean("can_balance_on_stone")) {
+                        balanceCanBalance.setChecked(true);
                     }
                     if (data.getString("teleop_notes").length() > 0) {
                         teleOpNotes.setText(data.getString("teleop_notes"));
@@ -195,17 +197,17 @@ public class ScoutTeamTeleOpActivity extends AppCompatActivity {
                     Toast.makeText(this, "An error occurred: " + error.getMessage(), Toast.LENGTH_LONG).show();
                 }
             } else {
-                canClaimBeacons.setChecked(false);
-                maxBeaconsClaimable.setText("");
+                glyphCanScoreGlyphs.setChecked(false);
+                glyphMaxScorable.setText("");
+                glyphCanCompleteCipher.setChecked(false);
 
-                canScoreInVortex.setChecked(false);
-                maxParticlesScoredInVortex.setText("");
-                canScoreInCorner.setChecked(false);
-                maxParticlesScoredInCorner.setText("");
+                relicCanScoreRelic.setChecked(false);
+                relicZoneOne.setChecked(false);
+                relicZoneTwo.setChecked(false);
+                relicZoneThree.setChecked(false);
+                relicUpright.setChecked(false);
 
-                capballOffFloor.setChecked(false);
-                capballAboveCrossbar.setChecked(false);
-                capballCapped.setChecked(false);
+                balanceCanBalance.setChecked(false);
 
                 teleOpNotes.setText("");
             }
