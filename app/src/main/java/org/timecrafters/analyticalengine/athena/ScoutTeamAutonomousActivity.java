@@ -60,6 +60,12 @@ public class ScoutTeamAutonomousActivity extends AppCompatActivity {
 
         teamSelection = (Button) findViewById(R.id.team_selection);
 
+        canScoreJewel.setEnabled(false);
+        canScoreInCryptobox.setEnabled(false);
+        canReadCryptoboxKey.setEnabled(false);
+        maxGlyphsScorable.setEnabled(false);
+        canParkInSafeZone.setEnabled(false);
+        autonomousNotes.setEnabled(false);
         teamHasAutonomous.setEnabled(false);
 
         teleOp.setEnabled(false);
@@ -68,6 +74,19 @@ public class ScoutTeamAutonomousActivity extends AppCompatActivity {
         teamHasAutonomous.setTextOff("No Autonomous");
         teamHasAutonomous.setTextOn("Have Autonomous");
         teamHasAutonomous.setChecked(true);
+
+        canScoreInCryptobox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    canReadCryptoboxKey.setEnabled(true);
+                    maxGlyphsScorable.setEnabled(true);
+                } else {
+                    canReadCryptoboxKey.setEnabled(false);
+                    maxGlyphsScorable.setEnabled(false);
+                }
+            }
+        });
 
         // Select Team
         teamSelection.setOnClickListener(new View.OnClickListener() {
@@ -130,8 +149,11 @@ public class ScoutTeamAutonomousActivity extends AppCompatActivity {
                 try {
                     AppSync.puts("SCOUTING_AUTO", "TEAM HAS AUTONOMOUS? "+ teamHasAutonomous.isChecked());
                     if (teamHasAutonomous.isChecked()) {
+                        if (maxGlyphsScorable.length() < 1) {
+                            maxGlyphsScorable.setText("0");
+                        }
                         scoutingData.put("can_score_jewel", canScoreJewel.isChecked());
-                        scoutingData.put("can_score__in_cryptobox", canScoreInCryptobox.isChecked());
+                        scoutingData.put("can_score_in_cryptobox", canScoreInCryptobox.isChecked());
                         scoutingData.put("max_glyphs_scorable", Integer.parseInt(maxGlyphsScorable.getText().toString()));
                         scoutingData.put("can_park_in_safe_zone", canParkInSafeZone.isChecked());
                     }
@@ -206,7 +228,11 @@ public class ScoutTeamAutonomousActivity extends AppCompatActivity {
     }
 
     public void enableButtons() {
+        canScoreJewel.setEnabled(true);
+        canScoreInCryptobox.setEnabled(true);
+        canParkInSafeZone.setEnabled(true);
         teamHasAutonomous.setEnabled(true);
+        autonomousNotes.setEnabled(true);
 
         teleOp.setEnabled(true);
     }
