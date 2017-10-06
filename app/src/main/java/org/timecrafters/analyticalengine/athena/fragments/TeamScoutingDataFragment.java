@@ -58,103 +58,50 @@ public class TeamScoutingDataFragment extends Fragment {
     }
 
     protected void renderAutonomousData(JSONObject autonomous) {
-        TextView can_claim_beacons   = (TextView) getView().findViewById(R.id.autonomous_can_claim_beacons);
-        TextView max_beacons_claimed = (TextView) getView().findViewById(R.id.autonomous_max_beacons_claimed);
-
-        TextView can_score_in_vortex = (TextView) getView().findViewById(R.id.autonomous_can_score_in_vortex);
-        TextView can_score_in_corner = (TextView) getView().findViewById(R.id.autonomous_can_score_in_corner);
-        TextView max_scored_in_vortex= (TextView) getView().findViewById(R.id.autonomous_max_scored_in_vortex);
-        TextView max_scored_in_corner= (TextView) getView().findViewById(R.id.autonomous_max_scored_in_corner);
-
-        TextView can_park_completely_on_platform = (TextView) getView().findViewById(R.id.autonomous_can_park_completely_on_platform);
-        TextView can_park_completely_on_ramp     = (TextView) getView().findViewById(R.id.autonomous_can_park_completely_on_ramp);
-        TextView can_park_on_platform = (TextView) getView().findViewById(R.id.autonomous_can_park_on_platform);
-        TextView can_park_on_ramp     = (TextView) getView().findViewById(R.id.autonomous_can_park_on_ramp);
-
-        TextView can_put_capball_on_floor = (TextView) getView().findViewById(R.id.autonomous_can_put_capball_on_floor);
+        TextView canScoreJewel       = (TextView) getView().findViewById(R.id.autonomous_score_jewel);
+        TextView canScoreInCryptobox = (TextView) getView().findViewById(R.id.autonomous_score_in_cryptobox);
+        TextView canReadCryptoboxKey = (TextView) getView().findViewById(R.id.autonomous_read_cryptobox_key);
+        TextView maxGlyphsScorable   = (TextView) getView().findViewById(R.id.autonomous_max_glyphs);
+        TextView canParkInSafeZone   = (TextView) getView().findViewById(R.id.autonomous_park_in_safe_zone);
 
         TextView autonomous_notes = (TextView) getView().findViewById(R.id.autonomous_notes);
 
         try {
             if (autonomous != null && autonomous.getBoolean("has_autonomous")) {
-                if (autonomous.getBoolean("can_claim_beacons")) {
-                    can_claim_beacons.setText("Yes");
-                    max_beacons_claimed.setText("" + autonomous.getInt("max_beacons_claimable"));
-                    can_claim_beacons.setTextColor(greenColor);
-                    max_beacons_claimed.setTextColor(greenColor);
+                if (autonomous.getBoolean("can_score_jewel")) {
+                    canScoreJewel.setText("Yes");
+                    canScoreJewel.setTextColor(greenColor);
                 } else {
-                    can_claim_beacons.setText("No");
-                    max_beacons_claimed.setText("0");
-                    can_claim_beacons.setTextColor(redColor);
-                    max_beacons_claimed.setTextColor(redColor);
+                    canScoreJewel.setText("No");
+                    canScoreJewel.setTextColor(redColor);
                 }
 
-                if (autonomous.getBoolean("can_score_in_vortex")) {
-                    can_score_in_vortex.setText("Yes");
-                    can_score_in_vortex.setTextColor(greenColor);
-                    max_scored_in_vortex.setText("" + autonomous.getInt("max_particles_scored_in_vortex"));
-                    max_scored_in_vortex.setTextColor(greenColor);
+                if (autonomous.getBoolean("can_score_in_cryptobox")) {
+                    canScoreInCryptobox.setText("Yes");
+                    canScoreInCryptobox.setTextColor(greenColor);
+                    maxGlyphsScorable.setText("" + autonomous.getInt("max_glyphs_scorable"));
+                    maxGlyphsScorable.setTextColor(greenColor);
                 } else {
-                    can_score_in_vortex.setText("No");
-                    can_score_in_vortex.setTextColor(redColor);
-                    max_scored_in_vortex.setText("0");
-                    max_scored_in_vortex.setTextColor(redColor);
+                    canScoreInCryptobox.setText("No");
+                    canScoreInCryptobox.setTextColor(redColor);
+                    maxGlyphsScorable.setText("0");
+                    maxGlyphsScorable.setTextColor(redColor);
                 }
 
-                if (autonomous.getBoolean("can_score_in_corner")) {
-                    can_score_in_corner.setText("Yes");
-                    can_score_in_corner.setTextColor(greenColor);
-                    max_scored_in_corner.setText("" + autonomous.getInt("max_particles_scored_in_corner"));
-                    max_scored_in_corner.setTextColor(greenColor);
+                if (autonomous.getBoolean("can_read_cryptobox_key")) {
+                    canReadCryptoboxKey.setText("Yes");
+                    canReadCryptoboxKey.setTextColor(greenColor);
                 } else {
-                    can_score_in_corner.setText("No");
-                    can_score_in_corner.setTextColor(redColor);
-                    max_scored_in_corner.setText("0");
-                    max_scored_in_corner.setTextColor(redColor);
+                    canReadCryptoboxKey.setText("No");
+                    canReadCryptoboxKey.setTextColor(redColor);
                 }
 
-                if (autonomous.getBoolean("park_completely_on_platform")) {
-                    can_park_completely_on_platform.setText("Yes");
-                    can_park_completely_on_platform.setTextColor(greenColor);
+                if (autonomous.getBoolean("can_park_in_safe_zone")) {
+                    canParkInSafeZone.setText("Yes");
+                    canParkInSafeZone.setTextColor(greenColor);
                 } else {
-                    can_park_completely_on_platform.setText("No");
-                    can_park_completely_on_platform.setTextColor(redColor);
-                }
-
-                if (autonomous.getBoolean("park_on_platform")) {
-                    can_park_on_platform.setText("Yes");
-                    can_park_on_platform.setTextColor(greenColor);
-                } else {
-                    can_park_on_platform.setText("No");
-                    can_park_on_platform.setTextColor(redColor);
-                }
-
-                if (autonomous.getBoolean("park_completely_on_ramp")) {
-                    can_park_completely_on_ramp.setText("Yes");
-                    can_park_completely_on_ramp.setTextColor(greenColor);
-                } else {
-                    can_park_completely_on_ramp.setText("No");
-                    can_park_completely_on_ramp.setTextColor(redColor);
-                }
-
-                if (autonomous.getBoolean("park_on_ramp")) {
-                    can_park_on_ramp.setText("Yes");
-                    can_park_on_ramp.setTextColor(greenColor);
-                } else {
-                    can_park_on_ramp.setText("No");
-                    can_park_on_ramp.setTextColor(redColor);
-                }
-
-                if (autonomous.getBoolean("capball_on_floor")) {
-                    can_put_capball_on_floor.setText("Yes");
-                    can_put_capball_on_floor.setTextColor(greenColor);
-                } else {
-                    can_put_capball_on_floor.setText("No");
-                    can_put_capball_on_floor.setTextColor(redColor);
-                }
-
-                if (autonomous.getString("autonomous_notes").length() > 0) {
-                    autonomous_notes.setText(autonomous.getString("autonomous_notes"));
+                    canParkInSafeZone.setText("No");
+                    canParkInSafeZone.setTextColor(redColor);
                 }
             }
         } catch (JSONException error) {
@@ -165,71 +112,60 @@ public class TeamScoutingDataFragment extends Fragment {
     }
 
     protected void renderTeleOpData(JSONObject teleOp) {
-        TextView particles_scored_in_vortex = (TextView) getView().findViewById(R.id.teleop_max_scored_in_vortex);
-        TextView particles_scored_in_corner = (TextView) getView().findViewById(R.id.teleop_max_scored_in_corner);
-
-        TextView can_claim_beacons   = (TextView) getView().findViewById(R.id.teleop_can_claim_beacons);
-        TextView max_beacons_claimed = (TextView) getView().findViewById(R.id.teleop_max_claimed_beacons);
-
-        TextView capball_off_floor      = (TextView) getView().findViewById(R.id.teleop_capball_off_floor);
-        TextView capball_above_crossbar = (TextView) getView().findViewById(R.id.teleop_capball_above_crossbar);
-        TextView capball_capped         = (TextView) getView().findViewById(R.id.teleop_capball_capped);
+        TextView canScoreInCryptobox = (TextView) getView().findViewById(R.id.teleop_score_in_cryptobox);
+        TextView maxGlyphsScorable   = (TextView) getView().findViewById(R.id.teleop_max_glyphs);
+        TextView canCompleteCipher   = (TextView) getView().findViewById(R.id.teleop_complete_cipher);
+        TextView canScoreRelic       = (TextView) getView().findViewById(R.id.teleop_score_relic);
+        TextView relicZones          = (TextView) getView().findViewById(R.id.teleop_relic_zones);
+        TextView relicPlacedUpright  = (TextView) getView().findViewById(R.id.teleop_relic_upright);
+        TextView canBalanceOnStone   = (TextView) getView().findViewById(R.id.teleop_balance_on_stone);
 
         TextView telep_notes            = (TextView) getView().findViewById(R.id.teleop_notes);
 
         try {
             if (teleOp != null) {
-                if (teleOp.getBoolean("can_claim_beacons")) {
-                    can_claim_beacons.setText("Yes");
-                    max_beacons_claimed.setText("" + teleOp.getInt("max_beacons_claimable"));
-                    can_claim_beacons.setTextColor(greenColor);
-                    max_beacons_claimed.setTextColor(greenColor);
+                if (teleOp.getBoolean("can_score_in_cryptobox")) {
+                    canScoreInCryptobox.setText("Yes");
+                    maxGlyphsScorable.setText("" + teleOp.getInt("max_scorable_glyphs"));
+                    canScoreInCryptobox.setTextColor(greenColor);
+                    maxGlyphsScorable.setTextColor(greenColor);
                 } else {
-                    can_claim_beacons.setText("No");
-                    max_beacons_claimed.setText("0");
-                    can_claim_beacons.setTextColor(redColor);
-                    max_beacons_claimed.setTextColor(redColor);
+                    canScoreInCryptobox.setText("No");
+                    maxGlyphsScorable.setText("0");
+                    canScoreInCryptobox.setTextColor(redColor);
+                    maxGlyphsScorable.setTextColor(redColor);
                 }
 
-                if (teleOp.getBoolean("can_score_in_vortex")) {
-                    particles_scored_in_vortex.setText("" + teleOp.getInt("max_particles_scored_in_vortex"));
-                    particles_scored_in_vortex.setTextColor(greenColor);
+                if (teleOp.getBoolean("can_complete_cipher")) {
+                    canCompleteCipher.setText("Yes");
+                    canCompleteCipher.setTextColor(greenColor);
                 } else {
-                    particles_scored_in_vortex.setText("0");
-                    particles_scored_in_vortex.setTextColor(redColor);
+                    canCompleteCipher.setText("No");
+                    canCompleteCipher.setTextColor(redColor);
                 }
 
-                if (teleOp.getBoolean("can_score_in_corner")) {
-                    particles_scored_in_corner.setText("" + teleOp.getInt("max_particles_scored_in_corner"));
-                    particles_scored_in_corner.setTextColor(greenColor);
+                if (teleOp.getBoolean("can_score_relic")) {
+                    canScoreRelic.setText("Yes");
+                    canScoreRelic.setTextColor(greenColor);
                 } else {
-                    particles_scored_in_corner.setText("0");
-                    particles_scored_in_corner.setTextColor(redColor);
+                    canScoreRelic.setText("No");
+                    canScoreRelic.setTextColor(redColor);
                 }
 
-                if (teleOp.getBoolean("capball_off_floor")) {
-                    capball_off_floor.setText("Yes");
-                    capball_off_floor.setTextColor(greenColor);
+                if (teleOp.getBoolean("relic_upright")) {
+                    relicPlacedUpright.setText("Yes");
+                    relicPlacedUpright.setTextColor(greenColor);
                 } else {
-                    capball_off_floor.setText("No");
-                    capball_off_floor.setTextColor(redColor);
+                    relicPlacedUpright.setText("No");
+                    relicPlacedUpright.setTextColor(redColor);
                 }
 
-                if (teleOp.getBoolean("capball_above_crossbar")) {
-                    capball_above_crossbar.setText("Yes");
-                    capball_above_crossbar.setTextColor(greenColor);
+                if (teleOp.getBoolean("can_balance_on_stone")) {
+                    canBalanceOnStone.setText("Yes");
+                    canBalanceOnStone.setTextColor(greenColor);
                 } else {
-                    capball_above_crossbar.setText("No");
-                    capball_above_crossbar.setTextColor(redColor);
-                }
-
-
-                if (teleOp.getBoolean("capball_capped")) {
-                    capball_capped.setText("Yes");
-                    capball_capped.setTextColor(greenColor);
-                } else {
-                    capball_capped.setText("No");
-                    capball_capped.setTextColor(redColor);
+                    canBalanceOnStone.setText("No");
+                    canBalanceOnStone.setTextColor(redColor);
                 }
 
                 if (teleOp.getString("teleop_notes").length() > 0) {

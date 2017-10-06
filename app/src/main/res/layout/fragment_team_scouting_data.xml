@@ -9,492 +9,386 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true"
-        android:layout_marginBottom="55dp">
+        android:layout_marginBottom="55dp"
+        android:fillViewport="true">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <TextView
-                android:text="Team Number | Team Name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/team"
-                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true" />
-
-            <TextView
-                android:text="Beacons"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textView17"
                 android:layout_centerHorizontal="true"
-                android:id="@+id/textView20"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:textStyle="normal|bold" />
+                android:text="Team Number | Team Name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
-            <TextView
-                android:text="Max Claimed Beacons:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView23"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView21"
-                android:layout_alignStart="@+id/textView21" />
-
-            <TextView
-                android:text="Particles"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView24"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_marginTop="16dp"
-                android:layout_below="@+id/textView23"
-                android:layout_centerHorizontal="true"
-                android:textStyle="normal|bold" />
-
-            <TextView
-                android:text="Can Score in Corner:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView28"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView25"
-                android:layout_alignStart="@+id/textView25" />
-
-            <TextView
-                android:text="Can Score in Vortex:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView25"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView24"
-                android:layout_alignEnd="@+id/textView21" />
-
-            <TextView
-                android:text="Max Scored in Vortex:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView22"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView28"
-                android:layout_alignStart="@+id/textView28" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/autonomous_max_beacons_claimed"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/autonomous_can_claim_beacons"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/autonomous_can_claim_beacons"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_above="@+id/textView23"
-                android:layout_alignParentEnd="true"
-                android:layout_alignTop="@+id/textView21" />
-
-            <TextView
-                android:text="Parking"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView31"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:textStyle="normal|bold"
-                android:layout_below="@+id/textView18"
-                android:layout_alignStart="@+id/textView24"
-                android:layout_marginTop="17dp" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/autonomous_can_park_completely_on_platform"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_alignBaseline="@+id/textView33"
-                android:layout_alignBottom="@+id/textView33"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/autonomous_can_park_on_platform"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/autonomous_can_park_completely_on_platform"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="Can Park Completely on Ramp:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView37"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView30"
-                android:layout_alignStart="@+id/textView33" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/autonomous_can_park_completely_on_ramp"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/autonomous_can_park_on_platform"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/autonomous_can_park_on_ramp"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/autonomous_can_park_completely_on_ramp"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="Can Park on Platform:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView30"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView33"
-                android:layout_alignStart="@+id/textView33" />
-
-            <TextView
-                android:text="Can Park on Ramp:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView35"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView37"
-                android:layout_alignStart="@+id/textView37" />
-
-            <TextView
-                android:text="Capball"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView39"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:textStyle="normal|bold"
-                android:layout_below="@+id/textView35"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="17dp" />
-
-            <TextView
-                android:text="Autonomous"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView17"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:textColor="@android:color/holo_red_dark"
-                android:textStyle="normal|bold"
-                android:layout_marginTop="28dp"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true" />
-
-            <TextView
-                android:text="Max Scored in Vortex:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView45"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView43"
-                android:layout_alignStart="@+id/textView23" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/teleop_max_scored_in_vortex"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_alignBaseline="@+id/textView45"
-                android:layout_alignBottom="@+id/textView45"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/autonomous_can_put_capball_on_floor"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_alignBaseline="@+id/textView41"
-                android:layout_alignBottom="@+id/textView41"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/teleop_max_scored_in_corner"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/teleop_max_scored_in_vortex"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="Particles"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView43"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:textStyle="normal|bold"
-                android:layout_below="@+id/textView42"
-                android:layout_alignStart="@+id/textView31" />
-
-            <TextView
-                android:text="Beacons"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView48"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:textStyle="normal|bold"
-                android:layout_below="@+id/textView44"
-                android:layout_alignEnd="@+id/textView20"
-                android:layout_marginTop="17dp" />
-
-            <TextView
-                android:text="Can Claim Beacons:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView51"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView48"
-                android:layout_alignEnd="@+id/textView28" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/teleop_max_claimed_beacons"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_alignBaseline="@+id/textView49"
-                android:layout_alignBottom="@+id/textView49"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="Max Claimed Beacons:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView49"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView51"
-                android:layout_alignStart="@+id/textView51" />
-
-            <TextView
-                android:text="Capball"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView53"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:textStyle="normal|bold"
-                android:layout_marginTop="16dp"
-                android:layout_below="@+id/textView49"
-                android:layout_alignEnd="@+id/textView42" />
-
-            <TextView
-                android:text="Above Crossbar:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView56"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView55"
-                android:layout_alignStart="@+id/textView55" />
-
-            <TextView
-                android:text="Capped:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView54"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView56"
-                android:layout_alignStart="@+id/textView56" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/teleop_capball_off_floor"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_above="@+id/textView56"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/teleop_can_claim_beacons"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_above="@+id/teleop_max_claimed_beacons"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/teleop_capball_above_crossbar"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/teleop_capball_off_floor"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/teleop_capball_capped"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/teleop_capball_above_crossbar"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="Max Scored in Corner:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView18"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView22"
-                android:layout_alignStart="@+id/textView51" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/autonomous_can_score_in_vortex"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_above="@+id/textView28"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/autonomous_can_score_in_corner"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/autonomous_can_score_in_vortex"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/autonomous_max_scored_in_vortex"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/autonomous_can_score_in_corner"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/autonomous_max_scored_in_corner"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/autonomous_max_scored_in_vortex"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="Can Park Completely on Platform:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView33"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView31"
-                android:layout_alignStart="@+id/textView23" />
-
-            <TextView
-                android:text="Can put Capball on Floor:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView41"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView39"
-                android:layout_alignStart="@+id/textView51" />
-
-            <TextView
-                android:text="Off Floor:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView55"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView53"
-                android:layout_alignStart="@+id/textView45" />
-
-            <TextView
-                android:text="Max Scored in Corner:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView44"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView45"
-                android:layout_alignStart="@+id/textView51" />
-
-            <TextView
-                android:text="Can Claim Beacons:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView21"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView20"
-                android:layout_alignEnd="@+id/textView17" />
-
-            <TextView
-                android:text="Notes"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView19"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:textStyle="normal|bold"
-                android:layout_below="@+id/textView41"
-                android:layout_alignEnd="@+id/textView56"
-                android:layout_marginTop="16dp" />
-
-            <TextView
-                android:text="N/A"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/autonomous_notes"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView19"
-                android:layout_centerHorizontal="true"
-                android:textAlignment="center" />
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/teleop_notes"
+                android:orientation="vertical">
 
-            <TextView
-                android:text="TeleOp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView42"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:textColor="@android:color/holo_blue_dark"
-                android:textStyle="normal|bold"
-                android:layout_marginTop="21dp"
-                android:layout_below="@+id/autonomous_notes"
-                android:layout_centerHorizontal="true" />
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="28dp"
+                    android:text="Autonomous"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textStyle="normal|bold" />
 
-            <TextView
-                android:text="N/A"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Can score jewel"
+                        android:textAlignment="textStart"
+                        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                    <TextView
+                        android:id="@+id/autonomous_score_jewel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="N/A"
+                        android:textAlignment="textEnd" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Can score in Cryptobox"
+                        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                    <TextView
+                        android:id="@+id/autonomous_score_in_cryptobox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="N/A"
+                        android:textAlignment="textEnd" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Can read Cryptobox Key"
+                        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                    <TextView
+                        android:id="@+id/autonomous_read_cryptobox_key"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="N/A"
+                        android:textAlignment="textEnd" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Max Glyphs Scorable"
+                        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                    <TextView
+                        android:id="@+id/autonomous_max_glyphs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="N/A"
+                        android:textAlignment="textEnd" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView30"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Can Park in Safe Zone"
+                        android:textAlignment="textStart"
+                        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                    <TextView
+                        android:id="@+id/autonomous_park_in_safe_zone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="N/A"
+                        android:textAlignment="textEnd" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/textView56"
+                    android:layout_below="@+id/textView41"
+                    android:layout_marginTop="16dp"
+                    android:text="Notes"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textStyle="normal|bold" />
+
+                <TextView
+                    android:id="@+id/autonomous_notes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView19"
+                    android:layout_centerHorizontal="true"
+                    android:text="N/A"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/teleop_notes"
-                android:layout_below="@+id/textView29"
-                android:layout_centerHorizontal="true"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:textAlignment="center" />
+                android:orientation="vertical">
 
-            <TextView
-                android:text="Notes"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView29"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:textStyle="normal|bold"
-                android:layout_marginTop="16dp"
-                android:layout_below="@+id/textView54"
-                android:layout_alignEnd="@+id/textView56" />
-        </RelativeLayout>
+                <TextView
+                    android:id="@+id/textView42"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/autonomous_notes"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="21dp"
+                    android:text="TeleOp"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textStyle="normal|bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Can Score in Cryptobox"
+                        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                    <TextView
+                        android:id="@+id/teleop_score_in_cryptobox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="N/A"
+                        android:textAlignment="textEnd" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Max Glyphs Scorable"
+                        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                    <TextView
+                        android:id="@+id/teleop_max_glyphs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="N/A"
+                        android:textAlignment="textEnd" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Can Complete Cipher"
+                        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                    <TextView
+                        android:id="@+id/teleop_complete_cipher"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="N/A"
+                        android:textAlignment="textEnd" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Can Score Relic"
+                        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                    <TextView
+                        android:id="@+id/teleop_score_relic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="N/A"
+                        android:textAlignment="textEnd" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Relic Zone(s)"
+                        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                    <TextView
+                        android:id="@+id/teleop_relic_zones"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="N/A"
+                        android:textAlignment="textEnd" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Can Place Relic Upright"
+                        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                    <TextView
+                        android:id="@+id/teleop_relic_upright"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="N/A"
+                        android:textAlignment="textEnd" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Can Balance on Stone"
+                        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                    <TextView
+                        android:id="@+id/teleop_balance_on_stone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="N/A"
+                        android:textAlignment="textEnd" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView29"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/textView56"
+                    android:layout_below="@+id/textView54"
+                    android:layout_marginTop="16dp"
+                    android:text="Notes"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textStyle="normal|bold" />
+
+                <TextView
+                    android:id="@+id/teleop_notes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView29"
+                    android:layout_centerHorizontal="true"
+                    android:text="N/A"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+            </LinearLayout>
+
+        </LinearLayout>
     </ScrollView>
 
 </FrameLayout>
