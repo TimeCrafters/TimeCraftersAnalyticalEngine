@@ -23,27 +23,15 @@ public class AutonomousFragment extends Fragment {
     Button menu;
     TextView dataset;
 
-    TextView beaconsClaimed;
-    TextView beaconsMissed;
-    TextView beaconsSuccessPercentage;
+    TextView jewelScored;
+    TextView jewelMissed;
 
-    TextView particlesScoredInVortex;
-    TextView particlesScoredInCorner;
-    TextView particlesMissedVortex;
-    TextView particlesMissedCorner;
-    TextView particleVortexSuccessPercentage;
-    TextView particleCornerSuccessPercentage;
+    TextView glyphScored;
+    TextView glyphReadCryptoboxKey;
+    TextView glyphMissed;
 
-    TextView parkedCompletelyOnPlatform;
-    TextView parkedCompletelyOnRamp;
-    TextView parkedOnPlatform;
-    TextView parkedOnRamp;
-    TextView parkedMissed;
-    TextView parkedSuccessPercentage;
-
-    TextView capballOnFloor;
-    TextView capballMissed;
-    TextView capballSuccessPercentage;
+    TextView parkingSafeZone;
+    TextView parkingMissed;
 
     TextView robotDead;
 
@@ -83,29 +71,17 @@ public class AutonomousFragment extends Fragment {
         menu = (Button) getView().findViewById(R.id.match);
         dataset = (TextView) getView().findViewById(R.id.dataset);
 
-        beaconsClaimed = (TextView) getView().findViewById(R.id.beacons_claimed);
-        beaconsMissed = (TextView) getView().findViewById(R.id.beacons_missed);
-        beaconsSuccessPercentage = (TextView) getView().findViewById(R.id.beacons_success_percentage);
+        jewelScored = (TextView) getView().findViewById(R.id.autonomous_jewel_scored);
+        jewelMissed = (TextView) getView().findViewById(R.id.autonomous_jewel_missed);
 
-        particlesScoredInVortex = (TextView) getView().findViewById(R.id.particles_scored_in_vortex);
-        particlesScoredInCorner = (TextView) getView().findViewById(R.id.particles_scored_in_corner);
-        particlesMissedVortex = (TextView) getView().findViewById(R.id.particles_missed_vortex);
-        particlesMissedCorner = (TextView) getView().findViewById(R.id.particles_missed_corner);
-        particleVortexSuccessPercentage = (TextView) getView().findViewById(R.id.particles_vortex_success_percentage);
-        particleCornerSuccessPercentage = (TextView) getView().findViewById(R.id.particles_corner_success_percentage);
+        glyphScored = (TextView) getView().findViewById(R.id.autonomous_glyph_scored);
+        glyphReadCryptoboxKey = (TextView) getView().findViewById(R.id.autonomous_glyph_read_cryptobox_key);
+        glyphMissed = (TextView) getView().findViewById(R.id.autonomous_glyph_missed);
 
-        parkedCompletelyOnPlatform = (TextView) getView().findViewById(R.id.parking_completely_on_platform);
-        parkedCompletelyOnRamp = (TextView) getView().findViewById(R.id.parking_completely_on_ramp);
-        parkedOnPlatform = (TextView) getView().findViewById(R.id.parking_on_platform);
-        parkedOnRamp = (TextView) getView().findViewById(R.id.parking_on_ramp);
-        parkedMissed = (TextView) getView().findViewById(R.id.parking_missed);
-        parkedSuccessPercentage = (TextView) getView().findViewById(R.id.parking_success_percentage);
+        parkingSafeZone = (TextView) getView().findViewById(R.id.autonomous_park_in_safe_zone);
+        parkingMissed   = (TextView) getView().findViewById(R.id.autonomous_park_missed);
 
-        capballOnFloor = (TextView) getView().findViewById(R.id.capball_on_floor);
-        capballMissed = (TextView) getView().findViewById(R.id.capball_missed);
-        capballSuccessPercentage = (TextView) getView().findViewById(R.id.capball_success_percentage);
-
-        robotDead = (TextView) getView().findViewById(R.id.robot_dead);
+        robotDead = (TextView) getView().findViewById(R.id.autonomous_robot_robot);
 
         if (AppSync.teamHasMatchData() && localActivity.autonomousData != null && localActivity.autonomousData.size() > 0) {
             dataset.setText(""+(localActivity.autonomousData.size()-1)+" in dataset");
@@ -153,55 +129,45 @@ public class AutonomousFragment extends Fragment {
     }
 
     public void populateAutonomousData(MatchStruct match) {
-        AppSync.puts("STATS", "Match: "+match.scoredInVortex);
         DecimalFormat decimalFormat = new DecimalFormat("###.##");
 
-        int totalBeacons, totalParticlesVortex, totalParticlesCorner, totalParking, totalCapball;
-        double beaconsPercentage;
-        double particlesPercentage;
-        double particlesVortexPercentage;
-        double particlesCornerPercentage;
-        double parkingPercentage;
-        double capballPercentage;
-
-        totalBeacons = match.beaconsClaimed+match.beaconsMissed;
-        beaconsPercentage = ((double) match.beaconsClaimed) / (double) totalBeacons * 100;
-
-        totalParticlesVortex = match.scoredInVortex+match.missedVortex;
-        particlesVortexPercentage = ((double) match.scoredInVortex) / (double) totalParticlesVortex * 100;
-
-        totalParticlesCorner = match.scoredInCorner+match.missedCorner;
-        particlesCornerPercentage = (double) match.scoredInCorner / (double) totalParticlesCorner * 100;
-
-        particlesPercentage = ((double) match.missedVortex+match.missedCorner) / (double) totalParticlesVortex+totalParticlesCorner * 100;
-
-        totalParking = match.completelyOnPlatform+match.completelyOnRamp + match.onPlatform+match.onRamp + match.missedParking;
-        parkingPercentage = (double) (match.completelyOnPlatform+match.completelyOnRamp + match.onPlatform+match.onRamp) / (double) totalParking * 100;
-
-        totalCapball = match.capballOnFloor+match.capballMissed;
-        capballPercentage = ((double) match.capballOnFloor) / totalCapball * 100;
-
-        beaconsClaimed.setText(""+match.beaconsClaimed);
-        beaconsMissed.setText(""+match.beaconsMissed);
-        beaconsSuccessPercentage.setText(""+decimalFormat.format(beaconsPercentage)+"%");
-
-        particlesScoredInVortex.setText(""+match.scoredInVortex);
-        particlesScoredInCorner.setText(""+match.scoredInCorner);
-        particlesMissedVortex.setText(""+match.missedVortex);
-        particlesMissedCorner.setText(""+match.missedCorner);
-        particleVortexSuccessPercentage.setText(""+decimalFormat.format(particlesVortexPercentage)+"%");
-        particleCornerSuccessPercentage.setText(""+decimalFormat.format(particlesCornerPercentage)+"%");
-
-        parkedCompletelyOnPlatform.setText(""+match.completelyOnPlatform);
-        parkedCompletelyOnRamp.setText(""+match.completelyOnRamp);
-        parkedOnPlatform.setText(""+match.onPlatform);
-        parkedOnRamp.setText(""+match.onRamp);
-        parkedMissed.setText(""+match.missedParking);
-        parkedSuccessPercentage.setText(""+decimalFormat.format(parkingPercentage)+"%");
-
-        capballOnFloor.setText(""+match.capballOnFloor);
-        capballMissed.setText(""+match.capballMissed);
-        capballSuccessPercentage.setText(""+decimalFormat.format(capballPercentage)+"%");
+        int totalJewels, totalGlyphs, totalCryptoKeys, totalParking;
+//        double beaconsPercentage;
+//        double particlesPercentage;
+//        double particlesVortexPercentage;
+//        double particlesCornerPercentage;
+//        double parkingPercentage;
+//        double capballPercentage;
+//
+//        totalBeacons = match.beaconsClaimed+match.beaconsMissed;
+//        beaconsPercentage = ((double) match.beaconsClaimed) / (double) totalBeacons * 100;
+//
+//        totalParticlesVortex = match.scoredInVortex+match.missedVortex;
+//        particlesVortexPercentage = ((double) match.scoredInVortex) / (double) totalParticlesVortex * 100;
+//
+//        totalParticlesCorner = match.scoredInCorner+match.missedCorner;
+//        particlesCornerPercentage = (double) match.scoredInCorner / (double) totalParticlesCorner * 100;
+//
+//        particlesPercentage = ((double) match.missedVortex+match.missedCorner) / (double) totalParticlesVortex+totalParticlesCorner * 100;
+//
+//        totalParking = match.completelyOnPlatform+match.completelyOnRamp + match.onPlatform+match.onRamp + match.missedParking;
+//        parkingPercentage = (double) (match.completelyOnPlatform+match.completelyOnRamp + match.onPlatform+match.onRamp) / (double) totalParking * 100;
+//
+//        totalCapball = match.capballOnFloor+match.capballMissed;
+//        capballPercentage = ((double) match.capballOnFloor) / totalCapball * 100;
+//
+        jewelScored.setText(""+match.jewelScored);
+        jewelMissed.setText(""+match.jewelMissed);
+//        beaconsSuccessPercentage.setText(""+decimalFormat.format(beaconsPercentage)+"%");
+//
+        glyphScored.setText(""+match.glyphScored);
+        glyphReadCryptoboxKey.setText(""+match.glyphCryptoboxKey);
+        glyphMissed.setText(""+match.glyphMissed);
+//        particleVortexSuccessPercentage.setText(""+decimalFormat.format(particlesVortexPercentage)+"%");
+//
+        parkingSafeZone.setText(""+match.parkSafeZone);
+        parkingMissed.setText(""+match.parkMissed);
+//        capballSuccessPercentage.setText(""+decimalFormat.format(capballPercentage)+"%");
 
         if (monoMatch) {
             if (match.is_deadRobot) {

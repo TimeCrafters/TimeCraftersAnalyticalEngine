@@ -151,6 +151,23 @@ public class TeamScoutingDataFragment extends Fragment {
                     canScoreRelic.setText("No");
                     canScoreRelic.setTextColor(redColor);
                 }
+                String _relicZones = "";
+                if (teleOp.getBoolean("relic_zone_1")) {
+                    _relicZones+="ONE ";
+                }
+                if (teleOp.getBoolean("relic_zone_2")) {
+                    _relicZones+="TWO ";
+                }
+                if (teleOp.getBoolean("relic_zone_3")) {
+                    _relicZones+="THREE";
+                }
+                if (_relicZones != "") {
+                    relicZones.setText(_relicZones);
+                    relicZones.setTextColor(greenColor);
+                } else {
+                    relicZones.setText("No");
+                    relicZones.setTextColor(redColor);
+                }
 
                 if (teleOp.getBoolean("relic_upright")) {
                     relicPlacedUpright.setText("Yes");

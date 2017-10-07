@@ -148,35 +148,35 @@ public class TeleOpFragment extends Fragment {
         double particlesCornerPercentage;
         double capballPercentage;
 
-        totalBeacons = match.beaconsClaimed+match.beaconsMissed;
-        beaconsPercentage = ((double) match.beaconsClaimed) / (double) totalBeacons * 100;
-
-        totalParticlesVortex = match.scoredInVortex+match.missedVortex;
-        particlesVortexPercentage = ((double) match.scoredInVortex) / (double) totalParticlesVortex * 100;
-
-        totalParticlesCorner = match.scoredInCorner+match.missedCorner;
-        particlesCornerPercentage = (double) match.scoredInCorner / (double) totalParticlesCorner * 100;
-
-
-        totalCapball = match.capballOffFloor + match.capballAboveCrossbar + match.capballCapped + match.capballMissed;
-        capballPercentage = ((double) match.capballOffFloor + (double) match.capballAboveCrossbar + (double) match.capballCapped) / (double) totalCapball * 100;
-
-        beaconsClaimed.setText(""+match.beaconsClaimed);
-        beaconsStolen.setText(""+match.beaconsStolen);
-        beaconsSuccessPercentage.setText(""+decimalFormat.format(beaconsPercentage)+"%");
-
-        particlesScoredInVortex.setText(""+match.scoredInVortex);
-        particlesScoredInCorner.setText(""+match.scoredInCorner);
-        particlesMissedVortex.setText(""+match.missedVortex);
-        particlesScoredInCorner.setText(""+match.missedCorner);
-        particleVortexSuccessPercentage.setText(""+decimalFormat.format(particlesVortexPercentage)+"%");
-        particleCornerSuccessPercentage.setText(""+decimalFormat.format(particlesCornerPercentage)+"%");
-
-        capballOffFloor.setText(""+match.capballOffFloor);
-        capballAboveCrossbar.setText(""+match.capballAboveCrossbar);
-        capballCapped.setText(""+match.capballCapped);
-        capballMissed.setText(""+match.capballMissed);
-        capballSuccessPercentage.setText(""+decimalFormat.format(capballPercentage)+"%");
+//        totalBeacons = match.beaconsClaimed+match.beaconsMissed;
+//        beaconsPercentage = ((double) match.beaconsClaimed) / (double) totalBeacons * 100;
+//
+//        totalParticlesVortex = match.scoredInVortex+match.missedVortex;
+//        particlesVortexPercentage = ((double) match.scoredInVortex) / (double) totalParticlesVortex * 100;
+//
+//        totalParticlesCorner = match.scoredInCorner+match.missedCorner;
+//        particlesCornerPercentage = (double) match.scoredInCorner / (double) totalParticlesCorner * 100;
+//
+//
+//        totalCapball = match.capballOffFloor + match.capballAboveCrossbar + match.capballCapped + match.capballMissed;
+//        capballPercentage = ((double) match.capballOffFloor + (double) match.capballAboveCrossbar + (double) match.capballCapped) / (double) totalCapball * 100;
+//
+//        beaconsClaimed.setText(""+match.beaconsClaimed);
+//        beaconsStolen.setText(""+match.beaconsStolen);
+//        beaconsSuccessPercentage.setText(""+decimalFormat.format(beaconsPercentage)+"%");
+//
+//        particlesScoredInVortex.setText(""+match.scoredInVortex);
+//        particlesScoredInCorner.setText(""+match.scoredInCorner);
+//        particlesMissedVortex.setText(""+match.missedVortex);
+//        particlesScoredInCorner.setText(""+match.missedCorner);
+//        particleVortexSuccessPercentage.setText(""+decimalFormat.format(particlesVortexPercentage)+"%");
+//        particleCornerSuccessPercentage.setText(""+decimalFormat.format(particlesCornerPercentage)+"%");
+//
+//        capballOffFloor.setText(""+match.capballOffFloor);
+//        capballAboveCrossbar.setText(""+match.capballAboveCrossbar);
+//        capballCapped.setText(""+match.capballCapped);
+//        capballMissed.setText(""+match.capballMissed);
+//        capballSuccessPercentage.setText(""+decimalFormat.format(capballPercentage)+"%");
 
         if (monoMatch) {
             if (match.is_deadRobot) {

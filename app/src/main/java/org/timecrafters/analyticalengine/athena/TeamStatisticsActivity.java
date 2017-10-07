@@ -64,74 +64,42 @@ public class TeamStatisticsActivity extends AppCompatActivity {
 
                     if (event.period.equals("autonomous")) {
                         if (event.type.equals("score")) {
-                            if (event.subtype.equals("beacon")) {
-                                allAutonomousMatches.beaconsClaimed++;
-                                autonomousMatch.beaconsClaimed++;
+                            if (event.subtype.equals("jewel")) {
+                                allAutonomousMatches.jewelScored++;
+                                autonomousMatch.jewelScored++;
                             }
 
-                            if (event.subtype.equals("particle")) {
-                                if (event.location.equals("vortex")) {
-                                    allAutonomousMatches.scoredInVortex++;
-                                    autonomousMatch.scoredInVortex++;
+                            if (event.subtype.equals("glyph")) {
+                                if (event.location.equals("glyph")) {
+                                    allAutonomousMatches.glyphScored++;
+                                    autonomousMatch.glyphScored++;
                                 }
-                                if (event.location.equals("corner")) {
-                                    allAutonomousMatches.scoredInCorner++;
-                                    autonomousMatch.scoredInCorner++;
-                                }
-                            }
-
-                            if (event.subtype.equals("capball")) {
-                                if (event.location.equals("floor")) {
-                                    allAutonomousMatches.capballOnFloor++;
-                                    autonomousMatch.capballOnFloor++;
+                                if (event.location.equals("cryptokey")) {
+                                    allAutonomousMatches.glyphCryptoboxKey++;
+                                    autonomousMatch.glyphCryptoboxKey++;
                                 }
                             }
 
                             if (event.subtype.equals("parking")) {
-                                if (event.location.equals("on_platform")) {
-                                    allAutonomousMatches.completelyOnPlatform++;
-                                    autonomousMatch.completelyOnPlatform++;
-                                }
-                                if (event.location.equals("on_ramp")) {
-                                    allAutonomousMatches.completelyOnRamp++;
-                                    autonomousMatch.completelyOnRamp++;
-                                }
-                                if (event.location.equals("platform")) {
-                                    allAutonomousMatches.onPlatform++;
-                                    autonomousMatch.onPlatform++;
-                                }
-                                if (event.location.equals("ramp")) {
-                                    allAutonomousMatches.onRamp++;
-                                    autonomousMatch.onRamp++;
-                                }
+                                 allAutonomousMatches.parkSafeZone++;
+                                 autonomousMatch.parkSafeZone++;
                             }
                         }
 
                         if (event.type.equals("miss")) {
-                            if (event.subtype.equals("beacon")) {
-                                allAutonomousMatches.beaconsMissed++;
-                                autonomousMatch.beaconsMissed++;
+                            if (event.subtype.equals("jewel")) {
+                                allAutonomousMatches.jewelMissed++;
+                                autonomousMatch.jewelMissed++;
                             }
 
-                            if (event.subtype.equals("particle")) {
-                                if (event.location.equals("vortex")) {
-                                    allAutonomousMatches.missedVortex++;
-                                    autonomousMatch.missedVortex++;
-                                }
-                                if (event.location.equals("corner")) {
-                                    allAutonomousMatches.missedCorner++;
-                                    autonomousMatch.missedCorner++;
-                                }
+                            if (event.subtype.equals("glyph")) {
+                                allAutonomousMatches.glyphMissed++;
+                                autonomousMatch.glyphMissed++;
                             }
 
                             if (event.subtype.equals("parking")) {
-                                allAutonomousMatches.missedParking++;
-                                autonomousMatch.missedParking++;
-                            }
-
-                            if (event.subtype.equals("capball")) {
-                                allAutonomousMatches.capballMissed++;
-                                autonomousMatch.capballMissed++;
+                                allAutonomousMatches.parkMissed++;
+                                autonomousMatch.parkMissed++;
                             }
 
                             if (event.subtype.equals("robot")) {
@@ -141,70 +109,53 @@ public class TeamStatisticsActivity extends AppCompatActivity {
                             }
                         }
                     } else {
-                        if (event.type.equals("score")) {
-                            if (event.subtype.equals("beacon")) {
-                                AppSync.puts("STATS", "Score Beacon");
-                                allTeleOpMatches.beaconsClaimed++;
-                                teleOpMatch.beaconsClaimed++;
-                            }
+//                        if (event.type.equals("score")) {
+//                            if (event.subtype.equals("glyph")) {
+//                                allTeleOpMatches.beaconsClaimed++;
+//                                teleOpMatch.beaconsClaimed++;
+//                            }
+//
+//                            if (event.subtype.equals("relic")) {
+//                                if (event.location.equals("vortex")) {
+//                                    allTeleOpMatches.scoredInVortex++;
+//                                    teleOpMatch.scoredInVortex++;
+//                                }
+//                            }
+//
+//                            if (event.subtype.equals("balance")) {
+//                                allTeleOpMatches.balance++;
+//                                teleOpMatch.capballCapped++;
+//                            }
+//                        }
+//
+//                        if (event.type.equals("miss")) {
+//                            if (event.subtype.equals("beacon")) {
+//                                allTeleOpMatches.beaconsMissed++;
+//                                teleOpMatch.beaconsMissed++;
+//                            }
+//
+//                            if (event.subtype.equals("particle")) {
+//                                if (event.location.equals("vortex")) {
+//                                    allTeleOpMatches.missedVortex++;
+//                                    teleOpMatch.missedVortex++;
+//                                }
+//                                if (event.location.equals("corner")) {
+//                                    allTeleOpMatches.missedCorner++;
+//                                    teleOpMatch.missedCorner++;
+//                                }
+//                            }
+//
+//                            if (event.subtype.equals("capball")) {
+//                                allTeleOpMatches.capballMissed++;
+//                                teleOpMatch.capballMissed++;
+//                            }
 
-                            if (event.subtype.equals("particle")) {
-                                if (event.location.equals("vortex")) {
-                                    allTeleOpMatches.scoredInVortex++;
-                                    teleOpMatch.scoredInVortex++;
-                                }
-                                if (event.location.equals("corner")) {
-                                    allTeleOpMatches.scoredInCorner++;
-                                    teleOpMatch.scoredInCorner++;
-                                }
-                            }
-
-                            if (event.subtype.equals("capball")) {
-                                if (event.location.equals("off_floor")) {
-                                    allTeleOpMatches.capballOffFloor++;
-                                    teleOpMatch.capballOffFloor++;
-                                }
-
-                                if (event.location.equals("above_crossbar")) {
-                                    allTeleOpMatches.capballAboveCrossbar++;
-                                    teleOpMatch.capballAboveCrossbar++;
-                                }
-
-                                if (event.location.equals("capped")) {
-                                    allTeleOpMatches.capballCapped++;
-                                    teleOpMatch.capballCapped++;
-                                }
-                            }
-                        }
-
-                        if (event.type.equals("miss")) {
-                            if (event.subtype.equals("beacon")) {
-                                allTeleOpMatches.beaconsMissed++;
-                                teleOpMatch.beaconsMissed++;
-                            }
-
-                            if (event.subtype.equals("particle")) {
-                                if (event.location.equals("vortex")) {
-                                    allTeleOpMatches.missedVortex++;
-                                    teleOpMatch.missedVortex++;
-                                }
-                                if (event.location.equals("corner")) {
-                                    allTeleOpMatches.missedCorner++;
-                                    teleOpMatch.missedCorner++;
-                                }
-                            }
-
-                            if (event.subtype.equals("capball")) {
-                                allTeleOpMatches.capballMissed++;
-                                teleOpMatch.capballMissed++;
-                            }
-
-                            if (event.subtype.equals("robot")) {
-                                allTeleOpMatches.deadRobot++;
-                                teleOpMatch.deadRobot++;
-                                teleOpMatch.is_deadRobot = true;
-                            }
-                        }
+//                            if (event.subtype.equals("robot")) {
+//                                allTeleOpMatches.deadRobot++;
+//                                teleOpMatch.deadRobot++;
+//                                teleOpMatch.is_deadRobot = true;
+//                            }
+//                        }
                     }
                 }
                 autonomousData.add(autonomousMatch);

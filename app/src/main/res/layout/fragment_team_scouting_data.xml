@@ -19,11 +19,12 @@
 
             <TextView
                 android:id="@+id/team"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:text="Team Number | Team Name"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
             <LinearLayout
@@ -52,11 +53,11 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/textView18"
+                        android:id="@+id/textView_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Can score jewel"
+                        android:text="Can score Jewel"
                         android:textAlignment="textStart"
                         android:textAppearance="@style/TextAppearance.AppCompat" />
 

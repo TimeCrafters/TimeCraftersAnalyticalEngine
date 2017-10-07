@@ -12,459 +12,310 @@
         android:layout_marginBottom="55dp"
         android:fillViewport="true">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <TextView
-                android:text="Team Number | Team Name"
-                android:layout_width="wrap_content"
+                android:id="@+id/team"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:id="@+id/team"
+                android:text="Team Number | Team Name"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
             <TextView
-                android:text="Autonomous"
-                android:layout_width="wrap_content"
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/team"
                 android:layout_centerHorizontal="true"
-                android:id="@+id/textView16"
+                android:text="Autonomous"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat"
                 android:textColor="@android:color/holo_red_dark"
                 android:textStyle="normal|bold" />
 
-            <Button
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/match"
-                style="@style/Widget.AppCompat.Button.Small"
-                android:background="@android:drawable/btn_dropdown"
-                android:text="ALL"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView16"
-                android:layout_alignEnd="@+id/textView16" />
+                android:orientation="horizontal">
 
-            <TextView
-                android:text="Beacons"
-                android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/textView61"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/match"
+                    android:layout_alignBottom="@+id/match"
+                    android:layout_alignParentStart="true"
+                    android:layout_weight="1"
+                    android:text="Match"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/match"
+                    style="@style/Widget.AppCompat.Button.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/textView16"
+                    android:layout_below="@+id/textView16"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:text="ALL"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <TextView
+                    android:id="@+id/dataset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/match"
+                    android:layout_alignBottom="@+id/match"
+                    android:layout_alignParentEnd="true"
+                    android:layout_weight="1"
+                    android:text="0 in dataset"
+                    android:textAlignment="textEnd"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Jewel"
+                    android:textAlignment="center" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView27"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Scored Jewel"
+                        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                    <TextView
+                        android:id="@+id/autonomous_jewel_scored"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="N/A"
+                        android:textAlignment="textEnd" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView28"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Missed"
+                        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                    <TextView
+                        android:id="@+id/autonomous_jewel_missed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="N/A"
+                        android:textAlignment="textEnd" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/match"
-                android:layout_centerHorizontal="true"
-                android:id="@+id/textView63"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:textStyle="normal|bold" />
+                android:orientation="vertical">
 
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Glyph"
+                    android:textAlignment="center" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Scored in Cryptobox"
+                        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                    <TextView
+                        android:id="@+id/autonomous_glyph_scored"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="N/A"
+                        android:textAlignment="textEnd" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Read Cryptobox Key"
+                        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                    <TextView
+                        android:id="@+id/autonomous_glyph_read_cryptobox_key"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="N/A"
+                        android:textAlignment="textEnd" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Missed Scoring in Cryptobox"
+                        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                    <TextView
+                        android:id="@+id/autonomous_glyph_missed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="N/A"
+                        android:textAlignment="textEnd" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView63"
-                android:layout_alignParentEnd="true"
-                android:id="@+id/beacons_claimed"
-                android:textAppearance="@style/TextAppearance.AppCompat" />
+                android:orientation="vertical">
 
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/textView31"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Parking"
+                    android:textAlignment="center" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView35"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="In Safe Zone"
+                        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                    <TextView
+                        android:id="@+id/autonomous_park_in_safe_zone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="N/A"
+                        android:textAlignment="textEnd" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView37"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Missed Safe Zone"
+                        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                    <TextView
+                        android:id="@+id/autonomous_park_missed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="N/A"
+                        android:textAlignment="textEnd" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/beacons_missed"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/beacons_claimed"
-                android:layout_alignParentEnd="true" />
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-            <TextView
-                android:text="Beacons Missed:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView68"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView66"
-                android:layout_alignStart="@+id/textView66" />
+                <TextView
+                    android:id="@+id/textView51"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Robot"
+                    android:textAlignment="center" />
 
-            <TextView
-                android:text="Success Percentage:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView64"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView68"
-                android:layout_alignStart="@+id/textView68" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-            <TextView
-                android:text="Particles"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView70"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:textStyle="normal|bold"
-                android:layout_marginTop="15dp"
-                android:layout_below="@+id/textView64"
-                android:layout_alignStart="@+id/textView63" />
+                    <TextView
+                        android:id="@+id/textView53"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Dead Robot"
+                        android:textAppearance="@style/TextAppearance.AppCompat" />
 
-            <TextView
-                android:text="Scored in Corner:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView73"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView72"
-                android:layout_alignStart="@+id/textView72" />
-
-            <TextView
-                android:text="Missed Vortex:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView74"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView73"
-                android:layout_alignStart="@+id/textView73" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/particles_scored_in_vortex"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_above="@+id/textView73"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/particles_scored_in_corner"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/particles_scored_in_vortex"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/particles_missed_vortex"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/particles_scored_in_corner"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/particles_missed_corner"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/particles_missed_vortex"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="Completely on Ramp:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView82"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView81"
-                android:layout_alignStart="@+id/textView81" />
-
-            <TextView
-                android:text="On Platform:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView83"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView82"
-                android:layout_alignStart="@+id/textView82" />
-
-            <TextView
-                android:text="On Ramp:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView99"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView83"
-                android:layout_alignStart="@+id/textView83" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/parking_completely_on_platform"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_alignBaseline="@+id/textView81"
-                android:layout_alignBottom="@+id/textView81"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/parking_completely_on_ramp"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/parking_completely_on_platform"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/parking_on_platform"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/parking_completely_on_ramp"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/parking_on_ramp"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/parking_on_platform"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="Capball Success Percentage:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView89"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView91"
-                android:layout_alignStart="@+id/textView80" />
-
-            <TextView
-                android:text="Missed Capball:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView91"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView90"
-                android:layout_alignStart="@+id/textView89" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/capball_on_floor"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView88"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/capball_missed"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/capball_on_floor"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/capball_success_percentage"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/capball_missed"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="Vortex Success Percentage:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView96"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView95"
-                android:layout_alignStart="@+id/textView95" />
-
-            <TextView
-                android:text="Corner Success Percentage:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView71"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView96"
-                android:layout_alignStart="@+id/textView96" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/particles_vortex_success_percentage"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/particles_missed_corner"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/particles_corner_success_percentage"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/particles_vortex_success_percentage"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="Missed:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView100"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView99"
-                android:layout_alignStart="@+id/textView99" />
-
-            <TextView
-                android:text="Parking"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView79"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:textStyle="normal|bold"
-                android:layout_marginTop="18dp"
-                android:layout_below="@+id/textView71"
-                android:layout_centerHorizontal="true" />
-
-            <TextView
-                android:text="Capball"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView88"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:textStyle="normal|bold"
-                android:layout_below="@+id/textView80"
-                android:layout_alignEnd="@+id/textView79"
-                android:layout_marginTop="12dp" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/parking_missed"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/parking_on_ramp"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="Match"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView61"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_alignBaseline="@+id/match"
-                android:layout_alignBottom="@+id/match"
-                android:layout_alignParentStart="true" />
-
-            <TextView
-                android:text="0 in dataset"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/dataset"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_alignBaseline="@+id/match"
-                android:layout_alignBottom="@+id/match"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="Completely on Platform:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView81"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView79"
-                android:layout_alignStart="@+id/textView74" />
-
-            <TextView
-                android:text="On Floor:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView90"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView88"
-                android:layout_alignStart="@+id/textView91" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/beacons_success_percentage"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/beacons_missed"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="Beacons Claimed:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView66"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView63"
-                android:layout_alignEnd="@+id/textView70" />
-
-            <TextView
-                android:text="Scored in Vortex:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView72"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView70"
-                android:layout_alignStart="@+id/textView64" />
-
-            <TextView
-                android:text="Missed Corner:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView95"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView74"
-                android:layout_alignStart="@+id/textView74" />
-
-            <TextView
-                android:text="Robot"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView14"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:textStyle="normal|bold"
-                android:layout_marginTop="19dp"
-                android:layout_below="@+id/textView89"
-                android:layout_centerHorizontal="true" />
-
-            <TextView
-                android:text="Dead Robot:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView27"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView14"
-                android:layout_alignStart="@+id/textView89" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/textView27"
-                android:layout_alignParentEnd="true"
-                android:id="@+id/robot_dead"
-                android:textAppearance="@style/TextAppearance.AppCompat" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/parking_success_percentage"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/parking_missed"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="Parking Success Percentage:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView80"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView100"
-                android:layout_alignStart="@+id/textView100" />
-
-        </RelativeLayout>
+                    <TextView
+                        android:id="@+id/autonomous_robot_robot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="N/A"
+                        android:textAlignment="textEnd" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
     </ScrollView>
-
 </FrameLayout>
