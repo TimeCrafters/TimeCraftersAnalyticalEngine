@@ -63,7 +63,7 @@ public class TeamStatisticsActivity extends AppCompatActivity {
                     EventStruct event = (EventStruct) events.get(n);
 
                     if (event.period.equals("autonomous")) {
-                        if (event.type.equals("score")) {
+                        if (event.type.equals("scored")) {
                             if (event.subtype.equals("jewel")) {
                                 allAutonomousMatches.jewelScored++;
                                 autonomousMatch.jewelScored++;
@@ -86,7 +86,7 @@ public class TeamStatisticsActivity extends AppCompatActivity {
                             }
                         }
 
-                        if (event.type.equals("miss")) {
+                        if (event.type.equals("missed")) {
                             if (event.subtype.equals("jewel")) {
                                 allAutonomousMatches.jewelMissed++;
                                 autonomousMatch.jewelMissed++;

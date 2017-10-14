@@ -136,6 +136,35 @@
                         android:layout_weight="1"
                         android:text="N/A"
                         android:textAlignment="textEnd" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView43"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Success Percentage"
+                            android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                        <TextView
+                            android:id="@+id/autonomous_jewel_success_percentage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="N/A"
+                            android:textAlignment="textEnd" />
+                    </LinearLayout>
                 </LinearLayout>
 
             </LinearLayout>
@@ -181,6 +210,28 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        android:id="@+id/textView22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Missed Scoring in Cryptobox"
+                        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                    <TextView
+                        android:id="@+id/autonomous_glyph_missed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="N/A"
+                        android:textAlignment="textEnd" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
                         android:id="@+id/textView20"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -197,22 +248,23 @@
                         android:textAlignment="textEnd" />
                 </LinearLayout>
 
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/textView22"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/textView233"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Missed Scoring in Cryptobox"
+                        android:text="Scoring Success Percentage"
                         android:textAppearance="@style/TextAppearance.AppCompat" />
 
                     <TextView
-                        android:id="@+id/autonomous_glyph_missed"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/autonomous_glyph_success_percentage"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="N/A"
@@ -279,6 +331,29 @@
                         android:textAlignment="textEnd" />
 
                 </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView211"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Success Percentage"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <TextView
+                    android:id="@+id/autonomous_parking_success_percentage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="N/A"
+                    android:textAlignment="textEnd" />
             </LinearLayout>
 
             <LinearLayout

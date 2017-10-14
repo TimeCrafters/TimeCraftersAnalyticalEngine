@@ -25,13 +25,16 @@ public class AutonomousFragment extends Fragment {
 
     TextView jewelScored;
     TextView jewelMissed;
+    TextView jewelPercentageText;
 
     TextView glyphScored;
     TextView glyphReadCryptoboxKey;
     TextView glyphMissed;
+    TextView glyphPercentageText;
 
     TextView parkingSafeZone;
     TextView parkingMissed;
+    TextView parkingPercentageText;
 
     TextView robotDead;
 
@@ -73,13 +76,16 @@ public class AutonomousFragment extends Fragment {
 
         jewelScored = (TextView) getView().findViewById(R.id.autonomous_jewel_scored);
         jewelMissed = (TextView) getView().findViewById(R.id.autonomous_jewel_missed);
+        jewelPercentageText = (TextView) getView().findViewById(R.id.autonomous_jewel_success_percentage);
 
         glyphScored = (TextView) getView().findViewById(R.id.autonomous_glyph_scored);
         glyphReadCryptoboxKey = (TextView) getView().findViewById(R.id.autonomous_glyph_read_cryptobox_key);
         glyphMissed = (TextView) getView().findViewById(R.id.autonomous_glyph_missed);
+        glyphPercentageText = (TextView) getView().findViewById(R.id.autonomous_glyph_success_percentage);
 
         parkingSafeZone = (TextView) getView().findViewById(R.id.autonomous_park_in_safe_zone);
         parkingMissed   = (TextView) getView().findViewById(R.id.autonomous_park_missed);
+        parkingPercentageText = (TextView) getView().findViewById(R.id.autonomous_parking_success_percentage);
 
         robotDead = (TextView) getView().findViewById(R.id.autonomous_robot_robot);
 
@@ -130,44 +136,34 @@ public class AutonomousFragment extends Fragment {
 
     public void populateAutonomousData(MatchStruct match) {
         DecimalFormat decimalFormat = new DecimalFormat("###.##");
+        AppSync.puts("MATCHSTRUCT", match.toString());
 
         int totalJewels, totalGlyphs, totalCryptoKeys, totalParking;
-//        double beaconsPercentage;
-//        double particlesPercentage;
-//        double particlesVortexPercentage;
-//        double particlesCornerPercentage;
-//        double parkingPercentage;
-//        double capballPercentage;
-//
-//        totalBeacons = match.beaconsClaimed+match.beaconsMissed;
-//        beaconsPercentage = ((double) match.beaconsClaimed) / (double) totalBeacons * 100;
-//
-//        totalParticlesVortex = match.scoredInVortex+match.missedVortex;
-//        particlesVortexPercentage = ((double) match.scoredInVortex) / (double) totalParticlesVortex * 100;
-//
-//        totalParticlesCorner = match.scoredInCorner+match.missedCorner;
-//        particlesCornerPercentage = (double) match.scoredInCorner / (double) totalParticlesCorner * 100;
-//
-//        particlesPercentage = ((double) match.missedVortex+match.missedCorner) / (double) totalParticlesVortex+totalParticlesCorner * 100;
-//
-//        totalParking = match.completelyOnPlatform+match.completelyOnRamp + match.onPlatform+match.onRamp + match.missedParking;
-//        parkingPercentage = (double) (match.completelyOnPlatform+match.completelyOnRamp + match.onPlatform+match.onRamp) / (double) totalParking * 100;
-//
-//        totalCapball = match.capballOnFloor+match.capballMissed;
-//        capballPercentage = ((double) match.capballOnFloor) / totalCapball * 100;
-//
+        double jewelPercentage;
+        double glyphPercentage;
+        double parkingPercentage;
+
+        totalJewels = match.jewelScored+match.jewelMissed;
+        jewelPercentage = ((double) match.jewelScored) / (double) totalJewels * 100;
+
+        totalGlyphs = match.glyphScored+match.glyphMissed;
+        glyphPercentage = ((double) match.glyphScored) / (double) totalGlyphs * 100;
+
+        totalParking = match.parkSafeZone+match.parkMissed;
+        parkingPercentage = (double) match.parkSafeZone / (double) totalParking * 100;
+
         jewelScored.setText(""+match.jewelScored);
         jewelMissed.setText(""+match.jewelMissed);
-//        beaconsSuccessPercentage.setText(""+decimalFormat.format(beaconsPercentage)+"%");
-//
+        jewelPercentageText.setText(""+decimalFormat.format(jewelPercentage)+"%");
+
         glyphScored.setText(""+match.glyphScored);
         glyphReadCryptoboxKey.setText(""+match.glyphCryptoboxKey);
         glyphMissed.setText(""+match.glyphMissed);
-//        particleVortexSuccessPercentage.setText(""+decimalFormat.format(particlesVortexPercentage)+"%");
-//
+        glyphPercentageText.setText(""+decimalFormat.format(glyphPercentage)+"%");
+
         parkingSafeZone.setText(""+match.parkSafeZone);
         parkingMissed.setText(""+match.parkMissed);
-//        capballSuccessPercentage.setText(""+decimalFormat.format(capballPercentage)+"%");
+        parkingPercentageText.setText(""+decimalFormat.format(parkingPercentage)+"%");
 
         if (monoMatch) {
             if (match.is_deadRobot) {

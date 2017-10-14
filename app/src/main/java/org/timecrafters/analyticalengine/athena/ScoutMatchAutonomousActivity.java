@@ -181,7 +181,7 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 lockTeamIn();
-                AppSync.addEvent(0, "autonomous", "scored", "jewel", "", 0, "Scored jewel");
+                AppSync.addEvent(0, "autonomous", "scored", "jewel", "", AutoScoresHelper.jewelScored, "Scored jewel");
                 jewelScored.setEnabled(false);
                 jewelMissed.setEnabled(false);
                 refreshEventLog();
