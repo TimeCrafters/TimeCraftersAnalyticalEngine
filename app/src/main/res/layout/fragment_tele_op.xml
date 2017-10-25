@@ -11,375 +11,400 @@
         android:layout_marginBottom="55dp"
         android:fillViewport="true">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <TextView
-                android:text="Team Number | Team Name"
-                android:layout_width="wrap_content"
+                android:id="@+id/team"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:id="@+id/team"
+                android:text="Team Number | Team Name"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
             <TextView
-                android:text="TeleOp"
-                android:layout_width="wrap_content"
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/team"
                 android:layout_centerHorizontal="true"
-                android:id="@+id/textView16"
+                android:text="TeleOp"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat"
                 android:textColor="@color/colorPrimaryDark"
                 android:textStyle="normal|bold" />
 
-            <TextView
-                android:text="Beacons"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/match"
-                android:layout_centerHorizontal="true"
-                android:id="@+id/textView63"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:textStyle="normal|bold" />
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView61"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/match"
+                    android:layout_alignBottom="@+id/match"
+                    android:layout_alignParentStart="true"
+                    android:layout_weight="1"
+                    android:text="Match"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <Button
+                    android:id="@+id/match"
+                    style="@style/Widget.AppCompat.Button.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView16"
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:text="ALL"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <TextView
+                    android:id="@+id/dataset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/match"
+                    android:layout_alignBottom="@+id/match"
+                    android:layout_alignParentEnd="true"
+                    android:layout_weight="1"
+                    android:text="0 in dataset"
+                    android:textAlignment="textEnd"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+            </LinearLayout>
 
             <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
+                android:id="@+id/textView45"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView63"
-                android:layout_alignParentEnd="true"
-                android:id="@+id/beacons_claimed"
-                android:textAppearance="@style/TextAppearance.AppCompat" />
+                android:text="Glyph"
+                android:textAlignment="center" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView39"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Scored"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <TextView
+                    android:id="@+id/teleop_glyph_scored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="N/A"
+                    android:textAlignment="textEnd" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView49"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Missed"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <TextView
+                    android:id="@+id/teleop_glyph_missed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="N/A"
+                    android:textAlignment="textEnd" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Success Percentage"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <TextView
+                    android:id="@+id/teleop_glyph_success_percentage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="N/A"
+                    android:textAlignment="textEnd" />
+            </LinearLayout>
 
             <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
+                android:id="@+id/textView57"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/beacons_lost"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/beacons_claimed"
-                android:layout_alignParentEnd="true" />
+                android:text="Relic"
+                android:textAlignment="center" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView59"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Zone One"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <TextView
+                    android:id="@+id/teleop_relic_zone_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="N/A"
+                    android:textAlignment="textEnd" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView62"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Zone Two"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <TextView
+                    android:id="@+id/teleop_relic_zone_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="N/A"
+                    android:textAlignment="textEnd" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView64"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Zone Three"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <TextView
+                    android:id="@+id/teleop_relic_zone_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="N/A"
+                    android:textAlignment="textEnd" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView66"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Relic Upright"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <TextView
+                    android:id="@+id/teleop_relic_upright"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="N/A"
+                    android:textAlignment="textEnd" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView68"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Missed"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <TextView
+                    android:id="@+id/teleop_relic_missed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="N/A"
+                    android:textAlignment="textEnd" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView70"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Success Percentage"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <TextView
+                    android:id="@+id/teleop_relic_success_percentage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="N/A"
+                    android:textAlignment="textEnd" />
+            </LinearLayout>
 
             <TextView
-                android:text="Beacons Lost/Stolen:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView68"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView66"
-                android:layout_alignStart="@+id/textView66" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/beacons_success_percentage"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/beacons_lost"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="Success Percentage:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView64"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView68"
-                android:layout_alignStart="@+id/textView68" />
-
-            <TextView
-                android:text="Particles"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView70"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:textStyle="normal|bold"
-                android:layout_marginTop="15dp"
-                android:layout_below="@+id/textView64"
-                android:layout_alignStart="@+id/textView63" />
-
-            <TextView
-                android:text="Scored in Corner:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView73"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView72"
-                android:layout_alignStart="@+id/textView72" />
-
-            <TextView
-                android:text="Missed Vortex:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView74"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView73"
-                android:layout_alignStart="@+id/textView73" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/particles_scored_in_vortex"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_above="@+id/textView73"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/particles_scored_in_corner"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/particles_scored_in_vortex"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/particles_missed_vortex"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/particles_scored_in_corner"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/particles_missed_corner"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/particles_missed_vortex"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="Above Crossbar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView62"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView81"
-                android:layout_alignStart="@+id/textView81" />
-
-            <TextView
-                android:text="Vortex Success Percentage:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView96"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView95"
-                android:layout_alignStart="@+id/textView95" />
-
-            <TextView
-                android:text="Corner Success Percentage:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView71"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView96"
-                android:layout_alignStart="@+id/textView96" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/particles_vortex_success_percentage"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/particles_missed_corner"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/particles_corner_success_percentage"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/particles_vortex_success_percentage"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="Capball"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView79"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:textStyle="normal|bold"
-                android:layout_marginTop="18dp"
-                android:layout_below="@+id/textView71"
-                android:layout_centerHorizontal="true" />
-
-            <TextView
-                android:text="Match"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView61"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_alignBaseline="@+id/match"
-                android:layout_alignBottom="@+id/match"
-                android:layout_alignParentStart="true" />
-
-            <TextView
-                android:text="0 in dataset"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/dataset"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_alignBaseline="@+id/match"
-                android:layout_alignBottom="@+id/match"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="Missed Corner:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView95"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView74"
-                android:layout_alignStart="@+id/textView74" />
-
-            <TextView
-                android:text="Dropped/Missed:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView60"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView105"
-                android:layout_alignStart="@+id/textView105" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/capball_capped"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/capball_above_crossbar"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="Capped:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView105"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView62"
-                android:layout_alignStart="@+id/textView62" />
-
-            <TextView
-                android:text="Capball Success Percentage:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textView60"
-                android:layout_alignStart="@+id/textView60"
-                android:id="@+id/textView108"
-                android:textAppearance="@style/TextAppearance.AppCompat" />
-
-            <TextView
-                android:text="Off Floor:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView81"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView79"
-                android:layout_alignStart="@+id/textView71" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/capball_missed"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/capball_capped"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/capball_success_percentage"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/capball_missed"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/capball_above_crossbar"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/capball_off_floor"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/capball_off_floor"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_above="@+id/textView62"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:text="Scored in Vortex:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/textView72"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView70"
-                android:layout_alignEnd="@+id/textView70" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Parking"
+                android:textAlignment="center" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView73"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Balanced on Stone"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <TextView
+                    android:id="@+id/teleop_parking_balanced"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="N/A"
+                    android:textAlignment="textEnd" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView76"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Missed Balancing on Stone"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <TextView
+                    android:id="@+id/teleop_parking_missed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="N/A"
+                    android:textAlignment="textEnd" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView78"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Success Percentage"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <TextView
+                    android:id="@+id/teleop_parking_success_percentage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="N/A"
+                    android:textAlignment="textEnd" />
+            </LinearLayout>
 
             <TextView
-                android:text="Beacons Claimed:"
-                android:layout_width="wrap_content"
+                android:id="@+id/textView48"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView66"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView63"
-                android:layout_alignStart="@+id/textView72" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/match"
-                style="@style/Widget.AppCompat.Button.Small"
-                android:background="@android:drawable/btn_dropdown"
-                android:text="ALL"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView16"
-                android:layout_centerHorizontal="true" />
-
-            <TextView
                 android:text="Robot"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView32"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:textStyle="normal|bold"
-                android:layout_below="@+id/textView108"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="17dp" />
+                android:textAlignment="center" />
 
-            <TextView
-                android:text="Dead Robot:"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView34"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:layout_below="@+id/textView32"
-                android:layout_alignStart="@+id/textView108" />
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
-            <TextView
-                android:text="N/A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/textView34"
-                android:layout_alignParentEnd="true"
-                android:id="@+id/robot_dead"
-                android:textAppearance="@style/TextAppearance.AppCompat" />
+                <TextView
+                    android:id="@+id/textView34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView108"
+                    android:layout_below="@+id/textView32"
+                    android:layout_weight="1"
+                    android:text="Dead Robot"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
 
-        </RelativeLayout>
+                <TextView
+                    android:id="@+id/robot_dead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/textView34"
+                    android:layout_alignParentEnd="true"
+                    android:layout_weight="1"
+                    android:text="N/A"
+                    android:textAlignment="textEnd" />
+            </LinearLayout>
+
+        </LinearLayout>
     </ScrollView>
 
 </FrameLayout>

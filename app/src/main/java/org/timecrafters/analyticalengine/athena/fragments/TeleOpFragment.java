@@ -75,22 +75,22 @@ public class TeleOpFragment extends Fragment {
         menu = (Button) getView().findViewById(R.id.match);
         dataset = (TextView) getView().findViewById(R.id.dataset);
 
-        beaconsClaimed = (TextView) getView().findViewById(R.id.beacons_claimed);
-        beaconsStolen = (TextView) getView().findViewById(R.id.beacons_lost);
-        beaconsSuccessPercentage = (TextView) getView().findViewById(R.id.beacons_success_percentage);
-
-        particlesScoredInVortex = (TextView) getView().findViewById(R.id.particles_scored_in_vortex);
-        particlesScoredInCorner = (TextView) getView().findViewById(R.id.particles_scored_in_corner);
-        particlesMissedVortex = (TextView) getView().findViewById(R.id.particles_missed_vortex);
-        particlesMissedCorner = (TextView) getView().findViewById(R.id.particles_missed_corner);
-        particleVortexSuccessPercentage = (TextView) getView().findViewById(R.id.particles_vortex_success_percentage);
-        particleCornerSuccessPercentage = (TextView) getView().findViewById(R.id.particles_corner_success_percentage);
-
-        capballOffFloor = (TextView) getView().findViewById(R.id.capball_off_floor);
-        capballAboveCrossbar = (TextView) getView().findViewById(R.id.capball_above_crossbar);
-        capballCapped = (TextView) getView().findViewById(R.id.capball_capped);
-        capballMissed = (TextView) getView().findViewById(R.id.capball_missed);
-        capballSuccessPercentage = (TextView) getView().findViewById(R.id.capball_success_percentage);
+//        beaconsClaimed = (TextView) getView().findViewById(R.id.beacons_claimed);
+//        beaconsStolen = (TextView) getView().findViewById(R.id.beacons_lost);
+//        beaconsSuccessPercentage = (TextView) getView().findViewById(R.id.beacons_success_percentage);
+//
+//        particlesScoredInVortex = (TextView) getView().findViewById(R.id.particles_scored_in_vortex);
+//        particlesScoredInCorner = (TextView) getView().findViewById(R.id.particles_scored_in_corner);
+//        particlesMissedVortex = (TextView) getView().findViewById(R.id.particles_missed_vortex);
+//        particlesMissedCorner = (TextView) getView().findViewById(R.id.particles_missed_corner);
+//        particleVortexSuccessPercentage = (TextView) getView().findViewById(R.id.particles_vortex_success_percentage);
+//        particleCornerSuccessPercentage = (TextView) getView().findViewById(R.id.particles_corner_success_percentage);
+//
+//        capballOffFloor = (TextView) getView().findViewById(R.id.capball_off_floor);
+//        capballAboveCrossbar = (TextView) getView().findViewById(R.id.capball_above_crossbar);
+//        capballCapped = (TextView) getView().findViewById(R.id.capball_capped);
+//        capballMissed = (TextView) getView().findViewById(R.id.capball_missed);
+//        capballSuccessPercentage = (TextView) getView().findViewById(R.id.capball_success_percentage);
 
         robotDead = (TextView) getView().findViewById(R.id.robot_dead);
 
