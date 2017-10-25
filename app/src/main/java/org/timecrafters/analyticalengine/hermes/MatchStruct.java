@@ -13,7 +13,7 @@ public class MatchStruct {
     public int deadRobot = 0;
 
     // Booleans
-    public boolean is_deadRobot = false;
+    public boolean is_deadRobot, is_relicUpright = false;
 
     public String toString() {
         String string = "MatchScruct";

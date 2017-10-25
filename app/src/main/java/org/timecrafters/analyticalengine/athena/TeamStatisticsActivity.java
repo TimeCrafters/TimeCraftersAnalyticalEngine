@@ -109,53 +109,60 @@ public class TeamStatisticsActivity extends AppCompatActivity {
                             }
                         }
                     } else {
-//                        if (event.type.equals("score")) {
-//                            if (event.subtype.equals("glyph")) {
-//                                allTeleOpMatches.beaconsClaimed++;
-//                                teleOpMatch.beaconsClaimed++;
-//                            }
-//
-//                            if (event.subtype.equals("relic")) {
-//                                if (event.location.equals("vortex")) {
-//                                    allTeleOpMatches.scoredInVortex++;
-//                                    teleOpMatch.scoredInVortex++;
-//                                }
-//                            }
-//
-//                            if (event.subtype.equals("balance")) {
-//                                allTeleOpMatches.balance++;
-//                                teleOpMatch.capballCapped++;
-//                            }
-//                        }
-//
-//                        if (event.type.equals("miss")) {
-//                            if (event.subtype.equals("beacon")) {
-//                                allTeleOpMatches.beaconsMissed++;
-//                                teleOpMatch.beaconsMissed++;
-//                            }
-//
-//                            if (event.subtype.equals("particle")) {
-//                                if (event.location.equals("vortex")) {
-//                                    allTeleOpMatches.missedVortex++;
-//                                    teleOpMatch.missedVortex++;
-//                                }
-//                                if (event.location.equals("corner")) {
-//                                    allTeleOpMatches.missedCorner++;
-//                                    teleOpMatch.missedCorner++;
-//                                }
-//                            }
-//
-//                            if (event.subtype.equals("capball")) {
-//                                allTeleOpMatches.capballMissed++;
-//                                teleOpMatch.capballMissed++;
-//                            }
+                        if (event.type.equals("scored")) {
+                            if (event.subtype.equals("glyph")) {
+                                allTeleOpMatches.glyphScored++;
+                                teleOpMatch.glyphScored++;
+                            }
 
-//                            if (event.subtype.equals("robot")) {
-//                                allTeleOpMatches.deadRobot++;
-//                                teleOpMatch.deadRobot++;
-//                                teleOpMatch.is_deadRobot = true;
-//                            }
-//                        }
+                            if (event.subtype.equals("relic")) {
+                                if (event.location.equals("zone_one")) {
+                                    allTeleOpMatches.relicZone1++;
+                                    teleOpMatch.relicZone1++;
+                                }
+                                if (event.location.equals("zone_two")) {
+                                    allTeleOpMatches.relicZone2++;
+                                    teleOpMatch.relicZone2++;
+                                }
+                                if (event.location.equals("zone_three")) {
+                                    allTeleOpMatches.relicZone3++;
+                                    teleOpMatch.relicZone3++;
+                                }
+                                if (event.location.equals("upright")) {
+                                    allTeleOpMatches.relicUpright++;
+                                    teleOpMatch.relicUpright++;
+                                    teleOpMatch.is_relicUpright = true;
+                                }
+                            }
+
+                            if (event.subtype.equals("balance")) {
+                                allTeleOpMatches.parkSafeZone++;
+                                teleOpMatch.parkSafeZone++;
+                            }
+                        }
+
+                        if (event.type.equals("missed")) {
+                            if (event.subtype.equals("glyph")) {
+                                allTeleOpMatches.glyphMissed++;
+                                teleOpMatch.glyphMissed++;
+                            }
+
+                            if (event.subtype.equals("relic")) {
+                                allTeleOpMatches.relicMissed++;
+                                teleOpMatch.relicMissed++;
+                            }
+
+                            if (event.subtype.equals("parking")) {
+                                allTeleOpMatches.parkMissed++;
+                                teleOpMatch.parkMissed++;
+                            }
+
+                            if (event.subtype.equals("robot")) {
+                                allTeleOpMatches.deadRobot++;
+                                teleOpMatch.deadRobot++;
+                                teleOpMatch.is_deadRobot = true;
+                            }
+                        }
                     }
                 }
                 autonomousData.add(autonomousMatch);

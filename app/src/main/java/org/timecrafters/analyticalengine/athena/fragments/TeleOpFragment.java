@@ -20,6 +20,8 @@ import java.text.DecimalFormat;
 
 public class TeleOpFragment extends Fragment {
     TextView team;
+    int greenColor = Color.parseColor("#008800");
+    int redColor   = Color.parseColor("#990000");
     Button menu;
     TextView dataset;
 
@@ -159,7 +161,7 @@ public class TeleOpFragment extends Fragment {
         relicZoneOne.setText(""+match.relicZone1);
         relicZoneTwo.setText(""+match.relicZone2);
         relicZoneThree.setText(""+match.relicZone3);
-        relicUpright.setText(""+match.relicUpright);
+//        relicUpright.setText(""+match.relicUpright); // Set below
         relicMissed.setText(""+match.relicMissed);
         relicSuccessPercentage.setText(""+decimalFormat.format(relicPercentage)+"%");
 
@@ -168,14 +170,23 @@ public class TeleOpFragment extends Fragment {
         ParkingSuccessPercentage.setText(""+decimalFormat.format(parkingPercentage)+"%");
 
         if (monoMatch) {
+            if (match.is_relicUpright) {
+                relicUpright.setText("Yes");
+                relicUpright.setTextColor(greenColor);
+            } else {
+                relicUpright.setText("No");
+                relicUpright.setTextColor(redColor);
+            }
             if (match.is_deadRobot) {
                 robotDead.setText("Yes");
-                robotDead.setTextColor(Color.RED);
+                robotDead.setTextColor(redColor);
             } else {
                 robotDead.setText("No");
                 robotDead.setTextColor(Color.BLACK);
             }
         } else {
+            relicUpright.setText(""+match.relicUpright);
+            relicUpright.setTextColor(Color.BLACK);
             robotDead.setText(""+match.deadRobot);
             robotDead.setTextColor(Color.BLACK);
         }
