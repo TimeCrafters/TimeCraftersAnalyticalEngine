@@ -23,22 +23,20 @@ public class TeleOpFragment extends Fragment {
     Button menu;
     TextView dataset;
 
-    TextView beaconsClaimed;
-    TextView beaconsStolen;
-    TextView beaconsSuccessPercentage;
+    TextView glyphScored;
+    TextView glyphMissed;
+    TextView glyphSuccessPercentage;
 
-    TextView particlesScoredInVortex;
-    TextView particlesScoredInCorner;
-    TextView particlesMissedVortex;
-    TextView particlesMissedCorner;
-    TextView particleVortexSuccessPercentage;
-    TextView particleCornerSuccessPercentage;
+    TextView relicZoneOne;
+    TextView relicZoneTwo;
+    TextView relicZoneThree;
+    TextView relicUpright;
+    TextView relicMissed;
+    TextView relicSuccessPercentage;
 
-    TextView capballOffFloor;
-    TextView capballAboveCrossbar;
-    TextView capballCapped;
-    TextView capballMissed;
-    TextView capballSuccessPercentage;
+    TextView parkingBalanced;
+    TextView parkingMissed;
+    TextView ParkingSuccessPercentage;
 
     TextView robotDead;
     boolean monoMatch = false;
@@ -75,22 +73,20 @@ public class TeleOpFragment extends Fragment {
         menu = (Button) getView().findViewById(R.id.match);
         dataset = (TextView) getView().findViewById(R.id.dataset);
 
-//        beaconsClaimed = (TextView) getView().findViewById(R.id.beacons_claimed);
-//        beaconsStolen = (TextView) getView().findViewById(R.id.beacons_lost);
-//        beaconsSuccessPercentage = (TextView) getView().findViewById(R.id.beacons_success_percentage);
-//
-//        particlesScoredInVortex = (TextView) getView().findViewById(R.id.particles_scored_in_vortex);
-//        particlesScoredInCorner = (TextView) getView().findViewById(R.id.particles_scored_in_corner);
-//        particlesMissedVortex = (TextView) getView().findViewById(R.id.particles_missed_vortex);
-//        particlesMissedCorner = (TextView) getView().findViewById(R.id.particles_missed_corner);
-//        particleVortexSuccessPercentage = (TextView) getView().findViewById(R.id.particles_vortex_success_percentage);
-//        particleCornerSuccessPercentage = (TextView) getView().findViewById(R.id.particles_corner_success_percentage);
-//
-//        capballOffFloor = (TextView) getView().findViewById(R.id.capball_off_floor);
-//        capballAboveCrossbar = (TextView) getView().findViewById(R.id.capball_above_crossbar);
-//        capballCapped = (TextView) getView().findViewById(R.id.capball_capped);
-//        capballMissed = (TextView) getView().findViewById(R.id.capball_missed);
-//        capballSuccessPercentage = (TextView) getView().findViewById(R.id.capball_success_percentage);
+        glyphScored = (TextView) getView().findViewById(R.id.teleop_glyph_scored);
+        glyphMissed = (TextView) getView().findViewById(R.id.teleop_glyph_missed);
+        glyphSuccessPercentage = (TextView) getView().findViewById(R.id.teleop_glyph_success_percentage);
+
+        relicZoneOne   = (TextView) getView().findViewById(R.id.teleop_relic_zone_1);
+        relicZoneTwo   = (TextView) getView().findViewById(R.id.teleop_relic_zone_2);
+        relicZoneThree = (TextView) getView().findViewById(R.id.teleop_relic_zone_3);
+        relicUpright   = (TextView) getView().findViewById(R.id.teleop_relic_upright);
+        relicMissed    = (TextView) getView().findViewById(R.id.teleop_relic_missed);
+        relicSuccessPercentage = (TextView) getView().findViewById(R.id.teleop_relic_success_percentage);
+
+        parkingBalanced = (TextView) getView().findViewById(R.id.teleop_parking_balanced);
+        parkingMissed   = (TextView) getView().findViewById(R.id.teleop_parking_missed);
+        ParkingSuccessPercentage = (TextView) getView().findViewById(R.id.teleop_parking_success_percentage);
 
         robotDead = (TextView) getView().findViewById(R.id.robot_dead);
 
@@ -142,41 +138,34 @@ public class TeleOpFragment extends Fragment {
     public void populateTeleOPData(MatchStruct match) {
         DecimalFormat decimalFormat = new DecimalFormat("###.##");
 
-        int totalBeacons, totalParticlesVortex, totalParticlesCorner, totalCapball;
-        double beaconsPercentage;
-        double particlesVortexPercentage;
-        double particlesCornerPercentage;
-        double capballPercentage;
+        int totalGlyphs, totalRelicZones, totalRelicUpright, totalParking;
+        double glyphPercentage;
+        double relicPercentage;
+        double parkingPercentage;
 
-//        totalBeacons = match.beaconsClaimed+match.beaconsMissed;
-//        beaconsPercentage = ((double) match.beaconsClaimed) / (double) totalBeacons * 100;
-//
-//        totalParticlesVortex = match.scoredInVortex+match.missedVortex;
-//        particlesVortexPercentage = ((double) match.scoredInVortex) / (double) totalParticlesVortex * 100;
-//
-//        totalParticlesCorner = match.scoredInCorner+match.missedCorner;
-//        particlesCornerPercentage = (double) match.scoredInCorner / (double) totalParticlesCorner * 100;
-//
-//
-//        totalCapball = match.capballOffFloor + match.capballAboveCrossbar + match.capballCapped + match.capballMissed;
-//        capballPercentage = ((double) match.capballOffFloor + (double) match.capballAboveCrossbar + (double) match.capballCapped) / (double) totalCapball * 100;
-//
-//        beaconsClaimed.setText(""+match.beaconsClaimed);
-//        beaconsStolen.setText(""+match.beaconsStolen);
-//        beaconsSuccessPercentage.setText(""+decimalFormat.format(beaconsPercentage)+"%");
-//
-//        particlesScoredInVortex.setText(""+match.scoredInVortex);
-//        particlesScoredInCorner.setText(""+match.scoredInCorner);
-//        particlesMissedVortex.setText(""+match.missedVortex);
-//        particlesScoredInCorner.setText(""+match.missedCorner);
-//        particleVortexSuccessPercentage.setText(""+decimalFormat.format(particlesVortexPercentage)+"%");
-//        particleCornerSuccessPercentage.setText(""+decimalFormat.format(particlesCornerPercentage)+"%");
-//
-//        capballOffFloor.setText(""+match.capballOffFloor);
-//        capballAboveCrossbar.setText(""+match.capballAboveCrossbar);
-//        capballCapped.setText(""+match.capballCapped);
-//        capballMissed.setText(""+match.capballMissed);
-//        capballSuccessPercentage.setText(""+decimalFormat.format(capballPercentage)+"%");
+        totalGlyphs     = match.glyphScored+match.glyphMissed;
+        glyphPercentage = ((double) match.glyphScored) / (double) totalGlyphs * 100;
+
+        totalRelicZones = match.relicZone1+match.relicZone2+match.relicZone3+match.relicMissed;
+        relicPercentage = ((double) match.relicZone1+match.relicZone2+match.relicZone3) / (double) totalRelicZones * 100;
+
+        totalParking = match.parkSafeZone+match.parkMissed;
+        parkingPercentage = ((double) match.parkSafeZone) / (double) totalParking * 100;
+
+        glyphScored.setText(""+match.glyphScored);
+        glyphMissed.setText(""+match.glyphMissed);
+        glyphSuccessPercentage.setText(""+decimalFormat.format(glyphPercentage)+"%");
+
+        relicZoneOne.setText(""+match.relicZone1);
+        relicZoneTwo.setText(""+match.relicZone2);
+        relicZoneThree.setText(""+match.relicZone3);
+        relicUpright.setText(""+match.relicUpright);
+        relicMissed.setText(""+match.relicMissed);
+        relicSuccessPercentage.setText(""+decimalFormat.format(relicPercentage)+"%");
+
+        parkingBalanced.setText(""+match.parkSafeZone);
+        parkingMissed.setText(""+match.parkMissed);
+        ParkingSuccessPercentage.setText(""+decimalFormat.format(parkingPercentage)+"%");
 
         if (monoMatch) {
             if (match.is_deadRobot) {
