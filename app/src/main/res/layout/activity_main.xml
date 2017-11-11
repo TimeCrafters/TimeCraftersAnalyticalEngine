@@ -21,7 +21,7 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/team_statistics"
         android:layout_marginTop="39dp"
-        android:background="@color/colorMainButton"
+        android:background="@color/colorMainButtonDisabled"
         android:enabled="false"
         android:text="Scout Team"
         android:textAppearance="@style/TextAppearance.AppCompat.Button"
@@ -35,7 +35,7 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/scout_team"
         android:layout_marginTop="37dp"
-        android:background="@color/colorMainButton"
+        android:background="@color/colorMainButtonDisabled"
         android:enabled="false"
         android:text="Track Match"
         android:textAppearance="@style/TextAppearance.AppCompat.Button"
@@ -46,13 +46,13 @@
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorMainButton"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorMainButtonDisabled"
         android:enabled="false"
         android:text="Team Statistics"
         android:textAppearance="@style/TextAppearance.AppCompat.Button"
-        android:textColor="@color/colorMainButtonText"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:textColor="@color/colorMainButtonText" />
 
     <TextView
         android:id="@+id/textView2"

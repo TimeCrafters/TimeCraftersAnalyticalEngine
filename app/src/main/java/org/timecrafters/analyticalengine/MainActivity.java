@@ -300,6 +300,9 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 Toast.makeText(getApplicationContext(), "Successfully parsed teams file", Toast.LENGTH_SHORT).show();
             }
+            matchButton.setBackgroundColor(getResources().getColor(R.color.colorMainButton));
+            teamButton.setBackgroundColor(getResources().getColor(R.color.colorMainButton));
+            teamStatsButton.setBackgroundColor(getResources().getColor(R.color.colorMainButton));
 
         } catch (IOException | NumberFormatException error) {
             failed = true;
