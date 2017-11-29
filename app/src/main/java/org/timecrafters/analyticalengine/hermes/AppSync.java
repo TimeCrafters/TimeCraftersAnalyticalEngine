@@ -26,6 +26,7 @@ import java.util.concurrent.TimeUnit;
  */
 
 public class AppSync {
+    public static final int SOFT_MAX_TEAMSLIST_SIZE = 1000;
     public static JSONObject appConfig;
     public static boolean useFilesDirectory = false; // Store data in apps 'files' directory or in 'External Storage'
     public static Uri teamsListUri;

@@ -142,19 +142,23 @@ public class MainActivity extends AppCompatActivity {
                 PopupMenu popupMenu = new PopupMenu(MainActivity.this, teamStatsButton);
                 popupMenu.getMenu().setQwertyMode(false);
 
+                if (AppSync.teamsList.size() > AppSync.SOFT_MAX_TEAMSLIST_SIZE) { Toast.makeText(getApplicationContext(), "Teams List is kinda big. Not showing colors.", Toast.LENGTH_LONG).show(); }
+
                 for (HashMap.Entry<Integer, String> entry : AppSync.teamsList.entrySet()) {
                     MenuItem temp = popupMenu.getMenu().add("" + entry.getKey() + " | " + entry.getValue());
                     SpannableString team_number = new SpannableString(""+entry.getKey());
                     SpannableString team_name   = new SpannableString(""+entry.getValue());
-                    if (AppSync.teamHasScoutingData(entry.getKey())) {
-                        team_number.setSpan(new ForegroundColorSpan(Color.rgb(0, 150, 0)), 0, team_number.length(), 0);
-                    } else {
-                        team_number.setSpan(new ForegroundColorSpan(Color.DKGRAY), 0, team_number.length(), 0);
-                    }
-                    if (AppSync.teamHasMatchData(entry.getKey())) {
-                        team_name.setSpan(new ForegroundColorSpan(Color.rgb(200, 80, 0)), 0, team_name.length(), 0);
-                    } else {
-                        team_name.setSpan(new ForegroundColorSpan(Color.DKGRAY), 0, team_name.length(), 0);
+                    if (AppSync.teamsList.size() <= AppSync.SOFT_MAX_TEAMSLIST_SIZE) {
+                        if (AppSync.teamHasScoutingData(entry.getKey())) {
+                            team_number.setSpan(new ForegroundColorSpan(Color.rgb(0, 150, 0)), 0, team_number.length(), 0);
+                        } else {
+                            team_number.setSpan(new ForegroundColorSpan(Color.DKGRAY), 0, team_number.length(), 0);
+                        }
+                        if (AppSync.teamHasMatchData(entry.getKey())) {
+                            team_name.setSpan(new ForegroundColorSpan(Color.rgb(200, 80, 0)), 0, team_name.length(), 0);
+                        } else {
+                            team_name.setSpan(new ForegroundColorSpan(Color.DKGRAY), 0, team_name.length(), 0);
+                        }
                     }
                     temp.setTitle(TextUtils.concat(team_number, " | ", team_name));
                 }

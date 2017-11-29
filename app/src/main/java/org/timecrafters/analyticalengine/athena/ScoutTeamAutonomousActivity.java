@@ -94,16 +94,18 @@ public class ScoutTeamAutonomousActivity extends AppCompatActivity {
             public void onClick(View v) {
                 PopupMenu popupMenu = new PopupMenu(ScoutTeamAutonomousActivity.this, teamSelection);
                 popupMenu.getMenu().setQwertyMode(false);
+                if (AppSync.teamsList.size() > AppSync.SOFT_MAX_TEAMSLIST_SIZE) { Toast.makeText(getApplicationContext(), "Teams List is kinda big. Not showing colors.", Toast.LENGTH_LONG).show(); }
 
                 for(HashMap.Entry<Integer, String> entry : AppSync.teamsList.entrySet()) {
                     AppSync.puts(entry.getKey().toString());
                     MenuItem temp = popupMenu.getMenu().add("");
                     SpannableString team_number = new SpannableString(""+entry.getKey()+ " | " +""+entry.getValue());
-
-                    if (AppSync.teamHasScoutingData(entry.getKey())) {
-                        team_number.setSpan(new ForegroundColorSpan(Color.rgb(0, 150, 0)), 0, team_number.length(), 0);
-                    } else {
-                        team_number.setSpan(new ForegroundColorSpan(Color.DKGRAY), 0, team_number.length(), 0);
+                    if (AppSync.teamsList.size() <= AppSync.SOFT_MAX_TEAMSLIST_SIZE) {
+                        if (AppSync.teamHasScoutingData(entry.getKey())) {
+                            team_number.setSpan(new ForegroundColorSpan(Color.rgb(0, 150, 0)), 0, team_number.length(), 0);
+                        } else {
+                            team_number.setSpan(new ForegroundColorSpan(Color.DKGRAY), 0, team_number.length(), 0);
+                        }
                     }
 
                     temp.setTitle(TextUtils.concat(team_number));
