@@ -1,0 +1,5032 @@
+1 USA|MA Team Unlimited
+7 USA|MD TechBrick FTC 7
+18 USA|NY Techno Chix
+22 USA|GA 100 Scholars
+25 USA|CA Rock N' Roll Robots
+28 USA|NY PolyGnomes
+33 USA|VA Enigma
+36 USA|CT Wyverns
+40 USA|CT HAX Robotics
+54 USA|MT Gr3y Matt3r
+61 USA|PA OZONE
+71 USA|WY Teton Gravity Robotics
+92 USA|AR Junior Bomb Squad
+110 USA|NJ MFS Foxes
+112 USA|GA RoboKnights of the Round Table
+116 USA|IL Crazy Eights
+118 USA|PA Steel Hornets
+121 USA|RI Rhode Rage 
+123 USA|NY Vanguard
+127 USA|TX The Fighting Pickles
+130 USA|CT Blazing Spirts
+133 USA|MA Arrows
+147 USA|NJ Montclair Momentum
+149 USA|RI Hawks
+154 USA|RI Renegade
+187 USA|OR Phoenix
+194 USA|VA ILITE Robotics
+201 USA|AZ BroncoBotics
+207 USA|NJ Critical Mass
+208 USA|SC KC Robotics Team
+226 USA|VA OHS 623 FTC Team 1
+230 USA|PA Ampere
+237 USA|NJ MFS Hawks
+247 USA|NJ Reboot
+248 USA|NJ Fatal Error
+251 USA|NJ Mech-alodons
+252 USA|RI Electric Quahogs
+265 USA|WI Viking Robotics 
+267 USA|OR EMP
+273 USA|CT ASD Tech Tigers
+288 USA|MO Spare Parts
+289 USA|MO Robohawks 289
+290 USA|MO Robohawks 290
+291 USA|MO Robohawks 291
+293 USA|VA Cape Squad
+310 USA|NY Stuy Fission
+327 USA|SC Caveman with Cloud
+329 USA|IL Chicago Squires
+342 USA|VA BIONIC BLUE DEVILS
+354 USA|VA ILITE Robotics
+358 USA|CA The Gaulbots
+359 USA|CA WEBB.exe
+360 USA|WA The Revolution
+365 USA|DE MOE (The Miracle Workerz)
+367 USA|IA Pug Life
+369 USA|VA OHS 623 FTC Team 2
+389 USA|MD The Swarm
+391 USA|NJ Mighty Irish
+395 USA|DE Robauktics
+406 USA|MO Richard's Fine Men
+407 USA|MO Sherlock Ohms
+408 USA|MO Archimedes' Screwdriver
+417 USA|WA S.K.I.D 
+450 USA|FL Children of the Swamp
+479 USA|NY Stuy Fusion
+499 USA|FL NanoFusion
+506 USA|FL Pandara
+516 USA|FL Gears of Fire
+519 USA|VA Epsilon Delta Too
+524 USA|CA Boss Bots
+525 USA|GA Success
+534 USA|WV STAR Techs
+535 USA|IN TOBOR
+542 USA|CA WHS Robotics
+548 USA|CA Geek Squad
+596 USA|CA SpectreBots
+607 USA|MD Dragon Slayers
+608 USA|CO The Phoenix
+609 USA|NJ Cougars
+651 USA|RI Sabers
+652 USA|RI Gearzly Bears
+654 USA|RI Upper Cut Bots
+658 USA|MT Union Robotics
+668 USA|NC Art's Legacy
+669 USA|CA Milpitas Xtreme Robotics
+673 USA|SC Subatomic Tomahawks
+679 USA|GA RoboRaiders
+689 USA|RI East Robotics
+701 USA|RI Ocean State Ostriches
+724 USA|MT RedNek Robotics Wun
+731 USA|NC Wannabee Strange
+750 USA|OR Gears in Motion
+753 USA|SC The Green Villains
+755 USA|NJ The Mechanical Wave
+756 USA|NJ Static Charge
+757 USA|NJ The Q.U.I.Z. Team
+760 USA|CO Metal Menace
+772 USA|SC Caveman with Rock
+796 USA|NY Wolves
+839 USA|MA Robo Warriors
+965 USA|VA The League of Incompetent Gentlemen
+975 USA|VA Synergy
+1001 USA|OH Hacksaw
+1002 USA|GA The CircuitRunners - Green
+1379 USA|GA Gear Devils
+1885 USA|VA ILITE Robotics
+2408 USA|MO Shrapnel Sergeants
+2425 USA|FL Hydra Alpha
+2753 USA|NJ Team Overdrive
+2803 USA|IN Raptor Robotics
+2818 USA|MD G-FORCE
+2827 USA|NC Artificial Stupidity
+2836 USA|WY Electrical Infraction
+2843 USA|MD Under The Son
+2844 USA|AZ Valley X Robotics
+2845 USA|FL Team Duct Tape
+2856 USA|WA Tesseract
+2858 USA|GA Sparbots
+2867 USA|MO Degrees of Freedom
+2873 USA|AZ Robobuffs
+2875 USA|MA MightyBots
+2879 USA|MT Technical Difficulty
+2885 USA|CA Kronos
+2887 USA|MN Edina Bucket Brigade
+2891 USA|CA WarriorBorgs
+2897 USA|MD Bearly Awake
+2898 USA|VA The BaronBots
+2901 USA|NC Purple Gears
+2923 USA|IL Kaybots
+2927 USA|TX Cold Steel
+2939 USA|WA Marvelous Power
+2940 USA|VA Wave Riders
+2975 USA|MI Robo Radiers
+2981 USA|GA Red RoboDragon
+2993 USA|GA Blue RoboDragon
+2997 USA|ID STEMLegacy
+3006 USA|NY TeraBots
+3007 USA|NY Licensed to Build
+3013 USA|CA The Nerd Herd
+3032 USA|RI Hyperion
+3033 USA|TX Roosevelt Rough Rider Robotics
+3050 USA|NV G-Bots
+3058 USA|OR Jury Riggers
+3073 USA|FL Massive D
+3081 USA|AK Trial and Error
+3093 USA|OR Phalanx
+3101 USA|FL Boom Bots
+3113 USA|MD Some Disassembly Required
+3116 USA|VA Robo Warriors
+3123 USA|FL Spontaneous Combustion
+3141 Mexico|DIF Bears
+3188 USA|WY Squiggle Splat Bang
+3208 USA|AK HyperLynx
+3216 USA|IL Robophins
+3221 USA|RI avenger 2
+3231 USA|WA WATER BOYZ SZN
+3283 USA|PA SciBots
+3291 Mexico|NLE Oxford Bulls
+3296 USA|TX Bots in Blue
+3305 USA|PA Scibots2
+3311 USA|OH Innovators Robotics
+3351 USA|RI Baconators
+3371 USA|NY Bötley Crüe
+3372 USA|NC AggieBots
+3385 USA|MN King Pin
+3387 USA|MN Crown of Fire
+3391 USA|NC Neptune
+3397 USA|VT Essex Robotics
+3398 USA|TX Darth Panthers
+3409 USA|MO Astromechs
+3415 USA|NJ Lancers
+3470 USA|CA The Patriots
+3479 USA|CO Generals
+3480 USA|AK FrostByte
+3486 USA|MS Techno Warriors Advanced
+3491 Canada|BC FIX IT
+3505 USA|MO Cadet Bot Crew
+3507 USA|IL Robotheosis
+3525 USA|OR Crossroad Robotics
+3526 USA|CA Marlbots
+3537 USA|IN The MechaHamsters
+3540 USA|NY RoboBoogie
+3543 USA|WA Titan Robotics
+3558 USA|MN FireBots
+3565 USA|MA Ghost Robotics 1
+3567 USA|NJ Fear The Gear
+3578 USA|WA Warriors Gold
+3583 USA|MD Power Hawks
+3587 USA|NC Unparalleled Processing
+3591 USA|MO The QUARKS
+3592 USA|MO The MESONS
+3595 USA|VA Schrödinger's Hat
+3600 USA|CA ElectroJackets
+3609 USA|IA Polar Technics
+3615 USA|MA Blue Screen
+3620 USA|MO Furious George
+3631 USA|MO Middle Earth Mechanics
+3634 USA|IA KISS
+3638 USA|OK Atomic Shock
+3640 USA|IL The BoilerBots
+3641 USA|SC PPS Robotics
+3648 USA|UT Beehive Robotics
+3650 USA|CA Torrey Techies
+3658 USA|MO The BOSONS
+3665 USA|MO Leopold GearHeads
+3666 USA|AZ Hawks Robotics
+3668 USA|VA Smokie Jr.
+3670 USA|OK Metal Mustangs
+3697 USA|TX Devastatorz
+3708 USA|TX Iron Eagles Optimus
+3726 USA|GA Mechanics In Blue
+3734 USA|TX Imperial Robotics
+3736 USA|FL Serious Business
+3737 USA|MA Hank's Tanks
+3738 USA|IA 3738 Robotics
+3744 USA|NY LREI Robotics
+3746 USA|CO NECO Robo Knights
+3749 USA|VA Bionic Penguins
+3750 USA|NY Error: 404
+3758 USA|IL Aztec Eagles
+3763 USA|MN Piece of Cake
+3764 USA|MN Extendomatics
+3766 USA|AK Crock 'em, Sock 'em Robots
+3774 USA|NJ Hive Voltage
+3777 USA|NJ Mecha Lion
+3781 USA|TX Pi-Rho Maniacs
+3788 USA|IA Vacation Bots
+3791 USA|CA Ziptiez
+3795 USA|PA JagWired
+3796 USA|MD Talons
+3804 USA|VA Team Snuffleupagus
+3805 USA|WA Atomic Robotics
+3819 USA|GA Green RoboDragon
+3825 USA|AK DimondX
+3830 USA|FL SkyNet
+3836 USA|OR The Iron Giants
+3841 USA|WV RoboBots
+3846 USA|FL Maelstrom
+3847 USA|CO Puma Robotics
+3848 USA|CA Shockwave
+3860 USA|WA The Revolution - Blue
+3861 USA|WA Vashon Pi-r8s "Pirates"
+3866 USA|IA Blood Sweat and Gears
+3873 USA|CA Scotbotics
+3886 USA|MD Quake
+3888 USA|FL Greased Lightning
+3896 USA|NY Techneetics
+3899 USA|TX Terror Bytes
+3900 USA|PA Mechasharks
+3901 USA|RI The Patriots
+3903 USA|OH Jaguars
+3916 USA|NC Apex Robotics
+3922 USA|NY Modibot
+3931 USA|GA RoboCopz
+3938 USA|MA Acton Robotics Team
+3939 USA|FL Bolts of Steel
+3944 USA|NJ Team Mercury
+3954 Netherlands|ZH Pink to the Future
+3963 USA|OR Junkers
+3965 USA|OR Twisted Metal
+3972 USA|MA Falcon Engineering and Robots
+3976 USA|NC Fighting Hornets
+3981 USA|NY The Griffins
+3983 USA|NJ Highlands Undefined
+4008 USA|TX Bronc Botz - Atlas
+4017 USA|NY roboPandas
+4027 USA|TX Legacy
+4029 USA|MA 2 Bits and a Byte
+4042 USA|WA Nonstandard Deviation
+4053 USA|WA Team #2
+4054 USA|WA Team #3
+4060 USA|WA RoboRams
+4077 USA|PA MASH
+4081 USA|MD The Droids
+4087 USA|WY Midwest π-rate Rebels   (Pi-rate Rebels)
+4093 USA|NY Gears
+4096 USA|MA T-10   ("T minus Ten")
+4097 USA|OR The Pac-Bots
+4100 USA|GA Darbots 1
+4102 USA|NJ CHS Cougars
+4104 USA|CO Robo Lobo
+4105 USA|VA Teal Tornadoes
+4106 USA|WI Supposable Thumbs
+4107 USA|NY MohonBots
+4115 USA|WI Men in Kilts
+4116 USA|WI Volta Robotics
+4130 USA|AE Expected Error!!
+4133 USA|MT Fusion
+4137 USA|NY IslandBots
+4141 USA|MD Wired Warriors
+4143 USA|OR Asimov's law
+4144 USA|IA Engineer Imagineer
+4149 USA|PA Terabytes
+4150 USA|IA Dark Matter
+4153 USA|CA Droidnoughts
+4155 USA|OK Rougher Robo Royalty
+4156 USA|IA RoboCats Red
+4157 USA|CA The Duckinators
+4169 Canada|AB Systems Overload
+4173 USA|IA Bionic Bulldogs
+4174 USA|NY Atomic Theory
+4175 USA|IA MechaMETROzilla
+4177 USA|IA Finger Tightans
+4185 USA|PA Silver Soldiers
+4192 USA|MO Bulldozers
+4193 USA|MO Those Guys
+4194 USA|MO Technomancers
+4200 USA|DE The X-Squared Factor
+4210 USA|NC SuperNova
+4213 USA|WA Biomecha
+4215 USA|NJ Hypnotic Robotics
+4216 USA|CA Rise of Hephaestus
+4217 USA|IN ROAR (Robots On A Rampage)
+4218 USA|MD Late() Knights
+4221 USA|GA Smíða Syndicate
+4224 USA|OK Y-Not Robots
+4227 USA|FL Metal Morphosis
+4232 USA|GA Global Dynamics "Plasma"
+4234 USA|MD TechBrick FTC 4234
+4237 USA|IA Hordes of Nords
+4244 USA|NY Chimera Tech
+4250 USA|OK LIGHTSABERS
+4262 USA|CA Ridgebots
+4266 USA|OK Makin' Stuff Move
+4267 USA|WI RoboChix
+4273 USA|WY Aluminati
+4276 USA|OR ERROR 4276
+4278 USA|CA De.Evolution
+4281 USA|OK R2D2
+4283 USA|IA Fully Updated
+4284 USA|CO Polar Droids
+4286 USA|CT Dragonoids
+4287 USA|CO Red Meteors
+4290 USA|TX LASA High PHidelity
+4318 USA|MD Green Machine Reloaded
+4323 USA|VA iCATZ
+4324 USA|IA Lost In Time
+4326 USA|NY Basement Lions
+4327 USA|GA Silver Titans
+4328 USA|NJ C'est la vie
+4329 USA|IA Oelwein Huskies
+4333 USA|RI Elite Machinez
+4344 USA|CA Rickrollers
+4345 USA|CA ART
+4347 USA|NJ NanoGurus
+4348 USA|CA RoboKnights
+4356 USA|NY Gears
+4358 USA|AK Error: 404
+4360 USA|OH BLHS REACH
+4362 USA|MD Aftershock
+4366 USA|IN Cyber Devils
+4378 USA|OK Black Box Robotics
+4389 USA|IA Higgs Bozos
+4390 USA|NJ The Typhoons - Storm Robotics Team
+4396 USA|PA Decepticons
+4399 USA|PA Autobots
+4410 USA|MA ARC Lightning
+4412 USA|OR Shower handles
+4416 USA|TX The Astroneers
+4417 USA|VA The Venom
+4419 USA|VA Pokebots
+4426 USA|IA River Kings Robotics
+4432 USA|CA Solista
+4433 USA|PA Smokin' Motors
+4443 USA|IA Sock Monkeys
+4444 USA|KY Whitefield Robocats
+4448 USA|WA Avanti Avengers4448
+4451 USA|DC Fox Enterprises
+4452 USA|MD Wolverines
+4454 USA|TX Mohawk Warriors Green
+4455 USA|TX MoHawk Warriors Red
+4466 USA|MA Robots and Brain Bots Inc.
+4469 USA|FL Hydra Beta
+4475 USA|CA Purple Reign
+4480 USA|OR Blue Dwarves
+4481 USA|NY Woodlands Falcons
+4486 USA|NJ MAD Robots
+4509 USA|MN Excalibots
+4510 USA|OH Techno Jackets
+4512 USA|CA West Torrance Robotics
+4524 USA|TX The Mob
+4531 USA|RI Axlegators
+4535 USA|MT RedNek Robotics Too
+4537 USA|OH DRSS Enterprise
+4545 USA|TX ViperBots Ouroboros
+4546 USA|TX ViperBots SnakeByte
+4549 USA|TX Motor Lutherans
+4574 USA|NJ SMPTE Color Bars
+4587 USA|MO Red Hot Techie Peppers
+4592 USA|VA Nuts and Bolts
+4600 USA|IN B1nary B0ts
+4601 USA|IN βeta Bots
+4602 USA|TX Bronc Botz - Prometheus
+4604 USA|MT The Force
+4605 USA|WI RoboHackerz
+4622 USA|NC L.O.C.S.
+4625 USA|CA Kings and Queens
+4628 USA|CA Suit Bots
+4630 USA|CT FeMales
+4634 USA|VA FROGbots
+4641 USA|TX RoboSharks
+4644 USA|MN Robotic Adrenaline
+4650 USA|MN Crusader Robotics
+4653 USA|NC Irrational DoorKeepers
+4654 USA|NY Jellyfish 
+4662 USA|OR Bulldog Robotics
+4664 USA|TX NOSIDE 1
+4665 USA|TX NOSIDE
+4705 USA|TX Adamas Robotics
+4707 USA|TX R2 - DCrew
+4717 USA|FL Mechromancers
+4719 USA|TX Toltechs Galileo
+4720 USA|TX Toltechs Newton
+4721 USA|TX Toltechs Einstein
+4736 USA|CO Chelonians of Cerulean
+4745 USA|TX Thorn's Army
+4749 USA|TX Longhorn DynamiX
+4750 USA|TX AZTECHS
+4751 USA|TX Iron Horns
+4752 USA|TX U-nightbots
+4774 USA|CT Fairfield Prep JesuBots 
+4780 USA|NY Terraroids
+4781 USA|NY MechaKnights
+4782 USA|NY The Super Troublemakers
+4783 USA|NY Dynamic
+4785 USA|NY Anonymous Autonomous
+4798 USA|TX ROBUFFS Dough Boys
+4809 USA|NY Botman
+4811 USA|TX Toltechs Copernicus
+4812 USA|TX ROBUFFS Team One
+4813 USA|MT EngiNERDS
+4821 USA|WV STARbot
+4822 USA|WV ZION
+4842 USA|TX Alpha Wolves
+4843 USA|TX Omega Wolves
+4844 USA|TX Delta Wolves
+4848 USA|TX Team Chaos
+4849 USA|TX Team Sabotage
+4856 USA|PA Minnie MASH
+4859 USA|TX LHS RoboRaiders
+4885 USA|TX OmegaBotzs
+4886 USA|TX Robo Junkies
+4890 USA|NJ Hive Voltage 2.0
+4894 USA|TX The Lone Rangers
+4895 USA|TX The Gunslingers
+4897 USA|TX Bodacious Bulldawgs
+4902 USA|TX Team Meddling Kids
+4906 USA|TX Midland High Junkyard Dawgs
+4914 USA|PA Vulcan FTC 4914
+4920 USA|TX Marvelous Robotics
+4921 USA|TX The Robotics Regiment
+4924 USA|VA Tuxedo Pandas
+4932 USA|TX Team C.I.A.
+4933 USA|PA Short Circuits Too
+4936 USA|NJ Sparks
+4943 USA|CA SES Robotics
+4946 USA|VT Robo Raiders
+4947 USA|CA Cougarobotics Alpha
+4950 USA|CA Tino 49ers
+4951 USA|AK RoboLynx
+4957 USA|NY FM Robotics Team
+4960 USA|FL Stealth Tigers
+4962 USA|OK The Rockettes
+4964 USA|MO Rolla Patriots
+4965 USA|IL Animatores Romani
+4969 USA|OH Robot-X
+4970 USA|VA Loose Screws
+4991 USA|MD Gear Freaks
+4992 USA|NV Metal Falcons
+4995 USA|NY Titanium Tigers
+4997 USA|FL Masquerade
+4998 USA|CA Q
+5002 USA|GA Steel Wolves
+5009 Canada|AB Helios
+5011 USA|CA Bot Squad
+5014 USA|DC Clout9
+5015 USA|CA Buffalo Wings
+5017 USA|CT RoboEpic
+5020 USA|NY KilaBots
+5023 USA|IA Bulldogs
+5026 USA|ID Tesla Coils
+5029 USA|OH PowerStackers
+5030 USA|RI Udderly Supreme
+5035 USA|MO WIRED
+5037 USA|IL got robot?
+5039 USA|OR DevilBots
+5040 USA|OH Nuts & Bolts
+5043 USA|IA The Duck Pirates
+5044 USA|OK Davy Jones Locker 
+5053 USA|ID Clearwater Atomic Robotic Technicians #2
+5060 USA|MA Milton Static
+5063 USA|IA TNT
+5064 USA|NC Aperture Science
+5065 USA|NY Bee Awesome
+5070 USA|FL N.U.T.S.
+5072 USA|IL Wildcats
+5076 USA|WA CyberStorm
+5086 USA|VA Tutu Turtles
+5094 USA|IA Still Under Development
+5095 USA|MO The LEPTONS
+5100 USA|GA DarBots 2
+5105 USA|AL Dragons
+5108 USA|MO Wild RoCATics
+5110 New Zealand|AUK Wingus & Dingus
+5115 USA|CO Wizards Robotics 5115
+5116 USA|GA Pawbotics
+5118 USA|MO The HADRONS
+5119 USA|MO The BARYONS
+5122 USA|AK Franklin & Friends
+5125 USA|FL Raiderbots
+5126 USA|IA DICE
+5131 USA|CA Pointers
+5132 USA|NM AHERT Ravens
+5135 USA|CA Team Uncopyrightable
+5136 USA|CA Crusader Creators
+5140 USA|OH WACO Aerobotics
+5141 USA|OK Warrior Bots
+5143 USA|IA Xcentrics
+5149 USA|IA Robota Red
+5153 USA|IA Gear Grinders
+5154 USA|IA R.O.M.
+5158 USA|FL T.I.T.A.N.S.
+5159 USA|HI Cantina Band
+5161 USA|GA Eaglemaniacs
+5163 USA|NY Flying Dragon
+5170 USA|GA G.E.A.R.S. Black
+5175 USA|TX Vector Robotics
+5177 USA|GA Global Dynamics "Noodle Squad"
+5178 USA|MD Mech Hawks
+5179 USA|OK Cyberstorm
+5187 USA|IL Transistor Titans
+5190 USA|MO Technoramic
+5196 USA|CO Robo Yetis
+5197 USA|CA GearHeads
+5198 USA|OR Wingnuts
+5199 USA|IL Duct Tape and a Prayer
+5202 USA|IL Zip TIE Fighters
+5206 USA|CA The Knights of Ni
+5209 USA|IL Operation: BisonBot
+5211 USA|CA The Iron Ducks
+5212 USA|NJ Megahertz!
+5214 USA|CA Tech Support
+5218 USA|CA Javabots
+5220 USA|CA RoboKnights 5220
+5223 USA|AK JABOTs
+5224 USA|PA Robowolves
+5225 USA|DC Anonymous Autonomous
+5233 USA|MD Vector
+5234 USA|MO Tiger Steel
+5237 USA|MI Loose Screws
+5248 USA|MO The FERMIONS
+5266 USA|OR Glasses 1/2 full
+5267 USA|OR JunkMonks
+5270 USA|NC Q
+5273 USA|MA ARC Thunder
+5276 USA|MA Broken Code
+5283 USA|NY LAIMO
+5285 USA|CA Robo Knights
+5289 USA|MI Martians
+5290 USA|MI Steel Eagles
+5291 USA|MI TOWR The Oxford Wildcats Robotics
+5292 USA|MI Red Storm Robotics-White
+5300 USA|IN The Dirty Dozen
+5309 USA|NC Plan B
+5319 USA|NY Buff Sci-borgs
+5320 USA|PA RoboLancers Gold
+5321 USA|PA TechHeroes
+5325 USA|CA The Muses
+5330 USA|MN Robotic Rush
+5332 USA|NJ Cougar Current
+5339 USA|NJ W.A.L.K.E.R.S.
+5340 USA|IA Gone Phishing
+5356 USA|NY Tardis
+5361 USA|NY Lionotics
+5363 USA|CA YULA
+5380 USA|CA ElectroMedics Red
+5383 USA|MI Neutrinos Breaking the Laws of Physics
+5384 USA|MI Emergency Situation Evacuate Now
+5385 USA|MI Enigma Riddlers
+5386 USA|MI Fabricators
+5387 USA|NJ TecHounds
+5389 USA|AK Wired Wolves
+5390 USA|CA Vikings
+5391 USA|MI Enigma Puzzlers
+5395 USA|OK Team Clutch
+5397 USA|MA The Bot Side
+5398 USA|NJ Robotux
+5401 USA|VA Washable Warriors
+5404 USA|MO Titanium Titans
+5406 USA|NJ Optimus Bee
+5411 USA|MI G3 Geeks, Gears, and Gadgets Green
+5422 USA|KS Horse Power
+5423 USA|WA CyberShock
+5424 Canada|AB M&M
+5429 USA|VA Team CLUTCH
+5436 USA|MA Aluminum Cobblers
+5437 USA|OH WRAptors - Slice
+5439 USA|MO The GLUONS
+5443 USA|TX Synergy
+5444 USA|VA Duck-Tech
+5445 USA|IA Trohawks
+5446 USA|WA Game Over
+5447 USA|WA Robo Knights
+5449 USA|MI High Voltage
+5452 USA|IL Robot to the Knee
+5459 USA|NC Syntax Error
+5465 USA|VA Lebanon Lab Rats
+5466 USA|IA Combustible Lemons
+5477 USA|NY Innovo
+5481 USA|MO The Crusaders
+5484 USA|NY EnderBot
+5485 USA|NY GorillaBots
+5488 USA|PA Robo Dragons
+5494 USA|GA Oscar
+5495 USA|IL Iron Eagles
+5498 USA|CA Cougarobotics Omega
+5501 USA|OH USS Enterprise 
+5506 USA|PA Edison Robo Owls
+5514 USA|PA Parkway RoboHounds
+5518 USA|CT Dutchman's Derivatives
+5520 USA|CT Binary Buccaneers
+5527 USA|VA Dynamic GEARS
+5540 USA|CA Skynet
+5543 USA|IN Game of Drones
+5549 USA|NC Blue Shift
+5553 USA|OK RoboComets
+5559 USA|MI RoboHawks Green
+5560 USA|MO The Crusaders 2
+5573 USA|NJ RoboCougars
+5598 USA|TX The PIT Crew
+5604 USA|WA Thunderbots
+5611 USA|NE Robo Bears
+5618 USA|MI Control Freaks RED
+5619 USA|WA Horizon
+5627 USA|OR Robotics Quasar Alliance
+5628 USA|TX The Tau Manifesto
+5637 USA|NY Tech-Wise Guys
+5641 USA|MI Devil bots red team
+5647 USA|GA Kemet Robotics
+5661 USA|AZ Wolves Robotics 1
+5663 USA|MI Twisted Devils Red
+5664 USA|AK Cyber Wolves
+5667 USA|UT Robominers
+5670 USA|TX Dragons
+5678 USA|CT Cardinal
+5681 USA|TX Robo Pirates - MARAUDERS
+5683 USA|TX The Leviathans 
+5686 USA|OR Cog-nation
+5687 USA|NV Cyber Mafia
+5703 USA|MO Doppler Effect
+5708 USA|OR VikingFIRST
+5709 USA|MD Gators
+5710 USA|MA Titans
+5711 USA|NY LaGBotics
+5714 USA|TX Shambots
+5717 USA|NJ Team GEAR UP!
+5734 USA|MO Robo Jag-Wires
+5736 USA|MN RoboSix
+5738 USA|TX MoHawk Warriors Blue
+5741 USA|VT CVU RoboHawks
+5754 USA|OH Marburn Academy Marbotics
+5755 USA|CA Tri-Force-Droids
+5764 USA|TX Blue Sabers
+5772 USA|NY Robo Knights
+5773 USA|CA Ink and Metal
+5784 Australia|NSW Mechanical Drop Bears
+5795 USA|NC Back  To The Drawing Board
+5802 USA|TX Mustang Metal
+5804 USA|UT Compiling Error
+5814 USA|MT The Chickens
+5815 USA|TX Disgruntled Robots
+5827 USA|CA Chimera Gears
+5828 USA|CA E.M.P. Chaos
+5862 USA|PA TechnoTigers
+5872 USA|VA MAVERICS
+5873 USA|NJ Dragon Terminators
+5881 USA|NC Tungsteel
+5889 USA|CA Cyberians
+5891 USA|TX Redneck Engineering
+5893 USA|MO Direct Current
+5897 USA|MA HackHers
+5898 USA|GA Galactic Lions
+5899 USA|CO Hungry Hungry Hippogriffs
+5902 USA|HI Team Musubi
+5904 USA|VA The Varsity Team
+5905 USA|MO Camdenton FTC FIRST LASER Middle School #1
+5906 USA|MO Camdenton FTC FIRST LASER Middle School #2
+5907 USA|MO Camdenton FTC  FIRST LASER Middle School #3
+5908 USA|MO Camdenton FTC FIRST LASER Middle School #4
+5909 USA|MO Camdenton FTC FIRST LASER Middle School  #5
+5910 USA|PA Sparks
+5913 USA|IA Drop It Like It's Bot
+5919 USA|NY RegisOwls
+5920 USA|WA IMVERT
+5921 USA|CA La Canada Engineering Club
+5923 USA|MN Metal Monsters
+5925 USA|AR WildBotz
+5927 USA|NY TechnoGirls
+5928 USA|IL The Turing Machines
+5937 USA|FL Renaissance Robotics
+5940 USA|GA Rockin' Robots
+5942 USA|CA Team Torch
+5951 USA|OR Mustangs
+5953 USA|WA Roarbotics
+5954 USA|MI Lightning Boltz
+5957 USA|MI Sonic Eagles
+5959 USA|WY Radioactive Hybrid
+5960 USA|MI Iron Dams
+5961 USA|WA Sound Robotics
+5962 USA|MN Nordic Storm
+5967 USA|OK RoboHornets 
+5968 USA|NJ WR That Hertz
+5970 USA|TX The Ambassadors
+5971 USA|WA Brain Bots
+5975 USA|IA CYBOTS
+5976 USA|MI Brandon Tech
+5978 USA|NY L V A I
+5979 USA|GA CyberStingers Blue
+5980 USA|MI Titanium Tech Vikes
+5991 USA|GA Tigerbytes
+5996 USA|NJ Hyper Nike
+6003 USA|CA SFC Techno Eagles
+6004 USA|NY Robo Blazers
+6007 USA|IL Eighty Nine Degrees
+6010 USA|VA Thunder Stone
+6016 USA|CA Ironwolves
+6025 USA|IA United Robotics
+6027 USA|VA L.E.D. Empire
+6032 USA|MA Rosie's Riveters
+6036 USA|MI Junior Robot Commander
+6037 USA|NJ W.A.G.S.
+6038 USA|CA Tino Pathfinders
+6040 USA|MA Canton Robodogs
+6041 USA|TX Robot X Games
+6043 USA|MI NC GEARS
+6045 USA|PA OHMBoys
+6046 USA|WA TekWolves
+6047 USA|GA Twisted Axles
+6051 USA|NY Quantum Mechanics
+6055 USA|MA GearTicks
+6063 USA|AK Iron Warriors
+6069 USA|NJ Pingry Robotics
+6070 USA|MI WOW - West Ottawa Warriors
+6072 USA|IA Wildbot Robotics
+6073 USA|TN Robo Bubo
+6074 USA|CA RAWALA (Robot Assemblers With A Long Acronym)
+6076 USA|MS Commodores
+6078 USA|NC Cut the Red Wire
+6079 USA|MI Bionic Broncos
+6085 USA|OH Electro/Mechanically Controlled Chaos
+6088 USA|ID I-Bots
+6090 USA|FL Rock Star Robotics
+6093 USA|IA Deviation from the Norm
+6101 USA|NJ Energized Hazard
+6102 USA|NJ E=MK2
+6103 USA|IA The STEMatics
+6109 USA|HI Punabots
+6110 USA|NJ M.E.T.S. Mechanical Mayhem
+6113 USA|IA RoboHawks
+6121 USA|IA Cougarbots
+6123 USA|NC Mechanical Marauders
+6128 USA|WA The Dragons 1.0
+6133 USA|OH The "NUTS!"
+6134 USA|MI Black Frogs
+6147 USA|IA Newbotics
+6148 USA|CA Orange Pi RoBEARics
+6150 USA|OH Moderately Dangerous
+6157 USA|WA Zenith
+6158 USA|VA Spartabots
+6163 USA|WA ECPO
+6165 USA|CA M-SET Cuttlefish
+6168 USA|MO Maniacal Mechanics
+6169 USA|TX Men In black
+6170 USA|SC Starbots Robotics
+6174 USA|AZ Odyssey Automatons
+6175 USA|HI Plus Ultra
+6176 USA|HI Buff and Blue Crew
+6179 USA|CA Quantum Fusion
+6180 USA|MD Batteries Not Included
+6183 USA|NC Thunderducks
+6184 USA|OH MHS Tech Club
+6186 USA|DE Senators
+6188 USA|WA SiBorgs
+6189 USA|IA High Voltage
+6190 USA|IN Red Alert: CyberStorm
+6191 USA|PA Short Circuit
+6198 USA|IL arbitrary_Text
+6199 USA|IL R.I.C.E.
+6200 USA|IL Bronco Bots
+6205 USA|MS SCARLET
+6206 USA|IL Ohms Olympians
+6207 USA|MO STEMpunks
+6209 USA|TX ViperBots Venom
+6210 USA|TX ViperBots  Stryke
+6215 USA|MO The Gracious Professionals
+6217 USA|RI The Fellowship
+6219 USA|TX Panther Bots Bravo
+6220 USA|WA Centripetal
+6221 USA|TX Panther Bots Alpha
+6225 USA|MI Synergy
+6226 USA|CA Bambusa
+6252 USA|IA Wacky Waving Inflatable Arm Flailing Tube Men
+6272 USA|TX Iron Eagles Prime
+6273 USA|MS Technocats
+6278 USA|GA RoboGlads
+6280 USA|AK Team Duct Tape
+6281 USA|AK Genetic Advantage
+6282 USA|CA Simi Valley Robotics
+6283 USA|MI Platinum Tech Vikes
+6284 USA|MD RoboCavs Black
+6285 USA|MO Statesbots - Black
+6286 USA|CA Falcon High Flyers
+6287 USA|IL Vertigo
+6289 USA|TN Drachenriders
+6294 USA|MI Bionic Bots
+6297 USA|IA Game Over
+6298 USA|OH Broken Axles
+6299 USA|TX ViperBots QuadX
+6302 USA|MS N.E.K.O.S.
+6306 USA|MD Tiborgs
+6308 USA|MA Hutzbots
+6309 USA|IA Oh.
+6312 USA|TX GOLDEN TIGERS
+6316 USA|MO The Crusaders 3
+6321 USA|FL Robo Raiders
+6322 USA|FL WiredCats
+6323 USA|FL The Pink Team
+6324 USA|FL Twisted Circuitz
+6325 USA|CA Aluminati
+6327 USA|FL Fetch
+6337 USA|NJ Metal Marauders
+6340 USA|IA Wauctopi
+6341 USA|VA Moon Platoon
+6347 USA|NY Geared Up
+6357 USA|CA Top Dogs
+6359 USA|MI Bruin Bots
+6360 USA|IN Brazen Bots
+6363 USA|IA The Twisted Axles
+6364 USA|FL Pulsatrix
+6365 USA|IA The Dungeon Masters
+6366 USA|WY Trojan Robotics
+6369 USA|MN Designosaurs
+6370 USA|CA Nemesis
+6371 USA|CA Machine Kings
+6372 USA|CA Patriotic Robotics
+6373 USA|CA SuperBots
+6378 USA|PA JayBots
+6379 USA|FL Clockwork Mania
+6382 USA|CO Wizards Robotics 6382
+6383 USA|VA Zeus' Bolts
+6387 USA|MO Brobots
+6390 USA|MD Falcon 1
+6395 USA|WA Event Horizon
+6402 USA|RI Mariners
+6406 USA|MD First Tech Coyotes
+6407 USA|TX Lutheran Mustangs
+6417 USA|MD Blu Cru
+6418 USA|OH NDCL Robotics
+6420 USA|IA SabreHOOF Tigers
+6424 USA|WA Oly Cow
+6426 USA|WI RoboHodags
+6427 USA|WA Wright Angle
+6433 USA|FL Neutrinos
+6436 USA|CA AlphaGenesis
+6437 USA|WY Mad Hatters
+6438 USA|NY Syndicate
+6448 USA|LA Blue Jays
+6450 USA|OH Jagbots
+6453 USA|MO Grizzly Griffs
+6454 USA|NY Saints Robotics
+6455 USA|TX MoHawk Warriors Orange
+6458 USA|IA Burgbots
+6459 USA|IL The Chicago Style BotDogs
+6460 USA|NY RoboWarriors
+6474 USA|IA Griffin Gears
+6475 USA|IA Innovation, Collaboration, and Excellence
+6476 USA|OR Player 1
+6481 USA|VA TechnoMancers
+6482 USA|MI Red Storm Robotics-Red
+6492 USA|IA Beaver Bots
+6494 USA|MI Control Freaks WHITE
+6496 USA|NY SEP Nerd Herd
+6499 USA|IA Warrior Bots
+6510 USA|TX CyberSharks
+6516 USA|MS ChargerBots
+6518 USA|IN TechnoDevils
+6522 USA|VA Neon Drones
+6527 USA|RI Powell Rangers
+6532 USA|IA RoboBears
+6540 USA|PA Lincoln1
+6545 USA|IA Knight Riders
+6546 USA|IA RoboCats
+6547 USA|KS CAPS Cobalt Colts
+6549 USA|PA Whoa!Bots
+6551 USA|IA TigerHawks
+6552 USA|PA Northeast High School
+6556 USA|MS Tempest
+6559 USA|WA Geared Reaction
+6564 USA|OR Infinity Angles
+6566 USA|TX Circuit Breakers
+6567 USA|NY Roboraiders
+6570 USA|CA Piradians
+6574 USA|NY Task Main
+6582 USA|AE Kaiserslautern HS - Raider Robotics
+6583 USA|IA Bionikats
+6590 USA|OR Ratchet Robotics
+6596 USA|IL Robotic Rams
+6606 USA|PA Dobbins Force
+6613 USA|NJ YALiEns
+6624 USA|IA Midgets
+6625 USA|IA Enginerds
+6633 USA|VA Technosaurus Rex
+6635 USA|TX Panthers
+6638 USA|IA RoboHawks
+6640 USA|PA Robotussin
+6652 USA|VA Los Chicos
+6661 USA|IA Starmont Sundevils
+6662 USA|IA Robo Falcons A
+6666 USA|IA Bugs in the System
+6675 USA|IL Chargers
+6676 USA|PA RoboLancers Crimson
+6677 USA|PA Techeads
+6691 USA|IA Cyber Reality
+6699 USA|MN Tempest
+6700 USA|VA X BOTS
+6704 USA|MS Bot Shop
+6707 USA|MN Safety Crew
+6708 USA|MN Frozen Fire
+6710 USA|TX Sigmas
+6712 USA|OR Bullet Proof
+6717 USA|OR Category FIVE #6717
+6719 USA|NJ Piotech
+6721 USA|MN RoboSnakes
+6723 USA|IA Flatline
+6727 USA|OR Redmond Proficiency Academy
+6728 USA|TX Frost Byte
+6731 USA|VT Ringers
+6735 USA|OK Team Medusa
+6747 USA|GA TRANSFORMERS
+6751 USA|MO Robo Vikings
+6761 USA|NY TESLA Robots
+6762 USA|CT N R G (Northwestern Robotics Gearheads)
+6770 USA|MA Canalmen
+6780 USA|OK Y-Not Robots²
+6795 USA|TX Panthers 3
+6811 USA|MI Hardcore Hard Drives
+6816 USA|TX Falcon Fury
+6831 USA|MS Robo Bearcats
+6832 USA|TX Iron Reign
+6833 USA|OR Event Horizon
+6836 USA|PA PERK 1
+6837 USA|NC Cannon Robotics Team - The Brobots
+6889 USA|MO Robo Crusaders
+6892 USA|TX Nameless
+6899 USA|NY Blue Bots
+6900 USA|AZ Watch Dogs
+6901 USA|TX Droid Rage
+6914 USA|WI Charging Chaos
+6929 USA|CO Data Force
+6931 USA|PA The Substantial Monocephalic BrainSTEM Robotics Team
+6934 USA|NJ The TranSisters
+6936 USA|NJ CodeRunners
+6939 USA|NY Pandemonium
+6942 USA|NY Pandemonium 2
+6945 USA|NY System Overload
+6949 USA|CA Einstein Eagles
+6955 USA|NY RO Bo Vines
+6962 USA|HI BnL Robotics
+6963 USA|HI Poki Cacti
+6971 USA|DE Robo Panthers
+6972 USA|NC F.I.R.E. [Fantastically Inventive Robotic Engineers]
+6973 USA|OK Radical Robotics
+6974 USA|OK Ministry of Magic
+6976 USA|TX Bronc Botz - Nano
+6977 USA|WI eTREC
+6980 USA|NJ Bad Wolf
+6981 USA|WI Hortonville Robotics
+6982 USA|CA Metal Magicians
+6983 USA|NJ CouGEARS
+6984 USA|WI STEMpocalypse
+6985 USA|WI BroBots
+6987 USA|OH HatTrix
+6988 USA|GA CyberStingers Gold
+6989 USA|GA 300 Robotics
+6990 USA|TX Static Void
+6994 USA|IL Machination
+6996 USA|NY Oncoming Storm
+7000 USA|MN 7 Above Zero
+7002 USA|MT PhetaBots
+7006 USA|IL RoboTitans
+7007 USA|IL Techknow Bots
+7012 USA|NY Redhawk Robotics
+7017 USA|FL In Gear
+7018 USA|OH Spartans
+7021 USA|SC RoboEagles
+7022 USA|AL Robostangs
+7023 USA|MI HexaSonics
+7026 USA|NJ JDroids
+7027 USA|OR Lowell Robotics
+7030 USA|IL RoboMinds
+7031 USA|MI Battle Blazers
+7034 USA|CT Singularity Technology
+7035 USA|NY Radical Robots
+7039 USA|VA Lord of the Bricks
+7042 USA|VA Robo Hamsters
+7043 USA|MI Golden Gears
+7045 USA|MI BLOWNFUSES
+7046 USA|RI The Spartins
+7047 USA|MI Mechanical Monkeys (Bloomfield Hills Middle School)
+7048 USA|MI Purple Protons
+7049 USA|MI Omega Warriors
+7053 USA|WY RoboBroncs Team 1
+7055 USA|PA Cruzin' Comets
+7064 USA|TX Techno Raiders 
+7065 USA|MI JunkYard Bots
+7071 USA|NJ EngiNerds
+7074 USA|IL BOOC BOTS
+7079 USA|TX Faltech
+7080 USA|VA BACON
+7083 USA|NC Team Tundrabots
+7085 USA|MI F.L.A.G. Fight Like a Girl
+7090 USA|VA First Appalachian Robotics
+7092 USA|CA RoboRunners
+7093 USA|RI RaiderBots
+7095 USA|MO S.T.O.R.M.
+7099 USA|OR PT Cruiser
+7100 USA|OR RoboTweens
+7101 USA|OR A Robot Named Desire
+7105 USA|NC SWIFT Robotics
+7110 USA|IA The Element of Surprise
+7117 USA|VA The Blockheads
+7120 USA|NY Bionica
+7123 USA|SD The Fellowship of the Loose Screws
+7128 USA|CA Tino Trail Blazers
+7129 USA|IL Robo Raiders
+7130 USA|IA Royal Robots
+7135 USA|NH Hornets
+7136 USA|OH Higgs Bosons
+7138 USA|MI Mechanical Mayhem
+7139 USA|MO KHS Robotics
+7140 USA|MI Knightmares
+7149 USA|NJ ENFORCERS
+7152 USA|MN Robot Squad
+7153 USA|GA Vindicem
+7156 USA|AZ Wolves Robotics 2
+7159 USA|CA Robo Ravens
+7161 USA|TX ViperBots Hydra
+7163 USA|OK The Bazinga Project
+7164 USA|NY FalconBots
+7167 USA|AZ Mecha Hawks
+7170 USA|TX Gearnotics I
+7171 USA|VA Shockwave
+7172 USA|TX Technical Difficulties
+7175 USA|CA Walbots
+7182 USA|MD Mechanical Paradox Cubed
+7189 USA|IA McKinley 5
+7190 USA|MN Green Girls Robotics
+7193 USA|IN South Spencer High School
+7195 USA|CA The Mechanical Memes
+7196 USA|IA Everything That is Radical
+7198 USA|WA Cyborg Ferrets
+7203 USA|FL KNO3
+7208 USA|MT X Team Cryptobox Braniacs
+7209 USA|AR Tech Hogs Robotics  
+7215 USA|MI Turning Gears
+7216 USA|TX NinjaSharks
+7221 USA|AZ AMS Termitaurs
+7224 USA|CO West Grand Robotics-Team 7224
+7227 USA|CA Scorpion Robotics
+7228 USA|MI Stryke Force - Special Air Service
+7229 USA|IA bzBots
+7230 USA|NY SAS Atoms
+7231 USA|MN 4th Dimension 
+7234 USA|IN Cville-ized Botman
+7236 USA|IA Recharged Green
+7238 USA|MI Blue and White Lightning Strikes
+7239 USA|TX Java Juveniles
+7242 USA|OK Bridge Creek RoboCats
+7244 USA|PA OUT of the BOX
+7245 USA|MA Big Green
+7247 USA|IA The H2O Loo Bots
+7251 USA|NJ Comets
+7252 USA|MI Vicious Volts
+7253 USA|MI Raging Robots
+7254 USA|MI S.W.A.T. Shelby Wildcat Autonomous Techies
+7255 USA|MI STEAM Stingers
+7257 USA|OR Da Builders
+7258 USA|IA Robo-ba-jojo
+7259 USA|IA NRG
+7260 USA|IA Polaris Tech
+7261 USA|IA Omega Robotics
+7263 USA|FL The Knights of Cavalry
+7265 USA|MD Gear Grinders
+7266 USA|MD Dragonettes
+7278 USA|VA LibraryBots
+7282 USA|MN Golden Girls
+7283 USA|WY Fist Full of Axels
+7286 USA|IL Wired Women
+7288 USA|MN RoboGlaciers
+7289 USA|MN Genius
+7290 USA|MN JagWires
+7297 USA|MA LiMITless
+7298 USA|AK Sigma Force
+7299 USA|WA Timber Bots
+7300 USA|NC Guzzoline Robotics
+7303 USA|CA RoboAvatars
+7305 USA|MI The GearCats - Clague Middle School
+7311 USA|NJ Terrier Byte Bots
+7312 USA|NJ Terrier Byte Bots
+7313 USA|MI Dominators
+7314 USA|PA Sab-BOT-age
+7316 USA|CA Iron Panthers
+7317 USA|IL Quest Gators 
+7318 USA|FL Phoenix Gears
+7321 USA|FL Charlotte Surge
+7324 USA|OH Root Access
+7325 USA|MI Mechanical Eagles
+7326 USA|MD Some Assembly Required
+7328 USA|CA I. C. E.
+7330 USA|WA Overlake FTC
+7332 USA|IA DodgerBOTS
+7333 USA|OR Combustible Lemons
+7341 USA|FL F.R.E.N.C.H. F.R.I.E.S.
+7343 USA|AR Blaze
+7344 USA|TN VLTG
+7346 USA|VA Mustachio Peanuts
+7350 USA|NJ Watts NXT?
+7351 USA|IL Dynamic Signals
+7357 USA|MO Team Titanium Tech
+7359 USA|MO S.W.A.T.
+7360 USA|MI Gears and Spears
+7366 USA|OK The Lab Rats
+7372 USA|CA Norbots
+7373 USA|GA Eagle Robotics - Carbon Fiber
+7390 USA|CA M-SET Jellyfish
+7391 USA|CA Error: 7391 Not Found
+7393 USA|MD electron Volts
+7398 USA|MS BLUE CREW
+7400 USA|IA Kryptonian Eagles
+7403 USA|MO The Grizzly Griffins
+7407 USA|NY Team VEGA
+7408 USA|MO Nuclear Unicorn Girl Assemblers (NUGA)
+7414 USA|NJ Deceptibots
+7415 USA|FL Psychobots
+7416 USA|PA Silver Spartans
+7417 USA|NY Portledge Robotics
+7418 USA|VT Batteries Not Included
+7419 USA|IN System Overload
+7420 USA|NY MechaSpartans
+7423 USA|PA Flaming Phoenix
+7424 USA|MO Robotic Warriors
+7431 USA|GA G.E.A.R.S. Silver
+7433 USA|NJ The Cyclones - Storm Robotics Team
+7437 USA|GA L.E.D. 
+7438 USA|HI Hot Spot Robotics
+7444 USA|NC Sisters of the Motherboard
+7445 USA|MI Techno Hawks - Black Team
+7452 USA|OK Iron Giants
+7456 USA|WA VVMS RoboClub
+7462 USA|WA Not to Scale
+7464 USA|CA Capitals Engineering
+7467 USA|MO SA-BOT-AGE
+7468 USA|MD Blue Chariots of Fire
+7469 USA|MO Blues Bots
+7470 USA|OR Elite Tech
+7473 USA|OR The Pride
+7474 USA|OR VWA
+7475 USA|NY The Navigators
+7477 USA|FL Super 7
+7479 USA|MI Techno Hawks - Red Team
+7482 USA|GA Triple A Tigers
+7486 USA|NY Suffern Robotics
+7488 USA|NY Nuts and Volts
+7491 USA|IA Robot Corps
+7492 USA|OK Charged w/Battery
+7495 USA|IA Rocketman
+7496 USA|OR Cyberbots
+7497 USA|OR Blackout
+7498 USA|OR Elite Squad
+7499 USA|OR The Nerdy Girls
+7506 USA|OK Bomb Squad
+7516 USA|OR Uranium 235
+7518 USA|MD Quince Orchard CouGears
+7519 USA|MD Quince Orchard CougarBotics
+7525 USA|MO Nerdy Birds
+7529 USA|IA BAYR  (bear)
+7540 USA|MD Bludogs
+7547 USA|MO JoeBotics
+7548 USA|HI SPAREPARTS
+7549 USA|HI Simmer
+7550 USA|HI Fig Newtons
+7553 USA|CA Team Loki
+7556 USA|NJ Inner City Circuits
+7571 USA|MA Alumineers
+7572 USA|AR Lights Out Special Unit
+7579 USA|FL GOAT (Getting Our Act Together)
+7580 USA|VA Robot Life
+7582 USA|NM Griffin Robotics Eagles
+7584 USA|DE Bad News Bots
+7588 USA|MN The PRIDE
+7589 USA|MN Ciphers
+7592 USA|FL Roarbots
+7593 USA|CA TigerBots
+7601 USA|OH Chain Saw
+7604 USA|OR Meme Machine
+7609 USA|CA Lions
+7610 USA|CA Tino Frontier
+7613 USA|AZ Sinagua Mustangs
+7615 USA|TX Mustang Sallies
+7618 USA|IA The Pi-neapples
+7621 USA|IA The Pi-rates
+7627 USA|IL Breaking Bot
+7631 USA|DC Make It Epic
+7641 USA|CA M-SET Betta Fish
+7643 USA|MI Tiger Tech
+7645 USA|CA BHS Robotics
+7646 USA|MN Circuit Overlords
+7649 Mexico|CHH Botrregos Jr. 7649
+7650 USA|FL The Circuit Breakers
+7662 USA|NY Dragons
+7668 USA|MI Trojanbots
+7673 USA|GA Dragons & Tiaras
+7676 USA|WA Whidbey Island Wildcats
+7678 USA|MO Eldon Gearheads
+7682 USA|NC Friday Knights
+7693 USA|MI TECHNADOS
+7696 USA|CA RSF Singularity
+7715 USA|IL Robotic Lions
+7716 USA|AZ Knight Tech Robotics
+7719 USA|FL Team RISE
+7729 USA|VA Seahawks Robotics
+7732 USA|WA Techno Tigers
+7742 USA|WA The Electric Sheep
+7743 USA|NY Lansing Bobcats
+7750 USA|OR M&M's
+7759 USA|WA Alpha
+7760 USA|WA Delta
+7766 USA|WA Cyber Coltz
+7767 USA|CA Upper Echelon
+7772 USA|MI P.A.N.T.H.E.R.S. - GRPS UPrep Academy
+7776 USA|OR Loose Screws
+7783 USA|TN Electric Wave
+7788 USA|TX Travis Middle School Robotics
+7790 USA|IN Tektonic Ninjas
+7792 USA|MI Nindroids
+7795 USA|CO CARACAS
+7797 USA|TX Victorian Voltage
+7802 USA|MS Challenge Accepted
+7804 USA|NH Tie Fighters
+7813 USA|NM Alpha Hawks
+7814 USA|OK Weatherford Robotics Club
+7823 USA|IA Roadrunner Robotics
+7826 USA|FL Mini-Moose
+7827 USA|VA Windsor High
+7830 USA|WA Stewart Robotics
+7831 USA|CA Titan
+7832 USA|CA Gear Gurus
+7833 USA|CA Imperial Tech Robotics
+7834 USA|CA Girlrillaz
+7835 USA|CA Victrix Aedifex
+7837 USA|MI The Thunder Colts
+7840 USA|AZ Hawk Robotics 
+7841 USA|IA Ballen Pretzels 2
+7842 USA|AL Browncoats
+7844 USA|VA Ratchet Bots
+7854 USA|CA MidKnight Madness
+7856 USA|MO Blood Sweat & Gears
+7867 USA|AE Robotica Santi
+7868 USA|NE BB Tech Team
+7869 USA|IL The Franken Botzz
+7873 USA|OR Duct tape
+7874 USA|OR system overload
+7875 USA|OR Men In Green
+7878 USA|OR Cougarbots
+7880 USA|IA The Carnivorous Rabbits
+7883 USA|PA Iron Patriots
+7888 USA|PA RoboChicks
+7890 USA|NY Space Lions
+7896 USA|MN Into The Void
+7897 USA|MN Knights of Procrastination
+7898 USA|MN Royal Empire
+7899 USA|MN Nameless Knights
+7900 USA|MN The Danger Zone
+7901 USA|MI Bulldozers
+7902 USA|MI Da Cows
+7911 USA|MI NC GEARS
+7924 USA|NE Red Toques
+7935 USA|WA The Dragons 2.0
+7939 USA|OR Bolt Busters
+7940 USA|OR The Clockwork Coalition
+7941 USA|OR Dodo Control
+7950 USA|MI The Pineapple Warriors
+7951 USA|MO The KAONS
+7953 USA|VA Vertigo
+7955 USA|VA Archetype
+7959 USA|NJ Cougar Cubs
+7960 USA|PA FSS Falcons
+7961 USA|MO MotorDame
+7972 USA|MN The New Age
+7974 USA|WI Great Scott!
+7977 USA|WA Wolverines
+7979 USA|WI Apple Tau
+7983 USA|VA Upper School Science & Robotics
+7984 USA|MO cyber dawgs
+7988 USA|MD hound bots II
+7989 USA|NC MOY Team I
+7993 USA|TX VOLT
+7994 USA|NJ HCST
+8008 USA|IA Wolves
+8014 USA|GA Teen Titans
+8024 USA|MO Rebel Cats
+8027 USA|MI Twisted Devils Blue
+8030 USA|WA Steel Wings
+8034 USA|MN Easy as Pi
+8039 USA|CA Return of the Adrenaline Snails
+8045 USA|OR Gromit's Grommets
+8056 USA|OR Kronos
+8061 USA|OR Gear Thieves
+8063 USA|OR Aftershock
+8073 USA|NY Quantum Chaos
+8080 USA|TX IronClad
+8081 USA|AZ Knights of the Lab Table
+8085 USA|NJ GR Robotics
+8094 USA|VA Robotic Rampage
+8095 USA|VA NA Robotics
+8097 USA|CA Botcats
+8099 USA|WA Falcons
+8101 USA|MN Robonados
+8103 USA|WA null robotics
+8108 USA|NY Theoretically Impossible
+8109 USA|NY RISE Robotics
+8110 USA|NY WiSE
+8111 USA|OR nanoGIANTS
+8114 USA|TX Lewisville HS
+8120 USA|OH Electric Hornets
+8129 USA|RI Sons of Liberty
+8130 USA|TX Vikings
+8132 USA|OR Gear Heads
+8133 USA|MI Bionic Sailors
+8136 USA|MO Raytown C2
+8142 USA|MI BeastMode Mounties
+8143 USA|MD Jagged Edge
+8145 USA|NY Brighton Robotics
+8148 USA|MA Aleph Bots
+8149 USA|IN Red Alert: Panic in the Build Room
+8151 USA|OR Tempest
+8152 USA|CT Portland Cybernetics
+8154 USA|OR Robotica
+8155 USA|OR Bucks
+8159 USA|OR Cloud Robotics
+8161 USA|OR Short Circuit
+8169 USA|OR Squid Squad
+8173 USA|OR Robots of Rohan
+8176 USA|OR Steelhead
+8188 USA|OR Gear Heads
+8194 USA|MD Digi-Gators
+8196 USA|NY CTRL ALT WIN
+8200 USA|NY BASE Steel Hawks
+8201 USA|NY BASE Golden Eagles
+8203 USA|TX The Theoreticals
+8204 USA|TX Wylie East Robotics
+8206 USA|MI Kearsley Clockworks
+8214 USA|TX Dark Horse Robotics
+8227 USA|MA Enginuity
+8232 USA|CO The Blown Fuses
+8239 USA|MI Vicious Vassar Vulcans
+8242 USA|TX Steerminatorz
+8243 USA|OR Giantbots
+8245 USA|MA CohBots
+8254 USA|MA Spartans
+8271 USA|MT The Knights of Nee
+8272 USA|IN CC Sparks
+8275 USA|VA Tech Busters
+8280 USA|UT R^2
+8284 USA|TX Geek Squad
+8291 USA|TX Bulldog Robotics
+8294 USA|CO The Oysters
+8295 USA|TX Baron Alpha
+8297 USA|VA Geared UP!
+8304 USA|VT Wired Cats
+8309 USA|MS Team Voyage
+8315 USA|WV Logan Middle School
+8323 USA|MI Vikings
+8325 USA|NY Oyster Bot
+8338 South Korea|44 Team Shatterdome
+8341 USA|MS The RAMs
+8346 USA|TX LOROTECH
+8365 USA|NY Gear Masters
+8366 USA|TX Dragon Domination
+8367 USA|CA ACME Robotics
+8369 USA|MI Tigers Robotics
+8372 USA|OR TNT (Trial N Terror)
+8373 USA|AR Diva Force
+8375 USA|CA Vulcan Robotics
+8379 USA|MA The Parity Bits
+8380 USA|CA UC Robotics
+8381 USA|CA M
+8383 USA|VA OddBots
+8387 USA|FL Biohazardous
+8391 USA|CT W-Prime Robotics
+8392 USA|FL Lift-Off!   
+8393 USA|PA The Giant Diencephalic BrainSTEM Robotics Team
+8395 USA|MD The A-Team
+8396 USA|CA Secret Team
+8397 USA|NY Beta
+8400 USA|UT Randomonium
+8401 USA|VA McNair Robotics
+8403 USA|MO Kilobytes
+8404 USA|CA Quixilver 
+8405 USA|NJ Millburn Robotics
+8406 USA|TX Filthy Horde
+8409 USA|RI Leonidas
+8411 USA|TN SHARP
+8413 USA|RI Invaders
+8415 USA|CA ANCroid
+8417 USA|KY 'Lectric Legends
+8418 USA|TX The League of Legendary Scientists
+8421 USA|NJ Tigers
+8424 USA|TX Cyber Eagles
+8425 USA|TX Divastatorz
+8426 USA|OH CMS Robotics
+8433 USA|GA CyberStingers Green
+8435 USA|IN KnightBots
+8438 USA|MN Quantum Leap
+8443 USA|ID STEM 91
+8444 USA|ID STEM 92
+8445 USA|ID STEM 93
+8461 USA|MO Elementary  My Dear Botson
+8466 USA|OR The Fellowship of the Robot
+8468 USA|PA The Javengers
+8470 USA|MA Team Technado
+8472 USA|CA ROBOTATOES
+8473 USA|MN Blue Lightning
+8474 USA|VA Duck Tape Duckies
+8477 USA|SC Rohming Robots
+8478 USA|MI E-Bots
+8479 USA|MD RoboCavs Gold
+8480 USA|PA Technobots
+8482 USA|MI Robobucs
+8485 USA|NJ CouBOTS
+8487 USA|MI Robo Toasters Orange
+8490 USA|NY Mamaroneck Tigers
+8492 USA|MI Titanium Trojans
+8495 USA|WA LeoTech
+8496 USA|CA Heat It Up and Keep It Cool
+8497 USA|OH Hal
+8499 USA|AZ Robo Hawks
+8505 USA|SC HighTechLanders
+8509 USA|PA STEEL Serpents
+8511 USA|MI Gryphon Bots
+8513 USA|MI Joe Bots - Maize
+8514 USA|TX BA GREEN: Robotonics
+8519 USA|MA Mad McCannics
+8526 USA|VT Aluminum Avian Antics
+8527 USA|NY Bond Bots
+8528 USA|DE Rhyme Know Reason
+8529 USA|MI Team R.O.B.O.T.I.C.S.
+8531 USA|MI GA Bots
+8532 USA|MA Falcons
+8533 USA|MI CSPA Miners
+8534 USA|NC Mechalodons
+8535 USA|VA Game Masters
+8539 USA|AK Bazinga Bots
+8541 USA|TX Blue Chargerbots
+8548 USA|WA Oly Cannoli
+8553 USA|MI Stryke Force - Screaming Eagles
+8554 USA|TX Team Rattlers
+8555 USA|TX Earth, Wind, and Fire
+8556 USA|TX Cyborgs
+8557 USA|TX USB-TEAM
+8558 USA|TX Tune Squad
+8559 USA|TX GET
+8562 USA|IA The Wolverine Machine
+8563 USA|WA The Other One
+8564 USA|CA Lockdown
+8565 USA|TX TechnicBots
+8567 USA|WA RoboPir8s
+8568 USA|NY Spencerport Tech Rangers
+8569 USA|NC RoboKnights
+8570 USA|AZ InFALAbles
+8572 USA|WI Wall-Y Robotics
+8573 USA|OH Open Source
+8574 USA|NJ WeByte
+8577 USA|CA Robocats
+8578 USA|IN Juden-Ki Robotics
+8579 USA|MI Classical Engineers
+8580 USA|MI Oakview CyberDragons
+8581 USA|OH Ædificatores
+8582 USA|MD Heavy Metal
+8588 USA|IA Finger Puppet Mafia
+8590 USA|OR Bear Mettle
+8591 USA|NJ Mega Mekanoids
+8593 USA|MI No Limits
+8601 USA|FL Godly Gears
+8603 USA|MI The Fighting Gnomes
+8605 USA|CA RSF Logitechies
+8606 USA|CA RSF Intergalactic Dragons
+8608 USA|IL Shockwave
+8610 USA|OR ToborTech
+8611 USA|IA MECattack
+8613 USA|MI Golden Gears
+8615 USA|MI iSpartans
+8617 USA|FL Techno Tigers
+8619 USA|VA Cerebrum Bellatorum
+8620 USA|IL Wormgear Warriors
+8621 USA|MI G3: Geeks, Gears & Gadgets Blue
+8624 USA|CA Spectrum
+8626 USA|TX The Prototypes
+8627 USA|TX Shambots2.0
+8628 USA|WA Chickenados
+8630 USA|VA Sparky Jr.
+8633 USA|TX Dragons
+8635 USA|CA RV Robo Squad
+8636 USA|MN FIRE
+8637 USA|MN Glitchy Bears
+8638 USA|OK tadpole
+8641 USA|UT The Masters
+8642 USA|OH It's Complicated!
+8644 USA|MA The Brainstormers
+8645 USA|PA Robotic Doges
+8646 USA|MI Team KAOS
+8647 USA|LA Super Cell
+8648 USA|IL Manual Academy Rams
+8649 USA|IA Wolves
+8650 USA|IA Firebreathing Rubber Duckies
+8651 USA|MS Wait For It...
+8652 USA|VA The Air Conditioned Kilts / Warriors
+8655 USA|MO The Clockworks
+8656 USA|MI Robo-Jackets
+8661 USA|IA Wildcats
+8662 USA|WA Edge Robotics
+8668 USA|TX Error 404: Team Name Not Found
+8671 USA|MO Dragons
+8672 USA|IA UBett
+8673 USA|VA Error 404
+8678 USA|GA The Calvary
+8680 USA|WI Kraken-Pinion 
+8683 USA|TX Game Changers
+8686 USA|MN Height Differential
+8688 USA|MI Marysville Jr Vi-Bots
+8690 USA|MS Twisted Circuits
+8691 USA|WA Hawkinators
+8692 USA|WA Arrow Tech
+8693 USA|WA Scarabs
+8695 USA|IA Tri Hards
+8696 USA|IA Trobotix
+8698 USA|IL Guilford Vikings
+8699 USA|CT The League of Extraordinary Roboticist 
+8702 USA|VA Innovotics
+8703 USA|LA Tiger Robotics
+8706 USA|IL Auburn High School 
+8707 USA|TX Bulldog Robotics
+8708 USA|IL Erabotics
+8709 USA|IL Roosevelt High School 
+8711 USA|IN The Gas Attendants
+8719 USA|OH QuantumLeap
+8720 USA|OR Insert Name Here
+8721 USA|NY Mighty Mechanics (FHRL)
+8728 USA|IL Bionic Wolves
+8729 USA|MN Blue Energy
+8730 USA|PA Palumbo
+8733 USA|MI RoboVikings
+8734 USA|MI Actuators
+8738 USA|NC Dream Achievers
+8740 USA|HI 'Iobotics
+8741 USA|HI 'Iobotics
+8742 USA|CA RoboTechs
+8743 USA|IA Raw Bacon
+8745 USA|WA Binary Blackbirds
+8746 USA|IN EFF5 (Engineering for Fun 5)
+8749 USA|IA Robota White
+8753 USA|MI The Eagles
+8755 USA|WI E-Storm
+8764 USA|VA The Mob Bots
+8767 USA|NY Deus ex Machina
+8769 USA|NC Rush Robotics
+8772 USA|MS RoboWildcats
+8775 USA|DE Protocol : CI 
+8777 USA|MI The Goonies
+8778 USA|UT Grid Skippers
+8781 USA|MS The Ironclads
+8782 USA|MO Robot Bandits
+8784 USA|AZ Sprockets
+8788 USA|VA Mistakes Were Made
+8790 USA|TX Mohawk Warriors Gold
+8791 USA|IN Green Machine
+8793 USA|IN Wired Woodmen
+8794 USA|WA Technovikings
+8795 USA|HI TrojanBots
+8796 USA|FL Clay 
+8797 USA|FL Oakleaf High School
+8798 USA|FL Aluminati Industries
+8799 USA|FL Robo Tigers
+8801 USA|IA Sioux Center
+8803 USA|MS East Rankin Robotics
+8804 USA|CA TeknoForce
+8805 USA|CO West Grand Robotics- Team 8805
+8806 USA|NY The Dark Matter Dragons
+8807 USA|IA Molten Sprockets
+8808 USA|MN Ponytail Posse
+8811 USA|TX Robo*Bison Amistad
+8812 USA|NJ CyberRaptors
+8813 USA|IA The Winter Soldiers
+8816 USA|NJ 22nd Century Robotics
+8817 USA|IL Fruit Salad
+8818 USA|NY Portledge Panthers
+8823 USA|WI Mariner Mayhem
+8824 USA|NE RoboStorm
+8825 USA|OK CADFish
+8837 USA|TN RMS Ninjineers
+8838 USA|TX El Lago Robotics
+8845 USA|MI the wild bees
+8856 USA|MO GHS Robotics Blue
+8863 USA|NY Precision Cut-Ups
+8865 USA|CA The Intersect
+8866 USA|OK Wot N' Robot Creation
+8867 USA|PA Broken Image Link
+8872 USA|CA Robopocalypse
+8875 USA|GA Critical Error
+8879 USA|MD Bot Brigade Quantum
+8881 USA|OR CAD Corps (Cardboard and Duct Tape - Code of Real Pirates)
+8882 USA|IA Annihil8ors
+8884 USA|PA RoboPanthers
+8886 USA|TX Saber Robotics
+8887 USA|IA MHS Botcats
+8888 USA|NH Infinity Factor
+8892 USA|OR PHRED
+8894 USA|CA Class 7
+8895 USA|MO Eagles
+8897 USA|LA Sacred Heart Saints
+8898 USA|HI 'Iobotics
+8899 USA|IL EP Robo Raiders
+8902 USA|NJ Cosmic Goose
+8904 USA|IA Ninja Teutles
+8905 USA|MO Statesbots- Orange
+8906 USA|CA ROARbots
+8907 USA|IL Blue Box Bots
+8908 USA|FL Robo Mojo
+8910 USA|VA Veri-Tech
+8913 USA|KY Brainy Bots
+8919 USA|MN FireStormers
+8922 USA|IA STEAMpunks
+8923 USA|WA Perpetual Velocity
+8930 USA|IA Tech-Nical Difficulties
+8931 USA|CO RT Dawson
+8932 USA|MI Wildcats
+8935 USA|MI Twisted Metal
+8943 USA|IL OOPS! Robotics
+8945 USA|FL Touch-Down!
+8947 USA|NC Techtonics
+8949 USA|OR The Gifted Gears
+8953 USA|IA Bosco Botz
+8955 USA|NM R^2 D^2
+8956 USA|LA Team Pyrogen
+8962 USA|MN TimeCrafters
+8967 USA|MN Rosemount Middle Robotics
+8969 USA|CO Control-Alt-Defeat
+8970 USA|OR Go4Bots-Go4naughts
+8971 USA|IN Diamond Blades
+8975 USA|NY Nut Jobs
+8977 USA|MN Sunburst
+8980 USA|MN Retro Tech
+8983 USA|CT Mechwarriors
+8985 USA|WA CyberCharge
+8987 USA|MI Robobucs
+8988 USA|IA Bellevue Blockheads
+8990 USA|CO Mile High Academy Mustangs
+8993 USA|MD Wing Makers - Circle of Wizards
+8995 USA|AZ Jaegers
+8998 USA|CA Royal PIE Robotics
+9000 USA|TX FTC9000
+9001 USA|TX Over 9000
+9006 USA|MA A Paradigm Shift
+9010 USA|TX Robotic Rangers
+9013 USA|FL Merritt Island Matrix
+9014 USA|CA Fireworks
+9019 USA|AK Nuclear Wolves
+9020 USA|MI iCreek
+9021 USA|NC TMSA Cyber Tigers
+9024 USA|NY Juggerknights
+9025 USA|IA The Crest
+9026 USA|OR Geartastic 6
+9027 USA|MO Synergistic Effect
+9028 USA|MI Savage Warriors
+9034 USA|KS Mustangs 
+9040 USA|CA STEAMpunks Alpha
+9042 USA|NJ The MidKnight Magic
+9044 USA|OR NERD
+9045 USA|TX Motorhead
+9048 USA|TX Philobots
+9049 USA|CA RoboPuffs
+9052 USA|IA Recharged Orange
+9053 USA|TX Psionics
+9054 USA|TX Viridian Robotic
+9058 USA|OR Lord of the Gears 
+9059 USA|OR Tehwurlisis
+9060 USA|OR Smarties
+9062 USA|NC Jr. Clawbotz
+9063 USA|NC Claws of Steel
+9064 USA|VA Nerds of the North
+9066 USA|HI Eighty Twenty
+9068 USA|CO El Paso 4-H FTC 
+9070 USA|MI Techno Warriors
+9071 USA|TX Team Scorpion
+9072 USA|MO Rising Phoenix 
+9073 USA|VA Knightrix
+9074 USA|CA Robo-Scorpions
+9075 USA|FL The Funky Bunch
+9076 USA|NC Sketchy Engineering
+9078 USA|MN Ground Zero
+9084 USA|MT Timber Tech
+9085 USA|PA Pottsgrove High School
+9087 USA|MI Twisted Devils Green
+9089 USA|WY RoboBroncs Team 2
+9092 USA|MO Smitty Werben Jaeger Man Jensen
+9094 USA|NY EDISON Robots
+9096 USA|CO C2 Botz
+9098 USA|CA Secreter Team
+9099 USA|MO Ritenour RoboHounds
+9102 USA|KS Ravonics Orion
+9103 USA|KS Ravonics Rover
+9104 USA|KS Ravonics Apollo
+9105 USA|KS Ravonics Voyager
+9106 USA|KS Ravonics Genesis
+9107 USA|KS Ravonics Curiosity
+9108 USA|KS Ravonics Spitzer
+9109 USA|KS Ravonics Endeavour
+9110 USA|FL WiredCats Omega
+9112 USA|UT Skeleton Crew
+9113 USA|IL Need for Speed
+9121 USA|SC Falcon Force
+9122 USA|NY Infernobotix
+9123 USA|OR MechaniCougs
+9128 USA|RI Mounties
+9129 USA|NJ Demon's Run
+9133 USA|MI Robo Dawgs
+9137 USA|NY BECA Hexabots
+9141 USA|TX Robois
+9145 USA|TX The Horse of Steel
+9146 USA|MO Mecha Panteras
+9147 USA|NC Beyond the Realm of Probabilities
+9160 USA|GA Epic Pi Bots
+9161 USA|TX Overload
+9162 USA|IL Speer Academy
+9163 USA|IL Techna Gators
+9164 Mexico|BCN Zorrobots
+9167 USA|TX Robosapiens
+9168 USA|ND ThunderBots
+9175 USA|FL Warrior Bots
+9178 USA|TX Almighty Rams
+9180 USA|AK Phantom Wolves
+9181 USA|NH MasterMinds
+9182 USA|MN Short Circuits
+9187 USA|GA MCHSBULLDOG
+9188 USA|TN HALL-E
+9189 USA|IL Optimus Primates
+9191 USA|TX Beta Testers
+9197 USA|OH The Catalysts
+9198 USA|MO Royal Robotics
+9200 USA|TX FTC9200
+9201 USA|TX FTC9201
+9202 USA|VA Her Majesty's Engineers
+9203 USA|IA Chaotic Cool Cats
+9204 USA|TX  Bold Gold TECH
+9205 USA|MN Iron Maidens
+9206 USA|GA iRobotics
+9214 USA|FL RhoBeta
+9215 USA|IA Team Talos
+9219 USA|RI If It Ain't Broke
+9220 USA|CA Rancho Rebel Robotics
+9223 USA|LA The Power-Struck Girls
+9224 USA|WI Rock-em Sock-em Robots
+9231 USA|OR Big Bots
+9239 USA|IL WOW (Wise Owl Warriors) 
+9242 USA|PA GearHounds
+9244 USA|NJ Lenape Robotics
+9247 USA|CA Chromium Robotics
+9249 USA|MN SHEnanigans
+9254 USA|CA STEM Punks
+9256 USA|TX Robo*Bison Esfuerzo
+9257 USA|MN Wheely Cool
+9258 USA|MN The Glorious Dweebs
+9261 USA|CA Level Up
+9266 USA|CA Pyrobots
+9277 USA|FL HazMat Robotics Explosives
+9290 USA|OH Techtonic Titans
+9294 USA|NY TITAN
+9295 USA|NY Speedy
+9297 USA|MI Tractor Technicians in Training (Red)
+9298 USA|MS Bionic Cobras
+9300 USA|MA WRHS Robotics
+9301 USA|MI Robobucs
+9324 USA|CA BWS Eagles
+9326 USA|MA Liquid Oxygen
+9328 USA|MO Oakville Tigers
+9330 USA|WA NeoBots
+9338 USA|MD Lightning Coalition Robotics
+9339 USA|OR Rogue Mafia
+9342 USA|IL The Incredibots
+9351 Mexico|CHH Botrregos Jr. Delta
+9352 USA|MI Holbrook Hawks
+9354 USA|NY Team Pink Panthers
+9356 USA|IA EngiNerds
+9357 USA|OR Get Pumped
+9359 USA|MN Circuit Snakes
+9362 USA|TX Samurai Robotics
+9365 USA|IL Atlas Engineering
+9366 USA|MI Artificial Ascent - City High Middle
+9367 USA|CA Torrey Techies White
+9370 USA|RI BVP Bots
+9371 USA|NY General Relativity
+9372 USA|NY Standard Model
+9374 USA|WA Circuit Breakers
+9375 USA|OR Go4Bot-Go4Hazard
+9376 USA|MI LMS Lancers
+9377 USA|TX ROBUFFS Yellow Submarine
+9378 USA|HI Falcons
+9381 USA|TX Hot Bots Purple
+9386 USA|TX Elmer and Elsie Robotics
+9387 USA|WA Shifting Gears
+9392 USA|MO Junior (Yellow) Jackets
+9402 USA|TX CyberSwarm
+9403 USA|TX Hive of Steel
+9404 USA|MI CA Frost Environment Sci Academy High/Middle
+9410 USA|IL Frank's Garage
+9411 USA|IL Rolling Thunder
+9412 USA|MI Johnny 5's
+9415 USA|MN Wrench Dressing 
+9418 USA|MN Tempest Automatons
+9421 USA|NY Harborfields Varsity Tornadoes
+9430 USA|MN Typhoons
+9432 USA|CA Blood, Sweat, & Gears
+9433 USA|CA Twisted Metal
+9435 USA|FL Mechanical Eagles
+9439 USA|DE Bumble Bots
+9441 USA|CA Syndicate
+9444 USA|FL FLA Tech 2.0
+9445 USA|MD GaCo North Middle
+9448 USA|CA Wolves
+9449 USA|OR LoggerRobotics
+9450 USA|MD Falcons FIRST
+9452 USA|MD WCHS Bulldogs
+9453 USA|TX Lyons Tech
+9454 USA|PA FreshBots 
+9458 USA|MI American Jackets
+9459 USA|MN Mythic
+9464 USA|NY Holy Cross Academy - Oneida
+9467 USA|WA Matrix 2.0
+9470 USA|OR Jefferson High School / SEI
+9473 USA|ND RoboCats
+9476 USA|MI Advanced Skilltronics
+9478 USA|NC Metalheads
+9485 USA|TX GLAMAZONS
+9486 USA|PA Scigearian Tigers
+9499 USA|MI Destrobots
+9500 USA|MI Raider Bots
+9501 USA|NY Zero to Robo
+9503 USA|TX PURPLE COBRAS
+9505 USA|ND Roboteers
+9506 USA|IL Quadratic Crushers
+9507 USA|NV Reedbotics
+9509 USA|RI Patriots
+9511 USA|TX Dallas Nation
+9512 USA|CA Hippie Bots
+9513 USA|CA Rage Against The Other Machines
+9514 USA|MI Cardinal Overload
+9517 USA|WA Robocubs
+9520 USA|OR Madatronics
+9527 USA|TX Rogue Resistance
+9530 USA|MD Gunston Herons
+9533 USA|NJ Brave-inators
+9534 USA|MS Ingomar RoboFalcons
+9536 USA|MN Slobberbots
+9540 USA|KY White Thunder
+9547 USA|TX Panthers
+9548 USA|NC Highly Combustible
+9554 USA|NJ alt+F4+ent
+9563 USA|NJ Cougar Stars
+9566 USA|IA Tech Bam
+9567 USA|OR Cybernetic Elks
+9568 USA|PA Olney Trojan Robotics 
+9569 USA|IA BK Robo
+9570 USA|PA GearGirls
+9572 USA|MI ChatterBoltz
+9575 USA|IA Error 404
+9576 USA|WA Chicken Whips
+9577 USA|MN Lake Crystal Knights
+9578 USA|CA Purple Pi
+9579 USA|MO Poplar Bluff Iron Mules
+9581 USA|NC Ravens Robotics
+9593 USA|IL Dimly Lit Bulbs
+9600 USA|CA Lady Panthers
+9603 USA|CA Got Robots?
+9606 USA|OH Smoking Motors
+9607 USA|AE BHS Robotics
+9608 USA|TX Cyberpride
+9611 USA|IN EC Central Tech Squad
+9612 USA|MO Oakville Robotics 2
+9614 USA|CA Hyperion
+9617 USA|MN Loose Screws
+9618 USA|PA Cyber Spartans
+9620 USA|NH R.O.U.S.'s (Robots of Unusual Size)
+9622 USA|VT Raider-Bots
+9624 USA|MI Spartobots 
+9625 USA|MO Panzerkampfwagen
+9631 USA|VA CyberKnights
+9633 USA|WY Pinedale 4H Robotics
+9637 USA|LA The Dominican Indiana Janes
+9650 USA|CT Blockhead Robotics
+9655 USA|GA Logix Robotics
+9656 USA|CA Omega
+9657 USA|CA Athena Robotics
+9659 USA|UT LazerPandas 9659
+9661 USA|LA Storm Chasers
+9667 USA|MD Goldogs
+9670 USA|TN Robo trojans
+9671 USA|FL Tomahawk Technauts
+9680 USA|CA Bonita High Robotics
+9681 USA|NY Parallel Lions
+9683 USA|DE ITSAR_9683
+9686 USA|GA Raiders of the ARC Black
+9689 USA|UT Ogden High School
+9695 USA|AZ BCHS Electric Eagles
+9698 USA|IL West Aurora Robotics
+9707 USA|ND Saints
+9708 USA|IA Sparklebots
+9709 USA|NJ RC Robotics
+9721 USA|VT Green Mountain Gears
+9725 USA|MA Architechti Newmani
+9727 USA|CA Armored Patriots
+9728 USA|TX Metal Militia
+9734 USA|PA Andromeda
+9735 USA|TX The Byrd Dawgs
+9743 USA|AZ Stingers
+9760 USA|MN Circuit Breakerz
+9761 USA|UT The PrestidigiTaters
+9762 USA|FL Radio Active
+9764 USA|WA Eastmont High School
+9765 USA|NJ Mechanized Bacon
+9766 USA|IN Tribe Tech Robotics
+9768 USA|LA Steel Eagles
+9769 USA|OR Total Chaos
+9770 USA|MD Robots, Inc.
+9771 USA|OH Spartans
+9772 USA|HI LJA Bulldogs
+9773 USA|NY Robocracy
+9775 USA|IL Intrinsic Schools Belmont Campus
+9776 USA|OR The United Nerds
+9777 USA|CA Reauxbatons
+9778 USA|TX Robotic Chinchillas
+9779 USA|FL PIEaters
+9781 USA|AK Gravity Check
+9784 USA|CA Dry Ice
+9785 USA|GA Cronos
+9786 USA|TN Torque Force Robotics
+9788 USA|IL Manual Academy RoboRams II
+9790 USA|IN Vier Left
+9791 USA|PA Divide by Zero
+9792 USA|MO GSA RoboNerds
+9793 USA|TX RobotSEA
+9794 USA|MD Wizards.exe
+9798 USA|MO N.E.R.D.S
+9799 USA|MD Ingenerds
+9800 USA|FL HyperNovas
+9801 USA|MN Titanium Minds
+9803 USA|VA Orange County High School Hornets
+9804 USA|CA Bomb Squad
+9808 USA|KS Team Chargers
+9809 USA|MT Oscuro Luz
+9812 USA|OH T-Noble
+9813 USA|VA Kilroy Jr. Robotics
+9816 USA|IN Tigears
+9819 USA|MI RoboRats
+9820 USA|PA Girls of Steel Hypatia
+9825 USA|VA Electrobotz
+9828 USA|OH Ultron Unit 
+9829 USA|TX MAKbots
+9830 USA|VA RobotLits
+9832 USA|NY Robomaniacs
+9835 USA|GA Robochicks
+9836 USA|CA ElectroMedics Gold
+9837 USA|CA Ravenettes
+9838 USA|OK elopdat
+9839 USA|TX Engineers of Olympus
+9840 USA|TX Royal Robotics
+9841 USA|MI Liberty Lions
+9842 USA|MI Fighting Lions
+9847 USA|OK MeteorBots
+9848 USA|NJ Mechanical Pioneers
+9849 USA|MO The Small Fries
+9850 USA|HI Hoco
+9851 USA|OR C4
+9853 USA|NJ Chatham Cougars
+9854 USA|PA Penn Charter Robotics
+9855 USA|MI Mattawan FTC RoboKats - CyberKlaws
+9856 USA|MO Eagle Robotics - Fire Chasers
+9859 USA|MI Raiders of the Lost Bark
+9861 USA|MI Cavalier Cougars
+9862 USA|IN CTRL+ALT+DESTROY
+9863 USA|PA MASHellaneous
+9864 USA|IN Jug Rox Robotix
+9865 USA|WA Error 404: Page Not Found
+9866 USA|MD VIRUS
+9867 USA|MA Evolution Robotics
+9872 USA|PA (In)Formal Logic
+9873 USA|CA PikaTech
+9876 USA|WA The Countdown
+9879 USA|AR Root Negative One
+9881 USA|CA Golden Gears
+9882 USA|VA Spegonauts
+9883 USA|MI Mighty Michigan Mechanics - M3
+9884 USA|WA Eastside Prep JV
+9886 USA|TX MESH
+9887 USA|CA RoboVikings
+9889 USA|NJ Cruise Control
+9890 USA|MN The Rubies
+9892 USA|CA EngiNERDs
+9894 USA|CA RoboLions
+9895 USA|MI Robohills
+9897 USA|ID Post Falls High School
+9898 USA|OK Commandobots
+9899 USA|CO Black Diamond Robotics
+9901 USA|VA Techie Titans
+9902 USA|CA San Clemente High Robotics Team
+9905 USA|MO Rampunzel
+9907 USA|OR DON'T PANIC and Always Carry a Towel
+9908 USA|MI The Killer Coders
+9910 USA|RI Bionic Scorpions
+9911 USA|MO 16 Gigs of RAM
+9912 USA|TN Scarabs
+9914 USA|CA RoboWarriors
+9915 USA|WA Robo Thunder
+9918 USA|VA RAD
+9921 USA|NJ PATRIOTS
+9923 USA|TX Team AAA
+9924 USA|CA The White Hat Hackers
+9925 USA|IA Delta Robotics
+9927 USA|NJ MidKnight Nova
+9929 USA|IL TNT (Tech Ninja Team)
+9930 USA|FL Robo-Knights
+9931 USA|MI Northeast Middle School - Viking Vigilantes
+9933 USA|MI GBEMS - Blazin' Turtles
+9934 USA|TN Webb Robotics
+9935 USA|VA Rebel Robotics
+9937 USA|FL Gamma Rays Atlantic Coast High
+9938 USA|FL Baldwin Middle/Senior
+9941 USA|FL Ram Robotics
+9943 USA|FL Robert E. Lee High School
+9944 USA|FL SATURN
+9948 USA|MN A.S.A.P.
+9949 USA|MN OtterBots
+9950 USA|IA Tachyon Travelers
+9952 USA|OH CHCA Beak Squad 7-8
+9956 USA|WI The Knack
+9957 USA|MD Robocraft
+9958 USA|LA Redfish Robotics
+9960 USA|MO N.E.R.D.S
+9962 USA|AL Robo Knights
+9963 USA|ND Comets 
+9964 USA|MN Duluth Krakens
+9965 USA|CA MSET Lionfish
+9966 USA|MO This Side Up
+9967 USA|IA Geared Up
+9968 USA|IA CrossFire
+9970 USA|OR Stellar Pixels
+9971 USA|NJ LANbros
+9972 USA|MN Iron Gears
+9973 USA|IA Scrap Mechanics
+9974 USA|IA T.H.O.R. 
+9976 USA|AL Cyber Warriors
+9977 USA|NC Circuit Shifters
+9978 USA|IA Avengers Tech
+9979 USA|PA Cougars
+9980 USA|OH Fitch Millennium Falcons
+9981 USA|PA Girls of Steel Lovelace
+9983 USA|IA Robo Falcons B
+9984 USA|NY JavaScouts
+9985 USA|IL Washington Robotics
+9986 USA|FL EagleBotics Navy
+9987 USA|FL EagleBotics Gold
+9988 USA|IA Taft Robotics
+9989 USA|NC Golden Eagles
+9990 USA|NC Robo Vikings
+9991 USA|NC Duly Noted 
+9992 USA|NC Techno Tigers
+9993 USA|NC Storm Bots
+9994 USA|NC Kearns Robotics
+9995 USA|NC Bennetrix
+9997 USA|PA Wolf Pack Robotics
+10001 USA|MD RoboCavs Silver
+10002 USA|PA Herculean Dynamite
+10005 USA|TX Blood Sweat and Gears
+10006 USA|CA Spudnik
+10012 USA|IA Nevada Nerds Anonymous
+10013 USA|FL Master Builders
+10015 Canada|AB SWAT Bots (Red)
+10016 USA|MI Clarkston RoboWolves
+10019 USA|MI Eppler Robo-TICS
+10020 USA|MI Galvanized Gadgets
+10021 USA|SC The Red Legion
+10022 USA|FL WiredCats Gen 3
+10023 USA|CA GatorBots
+10025 USA|MD HV4HR
+10030 USA|OH 7SigmaRoboticsorg
+10031 USA|MI  Red Storm Robotics-Blue
+10034 USA|TN SFMS TEAM IMPACT
+10035 USA|MI Robo Rangers
+10037 USA|MI M.A.R.S. Mini Rovers
+10038 USA|IA Illuminati Confirmed
+10040 USA|MI Robotic Narwhals
+10041 USA|MI Blackrock Bots
+10047 USA|MD Galactic Tigers
+10051 USA|NJ TECHNOLOGIC
+10052 USA|OK Salina Robocats
+10053 USA|NJ Iron Eagles
+10055 USA|TX Momentum-2
+10056 USA|TX Momentum-3
+10058 USA|MI Wild Cards
+10060 USA|OR Klamath Coyotes
+10062 USA|MI Robogators
+10064 USA|TX Lady Gears
+10068 USA|GA Duct-Ties & Zip-Tape
+10069 USA|IA Autonomous Anonymous
+10071 USA|IA Nuts, Bolts, and Issues
+10072 USA|GA Pixilation Nation
+10075 USA|MN Allstar BEARS
+10076 USA|MN PixelLogic
+10077 USA|MN The UnBEARables
+10078 USA|MD EngiNerds
+10080 USA|NV Scorpions
+10082 USA|IA Mechanicats
+10084 USA|OH Team Calamari
+10087 USA|FL FatherBoards
+10088 USA|FL SharkBeta
+10091 USA|IL N.Y.A.N. Robotics - Not Your Average Nerds
+10092 USA|CA Green.Griffins;
+10093 USA|IL RoboKays
+10095 USA|TX Revelation
+10096 USA|NJ Those Guys
+10098 USA|PA 2 Eyed Illuminati
+10099 USA|AK Chain Reaction
+10100 USA|WI Phoenix Force
+10101 USA|IL Binary Bullets
+10104 USA|MI That OTHER Team
+10106 USA|MO CBC Robotics
+10107 USA|IA A League Of Their Own
+10109 USA|IL D-Elite
+10110 USA|IA Pixel Knights
+10111 USA|AZ Herberger Javelinas
+10113 USA|PA NZ.1
+10117 USA|OH Party Pandas
+10123 USA|MO GHS Robotics Red
+10124 USA|MI Trial and Error
+10127 USA|MO Tesla's Knights
+10130 USA|FL Crown Joules
+10132 USA|CT Winged Beavers
+10133 USA|IN Machines of Mayhem 
+10136 USA|MI Frost RoboFalcons
+10137 USA|MI Emerson RoboEagles
+10138 USA|IL Newton Busters
+10139 USA|IA Glitch Mob
+10143 USA|TX TBD
+10144 USA|OH Trial and Error
+10145 USA|MD The Hive
+10146 USA|IL Invader Bots
+10148 USA|CA ART 
+10150 USA|CA ART
+10158 USA|GA Kronos Robotics
+10159 USA|NJ Upgrade
+10160 USA|IA Keokuk Middle School
+10161 USA|NY Fayetteville Free Library FTC Team
+10163 USA|CA KSJC
+10165 USA|AL Apex Predators
+10167 USA|FL Green Cove Springs Junior High
+10168 USA|FL LJH Gator Techs
+10169 USA|NY Mineola Motors
+10173 USA|KS Ravonics Gemini
+10176 USA|MI Robotex
+10179 USA|FL Tech Turtles
+10180 USA|MI Stein
+10181 USA|IA Seagulls
+10182 USA|IL DRW Cheetahs
+10183 Germany|BW What the Frog
+10185 USA|IA From The Island Of Misfit Robots
+10188 USA|MO T-N-T
+10191 USA|MS Trial and Error
+10194 USA|PA Trojanauts
+10195 USA|NC Night Owls
+10198 USA|IA STEM Punk
+10202 USA|MI Reese Rockets Middle School Robotics
+10203 USA|NJ HuskieBots
+10204 USA|FL Robotic Bacon Eating Narwhals
+10210 USA|MI Aztechs
+10211 USA|OH Team Hercules
+10214 USA|IA Lightning Legends
+10216 USA|MD SpiderByte
+10217 USA|CA PUMA Robotics
+10219 USA|GA Mt. Bethel Christian Academy
+10223 USA|CO Team AIR
+10230 USA|WA Granite Bots
+10235 USA|MO Binary Busters
+10236 USA|HI Buff Bots
+10237 USA|OH US Robotics
+10238 USA|MN T.I.G.E.R.
+10239 USA|AZ Gatorbots
+10240 USA|IL ShamBot Green
+10241 USA|WY RoboBroncs Team 4
+10243 USA|NJ Robotic Rams
+10244 USA|WA S.W.A.G. Jr.
+10245 USA|TX Sentinels
+10246 USA|AZ The Midnight Cicadas
+10247 Australia|SA Trinity BaCoNeers
+10249 USA|IA Robotic Wolves Black
+10250 USA|MI Falconators
+10251 USA|NH 36 Cents
+10253 USA|IL Bobcats Robotics
+10254 USA|IL MCHS RoboLions
+10255 USA|MI RoboDux
+10256 USA|IA Robotic Wolves Green
+10257 USA|IA Warriors of Steel
+10259 USA|OK Science
+10260 USA|OK Elementals
+10262 USA|MI Pioπeers
+10264 USA|OR Go4Bot-Go4n8ers
+10265 USA|MO Force Green
+10266 USA|IL Mach Speed
+10267 USA|IL Gears of Fury
+10268 USA|IL Gearaffes
+10272 USA|MN Titanium Allies
+10273 USA|MN Cat in The Hat Comes Back
+10274 USA|OR MPHS Botcats
+10275 USA|OR The Originals
+10276 USA|FL Storm Troopers
+10278 USA|MA SB Raiders
+10280 USA|MI TechnoLions
+10284 USA|FL Team R.O.B.O.T. (Really Obsessed Builders Of Tomorrow)
+10285 USA|WA E2C2
+10290 USA|UT Atomic Randomizers
+10291 USA|WI Shorewood Robo-Hounds
+10293 USA|IN Daleks
+10294 USA|WI The Edge
+10297 USA|MI Knights in Aluminium
+10298 USA|CA Brain Stormz
+10300 USA|NJ Robo-Dragons
+10302 USA|TX Robohorns
+10303 USA|IL Robot Rebellion
+10306 USA|VA Seahorses
+10307 USA|NC Tardigr-8
+10308 USA|IL High Voltage Bandits
+10309 USA|MI TechnoHuskies
+10310 USA|NE Flyers
+10312 USA|OK BearBotics
+10315 USA|MI Tech Hawks - Burton Middle School
+10318 USA|CA Ramdroids
+10319 USA|MI Shawmut Hills
+10320 USA|CA FaZe Robotix
+10322 USA|NY Shark Byte
+10323 USA|OH Robot Rams
+10325 Canada|AB Wolvo-Bot
+10331 USA|MA Hailstorm 
+10332 USA|OR Technical Difficulties
+10333 USA|PA TechSpark
+10334 USA|FL Invaders
+10335 USA|LA Team Hellion
+10337 USA|LA Dark Matter
+10338 USA|MD Dark Matters
+10339 USA|OR 3.1415926535
+10341 USA|OH Silicon Edge
+10342 USA|WA The Electric Dogfish Experience
+10343 USA|NJ WR Positive Charge
+10345 USA|FL Royal Blue
+10346 USA|OH Raider Robotics
+10347 USA|FL General Tech
+10348 USA|NM Gear Masters
+10353 USA|PA Metal Works
+10354 USA|TX Mustangs
+10355 USA|OK Project Peacock
+10357 USA|VA Volt-e-mort
+10358 USA|VA Squatch Watch
+10361 USA|TX Bushland Robotics- I'LL BE BOT
+10364 USA|MN Time Pilots
+10366 USA|FL WiredCats Future
+10368 USA|OK Matrix Robotics
+10369 USA|AZ Golden Eagles
+10371 USA|IL The Greenies
+10373 USA|UT Black Ops
+10375 USA|PA MYC FTC 1
+10376 USA|RI Cybears
+10377 USA|VA FCHS FTC#2
+10382 USA|MD TEC Tigers
+10383 USA|IA Tech-Know-Logic
+10385 USA|FL RoboTech Warriors
+10387 USA|IL Red Hot
+10390 USA|CA STEM Scouts At-Large
+10391 USA|TN Lynx Robotics
+10393 USA|NY Pink Droyd
+10396 USA|GA Raiders of the ARC Silver
+10397 USA|MN Ice Breakers
+10398 USA|MN Quantum Mechanics
+10401 USA|NY Team Awesome
+10404 USA|TX Astrobots
+10405 USA|TX Gh0st Knights
+10410 USA|OH Roboteers
+10413 USA|FL Imaginary Radicals
+10414 USA|VA Why did it have to be snakes?
+10415 USA|IL Warbots
+10418 USA|OH Fitch Mechanical Talons
+10419 USA|NY Syosset Elite
+10420 USA|IL Mechanized Kay-OS
+10421 USA|IL Kay Tech
+10423 USA|MN Servo Pros
+10424 USA|WA Primetime Robotics
+10428 USA|OR Tactile Shrimp
+10430 USA|MN Wiring Warriors
+10431 USA|WA Tomato Farmers
+10432 USA|MN Untitled 1
+10434 USA|CA Negative Kelvin
+10435 USA|IA Circuit Breakers
+10436 USA|AR Wolfbytes
+10437 USA|TX Robo-Sapiens
+10438 USA|MI Ein
+10439 USA|MN Final Frontier
+10441 USA|OH Geared Up
+10442 USA|VA Iron Giants
+10444 USA|MO Chief Robotics
+10448 USA|CO Wizards Robotics 10448
+10452 USA|MD GaCo South Middle
+10455 USA|IN Krusty Krushers
+10458 USA|GA EVE
+10460 USA|MO Bot Squad
+10461 USA|CA iScouts
+10464 USA|OH The Bionic Tigers
+10465 USA|LA Patrick F. Taylor Academy High School Robotics
+10466 USA|MN BECKER MS Atlantis
+10468 USA|MN Becker MS Challenger
+10469 USA|MN Black Sabers
+10470 USA|MN Red Sabers
+10472 USA|MA New Bedford Harpooners
+10474 USA|MI Artificial Intellegence
+10475 USA|NY The Spartan Bots
+10476 USA|MO Iron Cats
+10477 USA|MI Rapid Robots
+10479 USA|TX Talon Industries
+10481 USA|IL ShamBot Gold
+10484 USA|MI Cyber Knights
+10485 USA|OR Sabotage
+10489 USA|OH Missing Parts
+10490 USA|PA Fiddling Fixers
+10491 USA|NC Tinker Bots
+10492 USA|DC Visibots
+10494 USA|ID роботы
+10496 Australia|VIC Omnipotent Omniwheels
+10497 USA|FL SwampBots
+10502 USA|AK Kuskokwim Surf Monsters
+10505 USA|IL Minivation
+10510 USA|IL I'm BOTman
+10515 USA|VA Xtreme Voltage
+10516 USA|VA Thaitanium Tanks
+10517 Australia|NSW Experimental Mayhem Unit
+10518 USA|TX Cougarbots
+10519 USA|TX LEGINTELLEX
+10521 USA|WY Servo Sychos
+10523 USA|AZ Dragons
+10526 USA|TX BA WHITE: Structural Rampage
+10527 USA|TX Tech-Knights
+10528 USA|TX BOTS IN BLACK
+10531 USA|OR Nā Mea Enchilada
+10532 USA|NY Shrikes
+10533 USA|UT OHMS FTC 2
+10537 USA|GA Brobotix
+10538 USA|MI Team KILT
+10539 USA|NY Ultro
+10540 USA|MI Gear Grinders Junior
+10541 USA|WY RoboPanthers
+10544 Canada|AB Cyber Eagles
+10545 USA|MI Atomic Bombs
+10547 USA|IA Mortal Combots
+10551 USA|VA Fuzion
+10552 USA|MI Concord Bot
+10553 USA|NJ Anonymouse
+10556 USA|NY Mulan
+10559 USA|TX RoboSpike
+10560 USA|MA Robo Hawks
+10562 USA|MN Golden Crusaders
+10565 USA|OR System Online
+10566 USA|OH WRAptors - Dice
+10567 USA|VA Voltage
+10568 USA|MN The Regal Kiwis
+10570 USA|VA CAT5 CyberCanes
+10572 USA|TX Bear Essentials 
+10573 USA|TX Garza Early College
+10576 USA|TX Hard Manual Reset
+10577 USA|TX Thunder Chicks
+10579 USA|TX Obama HS
+10580 USA|TX Knightmares
+10581 USA|TX Cyborg Mustangs
+10582 USA|NJ Emerald Knights
+10583 USA|FL The Robotic Gladiators
+10584 USA|FL Keystone Heights High School
+10585 USA|OR .jpegasus
+10588 USA|MO The Luxons
+10590 USA|MN The Monkey Wrench Gang
+10591 USA|MS Simpson County Future Engineers
+10593 USA|CO Overdrive
+10595 USA|MT Bison
+10598 USA|CA Fusionyx
+10599 USA|IA GMG Robotics
+10601 USA|MI Calvary Baptist Academy
+10602 USA|IA Nut and Bolt
+10603 USA|NJ WOOD-CHIPS
+10610 USA|AK Mears Gears
+10611 USA|MI MooTech 
+10615 USA|MI Jefferson CyDogs
+10617 USA|MN MECHATECH
+10618 USA|MO Team Rocket
+10620 USA|MI Pioneer Circuit Breakers
+10621 USA|IN North Robotics
+10624 USA|UT TNT (terribly nice team)
+10629 USA|UT EagleBots
+10630 USA|IL Warinators
+10632 USA|TX JECA RoboRaptors
+10633 USA|NJ XLR8R
+10635 USA|IL Unknown Element
+10636 USA|MI Inventors
+10637 USA|NC Pinecrest Patriots
+10639 USA|NY RoboKnights
+10641 USA|OK Atomic Gears
+10644 USA|MI CyBugs
+10645 USA|MI Hornet Hackers
+10646 USA|IA Titanium-Griffins
+10649 USA|TX Falconeers
+10650 USA|FL HazMat Robotics Biohazards
+10651 USA|MO C0de Breakerz
+10652 USA|OR Robo Rebels
+10653 USA|MI SASA DRAGATRONS
+10656 USA|IA Falcon Bots
+10657 USA|TX Error 409: Conflict
+10659 USA|OR The Illuminati
+10662 USA|MT Lazer Sharks in Space
+10663 USA|MS Envisioneers
+10664 USA|MN Attack on Robot
+10668 USA|NC VikingWay
+10669 USA|NJ Clutch Squad
+10670 USA|FL RCR
+10671 USA|MI Cyber Phoenix FTC
+10673 USA|CA Spudbot
+10674 USA|CA Raven Robotics
+10675 USA|NY RoboRangers
+10676 USA|TX Lady Warbots
+10678 USA|MI Gear Grinders Junior 2.0
+10681 USA|MO Nexus
+10682 USA|NC North Moore Mustangs
+10684 USA|UT Warpdrive
+10685 USA|VA House of Jacks
+10686 USA|WI Phoenix
+10692 USA|MA Iron Horses
+10693 USA|ND Washburn Inno-Vaders
+10694 USA|UT Ultimum Dominarum 
+10695 USA|UT Temporary
+10696 USA|NY Syosset Syborgs
+10698 USA|MI WMS Warriors
+10699 USA|MI SASA Dragonators
+10702 USA|OR RoboDogs I
+10703 USA|LA Cyclones
+10707 USA|CA GIRLBOTS  
+10712 USA|CO Code Crushers
+10716 USA|VA Titans
+10717 USA|CA Robo-Cougars
+10719 USA|MD Termigators
+10721 USA|MI Vikings
+10722 USA|UT RoboRaptors
+10723 USA|MI SnowBots Blue
+10725 USA|UT Elevated Engineering
+10726 USA|TX The Dream Team
+10730 USA|VT Bulldog Robotics 
+10731 USA|WY Radioactive
+10733 USA|MN Capitol Hill FTC
+10735 USA|MI Jaxon Falcon Works
+10736 USA|CO Wizards Robotics 10736
+10739 USA|MO Friendly Robot Guys
+10752 USA|TX Boss Hogg
+10753 USA|TX G3
+10755 USA|IN The Technomages
+10756 USA|TX The Purple Vipers
+10760 USA|WI FUNKtions
+10761 USA|CA G.O.A.T.s
+10763 USA|CT TECH LIONS
+10767 USA|MA DEEZ GEARZ
+10768 USA|FL Middleburg High School
+10771 USA|PA Le Pamplemousse
+10773 USA|RI Chariho Chargers2
+10776 USA|NY Cosmobots
+10779 USA|MI Short Circuit Spartans
+10780 USA|NM Magdalena GeekBots
+10782 USA|TX Clawbots
+10785 USA|NJ Highlanders
+10788 USA|NJ Mountain Lakes Robotics
+10789 USA|CA Rebel Alliance
+10794 USA|CA Spaceballs
+10798 USA|ND Hazen Bison
+10802 USA|TX BPORT Robotics
+10803 USA|MI McU-Bots
+10805 USA|MI MicroCreek
+10809 USA|CA Crow Force 5
+10812 USA|MI STEM-Bots
+10813 USA|MI Kearsley Scrap Rats
+10816 USA|RI WHALES
+10818 USA|MI Bronco Robotics
+10819 USA|OR Mechanical Eagles
+10820 USA|CT Falconeers
+10824 USA|WI Tesla Trojans
+10825 USA|WY RoboBroncs Team 3
+10829 USA|WI Bay Robotics
+10830 USA|FL RoboPanthers2000
+10831 USA|TX Raptors
+10832 USA|TX Talon
+10833 USA|MD Robo-Scorps
+10835 USA|WA TestOA
+10836 USA|IL STEMper Fi
+10840 USA|TX πRate Crew
+10844 USA|MI Wildbots
+10847 USA|RI Robo Eagles
+10849 USA|MI WMS Robotics
+10851 USA|OH WASA
+10859 USA|NC RACE
+10860 USA|TX Boneyard Bandits
+10861 USA|TX Transformerz
+10862 USA|TX Droid Rage
+10863 USA|TX Droid Rage
+10867 USA|NJ TCH Tornado
+10868 USA|MO Roboteer Cadets - Alpha Company
+10869 USA|VA Maze Masters
+10870 USA|NY Ardsley Robotics
+10871 USA|KS Back seat driving with Gramma
+10872 USA|KS SEND IT!!!!
+10874 USA|NJ LIONS
+10876 USA|KS Space Bears
+10877 USA|CT Cardinals
+10888 USA|IL Team J.A.R.V.I.S.
+10890 USA|TX Power Ranger
+10891 USA|MI Oriolebots
+10892 USA|UT HammerTime 10892
+10899 USA|VT Mansfield Mechanics United
+10902 USA|TX Techno Pirates
+10904 USA|TX CyberWolves
+10911 USA|MI Carrollton Cavatrons
+10912 USA|MA Blue Bot Group
+10914 USA|TX Delta
+10916 USA|MO Team S.H.R.E.K.
+10917 USA|CA ninja-te.ch
+10920 USA|NJ The Prototype Panthers
+10921 USA|TX Falcons
+10922 USA|AR Terminators
+10923 USA|NY The Down Unders
+10924 USA|NM Beta Hawks
+10925 USA|OR Spartacles
+10933 USA|NY Tech Titans
+10934 USA|AE Vicenza HS
+10935 USA|AE Bahrain
+10936 USA|AE Sigonella High School
+10939 USA|AE LHS RoboLancers ~2
+10940 USA|AE Ramstein HS - #1  - Superfluou's A'postrphe's
+10941 USA|AE SHAPE HS
+10942 USA|AE Vilseck HS (Team 1)
+10944 USA|AE Kaiserslautern HS 2
+10945 USA|TX Toaster Squad
+10948 USA|IN PHMS Engineer Pioneers
+10949 USA|NY Indians
+10950 USA|IN PHMS - Geared Gals
+10960 USA|UT EaglEbots
+10963 USA|TX  KI Falcons
+10969 USA|TX Ir0n K!ng$
+10970 USA|TX Bull Dog Auto Bots
+10971 USA|TX Lady Bull Dog Bots
+10973 USA|TX Retro Dogs
+10974 USA|NJ IronMariners
+10975 USA|NJ Raiders-ShortCircuits
+10980 USA|FL Cookiebytes
+10982 USA|TX Ulrich Robotics
+10984 USA|AZ Beep Patrol
+10985 USA|TX Toxic Geckos
+10986 USA|IA ARC
+10990 USA|ID Mountain Home AFB
+10993 USA|TX Pharr Police Athletic League
+10994 USA|TX PSJA Buell HS
+10995 USA|TX T-STEM FTC 1
+10996 USA|TX T-STEM FTC 2
+10998 USA|AK MechaLynx
+11000 USA|TX Rowe-botic Warriors
+11002 USA|UT Die Toaster, Die!
+11003 USA|NJ Cyber Blue
+11004 USA|TX Heartbreakers
+11009 USA|TX McHi Robodogs
+11013 USA|MI AHCS CouGears
+11014 USA|OR Chemawa Brave Bots
+11018 USA|TX RoBovine
+11019 USA|TX RRock^3
+11020 USA|FL Terminators
+11021 USA|MO Catalyst
+11025 USA|TX Taurus
+11026 USA|GA Rebel Robotics FTC
+11027 USA|PA NA First
+11030 USA|TX Metal Jackets
+11031 USA|MS BentonBots 2.0
+11033 USA|MS Team Avengers
+11034 USA|IN Cavemen Robotics
+11039 USA|CA Innov8rz
+11041 Czech Republic|106 FalconTech
+11042 Australia|QLD MalFunction
+11049 USA|IL Unstable Nucleus
+11054 USA|NM Brain Hackers
+11056 Israel|D The Y bot
+11062 USA|UT Cookienauts
+11063 USA|MT eNDVR
+11068 USA|TX KIPP Eaglebots
+11072 USA|IL Fe  ArSeNAl
+11073 USA|MO Brobotics
+11076 USA|RI Chariho Middle School
+11078 USA|UT Diet Water
+11079 USA|NE Nuts & Bolts
+11081 USA|KY ftcSPARC
+11083 USA|VT Quantum Ghosts
+11085 USA|TX MHS
+11087 USA|NY Curiobot
+11088 USA|NY STOBOR
+11089 USA|OR Bytes of Kitkats
+11090 USA|TX Chaos Monkeyz
+11091 USA|OH Reynoldsburg Robotics
+11092 USA|MO The Dark Side
+11093 USA|TX MegaKnytes
+11094 Canada|BC Canucks and Bolts
+11095 USA|OH Loose Screws
+11096 USA|GA East Cobb Robotics FTC 
+11097 USA|TX Cyber Surge
+11098 USA|MI Nuclear Norsemen
+11100 USA|MA We are Robo
+11101 USA|CA Team STEAM
+11102 USA|MO Team M.O.R.E. (Marshall Owls Robotics & Engineering)
+11103 USA|NH Tech Tonix
+11104 USA|WA Bearded Pineapples
+11108 USA|AR Bomb Squad: STEMinists
+11109 USA|WA Pirate Tekerz
+11112 USA|VA RoboLords
+11114 USA|IN Ultrasonic Scouts
+11115 USA|NH Gluten Free
+11117 USA|MN St. Paul Academy and Summit School
+11120 USA|WA CPR Eagles
+11121 USA|WA Fishy Business, Inc. (FBI)
+11123 USA|WA Fuzzy Logic
+11124 USA|NJ Angelbots
+11125 South Korea|49 BEARIER
+11127 USA|GA Whitefield Robotics
+11128 USA|CA Inspiration
+11129 USA|MI RoboTitans
+11130 USA|IN Kokomo RoboKats
+11132 USA|NJ HERD (High School Engineering Robotics Division)
+11134 USA|WA Szechuan Sauce
+11137 USA|MO E-Lemon-Ators
+11138 USA|WA Robo Eclipse
+11139 USA|IL Knight Owls
+11140 Mexico|SON TAES 
+11141 USA|GA Neon Nights Reload
+11142 USA|IA Robo Minions Rebooted
+11143 Australia|NSW Barker Orangebacks
+11144 Australia|NSW Barker Bluebacks
+11145 Australia|NSW Barker Greenbacks
+11146 Australia|NSW Barker Pinkbacks
+11147 Australia|NSW Barker FTC 6 2017
+11148 Australia|NSW Barker FTC 7 2017
+11149 USA|TX LAB RATS Robotics & Engineering
+11150 USA|MN Thunder PengWin Robotics Team
+11154 USA|PA Widener-Chester
+11155 USA|TX Clash of Coders
+11156 USA|TX Harlingen High School
+11157 USA|TX Harlingen High School South
+11158 USA|TX ECHS Robotics
+11159 USA|TX Dr. Abraham P Cano Freshman Academy
+11161 USA|TN Tennessee Robotics Club
+11163 USA|IL LadyTitans
+11164 USA|TX Electric Boogaloo
+11165 USA|HI O-Bots
+11166 USA|NJ Big Red Robotics
+11167 USA|CA Verdugo Hills High School Robotics
+11168 USA|AK The Quantum Mechanics
+11170 USA|OR Central Catholic High School
+11171 USA|TX Charge
+11172 USA|FL Bolles Bots Bartram
+11173 USA|NJ Hall of Pi
+11174 USA|CT mc² Robotics
+11175 USA|MN Providence Academy Lions
+11176 USA|MI Panthers
+11177 USA|IL Gear Grinders
+11179 USA|OK St. John Bosco Knights
+11180 USA|NJ Beaks n' Bolts Robotics
+11181 USA|MI Robo-Raptors
+11182 USA|CA Wolverines
+11183 USA|NV McQueen High School- 32 Bit
+11184 USA|NY Obsidian Fortress
+11185 USA|TX Robotic Revolution
+11186 USA|WA Mecha-Mules
+11187 USA|OH AZTECHS FTC
+11188 USA|CT Team NOVA
+11190 USA|MN MechaDojo
+11191 USA|MO Red Vectors
+11192 Israel|M Black Tigers
+11193 USA|MI Flying DutchBots
+11194 USA|NJ Ante-Bionics
+11195 USA|MS Envisioneers II
+11197 USA|MS Envisioneers III
+11198 USA|IN Ingene Intermediate Mechatronics 
+11199 USA|FL Forge
+11200 USA|LA Phenomena
+11201 USA|CA Piedmont Pioneers
+11203 USA|MO DuRT (DeSmet ultimate Robotics Team)
+11204 USA|FL Shark A-Tech
+11205 USA|NY Edgemont Robotics Club
+11206 USA|MN Ordean Devil Dogs
+11207 USA|IL Iron Panthers
+11208 USA|PA Kardia Robotics
+11209 USA|VA Code Crushing Griffins
+11210 USA|PA Infinity Robotechs
+11211 USA|OH Tiger Robotics
+11212 USA|CA The Clueless 
+11213 USA|CA Mustangs
+11214 USA|SC Ground Shakers
+11215 USA|MD TechBrick FTC 11215
+11216 USA|NY Buffering
+11219 USA|AZ Canyon State Techies
+11220 USA|LA Bayou Bots
+11221 USA|MS Boxcar Children
+11222 USA|IA TROJAN TERABYTES 
+11225 USA|KY DELTA Robotics (Louisville Collegiate School)
+11227 USA|TX Gears^5 Power
+11228 USA|MI Cityside Middle School 
+11230 USA|MI OMS ElektraKatz
+11231 USA|MI Cyborg Cats
+11232 USA|CA RoboRaptors 1 
+11233 USA|WA Charlie
+11234 USA|WA Chandra
+11235 USA|IL Retro Robotics
+11236 USA|NJ IbotBuilders
+11238 USA|NV STEAMERS
+11240 USA|OK Tech Terrorz
+11241 USA|NJ Blue Steel
+11242 USA|TX ERROR 451 - Unavailable for Legal Reasons
+11243 USA|TX KIPP Cyber Senators
+11244 USA|MI Thunderbots 
+11245 USA|NY Victor FTC Team 1
+11246 USA|NY Victor FTC Team 2
+11247 USA|TX Deady Middle School
+11248 USA|NJ //Cougars
+11249 USA|TX Mc Reynolds MS Mighty Bears
+11250 USA|TX Dragon Bots
+11251 USA|MA Lexington Legoheads
+11252 USA|IA RoboCats Black
+11253 USA|NJ Roxbotix Jr.
+11254 USA|MI Robo Rhinos
+11255 USA|OR TSAR
+11256 USA|CA Nano Nerds
+11257 USA|NJ Robotic Rockettes
+11258 Australia|NSW Barker FTC 3 2017
+11259 USA|AR Team ATOM 
+11260 USA|CO Up-A-Creek Robotics 
+11261 USA|WV Team S.T.R.A.N.G.E
+11262 USA|IN Patriot Bot 
+11263 USA|FL TechnoMancers
+11264 USA|SD Bots in Black 
+11265 USA|MD Astro-Tigers
+11266 USA|MI Black River
+11267 USA|TX Call of EON (Engineers of the New Age) Black ops III
+11268 USA|IA Atomic
+11269 USA|MS Titan Robotics
+11270 USA|MN FTC Athena
+11271 USA|IA RoboTux
+11272 USA|IN Faith Christian School
+11279 USA|MS Pure Imagination
+11281 USA|NY WCV Team FTC
+11282 USA|NH Founders Academy FTC
+11283 USA|IL Mmm...Java
+11285 USA|CA PATENT PENDING
+11288 USA|CA Seminerds
+11289 USA|IL Rochester Robocatz
+11290 USA|MN TAXI K.A.B.D
+11291 USA|TX Fe-males
+11294 USA|TX Trillbotic Colts
+11295 USA|CO Terror-bytes
+11296 USA|NM Airship Pirates
+11297 USA|NM Nerds Bots
+11298 USA|NM Iron Flower
+11299 USA|MN CrushBots
+11300 USA|NM Sarracino MS FTC
+11301 USA|MN Maranatha Christian Academy FTC 1
+11302 USA|OH Next Nova 
+11303 USA|MO Y Bridge 4H Robotics
+11304 USA|NJ Ridge Robotics
+11305 USA|MI Vallibots
+11306 USA|NJ Prototype G
+11307 USA|MI Laker Droids
+11308 USA|CO MindCrafters FTC - YISE
+11310 USA|CO Mesa Ridge Grizzlies
+11311 USA|CA Paragon
+11312 USA|TX JSTEM Lightning 11312
+11313 USA|CA UniqueHorns
+11316 USA|IA Weapons of Mass Construction
+11317 USA|MI Engineers
+11318 USA|MI Engineers Bravo
+11319 USA|PA La Salle Robotics BLUE
+11322 Australia|QLD Grace Ananas FTC
+11327 USA|TX TECH AVATARS
+11329 USA|IN ICE Robotics
+11330 USA|CO DR Robotics
+11332 USA|CA LASERS
+11333 USA|CA Samurai
+11334 USA|CA Alpha Tech
+11335 USA|CA Delta Tech
+11336 USA|CA Red Snow Robotics
+11337 USA|CA Robonauts
+11338 USA|TX JSTEM Lightning 11338
+11339 USA|TX Williams Warrior Robotics
+11340 USA|MI Iron Eagles
+11341 USA|TX ViBøts 
+11342 USA|AE Ramstein HS - #2 - Plethora O' Punctuation
+11343 USA|FL CDS Patriot Bots
+11344 USA|OK Merritt Oilers
+11347 USA|GA The CircuitRunners - Black
+11348 USA|OK Moore High School Lions
+11349 USA|PA McCaskey Robotics
+11350 USA|CA Sloth Slowbotics
+11351 USA|WI R^3B
+11353 USA|WI The Formal Emus
+11354 USA|OK The Midnight Ostrich Runners
+11356 USA|MI Robosonics
+11357 USA|MO CrusaderBots
+11358 USA|MA Silver Circuit
+11359 USA|MA SilverBots
+11360 USA|MI Space Unicorns
+11362 USA|WV M Cubed
+11363 USA|CA Silent Bot Deadly
+11364 USA|GA Eagle Robotics - Diamond Plate
+11365 USA|AZ Ticket To Paradise
+11366 USA|TX The Smarty Party
+11367 USA|MI Omegabots
+11369 USA|CO Widefield Gladiator
+11370 USA|CO Spartans
+11371 USA|CO Wolv-n-ators
+11372 USA|CO Janitell Jagwires
+11373 USA|IL PowerSurge 2.0
+11375 USA|MS Teen Tech
+11376 USA|OK Tuttle CyberTigers - Black
+11377 USA|AE Ankara Unit School
+11379 USA|CA PowerOp
+11380 USA|CA Golden Path
+11382 USA|IL D92 Vulcan
+11383 USA|GA Fortissimus
+11384 USA|IA FTC Thunderstruck
+11385 USA|CA Thee Wood Warriors
+11386 USA|CA Sentinel One
+11387 USA|CA iHexagon
+11388 USA|WA TechnoTurtles
+11390 USA|IA Not Fast, Just Furious
+11391 USA|IA Robotic Rails
+11392 USA|IL Defenestration
+11394 USA|MI PixelBotics
+11395 USA|IL Crystal Lake South Robotics
+11396 USA|NJ Eastern Christian Eaglebot
+11397 USA|OR  BBIT
+11398 USA|IN Wired Knights
+11399 USA|AZ Pascal's Pandas
+11401 USA|NY Girl Powered Robotics (GPR)
+11406 USA|AE Stuttgart HS Panthers
+11407 USA|AE Vilseck HS Falcons
+11409 USA|MN M.E.M.E. Mechanically Engineered Metal Enigma
+11410 USA|IL Perspectives Warriors
+11411 USA|CA Cherry Pi
+11412 USA|MN Green Stop Sign  Chisago Lakes Middle School
+11413 USA|MN Auto  Anonymous Chisago Lakes Middle School 
+11414 USA|WI Fondy Fire
+11417 USA|MN Static Screws
+11418 USA|IA CCA Middle
+11419 USA|TX Jasper Jaguar Robotics Team
+11422 USA|VA Tunstall Titans
+11424 USA|NC Thales Academy Centurions 
+11425 USA|TX Murphy Mavericks Robotics Team
+11426 USA|CA Knights
+11429 USA|FL The Mechanical Bulls
+11433 USA|GA Pataula Panthers Golden Gears Robotics Team
+11434 USA|FL JagWires
+11436 USA|NE Hall County
+11437 USA|OH Scotbot11437
+11438 USA|MI SAY Play Warriors 2
+11439 Israel|D SDEROT
+11440 USA|PA Ohmega
+11441 USA|OR Chronobreak
+11442 USA|OR Blackbird
+11444 USA|SC Garnet Squadron
+11446 USA|TX Tech Know Logic
+11447 USA|OR New NERDs on the Block
+11450 USA|NJ Dickinson Rams
+11451 USA|NJ Alphabots
+11452 Israel|M Chappie
+11453 USA|NY Uncertainty Principle
+11454 USA|SC Penguineers
+11455 USA|TX Gutierrez Jags
+11456 USA|NJ Blair Academy
+11457 USA|MO STARbots
+11459 USA|MN White Sabers
+11460 USA|MA Sliced Breadboards
+11461 USA|IL BOT Spot Robots
+11462 USA|IL Mechanical Muses
+11463 USA|IL Eisenhower High School
+11465 USA|FL Fort White Indibots
+11466 USA|CA Tino Voyagers
+11467 USA|CA tinorobotics2016A
+11468 USA|TN Baylor Robotics
+11469 USA|MS Piney Woods Robotics Team
+11470 USA|MO Jennings
+11471 USA|NV Codebusters
+11472 USA|TX Rice RavenClaw
+11473 USA|MA Oxford High School
+11475 USA|CA Teravoltz
+11477 USA|WA Four Eyes
+11478 USA|IA -cuberoot(-i pi)! 
+11479 USA|VA Orbital Robotics
+11480 USA|IA Hyperspeed
+11481 USA|IA da Vinci Robo Mentality
+11482 USA|NH MaverBITS
+11483 USA|IN Steel Spartans
+11484 USA|VA JMHS Robotics - French Toast Bunch
+11485 USA|OK Wyldcats
+11487 USA|WA Gibson Ek Robotics
+11488 USA|MN Solid
+11490 USA|WI Muffin Tanks
+11493 USA|PA The Upside Down
+11496 USA|IL MacArthur High School
+11497 USA|AK CHS Wolverines
+11499 USA|FL Pink Pelicans
+11500 USA|MD St. Mark Robotics
+11501 USA|MO White Vectors
+11503 USA|TX ViperBots HyperFang
+11504 USA|CA Xenon
+11505 Australia|QLD The Sea Team
+11506 Australia|QLD The Bee Team
+11513 USA|CA Guards 
+11514 USA|MO Nexus
+11517 USA|NY Digital Darlings
+11518 USA|GA The ATCEPA Robotics Team
+11519 USA|NM South Valley Preparatory
+11520 USA|MI Omegabots
+11523 USA|GA Mechanics In Black
+11524 USA|TX Team Name Wanted: Dead or Alive
+11525 USA|MD Minerva's Mechanics
+11526 USA|LA Dominican Valkyries 
+11528 USA|NC Bots of Prey
+11529 USA|AZ Navajo Code Writers
+11530 Israel|JM Hayovel
+11531 USA|MI Techno Trojans II
+11532 USA|FL Arghbots
+11533 USA|MD BRAINS
+11534 USA|MD Bot Brigade Quartic
+11536 USA|NH Derryfield School
+11537 USA|MO Blazing Comets
+11539 USA|MO Team Voltage
+11540 USA|PA La Salle Robotics GOLD
+11541 USA|WA Little Lost robot
+11542 USA|AL Fidget Widgets
+11543 USA|NC West Pine Wiredcats
+11545 USA|OR Dread Pirate Robots
+11546 USA|CA BWS Eaglets
+11547 USA|OR Talk Nerdy To Me
+11548 USA|CA MaD Robotics
+11549 USA|TX Rhomans
+11552 USA|MD tbd
+11553 USA|MD Indiana Drones
+11554 USA|PA Bot of Gold
+11555 USA|FL JEDI KNIGHTS
+11556 USA|OR Valley Catholic Robotics
+11559 USA|MI Flaming Pigeons - GR Montessori
+11561 USA|CO Mustangs
+11563 USA|TX Hedrick Garage
+11564 USA|CA Mechademics
+11565 USA|MN We Robot
+11566 USA|MN Tough Cookies
+11570 USA|WI Étude Engineers
+11572 USA|OK Mouse Spit
+11574 USA|NV Sonic Screwdrivers
+11575 USA|CA Robust Robots
+11576 USA|NM Zombies
+11580 USA|OH StemPunks
+11581 USA|MN FTC Ramhawks
+11582 USA|KY RoboCats
+11586 USA|MN Becker MS Discovery
+11587 USA|NM Starry Knights
+11588 USA|NC Deus Ex Machina
+11589 Canada|BC Fusion
+11590 USA|TX Akins RoboEagles!!!
+11591 USA|OR AEMBOT
+11594 USA|TX G.P.S.
+11595 USA|GA GA STEM Power
+11598 USA|AZ SFdA Saints
+11606 USA|LA Cubs
+11607 USA|NY HazMatrix
+11608 USA|MN Crimson Robotics Architects
+11609 USA|MN Crimson Robotics Team Bee Movie
+11612 USA|MN Crimson Robotics Team Catalyst
+11613 USA|MN Crimson Robotics Dandy Lions
+11614 USA|NC PCH Robo Patriots
+11615 USA|MN Pantherbots
+11616 USA|MI Wire-Catz
+11617 USA|MI Chelsea Glitch
+11618 USA|MI Chelsea Gremlins
+11619 USA|FL Rust In Pieces
+11621 USA|MN Light Speed
+11622 USA|NC Vikings Too!
+11624 USA|VA Robocats
+11625 USA|OR Clockwork Robotics
+11626 USA|PA K-9's
+11628 USA|FL Coding Hope
+11629 USA|TX Todoians
+11630 USA|VA C^2 Robotics - Carroll County High School
+11637 USA|MI Grease Wolves
+11639 Canada|AB OpCom
+11640 USA|TX Redstone Warriors
+11643 USA|CA Hercules Robotics
+11645 USA|TX Tigerbots
+11647 USA|IL GnomeBots
+11649 USA|NY Portledge Robo Time
+11650 USA|FL Tech-Tiger Robotics
+11653 USA|WY Super Terrific Engineering Maniacs
+11654 USA|UT Plus or Minos
+11656 USA|CA iKickBots
+11657 Australia|SA RoboVengers
+11659 USA|MO Wheaton Robodogs
+11660 USA|OR Rocket Robotics - Falcons
+11661 USA|UT Fort Defenders
+11663 USA|IL Mundelein Robotics
+11664 USA|WA OWS BotCatz
+11665 USA|NV Ravenclaw
+11666 USA|AZ Griffin Robotics
+11667 USA|MN We Robot 2
+11668 USA|MI STEAM Works
+11672 USA|PA Keith Valley Robo Hatters Red
+11673 USA|PA Keith Valley Robo Hatters Black
+11675 USA|TN HVA RoHAWKtics
+11676 USA|TX Lexan Pixies
+11677 USA|MN MURA FTC
+11678 USA|MO Arrow Flight 
+11681 USA|FL BANANAS
+11682 USA|NH Botman and Robo
+11683 USA|CA RoboKnights Too
+11684 USA|MO GSA Cardinals
+11685 USA|IL Talon Tech
+11686 USA|NC Mechanical Madness 
+11687 USA|RI Lincoln School
+11688 USA|CA Dads' Club Robotics
+11689 USA|CA We Love Pi
+11691 USA|MI Scripps Dragons
+11695 USA|MD tbd
+11697 USA|NJ Ro11botics697
+11698 USA|MS Lamar Christian
+11700 USA|VA AISeahorse
+11701 USA|AZ Elksplosion
+11702 USA|GA Sentinel Robotics
+11703 USA|OR Rough Cut Robotics
+11704 USA|MO Peanuts and Lightning Bolts
+11705 USA|MI JC Strong Bots
+11706 USA|FL Robots in Paradise
+11709 USA|NC Hairston Tsunami Surfers 
+11710 USA|FL RoboRaiders
+11711 USA|GA Tech Tigers
+11712 Canada|AB Aberhart Robotics Republic (Orange)
+11714 USA|MI Burr Oak BossCats
+11717 USA|MI Circuit Breakers
+11718 USA|VA Warren County Wildcats
+11719 USA|TX Iron Hook
+11720 USA|TX PUROBOTS
+11721 USA|IA Outlaws
+11722 Canada|AB Real Virtuality
+11723 USA|MA Canton GearHounds
+11724 USA|MN Black Widows
+11725 USA|MO Pharobots
+11727 USA|MI MLK Jr. Academy Neutrons
+11729 USA|MI Chelsea Crash
+11735 USA|MI Robo Toasters Blue
+11736 USA|CA RASCALS
+11737 Egypt|PTS Wise Gears
+11738 USA|MN Dragon Pie
+11739 USA|MI Cyborg Wolves
+11742 USA|TX Matbotz
+11744 Israel|Z Galileo
+11745 USA|TX Red Scare
+11750 USA|GA Bellatorum
+11752 USA|IL Orphan Bots
+11754 USA|NJ EnergySmart FTC
+11757 USA|MN Rebellious Robots
+11758 USA|MI ATA Inventors II
+11759 USA|MI ATA Inventors IV
+11760 USA|UT IndieGirls 11760
+11761 USA|TX Theory of Robotivity
+11767 USA|MI Meridian Jr. Mustangs
+11768 USA|MO N.E.O.N.
+11769 USA|MI Robotic Panthers
+11770 USA|CA Curiosity
+11771 USA|MO Allen Village School Robotics
+11772 USA|IL JAVATOMIC
+11773 USA|TX DOGPOUND
+11774 USA|FL Palatka High School Robo-Panthers
+11776 USA|TX Pyro Sharks
+11777 USA|NE Titanium Badgers
+11779 USA|NY AC Aces
+11780 USA|NH B.L.U.E Squared
+11781 USA|OH MVS Rambotics
+11782 USA|TX Robo Pirates - MUTINY
+11783 USA|MO The Mystery Machines
+11785 USA|MO Code 31
+11786 USA|MI 2PawsRoboticsJr
+11787 USA|WA SMART
+11791 USA|TX Marvin The Martian
+11792 USA|PA BotsBurgh
+11793 USA|TX TRICERABOTS
+11794 USA|AZ Sunrise Koolbotics
+11795 USA|IL ITW David Speer Academy 2
+11802 Australia|NSW Illuminuts
+11803 Israel|HA achva gilboa
+11804 USA|VA Señor Loadenstein
+11807 Chinese Taipei|CYQ CMS
+11811 USA|TX DDoS Robotics
+11812 USA|MN We Robot 3
+11813 USA|WA Thunderbots
+11814 USA|IN Tinker Tech
+11819 USA|MN Mad Machinists
+11821 USA|IL Voltage
+11822 USA|IL S.T.E.M. - Bulldogs
+11823 Israel|HA NightMare
+11824 USA|AZ Veritas Prep Robotics
+11825 USA|CA Graveyard Shift
+11826 USA|TX Bionic Sharks
+11827 USA|TX HoundBot
+11828 USA|WA White Salmon  Snakes
+11829 USA|LA CPA-Tech Challenge
+11830 USA|PA RarBots
+11831 USA|TX Blue Spark Robotics
+11833 USA|NJ Oasis Orbiters
+11834 USA|IA Norwegian Ninjas
+11835 USA|NJ Oasis Orions
+11837 USA|IN ZenoBots
+11838 USA|MN Robots of the Round Table
+11839 USA|MN Metal Melters
+11841 USA|SC STEAM Punks
+11842 USA|CA Cyber War Machines
+11843 Canada|BC Island Connect Ed
+11844 USA|MN Johnson's Jets
+11846 USA|MI Wayland Wildcat Cat-a-Tech-Nics
+11847 USA|OR Cascade Carbon Cyborgs
+11848 USA|IL Spare Parts Robotics
+11851 USA|MI East Grand Rapids Middle School
+11852 USA|ID High Voltage Rodeo Clowns
+11855 USA|MI Joe Bots - Blue
+11856 USA|IA ROBOTICATS
+11857 USA|GA Patriotrons
+11861 USA|MI Yooper Troopers
+11865 USA|WA Steel Hearts
+11866 USA|NH Gigabyte
+11867 USA|OK MNMS Stallions
+11870 USA|MI West Bloomfield Short Circuit
+11871 USA|NJ Voltron
+11872 USA|MN Visible Spectrum
+11873 USA|MN Parallax Shift
+11874 USA|KS Blue Valley CAPS  Metal Mavericks
+11875 USA|NY Pb Lead Heads
+11877 USA|CT Rock n' Robots
+11880 USA|IL Vertical Vectors
+11886 USA|MD Crossroads
+11888 USA|WA Rotag
+11890 USA|OR Reverse Polar-ity
+11891 USA|FL RoboStingers
+11892 USA|FL Hilliard High School Flashes
+11893 USA|FL Fernandina Beach High School Pirates
+11895 USA|CA South City Robodudes
+11897 USA|MO RoboFoxes
+11898 USA|CA Newark Memorial Robuckets
+11899 USA|MI Roboscouts
+11901 Israel|D Black Magic
+11903 USA|MN Happy Little Robots
+11904 USA|MN Likwid
+11905 USA|OR The Pack
+11907 USA|DE Newark Yellowjackets
+11908 USA|KS Gardner Edgerton Electric Kiwis
+11909 USA|OH Cuyahoga Falls High School Robotics Club
+11911 USA|TX JPS Falcons
+11912 USA|TX Stevens Falcons
+11913 USA|TX Bots and Boujee
+11915 USA|OH Dragons
+11917 Canada|AB Sting Robotics FTC
+11918 USA|TX Grizzly Bots
+11919 USA|TX Leopardrobo.1
+11920 USA|CA Quarry Lane Cougars
+11924 USA|TX Martin Robots
+11927 USA|OR Wired Wings Robotics
+11929 USA|MN Crimson Robotics Team Egg
+11930 USA|TX OB Robots
+11931 USA|IL Super Sonics
+11932 USA|MI Tech Dogs
+11933 USA|MI Lock Jaw
+11934 USA|TX Obama Robotics
+11935 USA|MN Nativity Circuit Sisters
+11936 USA|TX Tidehaven Junior High System Overload
+11938 USA|CA GPA Eagles Robotics Team
+11939 USA|TX Tidehaven High Okward Guys
+11940 USA|MI Coyote Constructinators
+11941 USA|MN Nativity NightHawks Blue
+11943 USA|NY The Nighthawks
+11944 USA|MT GFHS Thundering Herd
+11946 USA|CO A. Lincoln High School
+11948 USA|CO Abraham Lincoln HS - Team #2
+11949 USA|MN Team Tec Man
+11951 USA|NJ Team Eagle Tech
+11952 USA|MA RHS FTC
+11953 USA|MA DonkeyBotz
+11959 USA|IN Kernel Panic
+11965 USA|MO Steampunks
+11968 USA|NE Titan Robotics
+11969 USA|NC RoboFalcons
+11970 USA|WA Titanium Talons 
+11973 USA|ID Riverstone OtterBotix
+11974 USA|MI MooCrew
+11975 USA|NY South Lewis HS
+11976 USA|MA BrandoBots
+11979 USA|NY Falcon-Bots
+11980 USA|AZ Team Viper
+11981 USA|NY YOF-Team Hidary
+11985 USA|KY Whitefield Miss Calculation
+11986 USA|TX Bushland Robotics- Robo Alliance
+11987 USA|MI East Grand Rapids Middle School 
+11988 USA|NY Crusader Robotics
+11989 USA|MN Rosemount Middle Robotics 2
+11990 USA|WA Run_Kano
+11992 USA|IN Radioactivity
+11994 USA|OR Hand of Ultron 
+11995 USA|NY TACA
+11997 USA|NY Heights Techies
+11998 Australia|TAS Metal Minds Robotics Inc
+11999 USA|MI Wyoming Little Demons
+12000 USA|OR Split
+12003 USA|PA Roboneers
+12005 USA|WA GPrep Lightning
+12006 Canada|BC Royal Bay Robotics
+12007 USA|PA JayBorgs
+12009 USA|CA Terminal Ferocity
+12010 USA|NC ChargerBots
+12011 USA|NY InTigers
+12013 USA|OH RoboBacon
+12014 USA|IN The Fire Wires
+12017 USA|VA Lucille Murray Brown Middle School
+12018 USA|VA Henderson Middle School
+12019 USA|VA Boushall Middle School
+12023 USA|TX T-STEM FTC 3
+12024 USA|TX Harlingen School of Health Professions
+12027 USA|CA Space Cookies
+12028 USA|WA Xero
+12030 USA|FL Brain Storm
+12032 USA|TX RoboSpartans
+12033 USA|TX Circuit Breakers
+12034 USA|TX Euless RC
+12035 USA|CO Titan Technos
+12038 USA|IL Anonymous Hackers
+12039 USA|TX Defcon 1
+12043 USA|IN Power Surge
+12045 USA|MN Thunder Knights
+12047 USA|RI Iron Lions
+12048 USA|TX BoSCo SRRT Alpha (Search & Rescue Response Team)
+12049 USA|MN Iron Wolves
+12050 USA|OR Master Cats
+12051 USA|IL Not Not Nerds
+12053 USA|MO Tezmynenne Botz
+12054 USA|CA Spicy Meme Boys & Girls
+12056 USA|OH Aves Ablaze
+12057 USA|OR Artificial Unintelligence
+12058 USA|TX Artifactors
+12060 USA|TX Adelitas Robotics
+12061 USA|TX BUCCANEER ENGINEERS
+12063 USA|MD The Mandelbots
+12064 USA|WA Wildcats
+12067 USA|IL King Robotics - Mustangs 
+12068 USA|MI Order of the Phoenix
+12069 USA|WA Cataclysm
+12073 USA|CA The Trisectors
+12074 USA|OR Rocket Robotics - Dragons
+12075 USA|MI Menominee Jr High
+12076 USA|OR SUHS Robotics
+12077 USA|MO NRTCBOTS
+12080 USA|NC Viking Vortex
+12083 USA|IL Doodle Bots
+12084 USA|PA Really... Simple Machines
+12085 USA|MI Royal Oak Robotics Fighting Bulldogs
+12089 USA|WA Hypernova
+12090 USA|FL DEN IN BLACK
+12091 USA|IN Bermuda Bots
+12092 USA|IN Bravo Bots
+12093 USA|TX Hogbotics
+12094 Canada|AB Team TWOSE
+12095 USA|MI S.T.E.M Warriors
+12096 USA|VA Absolute Zero
+12099 USA|OH All Stars
+12100 USA|OH Independence HS
+12101 USA|MI Bangor Middle School
+12102 USA|FL Patriot Programmers
+12105 USA|CA Robonox
+12106 USA|TX LFC Robotics
+12109 USA|CA Retrofuturism
+12110 USA|OR Rocket Robotics - Titans
+12111 USA|MI Royal Oak Robotics Fighting Bulldogs
+12112 USA|MI GCMS Circuit Breakers
+12113 USA|MI Armadillo Pups
+12114 USA|MT Husky Power
+12115 USA|TX JECA RoboRaptors
+12116 USA|NJ Redbots
+12118 USA|MD GaCo North High
+12123 USA|CT Granby Grunts FTC
+12126 USA|TX Cedar Creek EagleBots 
+12128 USA|OR Sky View
+12129 USA|OR Pumabots
+12130 USA|IN Ravemen Robotics
+12132 USA|OR BioBotz2.0
+12134 USA|MD GaCo South High
+12135 USA|KS Finding Emo
+12136 USA|CA ICahn Robotics Society
+12139 USA|TX Mini Adamas
+12146 USA|WY HEM botics
+12147 USA|MA Shtark Industries
+12152 USA|IA Comets
+12153 USA|RI Jaguars
+12154 USA|UT Highland Hikers
+12155 USA|CO Roaring Fork High School STEM
+12156 Canada|BC Pacific School of Innovation and Inquiry
+12157 USA|TX SOC-Bot Robotics
+12158 USA|OH Mifflin HS
+12159 USA|UT TOO LEGIT TO QUIT
+12160 USA|UT NUCLEAR CORE
+12163 USA|NY Heuvelton Central School
+12164 USA|PA B.C Crusaders 2
+12166 USA|OH New Bremen Techno Birds (NBTB)
+12167 USA|TX FABOO
+12168 USA|IA Plainsmen Robotics
+12172 USA|TX Morris - Team B.O.B.
+12176 USA|IL LevelUP
+12178 USA|NY Artificial Intelligence
+12179 USA|OR Macrobots M1
+12180 USA|OR Dragoon
+12181 USA|MI Royal Oak Robotics Fighting Bulldogs
+12183 USA|MN Rockets
+12184 USA|MI RoboCreek
+12185 USA|CA Knight Time
+12186 USA|PA B.C. Crusaders 1
+12189 Chinese Taipei|CYQ CMS2
+12190 Chinese Taipei|CYQ CMS3
+12191 USA|WI WCRB Wild Cat Robot Beast
+12192 USA|WI The Gracious Professionals
+12193 USA|RI METrix
+12194 USA|NV Reedbotics G-Force
+12195 USA|MA Bellingham High School Blackhawks Robotics Club
+12197 USA|ID Foxfire
+12199 USA|CA The Spider Pigs
+12202 USA|TX Gaga for Robots
+12204 Canada|AB OJSH Robotics
+12211 USA|OH Trial & Error
+12212 USA|GA SpartaBots I
+12213 USA|GA SpartaBots II
+12215 USA|OR Curdeous Qbot
+12216 USA|OR The Doctors
+12217 USA|WA Timberline Trailblazers
+12219 USA|CT Electric Eagles
+12220 USA|TX Clout Bears
+12223 USA|IL MYTT SOUTHLAND ENGINEERS
+12224 USA|CA Blue Smoke
+12227 USA|TX BushBots
+12231 USA|IN WarriorTech
+12233 USA|IA Rails Robotic Legion
+12234 USA|AK StReAM Robotics
+12236 USA|TX Engineering Knights
+12237 USA|TX HyperBots
+12238 USA|TX LMS Scotties
+12239 USA|MT Matrix
+12240 USA|AK StReAM Team
+12241 USA|AZ Panther Robotics
+12245 USA|FL Cobalt
+12248 USA|TX Badgers
+12250 USA|MS Robotic Raiders
+12252 USA|OR North Santiam Robotics
+12254 USA|TX Superior Automated Machines
+12255 USA|MI Rudyard Steampunks
+12262 Australia|NSW Barker FTC 2 2017
+12263 Australia|NSW Barker FTC 8 2017
+12264 USA|TX πRate Brigade
+12265 Canada|AB GearHeads
+12266 USA|NY ADK P-TECH RoBEEtics
+12270 USA|NC Kennedy Klinklang
+12271 USA|NJ TechTron
+12272 USA|MS Tropical Storm
+12273 USA|FL Raiders of the Lost Parts
+12274 USA|TX Wunderlich Robotics
+12275 USA|NM High Country Robotics
+12277 USA|TX Hornet Robotics
+12281 Canada|BC Elgin Robotics
+12282 USA|NY SOF RC
+12285 USA|TX Droid Rage
+12286 USA|GA Warbots High School
+12294 USA|MI Shumate Firewall
+12296 USA|AK Robot STrEaM
+12297 USA|TX Raven Robotics
+12300 USA|IL RainbowPushBots
+12301 USA|NY MDQ  A - Team Kettle Cooked
+12302 USA|TX Synergy
+12303 USA|MI Hacker Hawks
+12305 USA|TX Gears of Thrones
+12306 USA|NY MDY Spare Parts
+12307 USA|TX (AB)^3
+12309 USA|NJ Wood-Ridge Spartans
+12310 USA|WI MKE Trojans 
+12313 USA|TX Argonauts
+12317 USA|MI Brave Bots
+12318 USA|TX Metal Problems
+12321 USA|TX PSJA North Raideretts
+12326 USA|MI W.I.M.A. Robotics
+12327 USA|MI Blue Devils Tech Team
+12328 USA|MS Carroll Academy Robotics 
+12330 USA|MI Eaglebots Green
+12331 USA|NY Robo Raiders
+12336 Canada|AB STEM Squad
+12337 USA|MI Rambler Robotics
+12338 USA|NM Mescalero Apache Chiefs
+12339 USA|TX Darth Cougarbots
+12340 USA|NE Quantum Linked
+12341 USA|SC Robot Techno
+12342 USA|MD Pallotti Robotics Team
+12343 USA|TX iBotics
+12347 USA|TX Flamin' Bots
+12349 USA|MS Queens of Parts
+12351 USA|UT Nuclear Minds
+12352 USA|MI All Saints Robotics 
+12353 USA|ID Technolots
+12354 Canada|BC Belmont Bytes
+12355 USA|PA Wyoming Seminary Robo-Knights
+12357 USA|UT Inconceivable
+12359 USA|TX Sharp Sharks
+12360 USA|TX Fossum RUSH
+12362 USA|MI Tractor Technicians in Training (Blue)
+12364 USA|TX Knightron-12364
+12365 USA|NJ MATES Robotics
+12366 USA|TX Greyhound Bot
+12369 USA|CO Wizards Robotics 12369
+12371 USA|ID Robotic Indians
+12372 USA|TX Rex De Leon
+12373 USA|TX Rowe-botic Problem
+12374 USA|AK Alchemy
+12375 USA|TX T^3
+12376 USA|UT WDTL
+12377 USA|CT Hopkins Robotics
+12378 USA|NY Dagaz
+12379 USA|MI Cyborg Seahawks
+12381 USA|MO Tiger_STEAM Black
+12382 USA|NY Syosset Sparks
+12384 USA|UT Checkmate
+12386 USA|CA BHS Team Blue
+12389 USA|MS Tupelo Middle School Robotics
+12390 USA|MS Lamar School
+12392 USA|TX Zeus
+12395 USA|TX Rattlers Robotics
+12398 USA|TX Bobcat Robotics
+12401 USA|TX Patriot Engineering
+12405 USA|CA Lost CTRL
+12406 USA|CA Indiana Drones
+12407 USA|TX Robotigers Alpha
+12408 USA|TX Robotigers Beta
+12409 USA|TX Robotigers Delta
+12410 USA|TX Robotigers Epsilon
+12414 USA|NY Indians Too
+12419 USA|IA Dubuque Stripped Servos
+12420 USA|GA Titanium Exploding Phoenixes
+12422 USA|NY Byting Bulldogs
+12425 USA|NY STEM Flowers
+12426 USA|CO In Zip Ties We Trust
+12427 USA|MO Bot of Steel
+12428 USA|NY Symbiosis 
+12429 USA|TX PSJA Southwest Robotics
+12430 USA|TX Wylie East Robotics Two
+12431 USA|TX Robodreams
+12432 USA|TX Pegasus
+12436 USA|TX Apache Pride
+12438 USA|WA UW STEMsub1
+12440 USA|MI Wilson Robotics
+12441 USA|NJ GearView
+12442 USA|MI Honey Creek Community School Techmaniacs
+12445 USA|NV Black Knights
+12446 USA|AZ Desert Pointe Academy Scorpions
+12447 USA|TX Patriot Engineering 2
+12448 USA|TX Patriot Engineering 3
+12449 USA|TX Patriot Engineering 8
+12450 USA|TX Patriot Engineering 4
+12451 USA|TX Patriot Engineering 5
+12452 USA|TX Patriot Engineering 6
+12453 USA|TX Patriot Engineering 7
+12454 USA|CA OVS RoboDragons
+12455 USA|PA Workshop
+12456 USA|TX Big Red
+12457 USA|GA Jefferson Dragonics
+12458 USA|TX NOSIDE 3
+12459 USA|MI Seahawk Demolition
+12460 USA|MI OW BEST ROYALS
+12461 USA|MI Mega Mustang Robotics
+12462 USA|NC Lejeune 1
+12463 Germany|BW KKST-2-RoboCats
+12464 USA|NY center moriches middle school 2
+12465 USA|MA RoboCats
+12466 USA|MI IDA MS LIGHTNING ENGINEERS
+12467 USA|MI Robo Potatos
+12468 USA|PA TheIncredibles
+12470 USA|TX NOSIDE 5
+12471 USA|TX NOSIDE 4
+12472 USA|TX NOSIDE 6
+12474 USA|CA BobaBots
+12475 Netherlands|NB Zwijsen Tech Team 1
+12478 USA|TX Team Meta-Mega
+12479 USA|GA Sutton Middle School Cougars
+12480 USA|MI Roadrunner Robotics
+12484 USA|VT Team Poutine
+12486 USA|TX Cathey Cobras
+12488 USA|NJ Raidiators
+12489 USA|TX BotKatz Squad
+12490 USA|TX RoboTerriers
+12491 USA|MI Raging Robots
+12492 USA|CA Blender Bots
+12494 USA|NH Southside Servers
+12499 USA|CA Gear Up
+12501 USA|RI The Wilbur Kids
+12502 USA|MI Wired Waffles
+12503 USA|TX POPBOTICS!
+12504 USA|MI Cadillac Cybernetics
+12505 USA|MI White Lake Middle School Bionic Warriors
+12506 USA|WA Rose Dragons
+12507 USA|WA MindHackers
+12508 USA|GA R.E.V. 10 
+12509 USA|VA HyperForce 
+12510 Israel|M Dark Unicorn
+12513 Canada|AB Les Scorpions
+12514 USA|SC Electron Interference
+12515 USA|UT AAI Titans
+12516 USA|CA TBD
+12517 USA|SC STEAM Rollers
+12518 USA|MD Almond Robotics
+12519 USA|MN Short Circuits
+12520 USA|MI Clifford H. Smart
+12522 USA|NY Augustine Classical Academy
+12525 USA|CA Wolf Corp
+12526 USA|OK Senoritas of Awesomeness
+12528 USA|MN NextGen
+12531 India|DL Team NeXT
+12533 USA|TX Inception
+12535 USA|OK Revolutionary Robots
+12536 USA|NH MPAL
+12538 USA|NJ eBorg Robotics
+12546 USA|TN Tusken Raiders
+12547 USA|WA Space Turtles
+12548 USA|MI Rebel Droids
+12549 USA|MI Robo Rebels
+12550 USA|MS MegaRoarRobotics
+12551 USA|IN Natural Disasters
+12553 USA|OH Air Guardians
+12554 Australia|NSW Hedge Hubs
+12555 USA|MN Farnsworth Eagles
+12556 USA|PA Apollo VI
+12557 USA|WA 404 Error
+12563 USA|TX Bots of Glory
+12564 USA|PA Technion
+12565 USA|MO The Blockheads
+12566 USA|MA AZTECHS
+12568 USA|AZ Vibrant Robotics
+12569 USA|OH STEMstangs
+12570 USA|CO 3CLIPSE 
+12572 USA|NY Halsey Bulldog
+12573 USA|CA Technnovators
+12575 USA|AL Future Leaders
+12576 Australia|QLD IGS
+12577 USA|TX Eastside Robotics 
+12578 USA|PA CWNC Robotics
+12580 USA|OR Dragons
+12581 USA|ID Heritage Academy FTC
+12583 USA|WA Pentacore
+12584 USA|NC Not Yet Determined
+12585 USA|FL BK Crusaders
+12586 USA|MN Maranatha Christian Academy FTC 2
+12587 USA|OH Newbury Black Knights
+12588 USA|KY RobotiCAL
+12589 USA|MA Pioneer Robotics
+12590 USA|KS STORM
+12591 USA|MN The MEME Team
+12592 USA|OR BanglaBots
+12593 USA|PA Yantrik
+12594 USA|WA W
+12595 USA|VA Powered by Push Ups
+12596 USA|TX ViperBots Copperhead
+12597 USA|TX LUMOS
+12598 USA|WA Green Jelly Beans
+12599 USA|OR Overcharged
+12600 USA|FL Hadron Knights
+12601 USA|NJ Robostorm
+12602 Thailand|50 PRINCE
+12603 USA|MI Jefferson Wired Wolves
+12604 USA|AZ Tiger Blue
+12605 USA|CA RSF Virtual Vipers
+12606 USA|IL TeeBeeDee
+12607 USA|CA Granite Ridge
+12608 USA|MO Northwest MO Bots
+12609 USA|MI BEEBOTS
+12610 USA|MN Sir Lancer Bots
+12611 USA|WA TechNova
+12612 USA|WA Singularity
+12613 USA|NY Touro College - High School Boys
+12614 USA|MO Robonauts
+12615 USA|WA Kicking Bolts Taking Gears
+12616 USA|AZ Mecha Knights
+12617 USA|MO MCC-Longview
+12618 USA|MO Early College Academy
+12619 USA|TX FTC Master Mechanics
+12620 USA|UT Dragonics
+12621 USA|OK Coleman Wildcats
+12622 USA|NH Red Spark
+12623 USA|CA Pathways Academy
+12624 USA|NY The Argonauts
+12625 USA|PA Mountain View High School
+12626 USA|TX Dynasty
+12627 USA|CA Quantum Qubits
+12628 USA|CA Fremont Hawk
+12629 USA|NY Stingbotics
+12630 China|32 HCC
+12631 USA|PA Animatronics
+12632 Romania|CJ Transilvania Robotix
+12635 USA|CA Kuriosity Robotics
+12636 USA|NJ IHA Robotics
+12637 USA|WA Meany Middle School Robotics Club
+12638 USA|AK Chugiak Mustangs Charlie Team
+12639 USA|AK Chugiak Mustangs Alpha Team
+12640 USA|AK Chugiak Mustangs Bravo Team
+12641 Mali|BKO African Panthers
+12642 USA|NY Tour College High School Girls Team
+12643 USA|MI Niles Nordic Nerds
+12644 USA|IL Morton Elements
+12645 USA|TX S.C.R.E.W. (Succeed - Conquer - Repeat Every Week) Ups
+12646 USA|MN Turquoise Turtles
+12647 USA|FL Krop Robotics
+12648 USA|AK Warrior Nation
+12649 USA|MN Code Blooded
+12650 USA|TX CANNOT COMPUTE
+12651 USA|AK Metal Knights
+12652 USA|TN The Flying Fish
+12653 USA|OH DRSS The Whovians
+12654 USA|TX Cano Freshman Academy
+12655 USA|VA North Cross Jagwires
+12656 USA|AK Loose Screwz
+12657 Canada|SK Arcola FTC
+12658 USA|MI Cybernetic Falcons
+12659 USA|MI Electro-falcons
+12660 USA|MN St Paul Academy and Summit School II
+12661 USA|TX Central Robotics
+12662 Canada|SK Radville FTC
+12663 Canada|SK Lampman FTC
+12664 USA|ME RougeBots
+12665 Nigeria|FC Crocs
+12666 USA|CA D39 RetroRobots
+12667 USA|MA Seawolves
+12668 USA|OH BlueJay Tech
+12669 USA|NH GUI ("Gooey") Gearheads
+12670 USA|TX Eclipse
+12671 USA|OR Cheesemakers
+12672 USA|VT 2B || !2B -> ?
+12673 USA|MI Riverside Academy Middle School
+12674 USA|AK Seward 
+12675 USA|CA Hermit Social Club
+12676 USA|NJ siSTEM.io
+12677 Canada|AB Elboya Robotics A
+12678 USA|MI Mattawan FTC RoboKats - MechaniKats
+12679 USA|IL Vulcan 2
+12680 Mexico|NLE Robotic Eagles
+12681 USA|IL 3rd Vulcan
+12682 USA|IL The Golden Ratio
+12683 USA|AR Rock City Robots
+12684 USA|CA Techtonic Gears
+12685 USA|MN S.H.O.T.
+12686 Canada|AB Elboya Robotics B
+12687 USA|GA Marist Cyber Eagles
+12688 USA|TX Bass Noise
+12689 USA|GA Marist Robiters
+12690 USA|TX Lost Cause 
+12691 USA|TX Robo Cards
+12692 USA|TN The Flying Pigs
+12693 USA|OR Jo Lane Team #1
+12694 USA|GA Marist #A
+12695 USA|OR Jo Lane Team #2
+12696 USA|TX Patriot Engineering 9
+12697 USA|TX Patriot Engineering 10
+12698 USA|WA Bow Tie Bandits
+12699 USA|SC Trailer-Blazers
+12701 USA|CT Spark Robotics
+12702 USA|MI Gaylord Girls Robotics
+12703 USA|TX IronPaw
+12704 USA|IL Blue Jay Builders
+12705 USA|TX Samuel Clemens High School
+12706 USA|TX Clemens High School Robotics
+12707 USA|TX Strike
+12708 USA|MA Robohawks
+12709 USA|TX System Overload
+12710 USA|TX Total Re-Paw
+12711 USA|TX Mac Attack
+12712 USA|TX Echo
+12713 USA|TX MacBots
+12714 USA|WY Bionic Bears
+12715 USA|FL Robo Tux Cats
+12716 USA|IN Dobots
+12717 USA|TX Lady Bird Johnson High School "Robotic Jaguars"
+12718 USA|MD Lion's Den
+12719 USA|MO Team Titanium
+12720 USA|MO Eagle Robotics - Armada
+12721 USA|OR Gears N Roses
+12722 USA|MI Northeast Middle School Team 2
+12723 USA|NE Omaha ARK
+12724 USA|NM BioHazard Robotics Detail (BHRD)
+12725 USA|TX Purple Chaos
+12726 USA|NJ Robostorm
+12727 USA|MT Metallic Melones
+12728 USA|CA Dominion
+12729 USA|MI BEEBOTS BLUE
+12730 USA|SC Flo~Bots
+12731 USA|FL Bulldog Robotics
+12732 USA|TX The Celtic Gearheads
+12733 USA|NC NUSA
+12734 USA|NJ Barnegat Bengals
+12735 USA|MN CAATS
+12736 USA|NY Electric Mayhem Green
+12737 USA|NY Electric Mayhem White
+12738 USA|WA Nerdy Girls
+12739 USA|FL Regressive
+12740 USA|MI Rebel Tech
+12741 USA|MI CITAGD FTC
+12742 USA|SC Green Charter RoboOwls
+12743 USA|GA Raider Makers
+12744 USA|ID Twin Falls High School
+12745 USA|IA Danville Team Harambe
+12746 USA|MI Delton Kellogg Middle School - Team C.A.T.
+12747 USA|VA Lancaster Circuit Breakers
+12748 USA|CA B1nary Drag0ns
+12749 USA|IL Brimfield Public Library
+12750 USA|RI Blue Wave
+12751 USA|MD Big Boab
+12752 USA|HI Hawaii School for the Deaf and the Blind Dolphins
+12753 USA|IA Interdimensional Robotics
+12754 USA|IA Wired Up
+12755 USA|GA KIPP WAYS Robotics Team
+12756 USA|MN The Legendaries
+12757 USA|MI North Park Montessori Nerds
+12758 USA|NH Derryfield Hungry Robots
+12759 USA|VA Madeira Robotics
+12760 USA|TX Brochachos
+12761 USA|MN Lake Middle Team 4
+12762 USA|GA Tech Titans
+12763 USA|CA The Rolling Bots 
+12764 USA|TX RoboViks
+12765 USA|CA Electric Dragons
+12766 USA|OK Wildcats
+12767 USA|AZ CMB: Catholic Master Builders
+12768 USA|OH INNOV-8
+12769 USA|GA Rebellion Engineering
+12770 USA|IN Need More Zip-Ties
+12771 USA|TX Channelview Techies
+12772 USA|TX Company-E
+12773 USA|MD Flamangos
+12774 USA|GA Organized Chaos
+12775 USA|MI Christ Connectors
+12776 USA|AK Fish Wheelers 
+12777 USA|NV Boulder City SuperBots
+12778 USA|CA The Golden Snake Smackers
+12779 USA|TX Husky Engineering & Robotics 1
+12780 USA|MN AMAL  LEADERS
+12781 USA|PA  FTC little town  robotics academy 
+12782 USA|TX Husky Engineering & Robotics 2
+12783 USA|IA Norwalk RoboWarriors
+12784 USA|PA  ftc little town christian robotics 
+12785 USA|TX Husky Engineering & Robotics 3
+12786 USA|TX Husky Engineering & Robotics 4
+12787 USA|VA foolS TEAM ahead
+12788 USA|WA Ultraviolet
+12789 USA|NH Hack-Gearz
+12790 USA|OK Cordell
+12791 USA|TX Junior Jags
+12792 USA|PA Sharon High Robotics Team
+12793 USA|MT Fort Benton Robo Tech
+12794 USA|OR Fremont 1
+12795 USA|OR Fremont 2
+12796 USA|TX Fifth Ward Enrichment
+12797 Israel|Z MEGIDDO LIONS
+12798 USA|TX Gateway Robotics
+12799 USA|MI The Detroit Leadership Academy Sentinels
+12800 USA|OR Echoes of the Future
+12801 USA|OR Echo Inc.
+12802 USA|OH We will Bot you
+12803 USA|NC Jr. Robo Gladiators
+12804 USA|CA LED
+12805 USA|MS CyberTribe
+12806 USA|NJ Roboken
+12807 USA|TX Screaming Yolks
+12808 USA|OR Revamped Robotics
+12809 USA|MD SharkBait
+12810 USA|TX QuantumX
+12811 USA|MI Masterminds
+12812 USA|TX LBJ Robotics
+12813 USA|MN Lake Middle Team #2
+12814 USA|CO Tech Terminators Junior
+12815 USA|NH Pi Heads
+12816 Netherlands|NB Zwijsen Tech Team 2
+12818 USA|IL Momence Machinists 
+12819 Netherlands|NB Zwijsen Tech Team 3
+12820 USA|TX Wagner TSTEM 1
+12821 USA|MI RoboSharks
+12822 USA|NY MDQ ACADEMY TEAM B
+12823 USA|CA Crescendo
+12824 USA|NY Tesla Empire
+12825 USA|TX Wildkat Robotiks
+12826 USA|MN Some Assembly Required
+12827 USA|FL Crazy Cat Ladies
+12828 USA|NC Critical Overload
+12829 USA|AZ ViperBots
+12830 USA|OH Scientific Touch
+12831 USA|OR The Crystal Skulls
+12832 USA|MI BEEBOTS WHITE
+12833 USA|NY Mechanical Meltdown
+12834 USA|MI BEEBOTS ORANGE
+12835 USA|IN Pixelated
+12836 USA|MI BEEBOTS BLACK
+12837 USA|MI BEEBOTS YELLOW
+12838 USA|VA Lancaster Robot Warriors
+12839 USA|GA Future Engineer 
+12840 USA|MO Pierce City High School
+12841 USA|AZ Plus +3 Robotics
+12842 USA|MO Grandview RII A
+12843 USA|TX Driscoll Rangers
+12844 USA|MO Grandview RII B
+12845 USA|MI FHPS METEORS
+12846 USA|TX Dynamic Gears
+12847 USA|VA ERA
+12848 USA|NJ Robonators
+12849 USA|TX Attucks MS
+12850 USA|CA TechnoStorms
+12851 USA|VA E.T Energized Techies
+12852 USA|OH Extreme Robotics
+12853 USA|NJ Robo Cavos
+12854 USA|LA HSplus
+12855 USA|VA Eukarya Lions
+12856 USA|AL Endeavor Steam Machines
+12857 USA|TX Phantom
+12858 USA|MS Blue Waves Robotics
+12859 USA|TX Humble MS
+12860 Australia|NSW The Tinkerers
+12861 USA|CA RoboHeroes
+12862 USA|MI Waldon Dragons
+12863 USA|IA Flourish & Bots
+12864 USA|GA Eclipse
+12865 USA|WA TechNoLogic
+12866 USA|NJ Cyber-Fins
+12867 USA|WA Eastmont Robotics - Team 2
+12868 USA|IL Ironclad
+12869 USA|CA Voyager 6+
+12870 USA|NY ScottieBots
+12871 USA|PA Keith Valley Robo Hatters Gray
+12872 USA|AK Crinkle Cut Fries
+12873 USA|MD S.T.E.A.M. Powered
+12874 USA|TX LOROTECH
+12875 USA|NJ Snyder Tigers
+12876 USA|MI East Hills Middle School intergalacTECH
+12877 USA|WA Amelia's Alicorns: Defenders of Technology
+12878 USA|WA Supernova Robotics
+12879 USA|NY Firebird Sprockets
+12880 USA|DE Razor Steel Robotics 
+12881 USA|LA Runnels Robotics
+12882 USA|VA Hypergaints
+12883 USA|TX Todoians 2
+12884 USA|AZ Bucephalus
+12885 USA|TX Golden Gears
+12886 USA|MN Breck School FTC
+12887 Mexico|CHH Devolt Phobos
+12888 USA|MD The Stingers
+12889 USA|AZ Wyverns
+12890 USA|MI Emerson  E.A.G.L.E.S.
+12891 USA|CO ROBO Warriors
+12892 USA|AZ White Mountain Robotics - Juggerbots
+12893 USA|KY Blue Lightning TECHbots
+12894 USA|WA Hexspeak
+12895 USA|MI HF_FTC__#2
+12896 USA|MO The LWA Eagles
+12897 USA|MA Newton's Law of Mass
+12898 USA|MN Papa Long Legs
+12899 USA|NY Bellport Clippers
+12900 USA|TX Schim Robotics
+12901 USA|AZ PROJECT:COBRA
+12902 USA|IL Inca Eaglebots
+12903 USA|IA Bulldog Robotics
+12904 USA|IL Olmec Eaglebots
+12905 USA|IL Aztec Eaglebots
+12906 USA|IL Mayan Eaglebots
+12907 USA|OR Piece of Pi
+12908 USA|MD The Mystical Rainbows
+12909 USA|CO FMS-Tech
+12910 USA|TX The Cybercats
+12911 USA|CO Yenyfer's Team
+12912 USA|MI Robo Kids
+12913 USA|IL DA Ex Bots
+12914 USA|HI The Eagles
+12915 USA|NY System Override
+12916 Mexico|CHH Devolt Deimos
+12917 USA|FL Error 404 
+12918 USA|IL Iron C.O.R.E.
+12919 USA|TX TechnoWarriors
+12920 USA|CA NanoGurus
+12921 USA|MI Magi Mechs
+12922 USA|MI The Livonia RoboRaptors
+12923 USA|CT Techno T-Rexes
+12924 USA|NY Iona Prep Gaels 
+12925 USA|TX Carpenter CowBOTS
+12926 USA|TX P@NTH∑R5 R0B0T1C5
+12927 USA|TX Shepton Robotics
+12928 USA|TX The Lightsaders
+12929 USA|TX Electric Lions
+12930 USA|TX Clark Robotics
+12931 USA|AZ The Legion
+12932 USA|NM Mescalero Apache Chiefs (2)
+12933 USA|TX Penguin Robotics
+12934 Australia|NSW AFC Logics
+12935 USA|TX FUTURE TECH
+12936 USA|TX Bear Wires
+12937 USA|MI Lake Shore Robotics
+12938 USA|MS Washington Generals' Robotics
+12939 USA|MI TBD Middle School
+12940 USA|TX ThunderBot Breakers
+12941 USA|WA Soleil
+12942 USA|CO Renaissance Secondary School
+12943 USA|MN Qbitz
+12944 USA|MI Innocademy 3
+12945 USA|IL cirCuiT breaKers
+12946 USA|MI Innocademy 2
+12947 USA|WA The Riot Crabs
+12948 USA|MI Innocademy 1
+12949 USA|WA Innovation 2
+12950 South Africa|GP Fifth Order
+12951 Australia|QLD ESKETIT
+12952 Australia|NSW rIGS
+12953 USA|VA Maroon Tide
+12954 USA|TX Inspectors
+12955 USA|MI Fire Sparks
+12956 USA|MA Lakerbots
+12957 USA|GA TGI TECH
+12958 USA|GA St Anne Pacelli Catholic School
+12959 USA|NE Electrogator Robotics
+12960 USA|FL Sickles High School
+12961 USA|GA Checkmate
+12962 USA|CA Zenith
+12963 USA|TX Manor Ram Robots
+12964 USA|MI Team Innovation
+12965 USA|LA College Track NOLA 
+12966 USA|WI Wilson Junior High FTC Team
+12967 USA|AK Kenny Lake 
+12968 USA|NJ Bard Robo-Raptors
+12969 USA|CO Peter
+12970 USA|NJ RoboSmart FTC
+12971 USA|IL Ctrl-Y
+12972 USA|NC TBCATITANSHS
+12973 USA|TX Reicher Robotics
+12974 USA|GA 57th Mechanized Brigade
+12975 USA|TX Top Dogs
+12976 USA|OK Tuttle CyberTigers - Red
+12977 USA|TX Rust In Peace
+12978 USA|TX CCHS Panther Robotics
+12979 USA|CA Gear Heads
+12980 USA|OR UVC FTC
+12981 USA|FL Rockobots
+12982 USA|IL RB High School 
+12983 USA|VA East End Robotics
+12984 USA|ID Devil Dogs
+12985 USA|CA B.A.R. Bay Area Robotics
+12986 USA|OK TSAS 
+12987 USA|WA Short Circuits
+12988 USA|FL Cambridge Lancers
+12991 USA|NV Awkward Silence
+12992 USA|TX The Vindicators
+12993 Australia|QLD RoboKings
+12994 USA|TN Oak Ridge Wonder Women
+12995 USA|GA SASH
+12996 USA|VA Vienna Speed Demons
+12997 USA|CA Cosmos
+12998 USA|ID Busted Bolts Robotics
+12999 USA|IA Union County 4-H FTC
+13000 Canada|AB Data Wolves
+13001 USA|FL Steam Knights
+13002 USA|MI Screaming Eagles
+13003 USA|ID Bot Rod Robotics
+13004 USA|AZ Techno Wildcats
+13005 USA|TX The Siege
+13006 USA|CT GRANBY GRUNTS FTC 2
+13007 USA|TX Tiger Team 3
+13008 USA|TX Tiger Team 2
+13009 USA|MI TechnoBots
+13010 USA|WI Baby Rams
+13011 USA|TX Team Designers Den
+13012 USA|LA DUTCHTOWN EAGLEBOTS
+13013 USA|UT SpectraTech
+13014 USA|NJ Falcon's Nest
+13015 USA|IA eLEMONators
+13016 USA|IA Jigabots
+13017 USA|LA Event Horizon
+13018 USA|MN The Wright Stuff
+13019 USA|MI Platinum Panthers
+13020 USA|OH Quantum Reapers
+13021 USA|MI Allegan Middle School Robotics
+13022 USA|CO Ridgeview Hoplites
+13023 USA|MO STEAMBOTS
+13024 USA|MI Tigers
+13025 USA|IL Beach Park Middle School
+13026 USA|MI R.U BOTS
+13027 USA|TX JSTEM FTC 2
+13028 USA|MI Cougar-Bots
+13029 USA|NY RoboSabers
+13030 USA|TX JSTEM FTC 1
+13031 USA|AZ Chi-squared-FTC Robotics
+13032 USA|MO Ant Colony
+13033 USA|WA Tenino HS
+13034 USA|KY Whitefield Rocks Robotics
+13035 USA|CA The Awesome Lady Argobot
+13036 Australia|QLD Gears
+13037 USA|AK Delta V
+13038 USA|VA Dragonbots
+13039 USA|VA Nuts & Volts
+13040 USA|NV Losee Lions
+13041 USA|MO Roboteer Cadets - Bravo Company
+13042 USA|AZ Arcadia Titan Robotics
+13043 USA|HI HTA Kauai
+13044 USA|HI Na 'Oahi o Kawaikini
+13045 USA|OK Caddo Bruins
+13046 USA|CA BugByte Robotics
+13047 USA|IL D.R.E.A.M Team:  The Fax Machines
+13048 USA|NJ Absolute Zero
+13049 USA|OK Prototypes
+13050 USA|CA Nueva Team
+13051 USA|MO Crossroads Current Robotics
+13052 USA|WA Techno Dawgs
+13053 USA|TX POLARIS
+13054 USA|MS Mechanical MasterMinds
+13055 USA|TX CV Bots
+13057 USA|FL GET SMART
+13058 USA|CO RG Dawson
+13059 USA|OK Charged w/Battery Too
+13060 USA|VA Capital-Bots
+13061 USA|MI Ann-Hua Robotics
+13062 USA|AR Cougar Pride
+13063 USA|IL PowerSurge - Flash
+13064 USA|NC Forbush High School
+13065 USA|NC Wolves
+13069 USA|TX Phoenix Builders
+13070 USA|NC SHS Rams
+13071 USA|VA Robo Wolves
+13072 USA|TX Fellowship of the Robot
+13073 USA|TX Brazoswood Robotics
+13074 USA|WA West Sound Academy
+13075 USA|TX Coram Deo Academy Robotics
+13076 USA|MN The Argonauts
+13077 USA|MD Hypersonic Robotics
+13078 USA|MI Holy Spirit Techrobotics
+13079 USA|WA OuterSpark Season 2
+13080 China|11 MechDancer
+13081 USA|HI Pueo Bots
+13082 USA|AZ Krazy Kangaroos
+13083 USA|HI Kauai High Red Raiders
+13084 USA|CA The Golden Gears
+13085 USA|IA Bionic Dutch
+13086 USA|HI RoboWarriors
+13087 USA|TX Teen Titans
+13088 USA|HI Cyber Saints
+13089 USA|CA E T Brigade
+13090 USA|MS Gadget Girlz
+13091 USA|UT Panther Power
+13092 USA|MO CHS Robotics
+13093 USA|FL Golden Fish
+13094 USA|MO Grandview RII D
+13095 USA|MO Grandview RII C
+13096 USA|SC Tech Waves of the Futrure
+13097 USA|TX KIPP Generations JagATrons
+13098 USA|TX Savage Servos
+13099 USA|AZ San Carlos BRAVES
+13100 USA|MD 47 Beavers
+13101 USA|CA M-A Bears: Team FS
+13102 USA|OH M.O.M.S.
+13103 USA|NJ Ironmen Robotics A
+13104 USA|MN Becker MS Endeavor
+13105 USA|NJ Ironmen Robotics B
+13106 USA|MI Walnut Creek Hawks
+13107 USA|TX Vanguard Academy 2
+13108 USA|TX Early College High School
+13109 USA|TX Vanguard Academy
+13110 USA|TX Southwest Robotics
+13111 USA|NJ Blue Bears Robotics
+13112 USA|NV Fantom-234
+13113 USA|OK Cardinal Robotics
+13114 USA|MO TSM FIRST Robotics Dreamers
+13115 USA|NJ Manalapan High School 
+13116 USA|CA i.am College Track BH
+13117 USA|CA Σ Installation Sigma
+13118 USA|MI IntelliGIMS Robotics
+13119 USA|OH TV Patriots
+13120 USA|WA Bulldogs
+13121 USA|FL State Barn
+13124 USA|NJ Clayton Middle School Robotics
+13125 USA|CA Brentwood Eaglebots
+13126 USA|LA Robo Knights
+13127 USA|TX RoboTigers
+13128 USA|TX Crusaders
+13129 USA|TX PEARadigm Shift
+13130 USA|MS Piney Woods Robotics
+13131 USA|RI Blackstone Bulldogs
+13132 USA|MO Miner Clue
+13133 USA|TX Wildcats
+13134 USA|OR W.H.A.T.?!
+13135 USA|NV Team Flash
+13136 USA|NC CDS Lions
+13137 USA|CA REWORK
+13138 USA|MI Mavericks
+13139 USA|MS Exotic Robotics
+13140 USA|TX The P-51 Mustangs: Team Imagine
+13141 USA|TX The P-51 Mustangs: Team Innovate
+13142 USA|TX The P-51 Mustangs: Team Inspire
+13143 USA|FL Warrior Machine
+13144 USA|CA PHS Falcons
+13145 USA|CA Circuit Breakers
+13146 Israel|TA Makers Assemble
+13147 USA|WA Blazer Bots
+13148 USA|WY Dell's Angels
+13150 USA|MI Cyborg Wolves
+13151 USA|IA Creative Adventure Lab
+13152 USA|AE Netzaberg MS (FTC)
+13153 USA|CA Marvin's Minions
+13154 USA|TN Robo Gladiators
+13155 USA|IL T-Bots 
+13156 USA|CO Robo11
+13157 USA|MI Steel Falcons
+13158 USA|NV Atomic Quails 
+13160 USA|MS  GMS GAT-HERS
+13161 USA|KS Westridge Robotics Club
+13162 USA|CA Apollo
+13163 USA|OH Wildcat Robotics
+13164 USA|ID STEM 94
+13165 USA|MA Firestorm Robotics
+13166 USA|AR Explorabots
+13167 USA|MA Blizzard Bots
+13168 USA|MI Engadine Engineers B
+13169 USA|NV Robo Colts
+13170 USA|OR System Overload(Robo Rink)
+13171 USA|CA Brain Builders
+13172 USA|OH Matrix
+13173 USA|MI Engadine Engineers A
+13174 USA|OR The Automatons
+13175 USA|TX Falco Ex Machina
+13176 USA|MS Spark-O-Matic Robotics
+13177 USA|OR Glyph Gladiators
+13178 USA|SD Roncalli Robo-Cavs
+13179 USA|IL Wilmington Wildcats
+13180 USA|CA Robo Sapiens
+13181 USA|RI Roboat-icists
+13182 USA|WI Lab29
+13183 USA|IN Zebrabots Middle
+13184 USA|CA Radiating Robots
+13185 USA|CA Battle Sheep
+13186 USA|IA Killer Ducks
+13187 USA|TX Raw Material
+13188 USA|OR RHS Robotics #2
+13189 USA|OR RHS Robotics #1
+13190 USA|CA Roblivion
+13191 USA|NJ Friends In Need Childrens Center (FINCC) Team FIRST
+13192 USA|MI RoboAbes
+13193 USA|IL Cary - Grove High School Robotics Club
+13194 USA|TX Advanced Learning Academy
+13195 USA|FL BASAbots
+13196 USA|SC Beaufort Academy Robotics
+13197 USA|IL T.E.S.L.A.S (Tomorrow's Engineers & Scientists Learning About STEM)
+13198 USA|GA Lilburn Mustangs
+13199 USA|MI St. John 
+13200 USA|CA MINDCRAFTERS
+13201 USA|WI Team Hazmat
+13202 USA|CA Helios
+13203 USA|FL Seacoast Robotics
+13204 USA|IL Rush University FTC Robotics
+13205 USA|AK The Bot Bros.
+13206 USA|IA Wave Droids
+13207 USA|GA Radloff Raiders
+13208 USA|IA CCAMS Rudders 2.0
+13209 Australia|NSW The Grease Mankeys
+13211 USA|WA Rogue One Robotics
+13212 USA|NY Alden Knights
+13213 USA|TX Psi-fighters
+13214 USA|NY Victor FTC Team 3
+13215 USA|CA Bracket Sources, Team #13215
+13216 USA|CA Deja Vu, Team #13216
+13217 USA|CA Avocoders, Team #13217
+13218 USA|CA Orca Ninjas, Team #13218
+13219 USA|CA X-cavators, Team #13219
+13220 USA|CA The Architechs, Team #13220
+13221 USA|CA Gophor Robotics, Team #13221
+13222 USA|MI Green Mustaches
+13223 USA|CA Lime Loops, Team #13223
+13224 USA|CA Face The Challenge
+13225 USA|OR Rust in Pieces
+13226 USA|MN Sage Gauge
+13227 USA|TX Mechanicats
+13228 USA|CA Cyberscots
+13229 USA|CA CougarCoders
+13230 USA|CA TogaTech
+13231 USA|TX Kennedy FTC Robotics
+13232 USA|CA Blood, Sweat & Tears
+13233 USA|FL Robo-Panthers Two
+13234 USA|NY Longwood CSD Jr High FTC
+13235 USA|NY Longwood CSD FTC
+13236 USA|OR Sutherlin High School Robotics
+13237 Israel|M tapuah paies baqa
+13239 USA|PA Hill-Freedman World Academy
+13240 USA|PA Swenson Robotics
+13241 USA|OH Pericula Pantherae
+13242 USA|OR Northwest Academy
+13243 USA|MN Confidential Robotics
+13244 USA|IA Riverside Bulldogs
+13245 USA|GA Arcturus 
+13246 USA|IN CyberCards
+13247 USA|MN Schrodinger's Bot
+13248 USA|AR Jaguars
+13249 USA|TX Hot Bots Black
+13250 USA|MI LavaBots
+13251 USA|CT Canterbury School
+13252 USA|CA Granite Ridge 
+13253 USA|CA Mad Bots
+13254 USA|MN MSA FTC 1
+13255 USA|OR CyberPirates
+13256 USA|CA Mechanika
+13257 USA|OR RoboPirates 
+13258 Australia|QLD Suncoast Seniors
+13259 USA|IL Achilles  Wheel
+13260 USA|CO Robo Rebels Chrome
+13261 USA|UT Mountain Ridge Huskies 1
+13262 USA|CO Robo Rebels Gold
+13263 USA|TX Midland Christian Robotics Club
+13264 USA|CO BENGAL-Tech
+13265 USA|TX The Bionics
+13266 USA|TX Droid Rage
+13267 USA|FL Dillard Robotics
+13268 USA|DE Razor Steel Robotics 2
+13269 USA|TX Nano-Knights
+13270 USA|MD McDonogh Robotics
+13271 USA|CO COWBOY ROBOTICS
+13272 USA|WA BNL
+13273 USA|CA MilkenKnightsMS1
+13274 USA|CA Longhorn Robotics
+13275 USA|AE Brussels HS Brigands
+13276 USA|CA MilkenKnightsMS3
+13277 USA|CA STEAMpunks Bravo
+13278 USA|GA Titans
+13279 USA|AE Lakenheath HS Strike Eagles
+13280 USA|CO Wizards Robotics 13280
+13281 USA|CA MilkenKnightsMS2
+13282 USA|AE AFNORTH HS Lions
+13283 USA|OR Short Circuits
+13284 USA|MI SnowBots Silver
+13285 USA|TX Raiderbotz
+13286 USA|AE SHAPE HS Spartans
+13287 USA|CA Sandstorm
+13288 USA|AR The New School Cougars
+13289 USA|NC Burns Middle Team 2
+13290 USA|NJ The Whirlwinds - Storm Robotics Team
+13291 USA|NC Crest Middle Team 2
+13292 USA|MN Au Pirates, Team A
+13293 USA|NJ PRowlers
+13294 USA|GA Robo Geeks
+13295 USA|IN Red Alert: Disaster Management
+13296 USA|IL Ti-Gears
+13297 USA|CA Jubilate Academy
+13298 USA|MI AuGres Techbots
+13299 USA|MN Armored Goats
+13300 USA|MI Radiation Kings
+13301 USA|IA Non competitive team 1
+13302 USA|NJ Java the Hutt
+13303 USA|CA Spartan Tartans
+13304 USA|AR Hot Springs Trojans
+13305 USA|MI Eaglebots White
+13306 USA|MO St. Pius X High School
+13307 USA|IA Central Noncompetitive 2
+13308 USA|IA Non competitive team 2
+13309 USA|AZ ITSA botCatz
+13310 USA|IL Midland FTC
+13311 Canada|ON Studica Blues
+13312 USA|MO BuRobotics
+13313 USA|CA Mission ONE
+13314 USA|IA Central Noncompetitive 4
+13315 USA|SC The Archers 
+13316 USA|NJ The MidKnight Owls
+13317 USA|AK Kerbal Engineers
+13318 USA|TX Cathey Robotics
+13319 USA|IA West Non Competitive 4 America's Bot Talent--13319
+13320 USA|IA West Non-Competitive team 1--Pickle--13320
+13321 USA|IA West Non-Competitive Team 2--Diamond Bots--13321
+13322 USA|IA West Team 1
+13323 USA|IA West Team 2
+13324 USA|IA West Non-Competitive 3--Another 1--13324
+13325 USA|OH Smart Cookies
+13326 USA|CA M-A Bears: Soda Squad
+13327 USA|MO Error_404
+13328 USA|CA M-A Bears: Team MIB
+13329 USA|TX Cedar Creek EagleBots 2
+13330 USA|WA Pulsar
+13331 USA|VA TechiePanthers
+13332 USA|OH Fantastic 3
+13333 USA|MI Shrine Roboknights
+13334 USA|NY Spence US Robotics
+13335 USA|MI Cardinal Nation
+13336 USA|PA Martians
+13337 USA|MO OJH /rōˈbädiks/
+13338 USA|AE Naples MHS FTC
+13339 USA|VA Underground
+13340 USA|AE Rota HS FTC
+13341 USA|WA TEAM ADRENALINE
+13342 USA|TX Bowie Botdawgs
+13343 USA|OK Glitch
+13344 USA|VA Motorollaz
+13345 USA|CA Polaris
+13346 USA|VA Salvation Army Boys & Girls Club
+13347 USA|PA Project Home Robotics Team
+13348 USA|TX Tribe Tech FTC
+13349 USA|VA Innovators
+13350 USA|WA 42 Sky Whales
+13351 USA|NY NYCF - LIC
+13352 USA|IA Rosie's Riveters 
+13353 USA|VA Circuit Breakers
+13354 USA|WA Asterix
+13355 USA|NJ Raidiators II
+13356 USA|CA Robo Tech Inc.
+13357 USA|NY Indian River Central School
+13358 USA|NY Gouverneur Central School FTC 2
+13359 USA|NY Brasher Falls Central School
+13360 USA|NY Franklin Academy
+13361 USA|NY Norwood Norfolk Central School
+13362 USA|NY Massena Junior High School
+13363 USA|NY Alexandria Central School
+13364 USA|NY General Brown Central School
+13365 USA|IL Gearheads #13365 FTC Team
+13366 USA|NY Canton Central School-Cybears
+13367 USA|NY NYCF - ET
+13368 USA|NY NYCF - TYWLS
+13369 USA|OH Dread Pirate Robots
+13370 USA|NY OFA Robotics
+13371 USA|NY Potsdam Central Central
+13372 USA|NY NYCF - MCSM
+13373 USA|TX TOXICBOTS
+13374 USA|MN Like Clockwork
+13375 USA|NY Great Neck North HS Robotics
+13376 USA|TX Cyber Wolves
+13377 USA|IN Blackout
+13378 USA|PA Robocats
+13379 Mexico|DIF Silver Fang Robotics
+13380 USA|CA Quantum Stinger
+13381 USA|MD Invasion Equation
+13382 USA|NY Maxwell Valkyries
+13383 USA|CA Nazareth Eagles 2.0
+13384 USA|MD MS FTC TEAM
+13385 USA|GA Sowega STEMbots
+13386 Canada|AB Team Jasmine
+13387 USA|MO Belton Cyber Pirates
+13388 USA|TX Cornerstone Christian Schools
+13389 USA|MD Mallard Robotics
+13390 USA|TX The Dream Machine
+13391 USA|TX The Hexinators
+13392 USA|TX Party Penguin Disco Panda
+13393 USA|OK DoveBots
+13394 USA|TX Optimus Primates
+13395 USA|MO Belton Cyber Pirates 
+13396 USA|MN Lincoln Eagles
+13397 USA|GA A.I.R.Robotics Inc.
+13398 USA|TX Cyberdawgs
+13399 USA|MO Belton Cyber Pirates
+13400 USA|TX BOT\HEADZ
+13401 USA|IN System Overload
+13402 USA|IN The Scrub Squad
+13403 USA|IN Castle Dragon Robotics
+13404 USA|AZ Pathway Pumas Robotics
+13405 USA|MD GaCo North Middle 2
+13406 USA|MA PlasticGears
+13407 USA|TX Botqueros
+13408 USA|VA LCD-Lucrative Computing Designers
+13409 USA|MI Saranac Robotics FTC
+13410 USA|TX Lady Botqueros
+13411 USA|WA Robo-tbd
+13412 USA|MI Wyoming Wheel Raptors
+13413 USA|IL Null Pointer Exceptions
+13414 USA|IN Crew 272
+13415 USA|IA Electric Storm
+13416 USA|IA JagRobotics
+13417 USA|MI Circuit Rush
+13418 USA|UT Mountain Ridge Huskies 3
+13419 USA|MI SWATT
+13420 USA|CO GVHS
+13421 USA|UT Mountain Ridge Huskies 2
+13422 USA|MO C*O*D*E*C Cougars
+13423 USA|MN MSA FTC 3
+13424 USA|WA North Creek High School-Purple
+13425 USA|IA Regis Royals 2.0
+13426 USA|NE Caffeinated Robots
+13427 USA|MI Legg Middle School
+13428 USA|IN Squires Robotics
+13429 USA|TX Cypress Christian RoboWarriors
+13430 USA|VA RVGS ELITE
+13431 USA|NM PVHS Elktronics
+13432 USA|MS Tupelo Wavebots #2
+13433 USA|OH Marburn Academy Panther Bots
+13434 USA|IL D.R.E.A.M Team Epsilon
+13435 USA|MO Tiger_STEAM Gold
+13436 USA|TX Rowebotic Legends
+13437 Canada|AB Manning Robotics
+13438 USA|OR The RobOTTERS 
+13439 USA|OR The Atomic Paperclips
+13440 USA|WY Roguebots
+13441 USA|VA Slice of Pi
+13442 USA|AL Motorized Mayhem
+13443 USA|MD Fredrick Douglass HS
+13444 USA|MA SCOUTZ
+13445 USA|VA Exceed
+13446 USA|MA POSITRONS
+13447 USA|VA Spammers
+13448 USA|MA NU-TRINOS
+13449 USA|MA BaileyBots
+13450 USA|MI St. Peter's Digital Dragons
+13451 USA|GA Oceanus
+13455 USA|MI Holmes Huskies
+13456 USA|LA Enigmatic Technomancers
+13457 USA|TX Vanguard FTC 3
+13458 Canada|AB FTC Team
+13459 Canada|BC Gear Girls
+13460 USA|IA Phantastix Phoenixes
+13461 USA|WA Robot Bantam
+13462 USA|MI Digital Owls
+13463 USA|MD Wilde Cats
+13464 Canada|BC Fission
+13465 USA|MT Panthers Robotics
+13466 USA|TX Gwama Robotics
+13467 USA|DE Lyrics and Logic
+13468 USA|AK Akula Foxbots
+13469 USA|MI SASA Vortices
+13470 USA|TX The Metalling Kids
+13471 USA|MN Minnetonka FTC
+13472 USA|TX Young Women's Leadership Academy
+13473 USA|FL Advent Robotics Team Voltage
+13474 USA|PA Mars
+13475 USA|NY Lionotics_2
+13476 USA|NJ WAG-A-Long
+13477 USA|MA Nanobotics
+13478 USA|WY Happy Jack Jackalopes
+13479 Canada|AB Xplorobotics
+13480 USA|WA Oly Guacamole
+13481 USA|WA Polar Bears
+13482 USA|NC Lakeshore Middle
+13483 USA|IA Game of Drones
+13484 USA|WA Error 13484
+13485 USA|WA Unbearable
+13486 USA|MN Flyer Robotics
+13487 USA|WA RoboMind
+13488 USA|IL DePaul College Prep Rams
+13489 USA|TX Alcuin Hawks
+13490 USA|KS YRT
+13491 USA|MT Magic City Mechanics
+13492 USA|AR The Order of the Phoenix
+13493 USA|OK spitfire
+13494 USA|VA Twin Valley High Robotics
+13495 USA|VA Hurley High Robotics
+13496 USA|IL Lady Mustang Robotics
+13497 USA|IA Path Finders
+13498 USA|MO Central Bionic Knights
+13499 USA|NJ Maelstrom
+13500 USA|VA Creators
+13501 Canada|AB LES BOUCS
+13502 USA|WA Spartabots
+13503 USA|MD Robocrew
+13504 USA|TN ROBO SNAKS
+13505 Canada|BC ROBO
+13506 Canada|AB OLS
+13507 USA|NH The Light Brigade
+13508 USA|NY LISG TECH TEAM
+13509 USA|TX LOROTECH
+13510 USA|NY MUCC Technicians OP
+13511 USA|TX Event Horizon
+13512 USA|TX The ROBO-RANGERS
+13513 USA|MI Rangears
+13514 USA|TX Big Bang
+13515 USA|WV The East Hardy High School Nerdz
+13516 USA|TX CyberCavs #2
+13517 USA|AZ Show Low Robotics
+13518 USA|MI DEAW Eagle Force
+13519 USA|TX CyberCavs
+13520 USA|VA Terabyte
+13521 USA|TX MetalHawks-Alpha
+13522 USA|TX MetalHawks-Bravo
+13523 USA|TX Lady ROBO-RANGERS
+13524 USA|TX Patriotics Robotics
+13525 USA|AR CircuitBreakers
+13526 USA|IL Royal Robots
+13527 USA|MI Lakeshore Middle School 2
+13528 USA|WA N/A
+13529 USA|MN North Minneapolis Robotics
+13530 USA|IL Andrewoids
+13531 Mexico|NLE Botbusters
+13532 USA|IA EagleBots
+13533 USA|MI Tech BraveBots
+13534 USA|MA Robots in Plaid
+13535 USA|PA Brainbots
+13536 USA|UT Raspado Robotics
+13537 USA|TX RoboChargers FTC Temp3
+13538 USA|OK Bishop McGuinness 1
+13539 USA|TX RoboChargers FTC Temp4
+13540 USA|RI Mt. Pleasant Robotics
+13541 USA|ME Hebron Lumberjacks
+13542 USA|TX RoboCharger FTC Temp2
+13543 USA|CA LMS Flyers
+13544 USA|VA Warwick Wyverns
+13545 USA|NJ Pre-College Consortium at NJIT
+13546 USA|MN Metalmorphosis
+13547 USA|MI E=mc2 Eagles
+13548 USA|GA Cougars
+13549 Canada|BC EMCS Robotics
+13550 USA|MI Milan Robotics 13550
+13551 USA|TX Road Runner Robotics
+13552 USA|TX RoboChargers FTC Temp1
+13553 USA|MN Nativity 7th Grade 
+13554 USA|MI NC GEARS
+13555 USA|GA Jagbots 2
+13556 USA|MN Orange Rush FTC
+13557 USA|MN Nativity 7th Grade Blue
+13558 USA|TX Rams Robotics
+13559 USA|WA Risdon Robotics
+13560 USA|OR Robro's
+13561 USA|OR Super Cougars
+13562 USA|TX Autocats
+13563 USA|MI Rocking Robots
+13564 USA|MO STEAM Robotics
+13565 USA|OR Echo's Anonymous
+13566 USA|KY BGH FIRST Galvanizers 
+13567 USA|WA GetKraken
+13568 USA|KY BGH FIRST Voyagers
+13569 USA|VA Q
+13570 USA|MI Electro Stangs
+13572 USA|ID Wolves
+13573 USA|OR roboRaptors
+13574 USA|NY M8trix
+13575 USA|FL HorsePower
+13576 USA|MN Robo Llamas
+13577 Canada|AB Meme Team
+13578 USA|ND Kick Back & Tech
+13579 USA|MN Vert Alert
+13580 USA|TX Tech Serpents
+13581 USA|TX Fang Gang
+13582 USA|TX Optimus Primates
+13583 USA|NJ RoboChicks
+13584 USA|TX X Reckless Robotics 
+13585 USA|NY Garage Mechanics
+13586 USA|TX Adders
+13587 USA|VA Troop of Techie Turtles
+13588 USA|TX Rattlerbots
+13589 USA|IL Aperture Engineering
+13590 USA|TX Viperstrike
+13591 USA|IL Voy
+13592 USA|NJ Metal Pieces
+13593 USA|GA Scorpius Robotics
+13594 USA|IL Sherrard HS STEM
+13595 USA|TX Tech Knights
+13596 USA|TX The Falconeers
+13597 USA|NC Valley Academy Innovators
+13598 USA|MI Mobots
+13599 USA|VA BruinBots
+13600 USA|FL Crestview High School
+13601 USA|WA WHS Robotics
+13602 USA|AK Arctic Gears
+13603 USA|MN LSHS #1
+13604 USA|AZ Alumi-nati
+13605 USA|MN College-Grade Ramen Noodles
+13606 USA|MO St. Vincent Indians
+13607 USA|MD RoboCavs Bronze
+13608 USA|MD RoboCavs Diamond
+13609 USA|NC The New Generation
+13610 USA|TX Team Liberty 
+13611 USA|TX cyber knights
+13612 USA|TX RYMS Cyborgs Max
+13613 USA|TX Brown Robies
+13614 USA|NJ Wally Watt
+13615 USA|NJ RoboRams
+13616 USA|MO Catalyst Red 
+13617 USA|NJ Bectobots
+13618 USA|NJ Barringer Arts High School
+13619 USA|NJ Technology High School
+13620 USA|MA The Winsor Wildbots
+13621 USA|VA Wind-Up Warriors
+13622 USA|OR Douglas High School Robotics team
+13623 USA|MN Iron Tacos
+13624 USA|FL System Overload
+13625 USA|WI Powder Puff Robotics
+13626 Australia|QLD Hasting Deering QASMT 1
+13627 USA|MI DigiMinds 2.0
+13628 USA|LA Green Machine
+13629 USA|TX Lady Hogbotics
+13630 USA|WI Cyber-Lions
+13631 USA|SC Timberland War Wolves
+13632 USA|NV Grizzlies
+13634 USA|NY WEALTHY-MINDED
+13635 USA|NY Genesis
+13636 USA|NY Brooklyn STEAM Center 5
+13637 USA|NY Brooklyn STEAM Center 4
+13638 USA|MN Au Pirates, Team U
+13639 USA|TX Leal Apaches
+13640 USA|AZ Knight Tech Robotics 2
+13641 USA|CA YULA Boys - JV
+13642 USA|OK Bishop McGuinness 2
+13643 USA|MI Rebel Wreckers
+13644 USA|TX Hallsville High School Robotics
+13645 USA|NY Stingbotics #2
+13646 USA|CA CHS Robotics
+13647 USA|MI Milan Robotics 13647
+13648 USA|WA Jankbot
+13649 USA|NJ RoboBlazers
+13650 USA|OR Robogiants
+13651 USA|MN iCubed (name might change)
+13652 USA|NY Brooklyn STEAM Center 6
+13653 Mexico|NLE Huaztech
+13654 USA|TX spinning fidgets 
+13655 USA|MN Taste the Rainbow
+13656 USA|SC Girl Scout Troop 5100
+13657 USA|TX Wonder Women
+13658 USA|TX shockbots
+13659 USA|TX hogbot
+13660 USA|TX Southwest Robotic Ladys
+13661 USA|SC Uniroboticorns
+13662 USA|TX Cujo Cougars
+13663 USA|NJ Quantum Smashers
+13664 USA|IN Nuclear Fusion
+13665 USA|MD The Clockwork Giants
+13666 USA|MI Tractor Technicians in Training (Green)
+13667 USA|MI Tractor Technicians in Training (Yellow)
+13668 USA|IL Thorbot
+13669 USA|PA RAIDERBOTS - COATESVILLE INTERMEDIATE HIGH SCHOOL
+13670 USA|TX Barons Builders
+13671 USA|TX Wetfield High School
+13672 USA|KS Echo Clan
+13673 USA|TX Dekaney High School
+13674 USA|UT Canyon View Venomous Cougars
+13675 USA|FL Wilkinson Junior High
+13676 USA|MD Loiederman Middle School Robotics Team
+13677 USA|NY Inwood TrailBlazers
+13678 USA|TX KIPP QUASARS
+13679 USA|TX (Lo)pez (Ro)bots Red
+13680 USA|MD Stone Lake Rocks!
+13681 USA|SC SRM Eagles
+13682 USA|KS JH MdCV
+13683 USA|TX (Lo)pez (Ro)bots Blue
+13684 USA|MI Infinity Tech
+13685 USA|TX Lucky 7
+13686 USA|AP Daegu High School
+13687 USA|TX Supreme 8
+13688 USA|OR De La Salle North Catholic High School Knights
+13689 USA|GA Lions
+13690 USA|SC Blacskburg High School
+13691 Romania|GJ FORCODE
+13697 USA|TX Murphy Ocelots
+13698 USA|VA Red Devils
+13699 USA|IL RoboGrizzlies
+13700 USA|CA Pulp Friction
+13701 USA|CA ElectroGears
+13702 USA|MI Joe Bots - White
+13703 USA|OH Tech Titans
+13704 USA|TX White Horse Robotics
+13705 USA|CA Hillcrest Robotics
+13706 USA|AZ Trouble in Paradise
+13707 USA|WA Jason Lee Bobcat Robotics
+13708 USA|OH McKinney Bulldogs
+13709 USA|OK Coleman Wildcats (2)
+13710 Australia|QLD Team Entangled 
+13712 USA|OH Robot-X.0.1
+13713 USA|MO CBC Robotics
+13714 USA|TX Juarez Lincoln High School
+13715 USA|TX Honey Badgers
+13716 USA|TX lbj dark knights
+13717 USA|TX Palmview HS
+13718 USA|TX The Robotic Break Dancers 
+13719 USA|TX Thelma Salinas STEM ECHS
+13720 USA|TX  lbj knights
+13721 USA|WI Eau Claire's Best
+13722 USA|OR Gear Grinders
+13723 USA|VA Andrew Lewis Wolverines
+13724 Canada|BC Victoria Robotics 2
+13725 USA|TX Robo-Ticks
+13726 USA|FL BLC Robotics
+13727 USA|OR Juntos Unidos
+13728 USA|CA Truckee Talos
+13729 Australia|QLD Kedron State High School
+13731 USA|FL Interlachen High School Robotics Club
+13732 USA|IA J-Hawk Robotics
+13733 USA|MI Electric Bacon
+13734 USA|MN Boys & Girls Club St. Paul
+13735 USA|NC ∏∆S (Pirates) FTC
+13736 USA|MT Cybotrons
+13737 USA|MO Belton Cyber Pirates
+13738 USA|NH  Alvirne Robotics
+13739 USA|NV TBD
+13740 USA|SC Flying Tigers
+13741 Australia|QLD Blessed Are The Geeks
+13742 USA|NH P4 Giants
+13743 USA|MD GaCo North Middle 3
+13744 USA|TX Enginerds
+13745 USA|WI Washington High School
+13746 USA|PA Mattox
+13747 USA|NJ Techtronic Challengers
+13748 USA|MI The Fiddle Brickers
+13749 USA|OR Rocket Robotics - Atlas
+13750 USA|IN TechNados
+13751 USA|AE Spangdahlem HS Scourge
+13752 USA|NY Harborfields Junior Varsity Tornadoes
+13753 USA|MT Lodge Grass Tech Team
+13754 USA|MI Lakeview Middle 7/8 Robotics
+13755 USA|TX Robocat
+13756 USA|OR Robodogs
+13757 USA|CA AHS Robotics Club 
+13758 USA|PA Mars Auxiliary Power
+13759 USA|PA Team Kensington Health Sciences Academy
+13760 USA|TX Sycamore Springs FTC Team
+13761 USA|FL FLA Pink Panthers
+13762 USA|NY MDQ Team I
+13763 Rwanda|01 TechMind's Hat
+13764 USA|NE Gordon-Rushville Wizards
+13765 Canada|AB Commodore 64
+13766 USA|MD 4-H Lower Shore FTC Team
+13767 USA|MI Code Meisters
+13768 USA|FL RoboDragons
+13769 USA|PA Knight Bots
+13770 USA|MD CESJDS Lions
+13771 USA|PA Lil'Boat
+13772 USA|PA Techno Knights
+13773 USA|PA Blue Bot
+13774 USA|MI Trials and Errors
+13775 USA|MO Mule Marauders
+13776 USA|FL LINKENTEK
+13777 USA|MI McU-Bots
+13778 USA|NM Griffin Robotics Lions
+13779 USA|VA ThunderBots
+13780 USA|TX Steer Robotics 
+13781 USA|MI Bear Bytes
+13782 USA|CT Hamden Hall
+13783 USA|TX ThunderChicksToo
+13784 USA|OR NT-1
+13785 USA|OR Beans
+13786 USA|CT Hamden Hall 2
+13787 USA|MN The Edgewood Fallen Architects
+13788 USA|TX Talkington Tinies
+13789 USA|MS Pirate Cats
+13790 USA|CA PHAA Cougars
+13791 USA|CA Sentinel 2
+13792 USA|DC EagleMSSD
+13793 Canada|AB Rambotics
+13794 USA|TX Tidehaven High School Bionic Beef
+13795 USA|TX Tidehaven High School Sentry
+13796 USA|TX Tidehaven High School Osiris
+13797 USA|WA Freddie
+13798 USA|OK Turpinators
+13799 USA|NV Team DLM 
+13800 USA|SC North Charleston High
+13801 USA|NJ STEM Robotic League
+13802 USA|TX Immanuel Christian School - Robel1ion
+13803 USA|TX Team Freedom
+13804 USA|VA Powhatan SPEAR  
+13805 USA|TX Roboto Muchachos
+13806 USA|OK Project Agnizab
+13807 USA|CA RoboHawks
+13808 USA|AL The Time Travelers
+13809 USA|MI Troy Cyborg
+13810 USA|TX CoyoBots
+13811 USA|TX High Voltage
+13812 USA|TX Team M.E.H. - Mechanical Engineer Hyenas
+13813 USA|MD Sandy Spring Friends School Robotics
+13814 Netherlands|NB Technotorious
+13815 USA|FL Technomasters
+13816 USA|OR Robots of the Lost Ark
+13817 USA|NE Heartland Lutheran Robotics
+13818 USA|MI Alcona Middle School 
+13819 USA|TX Tigers
+13820 USA|VA Skyline ROBtics
+13821 USA|NY MESA Warriors
+13822 USA|TX RoboVikings
+13823 USA|IL Hilltoppers - Glenbard West Robotics Club
+13825 USA|TX FTC Outlaws
+13826 USA|TX The Almost Magnificent Seven
+13827 USA|TX The Silver Bandits
+13828 USA|WI Golda Geared-Up Geeks
+13829 USA|IL Solorio Robotics
+13830 USA|IA Panthers
+13831 USA|CA TBA
+13832 USA|CA Tino 2017A
+13833 USA|TX Kaffie Dolphins
+13834 USA|CA Tino 2017
+13835 USA|CO Iron Fist
+13836 USA|IL TF South Robotics
+13837 USA|MI RoboRaiders
+13838 USA|WI Wabeno 
+13839 USA|WA North Creek High School-Silver
+13840 USA|OR Hawkbots
+13841 USA|OR Cyberhawks
+13842 Australia|NSW Circuit Breakers
+13843 USA|OR Trinity Saints
+13844 USA|VA Wild Dream
+13845 USA|OH MoeBots
+13846 USA|NY RoboMax
+13847 USA|NY Harborfields Freshmen Tornadoes
+13848 USA|MA Bishop Feehan Robotics Team
+13849 USA|MS OMS Chargerbots
+13850 USA|TX Wylie East Robotics Three
+13851 USA|CA Edge
+13852 USA|VA Monrobots
+13853 USA|NY Millennium Falcons
+13854 USA|OK Oaks Mission Technowarriors
+13855 USA|UT Black Ice Robotics
+13856 USA|TX KMS Knights
+13857 USA|IA Tekkaton
+13858 Canada|AB JFHS Falcons
+13859 USA|TX Providence Provets
+13860 USA|AR Cotter High School
+13861 USA|CA Gallantic Bot
+13862 USA|FL The Sqwires
+13863 USA|NC Darden Darlings
+13864 USA|TX MJMS Robotics
+13865 USA|NC New Century Team #2
+13866 USA|MI Cougar Tech 1
+13867 USA|NY Baymen Bionics
+13868 USA|NY RKA Robotics
+13869 USA|MT Aspire
+13870 USA|NC North Moore Middle
+13871 USA|CT Robo Mustangs
+13872 USA|LA The Ship
+13873 USA|PA Oakland Catholic High School
+13874 Poland|MZ Stardust Squad
+13875 USA|IA B-K Battle Bots
+13876 USA|MI Stormtroopers
+13877 USA|TX Sparkz
+13878 USA|MI Robostingers
+13879 USA|CO EGMS Cubs
+13880 USA|CT Blue Chip
+13881 USA|PA Vaux RoboCats
+13882 USA|MI B-BOTS
+13883 USA|NC TBD
+13884 USA|MS East Rankin Robotics II
+13885 USA|MI OJ Robotics
+13886 USA|TX Decepticats
+13889 USA|CA Jordan CougarBots
+13890 USA|CA Angry Blue Cows
+13891 USA|CA Serendipity
+13892 USA|AP Osan Middle School
+13893 USA|TX Titanium Titans
+13894 USA|MI Stockbridge Junior High School 
+13895 USA|TX PowerBots
+13896 USA|TX Nerm
+13897 USA|ND Panther Tech
+13898 Canada|AB Aberhart Robotics Republic (White)
+13899 USA|NH Raymond Rams
+13900 USA|SC Iron Horses
+13901 USA|MN Owatonna Middle School
+13902 Canada|AB Wolfbotz
+13903 USA|NC Principia 
+13904 Canada|AB Circuit Breakers
+13905 USA|CA SMHS Robotics Club
+13906 Cyprus|01 Epiteugma Revved Up
+13907 USA|OR G.I.R.L.S.
+13908 USA|OR The Animals
+13909 USA|OR The Red Legion
+13910 USA|AZ Voltage
+13911 USA|TX HHS Robo  Warriors
+13912 USA|TX MHS Cowboy Robotics
+13913 USA|TX Terrell Wells Trojans
+13914 USA|UT teamncrumpets
+13915 USA|TX Eagle Bots
+13916 USA|TX Retrobots
+13917 USA|MI Hillside Robotics
+13918 USA|NY KULC Tweens
+13919 USA|TX University High School Trojans
+13920 USA|IN OV Toirtap
+13921 USA|TX HSI Wildcat
+13922 USA|NY Robotics class high school 
+13923 USA|NY high school team 2 
+13924 USA|MI Bulldogs
+13925 USA|CO SSHS
+13926 USA|CA RoboRaptors 3
+13927 USA|NY Ossining Omegas II
+13928 Mexico|PUE TECNOBOTICS
+13929 Australia|QLD Merrimac State High School II
+13930 Australia|QLD Merrimac State High Schoo I
+13931 USA|PA Washington
+13932 USA|TX KnightBots
+13933 USA|GA Boys and Girls Club of ColumbusMakesIT
+13934 USA|TX Roboterriers 2
+13935 USA|TX Randolph Rohawktics
+13936 USA|OR DHS Jaegers
+13937 USA|NC NWGHS Bamboozlers
+13938 USA|TX NOSIDE 7
+13939 USA|LA Equinox
+13940 USA|FL OX Robotics
+13941 USA|TX NOSIDE 8
+13942 USA|SC Spicy Bots
+13943 USA|TX Coyote Tinkering Squad
+13944 USA|TX QWERTY Coyotes
+13945 USA|NY Marauders  Robotics
+13946 USA|NY Fire Senders
+13947 USA|NY Al-Noor School Robotics
+13948 USA|TX Cathedral Robotics
+13949 USA|MI HILLSDALE PREPARATORY 
+13950 USA|MA Hi-Tech Hornets
+13951 USA|IL Technical Terminators 
+13952 USA|CT GForce Lighthouse
+13954 USA|TX McAllen Memorial FTC
+13955 USA|NY ADK P-TECH GearFox
+13956 USA|IL Just Kidding 
+13957 USA|CO Titan Technos
+13958 Australia|NSW Arden Anglican School
+13959 USA|CA Desert Adventist Academy
+13960 USA|MI Seneca Jaguars
+13961 USA|TX Blue Ghosts
+13962 Israel|D ASHKELON
+13963 USA|NY Channel View School for Research
+13964 USA|VA Wythe Tech Titans
+13965 USA|CT Hopkins Robotics B
+13966 USA|MD BCMS Robotics
+13967 USA|AP Humphreys Middle School
+13968 USA|AZ Herberger Howlers
+13969 USA|TX Quinn Robotics
+13970 USA|NJ Anjoules
+13971 USA|CA Purple Ravens
+13972 USA|TX RoboKnights
+13974 USA|PA Freshmen
+13975 USA|MD The A*Star 4H BOTcats
+13976 USA|OR Stanfield Robotics
+13977 USA|PA St. Luc
+13978 USA|CA Mechanized Garbage A
+13979 USA|OR Stanfield Robotics B
+13980 USA|CA Mechanized Garbage B
+13981 USA|CA GatorBots
+13982 USA|TX Strack Intermediate Robotics
+13983 USA|MI Legg Middle School B
+13984 USA|MI MCS Tech Nerds
+13985 USA|MI Falcons Junior Robo Team
+13986 USA|MI Bulldogs FTC2
+13987 Canada|SK Bulldogs
+13988 USA|CA Bionic Vikings
+13989 USA|MI Kingsford Robotics
+13990 USA|FL Wildcat robotics
+13991 USA|MI TBD KMS 2
+13992 USA|MI MCS Robot Nerds
+13994 USA|MI George Crockett Academy
+13995 USA|MI University Prep Math & Science
+13996 USA|MI FDA-Hurricanes Middle
+13997 USA|MI BaragaBots
+13998 USA|MI GFU-PantherBots
+13999 USA|MI Palmer Park
+14000 USA|MI Dixon Academy
+14001 USA|MI Los Tigres
+14002 USA|MI Red Hawks
+14003 USA|MI Gompers
+14004 USA|MI Bow Robotics Team
+14005 USA|MI Clippert Eagles
+14006 USA|MI Garvey Academy Tech Team
+14007 USA|MI Rockin Robo Kidz2
+14008 USA|MI Schulze Tech Team
+14009 USA|MI AWESOMYSTICS
+14010 USA|MI FLICS
+14011 USA|AL Trojans
+14012 USA|MI OVMS Cardinals1
+14013 USA|MI Shamrock Jr. Bots
+14014 USA|MI HPJH First Robotics Team
+14015 USA|MI Michigan Center Junior High
+14016 USA|VA Stuart Hall
+14018 USA|MI RoboMounties
+14019 USA|MT Srv3
+14020 USA|NJ NEMESIS Prime
+14021 Canada|AB SCHS (Springbank Community High School) Robotic Team 3
+14022 Canada|AB SCHS (Springbank Community High School) Robotics Team 2
+14023 Canada|AB SCHS (Springbank Community High School) Robotics
+14024 USA|NH C.H.A.O.S.
+14025 USA|TX Scholastic Minds Academic Robotics Team (S.M.A.R.T.)
+14026 USA|NY Eden Central
+14028 Israel|HA Orbit 10
+14032 USA|TX Somerville Yegua Robotics
+14033 USA|MI Robo Ravens
+14034 USA|TX Robotic Wolves
+14035 USA|CT Gear Shakers
+14036 USA|NY Stepinac Crusaders
+14037 Canada|QC Ivy Challenge
+14038 USA|NE Mustang Bots
+14039 USA|MA IrRaTiONAl
+14040 USA|MI Concord Academy Petoskey
+14041 USA|VT K - 9 Robotics
+14043 USA|NH Mountain View FTC
+14044 USA|UT Panther Pride
+14045 USA|MI MVJH Robotics
+14046 USA|NH Hinsdale FTC
+14047 Israel|D Mega Masters
+14049 India|MH RoboSapiens
+14050 USA|NY CCAFTC
+14051 USA|FL Sunrise MS Falcons
+14052 USA|VA Technotubbies
+14053 USA|CA Beta Wolves
+14054 USA|NY Indian River Central 2
+14055 USA|NM Tulie Tech FTC - Rookie Team
+14056 USA|MS RaiderBots
+14057 USA|CA Team Infinity
+14058 USA|NJ PiTronics
+14060 USA|VT Milton Middle School
+14061 USA|IN Valparaiso Middle School Robotics Team
+14062 USA|MD MoCo Machines
+14063 USA|IA Saydel High School Robotics Team---Vulcan Eagles
+14064 USA|WI Apple CRISPR
+14065 Canada|BC Mathison
+14066 USA|MI Berkshire Wildcats
+14067 USA|NH Laconia High School Robotics
+14068 USA|UT A1's
+14069 USA|TX KnightBots
+14070 USA|CA Robo-Duby
