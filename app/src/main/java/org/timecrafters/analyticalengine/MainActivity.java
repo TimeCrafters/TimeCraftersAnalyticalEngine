@@ -32,6 +32,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 
@@ -245,16 +246,15 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private String[] readFileContent(Uri uri) throws IOException {
-        String[] list = new String[1000];
+    private ArrayList<String> readFileContent(Uri uri) throws IOException {
+        ArrayList<String> list = new ArrayList<>();
         InputStream inputStream = getContentResolver().openInputStream(uri);
         BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
-        StringBuilder stringBuilder = new StringBuilder();
         String currentLine;
 
         for (int i = 0; (currentLine = reader.readLine()) != null; i++) {
             if (!currentLine.equals("")) {
-                list[i] = currentLine;
+                list.add(currentLine);
             }
         }
         inputStream.close();
@@ -265,14 +265,14 @@ public class MainActivity extends AppCompatActivity {
         boolean failed = false;
         AppSync.teamsList.clear();
         try {
-            String[] list = readFileContent(uri);
+            ArrayList<String> list = readFileContent(uri);
             String[] part;
-            for (int i = 0; i < list.length; i++) {
-                if (list[i] == null) {
+            for (int i = 0; i < list.size(); i++) {
+                if (list.get(i) == null) {
                     break;
                 }
 
-                String line = list[i];
+                String line = list.get(i);
                 // process the line.
                 part = line.split(" ");
                 String teamNumber = part[0];
