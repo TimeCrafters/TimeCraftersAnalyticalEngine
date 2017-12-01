@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
@@ -13,85 +13,142 @@
     android:visibility="visible"
     tools:context="org.timecrafters.analyticalengine.MainActivity">
 
-    <Button
-        android:id="@+id/scout_team"
-        style="@style/Widget.AppCompat.Button.Colored"
+    <ScrollView
+        style="@android:style/Widget.DeviceDefault.Light.ScrollView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/team_statistics"
-        android:layout_marginTop="39dp"
-        android:background="@color/colorMainButtonDisabled"
-        android:enabled="false"
-        android:text="Scout Team"
-        android:textAppearance="@style/TextAppearance.AppCompat.Button"
-        android:textColor="@color/colorMainButtonText" />
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbarStyle="insideOverlay">
 
-    <Button
-        android:id="@+id/scout_match"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/scout_team"
-        android:layout_marginTop="37dp"
-        android:background="@color/colorMainButtonDisabled"
-        android:enabled="false"
-        android:text="Track Match"
-        android:textAppearance="@style/TextAppearance.AppCompat.Button"
-        android:textColor="@color/colorMainButtonText" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/team_statistics"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:background="@color/colorMainButtonDisabled"
-        android:enabled="false"
-        android:text="Team Statistics"
-        android:textAppearance="@style/TextAppearance.AppCompat.Button"
-        android:textColor="@color/colorMainButtonText" />
+            <Button
+                android:id="@+id/scout_team"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/team_statistics"
+                android:background="@color/colorMainButtonDisabled"
+                android:enabled="false"
+                android:text="Scout Team"
+                android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                android:textColor="@color/colorMainButtonText" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/team_list_filename"
-        android:layout_alignParentStart="true"
-        android:layout_column="0"
-        android:layout_row="1"
-        android:text="Teams List"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+            <Button
+                android:id="@+id/scout_match"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/scout_team"
+                android:layout_marginTop="14pt"
+                android:background="@color/colorMainButtonDisabled"
+                android:enabled="false"
+                android:text="Track Match"
+                android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                android:textColor="@color/colorMainButtonText" />
 
-    <TextView
-        android:id="@+id/team_list_filename"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/textView9"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="10dp"
-        android:layout_toStartOf="@+id/import_list"
-        android:text="No List Loaded"
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        android:textColor="@android:color/holo_red_dark" />
+            <Button
+                android:id="@+id/team_statistics"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="14pt"
+                android:background="@color/colorMainButtonDisabled"
+                android:enabled="false"
+                android:text="Team Statistics"
+                android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                android:textColor="@color/colorMainButtonText" />
 
-    <Button
-        android:id="@+id/import_list"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/team_list_filename"
-        android:layout_alignParentEnd="true"
-        android:text="Import" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="18pt"
+                android:gravity="bottom"
+                android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:text="TimeCrafters.org/ScoutingApp"
-        android:textAppearance="@style/TextAppearance.AppCompat" />
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/team_list_filename"
+                    android:layout_alignParentStart="true"
+                    android:layout_column="0"
+                    android:layout_row="1"
+                    android:text="Teams List"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
-</RelativeLayout>
+                <TextView
+                    android:id="@+id/team_list_filename"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/textView9"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toStartOf="@+id/import_list"
+                    android:text="No List Loaded"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textColor="@android:color/holo_red_dark" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/create_list"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/colorMainButton"
+                        android:text="Create" />
+
+                    <Button
+                        android:id="@+id/edit_list"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4pt"
+                        android:layout_marginRight="4pt"
+                        android:layout_weight="1"
+                        android:background="@color/colorMainButtonDisabled"
+                        android:enabled="false"
+                        android:text="Edit" />
+
+                    <Button
+                        android:id="@+id/import_list"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/team_list_filename"
+                        android:layout_alignParentEnd="true"
+                        android:layout_weight="1"
+                        android:background="@color/colorMainButton"
+                        android:text="Import" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="14pt"
+                    android:text="TimeCrafters.org/analytical-engine"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

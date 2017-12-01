@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="org.timecrafters.analyticalengine.MainActivity"
+            android:name=".MainActivity"
             android:configChanges="orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,15 +21,19 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="org.timecrafters.analyticalengine.athena.ScoutMatchAutonomousActivity"
+            android:name=".athena.ScoutMatchAutonomousActivity"
             android:configChanges="orientation|screenSize" />
-        <activity android:name="org.timecrafters.analyticalengine.athena.ScoutMatchTeleOpActivity" />
-        <activity android:name="org.timecrafters.analyticalengine.athena.ScoutTeamAutonomousActivity" />
-        <activity android:name="org.timecrafters.analyticalengine.athena.ScoutTeamTeleOpActivity" />
+        <activity android:name=".athena.ScoutMatchTeleOpActivity" />
+        <activity android:name=".athena.ScoutTeamAutonomousActivity" />
+        <activity android:name=".athena.ScoutTeamTeleOpActivity" />
         <activity
-            android:name="org.timecrafters.analyticalengine.athena.TeamStatisticsActivity"
+            android:name=".athena.TeamStatisticsActivity"
             android:label="@string/title_activity_team_statistics"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".athena.TeamsListCreatorActivity"
+            android:label="@string/app_name">
+        </activity>
     </application>
 
 </manifest>

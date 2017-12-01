@@ -26,6 +26,7 @@ import org.json.JSONObject;
 import org.timecrafters.analyticalengine.athena.ScoutMatchAutonomousActivity;
 import org.timecrafters.analyticalengine.athena.ScoutTeamAutonomousActivity;
 import org.timecrafters.analyticalengine.athena.TeamStatisticsActivity;
+import org.timecrafters.analyticalengine.athena.TeamsListCreatorActivity;
 import org.timecrafters.analyticalengine.hermes.AppSync;
 
 import java.io.BufferedReader;
@@ -50,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
 
     public Button scoutTeamButton;
     public Button scoutMatchButton;
+    public Button createButton;
+    public Button editButton;
     public Button importButton;
 
     @Override
@@ -58,6 +61,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         MainActivityContext = this;
+
+        filename = (TextView) findViewById(R.id.team_list_filename);
+        teamStatsButton = (TextView) findViewById(R.id.team_statistics);
+        createButton = (Button) findViewById(R.id.create_list);
+        editButton   = (Button) findViewById(R.id.edit_list);
+        importButton = (Button) findViewById(R.id.import_list);
+
+        scoutTeamButton  = (Button) findViewById(R.id.scout_team);
+        scoutMatchButton = (Button) findViewById(R.id.scout_match);
+
         AppSync.getConfig();
         try {
             String list = AppSync.getConfig().getString("last_used_teams_list");
@@ -69,13 +82,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         } catch (JSONException error) {/* Fault */}
-
-        filename = (TextView) findViewById(R.id.team_list_filename);
-        teamStatsButton = (TextView) findViewById(R.id.team_statistics);
-        importButton = (Button) findViewById(R.id.import_list);
-
-        scoutTeamButton = (Button) findViewById(R.id.scout_team);
-        scoutMatchButton = (Button) findViewById(R.id.scout_match);
 
         if (AppSync.teamsListUri != null) {
             filename.setText(AppSync.teamsListUri.getPath());
@@ -93,6 +99,12 @@ public class MainActivity extends AppCompatActivity {
         scoutMatchButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(getBaseContext(), ScoutMatchAutonomousActivity.class));
+            }
+        });
+
+        createButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(getBaseContext(), TeamsListCreatorActivity.class));
             }
         });
 
@@ -299,6 +311,7 @@ public class MainActivity extends AppCompatActivity {
             matchButton.setEnabled(true);
             teamButton.setEnabled(true);
             teamStatsButton.setEnabled(true);
+            editButton.setEnabled(true);
             if (loadingLastUsedList) {
                 Toast.makeText(getApplicationContext(), "Successfully parsed last used teams file", Toast.LENGTH_SHORT).show();
             } else {
@@ -307,6 +320,7 @@ public class MainActivity extends AppCompatActivity {
             matchButton.setBackgroundColor(getResources().getColor(R.color.colorMainButton));
             teamButton.setBackgroundColor(getResources().getColor(R.color.colorMainButton));
             teamStatsButton.setBackgroundColor(getResources().getColor(R.color.colorMainButton));
+            editButton.setBackgroundColor(getResources().getColor(R.color.colorMainButton));
 
         } catch (IOException | NumberFormatException error) {
             failed = true;
