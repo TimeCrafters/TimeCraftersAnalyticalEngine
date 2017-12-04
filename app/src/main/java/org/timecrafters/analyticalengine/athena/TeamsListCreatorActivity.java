@@ -1,14 +1,22 @@
 package org.timecrafters.analyticalengine.athena;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.Toast;
 
 import org.timecrafters.analyticalengine.R;
 import org.timecrafters.analyticalengine.hermes.AppSync;
+import org.timecrafters.analyticalengine.hermes.TeamsListAdapter;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -32,6 +40,7 @@ public class TeamsListCreatorActivity extends AppCompatActivity {
 
         String[] teamNumberList = new String[teamNumbers.keySet().size()];
         String[] teamNameList   = new String[teamNumbers.values().size()];
+        final ArrayList<String> teamsList = new ArrayList<String>();
 
         int _i = 0;
         for(String key : teamNumbers.keySet()) {
@@ -40,7 +49,7 @@ public class TeamsListCreatorActivity extends AppCompatActivity {
             _i++;
         }
 
-        ArrayAdapter<String> numberAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, teamNumberList);
+        final ArrayAdapter<String> numberAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, teamNumberList);
         final AutoCompleteTextView numberView = (AutoCompleteTextView) findViewById(R.id.team_number);
         numberView.setAdapter(numberAdapter);
 
@@ -67,6 +76,66 @@ public class TeamsListCreatorActivity extends AppCompatActivity {
         numberView.setThreshold(1);
         nameView.setThreshold(2);
 
+        final TeamsListAdapter listAdapter = new TeamsListAdapter(teamsList, this);
+        final ListView listView = (ListView) findViewById(R.id.teams_list);
+        listView.setAdapter(listAdapter);
+
+        final Button addButton = (Button) findViewById(R.id.add);
+        final int addButtonColor = ((ColorDrawable) addButton.getBackground()).getColor();
+        addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (numberView.getText().length() > 0 && nameView.getText().length() > 0) {
+                    boolean uniqueEntry = true;
+                    String entry = "" + numberView.getText() + " " + nameView.getText();
+
+                    for(int i = 0; i < teamsList.size(); i++) {
+                        if (entry.equals(teamsList.get(i))) {
+                            uniqueEntry = false;
+                        }
+                    }
+
+                    if (uniqueEntry) {
+                        teamsList.add(entry);
+                        numberView.setText("");
+                        nameView.setText("");
+                        listAdapter.notifyDataSetChanged();
+                        listView.smoothScrollToPosition(listAdapter.getCount() - 1);
+                    } else {
+                        Toast toast = Toast.makeText(getApplicationContext(), "Team "+numberView.getText()+" already on list", Toast.LENGTH_LONG);
+                        toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, 0);
+                        toast.show();
+
+                        Runnable pulseButton = new Runnable() {
+                            @Override
+                            public void run() {
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        addButton.setBackgroundColor(Color.RED);
+                                        AppSync.puts("RUNNABLE", "RED");
+                                        AppSync.puts("COLOR_RED", ""+((ColorDrawable) addButton.getBackground()).getColor());
+                                    }
+                                });
+                                try {
+                                    Thread.sleep(512);
+                                    runOnUiThread(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            AppSync.puts("RUNNABLE", "RAN");
+                                            addButton.setBackgroundColor(addButtonColor);
+                                            AppSync.puts("COLOR_GREEN", ""+((ColorDrawable) addButton.getBackground()).getColor());
+                                        }
+                                    });
+                                } catch(InterruptedException e){AppSync.puts("ERROR_CLOCK", "AN error occurred during science class.");}
+                            }
+                        };
+                        AsyncTask.execute(pulseButton);
+//                      set button color to red for 1 second then fade back to normal color;
+                    }
+                }
+            }
+        });
     }
 
     void megaParser(ArrayList arrayList) {
