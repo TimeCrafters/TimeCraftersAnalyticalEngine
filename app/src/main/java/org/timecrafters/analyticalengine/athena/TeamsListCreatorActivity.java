@@ -2,6 +2,8 @@ package org.timecrafters.analyticalengine.athena;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 
@@ -9,8 +11,6 @@ import org.timecrafters.analyticalengine.R;
 import org.timecrafters.analyticalengine.hermes.AppSync;
 
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -18,7 +18,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class TeamsListCreatorActivity extends AppCompatActivity {
-    HashMap<String, String> teams                = new HashMap<String, String>();
+    HashMap<String, String> teamNumbers = new HashMap<String, String>();
+    HashMap<String, String> teamNames   = new HashMap<String, String>();
     ArrayList countries          = new ArrayList<>();
     ArrayList states_provinces   = new ArrayList<>();
 
@@ -29,22 +30,39 @@ public class TeamsListCreatorActivity extends AppCompatActivity {
 
         megaParser(loadUltimateTeamsList());
 
-        String[] teamNumberList = new String[teams.keySet().size()];
-        String[] teamNameList   = new String[teams.values().size()];
+        String[] teamNumberList = new String[teamNumbers.keySet().size()];
+        String[] teamNameList   = new String[teamNumbers.values().size()];
 
         int _i = 0;
-        for(String key : teams.keySet()) {
+        for(String key : teamNumbers.keySet()) {
             teamNumberList[_i] = (String) key;
-            teamNameList[_i] = (String) teams.get(key);
+            teamNameList[_i] = (String) teamNumbers.get(key);
             _i++;
         }
 
         ArrayAdapter<String> numberAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, teamNumberList);
-        AutoCompleteTextView numberView = (AutoCompleteTextView) findViewById(R.id.team_number);
+        final AutoCompleteTextView numberView = (AutoCompleteTextView) findViewById(R.id.team_number);
         numberView.setAdapter(numberAdapter);
+
         ArrayAdapter<String> nameAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, teamNameList);
-        AutoCompleteTextView nameView = (AutoCompleteTextView) findViewById(R.id.team_name);
+        final AutoCompleteTextView nameView = (AutoCompleteTextView) findViewById(R.id.team_name);
         nameView.setAdapter(nameAdapter);
+
+        numberView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                String team = teamNumbers.get((String) adapterView.getItemAtPosition(i));
+                nameView.setText(team);
+            }
+        });
+
+        nameView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                String team = teamNames.get((String) adapterView.getItemAtPosition(i));
+                numberView.setText(team);
+            }
+        });
 
         numberView.setThreshold(1);
         nameView.setThreshold(2);
@@ -66,7 +84,8 @@ public class TeamsListCreatorActivity extends AppCompatActivity {
             teamString+=array[i];
         }
 
-        teams.put(array[0], teamString);
+        teamNumbers.put(array[0], teamString);
+        teamNames.put(teamString, array[0]);
     }
 
     private void countryAndRegionParser(String s) {
