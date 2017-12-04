@@ -4,12 +4,14 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.TextView;
 
 import org.timecrafters.analyticalengine.R;
+import org.timecrafters.analyticalengine.athena.TeamsListCreatorActivity;
 
 import java.util.ArrayList;
 
@@ -44,6 +46,10 @@ public class TeamsListAdapter extends BaseAdapter implements ListAdapter {
         return 0;
     }
 
+    public void remove(int i) {
+        list.remove(i);
+    }
+
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
         View view = convertView;
@@ -52,7 +58,7 @@ public class TeamsListAdapter extends BaseAdapter implements ListAdapter {
             view = inflater.inflate(R.layout.teams_list_listview_layout, null);
         }
 
-        TextView listItemText = (TextView)view.findViewById(R.id.list_item_string);
+        final TextView listItemText = (TextView)view.findViewById(R.id.list_item_string);
         listItemText.setText(list.get(position));
 
         Button deleteButton = (Button)view.findViewById(R.id.delete);
@@ -60,8 +66,12 @@ public class TeamsListAdapter extends BaseAdapter implements ListAdapter {
         deleteButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                list.remove(position);
-                notifyDataSetChanged();
+//                list.remove(position);
+                listItemText.startAnimation(((TeamsListCreatorActivity)context).animation);
+                v.startAnimation(((TeamsListCreatorActivity)context).animation);
+                ((TeamsListCreatorActivity)context).selectedRow = position;
+                remove(position);
+//                notifyDataSetChanged();
             }
         });
 

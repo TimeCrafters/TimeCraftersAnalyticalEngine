@@ -7,11 +7,14 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.timecrafters.analyticalengine.R;
@@ -23,13 +26,20 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 
 public class TeamsListCreatorActivity extends AppCompatActivity {
+    final ArrayList<String> teamsList = new ArrayList<String>();
+
     HashMap<String, String> teamNumbers = new HashMap<String, String>();
     HashMap<String, String> teamNames   = new HashMap<String, String>();
     ArrayList countries          = new ArrayList<>();
     ArrayList states_provinces   = new ArrayList<>();
+    public Animation animation;
+    public int selectedRow = 0;
+    public ListView listView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,8 +50,6 @@ public class TeamsListCreatorActivity extends AppCompatActivity {
 
         String[] teamNumberList = new String[teamNumbers.keySet().size()];
         String[] teamNameList   = new String[teamNumbers.values().size()];
-        final ArrayList<String> teamsList = new ArrayList<String>();
-
         int _i = 0;
         for(String key : teamNumbers.keySet()) {
             teamNumberList[_i] = (String) key;
@@ -74,11 +82,28 @@ public class TeamsListCreatorActivity extends AppCompatActivity {
         });
 
         numberView.setThreshold(1);
-        nameView.setThreshold(2);
+        nameView.setThreshold(1);
 
         final TeamsListAdapter listAdapter = new TeamsListAdapter(teamsList, this);
-        final ListView listView = (ListView) findViewById(R.id.teams_list);
+        listView = (ListView) findViewById(R.id.teams_list);
         listView.setAdapter(listAdapter);
+
+        animation = AnimationUtils.loadAnimation(this,
+                R.anim.slide_out);
+        animation.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                listAdapter.notifyDataSetChanged();
+            }
+        });
 
         final Button addButton = (Button) findViewById(R.id.add);
         final int addButtonColor = ((ColorDrawable) addButton.getBackground()).getColor();
@@ -101,6 +126,7 @@ public class TeamsListCreatorActivity extends AppCompatActivity {
                         nameView.setText("");
                         listAdapter.notifyDataSetChanged();
                         listView.smoothScrollToPosition(listAdapter.getCount() - 1);
+                        recalculateTeamsCount();
                     } else {
                         Toast toast = Toast.makeText(getApplicationContext(), "Team "+numberView.getText()+" already on list", Toast.LENGTH_LONG);
                         toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, 0);
@@ -134,6 +160,24 @@ public class TeamsListCreatorActivity extends AppCompatActivity {
 //                      set button color to red for 1 second then fade back to normal color;
                     }
                 }
+            }
+        });
+
+        final Button cancelButton = (Button) findViewById(R.id.cancel);
+        cancelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AppSync.puts("Am I Called?");
+                cancelCreation();
+            }
+        });
+
+        final Button saveButton = (Button) findViewById(R.id.save);
+        saveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                saveCreation();
+                // TODO: Save teams list to /TimeCraftersAnalyticalEngine/lists/#{name}.txt or to user provided directory.
             }
         });
     }
@@ -179,4 +223,47 @@ public class TeamsListCreatorActivity extends AppCompatActivity {
         return arrayList;
     }
 
+    private void recalculateTeamsCount() {
+        final TextView teamsCount = (TextView) findViewById(R.id.team_count);
+        teamsCount.setText(""+teamsList.size()+" Teams");
+    }
+
+    private void saveCreation() {
+        if (teamsList.size() > 0) {
+            Collections.sort(teamsList);
+        } else {
+            AppSync.createAlertDialog(this, "List Empty!", "Can not save an empty list.", new Runnable() {
+                @Override
+                public void run() {
+                    // Do nothing.
+                }
+            });
+        }
+    }
+
+    private void cancelCreation() {
+        if (teamsList.size() > 0) {
+            AppSync.createConfirmDialog(this, "Abort List Creation?", "All entered data with be lost.",
+                new Runnable(){
+                @Override
+                public void run() {
+                    finish();
+                }},
+
+                new Runnable() {
+                @Override
+                public void run() {
+
+                }
+            });
+        } else {
+            finish();
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        cancelCreation();
+//        super.onBackPressed();
+    }
 }

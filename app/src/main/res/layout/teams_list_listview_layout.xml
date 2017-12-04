@@ -1,5 +1,5 @@
-<!--  Thanks to the author of this Answer: https://stackoverflow.com/a/23021960 -->
 <?xml version="1.0" encoding="utf-8"?>
+<!--  Thanks to the author of this Answer: https://stackoverflow.com/a/23021960 -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
