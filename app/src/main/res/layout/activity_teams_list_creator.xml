@@ -34,7 +34,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@android:drawable/btn_dropdown"
-                android:text="Country" />
+                android:text="Country"
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/state_province"
@@ -43,7 +44,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@android:drawable/btn_dropdown"
-                android:text="State/Province" />
+                android:text="State/Province"
+                android:visibility="gone" />
 
         </LinearLayout>
 

@@ -1,9 +1,13 @@
 package org.timecrafters.analyticalengine.athena;
 
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Environment;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.View;
@@ -13,15 +17,20 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.timecrafters.analyticalengine.MainActivity;
 import org.timecrafters.analyticalengine.R;
 import org.timecrafters.analyticalengine.hermes.AppSync;
 import org.timecrafters.analyticalengine.hermes.TeamsListAdapter;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -139,8 +148,6 @@ public class TeamsListCreatorActivity extends AppCompatActivity {
                                     @Override
                                     public void run() {
                                         addButton.setBackgroundColor(Color.RED);
-                                        AppSync.puts("RUNNABLE", "RED");
-                                        AppSync.puts("COLOR_RED", ""+((ColorDrawable) addButton.getBackground()).getColor());
                                     }
                                 });
                                 try {
@@ -148,9 +155,7 @@ public class TeamsListCreatorActivity extends AppCompatActivity {
                                     runOnUiThread(new Runnable() {
                                         @Override
                                         public void run() {
-                                            AppSync.puts("RUNNABLE", "RAN");
                                             addButton.setBackgroundColor(addButtonColor);
-                                            AppSync.puts("COLOR_GREEN", ""+((ColorDrawable) addButton.getBackground()).getColor());
                                         }
                                     });
                                 } catch(InterruptedException e){AppSync.puts("ERROR_CLOCK", "AN error occurred during science class.");}
@@ -231,11 +236,119 @@ public class TeamsListCreatorActivity extends AppCompatActivity {
     private void saveCreation() {
         if (teamsList.size() > 0) {
             Collections.sort(teamsList);
+            final String path = Environment.getExternalStorageDirectory().toString() + File.separator + AppSync.defaultFolderPath + File.separator + "lists";
+            final AppCompatActivity localActivity = this;
+
+            AlertDialog.Builder alert = new AlertDialog.Builder(this);
+            alert.setTitle("Name List").setMessage("Save path: "+path);
+            final EditText input = new EditText(this);
+            input.setTextColor(Color.BLACK);
+            alert.setView(input);
+
+            alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                }
+            });
+            alert.setPositiveButton("Okay", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                    if (AppSync.lastInputText != null) {
+                        AppSync.puts("DIALOG", "lastInputText: lastInputText is null!");
+                    }
+                    if (input.length() > 0) {
+                        File file = new File(path +File.separator+ AppSync.lastInputText +".txt");
+                        boolean abort = false;
+                        if (file.exists()) {
+                            abort = true;
+                        }
+
+                        if (!abort) {
+                            saveList(path,input.getText().toString() +".txt");
+                        } else {
+                            AppSync.createConfirmDialog(localActivity, "File already exists!", "Overwrite?", new Runnable() {
+                                @Override
+                                public void run() {
+                                    saveList(path,input.getText().toString() +".txt");
+                                }
+                            }, new Runnable() {
+                                @Override
+                                public void run() {
+                                    // cancelled
+                                }
+                            }, "Overwrite", "Cancel");
+                        }
+
+                    } else {
+                        AppSync.createAlertDialog(localActivity, "Name is empty!", "Can't save file without a name.", new Runnable() {
+                            @Override
+                            public void run() {
+
+                            }
+                        });
+                }
+            }
+            });
+
+            alert.show();
         } else {
             AppSync.createAlertDialog(this, "List Empty!", "Can not save an empty list.", new Runnable() {
                 @Override
                 public void run() {
                     // Do nothing.
+                }
+            });
+        }
+    }
+
+    private void saveList(String path, String filename) {
+        AppSync.createDirectory(path);
+        File file = new File(path +File.separator+ filename);
+        BufferedWriter bw = null;
+        boolean failure = false;
+        boolean writeSuccess = false;
+
+        AppSync.puts("saveList","Pending");
+
+        try {
+            try {
+                bw = new BufferedWriter(new FileWriter(file.getPath(), false));
+            } catch (IOException error) {
+                failure = true;
+                AppSync.puts("ERROR", error.toString());
+            }
+
+            if (!failure) {
+                for (int i = 0; i < teamsList.size(); i++) {
+                    AppSync.puts("saveList", "Writing: "+teamsList.get(i));
+                    bw.write(teamsList.get(i));
+                    bw.newLine();
+                    bw.flush();
+                }
+                writeSuccess = true;
+                // Set active teams list
+                MainActivity.MainActivityContext.parseTeamsList(Uri.fromFile(file), false);
+                AppSync.puts("saveList", "Success");
+            } else {
+                AppSync.puts("saveListERROR", "WRITE ERROR | WRITE ERROR");
+            }
+        } catch (IOException error) {
+            // Eating fish and chips, bbl.
+            AppSync.puts("saveListERROR", error.toString());
+        } finally {
+            if (bw != null) {
+                try {
+                    bw.close();
+                } catch (IOException error) {
+                    AppSync.puts("saveListERROR", "Ugg.");
+                }
+            }
+        }
+        if (writeSuccess) {
+            finish();
+        } else {
+            AppSync.createAlertDialog(this, "Failed to save!", "Try again.", new Runnable() {
+                @Override
+                public void run() {
+
                 }
             });
         }

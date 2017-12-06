@@ -1,11 +1,13 @@
 package org.timecrafters.analyticalengine.hermes;
 
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Environment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.EditText;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -37,9 +39,11 @@ public class AppSync {
     public static int teamNumber;
     public static String teamName;
 
-    public static String competitionName = "competition"; // The name of the event being tracked, E.G. North Super Regionals
+    public static String competitionName = "competition";
     public static String defaultFolderPath = "TimeCraftersAnalyticalEngine";
     public static String currentMatchPath;
+
+    public static String lastInputText;
 
     public static ArrayList<EventStruct> eventsList = new ArrayList<>();
 
@@ -430,5 +434,8 @@ public class AppSync {
         AlertDialog.Builder alert = new AlertDialog.Builder(activity);
         alert.setTitle(title).setMessage(message);
         alert.show();
+    }
+
+    public static void createPromptDialog(final AppCompatActivity activity, String title, String message, final Runnable acceptRunner, final Runnable declineRunner) {
     }
 }
