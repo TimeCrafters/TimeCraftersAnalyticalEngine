@@ -104,8 +104,30 @@ public class MainActivity extends AppCompatActivity {
 
         createButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                AppSync.setListMode = 0;
-                startActivity(new Intent(getBaseContext(), TeamsListCreatorActivity.class));
+                boolean canUseExternalStorage = true;
+                JSONObject config = AppSync.getConfig();
+                try {
+                    if (config.getBoolean("use_external_storage")) {
+                        canUseExternalStorage = true;
+                    } else { canUseExternalStorage = false; }
+                } catch (JSONException error) { AppSync.puts(TAG, "Error in Config: "+error.getMessage());}
+                if (canUseExternalStorage && ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PERMISSION_GRANTED) {
+
+
+                    AppSync.createAlertDialog(MainActivityContext, "Write Permissions", "This app requires write access to read/write files accessible in userspace.", new Runnable() {
+                        @Override
+                        public void run() {
+                            ActivityCompat.requestPermissions(MainActivity.this,
+                                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                                    REQUEST_WRITE_PERMISSION);
+
+                        }
+                    }, "Ask");
+
+                } else {
+                    AppSync.setListMode = 0;
+                    startActivity(new Intent(getBaseContext(), TeamsListCreatorActivity.class));
+                }
             }
         });
 
@@ -128,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
                 if (canUseExternalStorage && ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PERMISSION_GRANTED) {
 
 
-                    AppSync.createConfirmDialog(MainActivityContext, "Write Permissions", "This app requires write access to read/write files accessible in userspace.\n\n If you continue without allowing write access, you'll only be able to access the written files on a Rooted device and data will be destroyed if you uninstall the app.", new Runnable() {
+                    AppSync.createAlertDialog(MainActivityContext, "Write Permissions", "This app requires write access to read/write files accessible in userspace.", new Runnable() {
                         @Override
                         public void run() {
                             ActivityCompat.requestPermissions(MainActivity.this,
@@ -136,19 +158,7 @@ public class MainActivity extends AppCompatActivity {
                                     REQUEST_WRITE_PERMISSION);
 
                         }
-                    }, new Runnable() {
-                        @Override
-                        public void run() {
-                            AppSync.createAlertDialog(MainActivityContext, "Permission not Granted", "Data will be stored in " + getFilesDir() + "\n\nData loss WILL occur if you uninstall.", new Runnable() {
-                                @Override
-                                public void run() {
-                            performFileSearch();
-                            AppSync.updateConfig("use_external_storage", false);
-                            AppSync.useFilesDirectory = true;
-                                }
-                            });
-                        }
-                    }, "Ask", "Decline");
+                    }, "Ask");
 
                 } else {
                     performFileSearch();
@@ -241,9 +251,7 @@ public class MainActivity extends AppCompatActivity {
                     AppSync.useFilesDirectory = false;
                     performFileSearch();
                 } else {
-                    AppSync.updateConfig("use_external_storage", true);
-                    AppSync.useFilesDirectory = true;
-                    performFileSearch();
+                    AppSync.createMessageDialog(this, "Permission is Required", "This app requires the ability to read/write to external storage to function properly.\nBy saving to external storage you'll will be able to offload your collected data.");
                 }
             }
         }
