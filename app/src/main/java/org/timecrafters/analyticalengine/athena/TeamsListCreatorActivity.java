@@ -22,6 +22,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONException;
 import org.timecrafters.analyticalengine.MainActivity;
 import org.timecrafters.analyticalengine.R;
 import org.timecrafters.analyticalengine.hermes.AppSync;
@@ -185,6 +186,13 @@ public class TeamsListCreatorActivity extends AppCompatActivity {
                 // TODO: Save teams list to /TimeCraftersAnalyticalEngine/lists/#{name}.txt or to user provided directory.
             }
         });
+
+        if (AppSync.setListMode == 0) {
+        } else if (AppSync.setListMode == 1) {
+            for (int key : AppSync.teamsList.keySet()) {
+                teamsList.add(""+ key +" "+ AppSync.teamsList.get(key));
+            }
+        }
     }
 
     void megaParser(ArrayList arrayList) {
@@ -242,6 +250,20 @@ public class TeamsListCreatorActivity extends AppCompatActivity {
             AlertDialog.Builder alert = new AlertDialog.Builder(this);
             alert.setTitle("Name List").setMessage("Save path: "+path);
             final EditText input = new EditText(this);
+            if (AppSync.setListMode == 1) {
+                try {
+                    String list = AppSync.getConfig().getString("last_used_teams_list");
+                    if (!list.equals("")) {
+                        try {
+                            String[] s1 = list.split(""+File.separator);
+                            String[] s2 = s1[s1.length-1].split(".txt");
+                            input.setText(s2[s2.length-1]);
+                        } catch (SecurityException error) {
+                            AppSync.puts("LIST", "Failed to load list.\n"+error.getMessage());
+                        }
+                    }
+                } catch (JSONException error) {/* Fault */}
+            }
             input.setTextColor(Color.BLACK);
             alert.setView(input);
 

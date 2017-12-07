@@ -43,6 +43,7 @@ public class AppSync {
     public static String defaultFolderPath = "TimeCraftersAnalyticalEngine";
     public static String currentMatchPath;
 
+    public static int setListMode = 0; // 0 = Create, 1 = Edit.
     public static String lastInputText;
 
     public static ArrayList<EventStruct> eventsList = new ArrayList<>();

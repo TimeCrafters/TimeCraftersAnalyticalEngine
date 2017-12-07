@@ -104,6 +104,14 @@ public class MainActivity extends AppCompatActivity {
 
         createButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                AppSync.setListMode = 0;
+                startActivity(new Intent(getBaseContext(), TeamsListCreatorActivity.class));
+            }
+        });
+
+        editButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                AppSync.setListMode = 1;
                 startActivity(new Intent(getBaseContext(), TeamsListCreatorActivity.class));
             }
         });
