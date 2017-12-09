@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
     public Button createButton;
     public Button editButton;
     public Button importButton;
+    private boolean createMode = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
 
         createButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                createMode = true;
                 boolean canUseExternalStorage = true;
                 JSONObject config = AppSync.getConfig();
                 try {
@@ -140,6 +142,7 @@ public class MainActivity extends AppCompatActivity {
 
         importButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                createMode = false;
                 boolean canUseExternalStorage = true;
                 JSONObject config = AppSync.getConfig();
                 try {
@@ -249,7 +252,12 @@ public class MainActivity extends AppCompatActivity {
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     AppSync.updateConfig("use_external_storage", true);
                     AppSync.useFilesDirectory = false;
-                    performFileSearch();
+                    if (createMode) {
+                        AppSync.setListMode = 0;
+                        startActivity(new Intent(getBaseContext(), TeamsListCreatorActivity.class));
+                    } else {
+                        performFileSearch();
+                    }
                 } else {
                     AppSync.createMessageDialog(this, "Permission is Required", "This app requires the ability to read/write to external storage to function properly.\nBy saving to external storage you'll will be able to offload your collected data.");
                 }
