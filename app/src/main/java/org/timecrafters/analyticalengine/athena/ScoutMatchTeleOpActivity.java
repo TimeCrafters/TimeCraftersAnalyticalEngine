@@ -8,6 +8,7 @@ import android.support.v7.widget.PopupMenu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.ToggleButton;
@@ -65,6 +66,9 @@ public class ScoutMatchTeleOpActivity extends AppCompatActivity {
 
         relic        = (Button) findViewById(R.id.relic);
         relicUpright = (ToggleButton) findViewById(R.id.relic_upright);
+        relicUpright.setEnabled(false);
+        relicUpright.setBackgroundColor(getResources().getColor(R.color.colorMainButtonDisabled));
+        relicUpright.setTextColor(getResources().getColor(R.color.colorMainButtonText));
 
         undo = (Button) findViewById(R.id.undo);
         done = (Button) findViewById(R.id.done);
@@ -77,9 +81,8 @@ public class ScoutMatchTeleOpActivity extends AppCompatActivity {
 
         currentTeam.setText(""+ AppSync.teamNumber+" | "+AppSync.teamName);
 
-        deadRobot.setText("Alive");
-        deadRobot.setTextOn("Alive");
-        deadRobot.setTextOff("DEAD");
+        deadRobot.setBackgroundColor(getResources().getColor(R.color.colorMainButton));
+        deadRobot.setTextColor(getResources().getColor(R.color.colorMainButtonText));
 
         glyphScored.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -155,30 +158,52 @@ public class ScoutMatchTeleOpActivity extends AppCompatActivity {
                             case R.id.none: {
                                 relicEvent = null;
                                 relic.setText(item.getTitle());
+                                relicUpright.setEnabled(false);
+                                relicUpright.setBackgroundColor(getResources().getColor(R.color.colorMainButtonDisabled));
                                 refreshEventLog();
                                 break;
                             }
                             case R.id.relic_zone_one: {
                                 relicEvent = new EventStruct(AppSync.teamNumber, "teleop", "scored", "relic", "zone_one", TeleScoresHelper.relicInZoneOne, "Relic Scored in Zone 1");
                                 relic.setText(item.getTitle());
+                                relicUpright.setEnabled(true);
+                                if (relicUpright.isChecked()) {
+                                    relicUpright.setBackgroundColor(getResources().getColor(R.color.colorMainButton));
+                                } else {
+                                    relicUpright.setBackgroundColor(getResources().getColor(R.color.colorRed));
+                                }
                                 refreshEventLog();
                                 break;
                             }
                             case R.id.relic_zone_two: {
                                 relicEvent = new EventStruct(AppSync.teamNumber, "teleop", "scored", "relic", "zone_two", TeleScoresHelper.relicInZoneTwo, "Relic Scored in Zone 2");
                                 relic.setText(item.getTitle());
+                                relicUpright.setEnabled(true);
+                                if (relicUpright.isChecked()) {
+                                    relicUpright.setBackgroundColor(getResources().getColor(R.color.colorMainButton));
+                                } else {
+                                    relicUpright.setBackgroundColor(getResources().getColor(R.color.colorRed));
+                                }
                                 refreshEventLog();
                                 break;
                             }
                             case R.id.relic_zone_three: {
                                 relicEvent = new EventStruct(AppSync.teamNumber, "teleop", "scored", "relic", "zone_three", TeleScoresHelper.relicInZoneThree, "Relic Scored in Zone 3");
                                 relic.setText(item.getTitle());
+                                relicUpright.setEnabled(true);
+                                if (relicUpright.isChecked()) {
+                                    relicUpright.setBackgroundColor(getResources().getColor(R.color.colorMainButton));
+                                } else {
+                                    relicUpright.setBackgroundColor(getResources().getColor(R.color.colorRed));
+                                }
                                 refreshEventLog();
                                 break;
                             }
                             case R.id.missed: {
                                 relicEvent = new EventStruct(AppSync.teamNumber, "teleop", "missed", "relic", "", 0, "Missed/Dropped Relic");
                                 relic.setText(item.getTitle());
+                                relicUpright.setEnabled(false);
+                                relicUpright.setBackgroundColor(getResources().getColor(R.color.colorMainButtonDisabled));
                                 refreshEventLog();
                                 break;
                             }
@@ -195,9 +220,32 @@ public class ScoutMatchTeleOpActivity extends AppCompatActivity {
             }
         });
 
+        relicUpright.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (relicUpright.isChecked()) {
+                    relicUpright.setBackgroundColor(getResources().getColor(R.color.colorMainButton));
+                } else {
+                    relicUpright.setBackgroundColor(getResources().getColor(R.color.colorRed));
+                }
+            }
+        });
         relicUpright.setText("Toppled");
         relicUpright.setTextOn("Upright");
         relicUpright.setTextOff("Toppled");
+
+        // Dead Robot
+        deadRobot.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    deadRobot.setBackgroundColor(getResources().getColor(R.color.colorMainButton));
+                } else {
+                    deadRobot.setBackgroundColor(getResources().getColor(R.color.colorRed));
+
+                }
+            }
+        });
 
         undo.setOnClickListener(new View.OnClickListener() {
             @Override

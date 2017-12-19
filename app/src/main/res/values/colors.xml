@@ -7,4 +7,6 @@
     <color name="colorMainButton">#008800</color>
     <color name="colorMainButtonDisabled">#44999999</color>
     <color name="colorMainButtonText">#ffffff</color>
+
+    <color name="colorRed">#880000</color>
 </resources>

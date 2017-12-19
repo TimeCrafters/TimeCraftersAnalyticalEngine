@@ -1,6 +1,7 @@
 package org.timecrafters.analyticalengine.athena;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +9,7 @@ import android.support.v7.widget.PopupMenu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.ToggleButton;
@@ -86,9 +88,8 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
         jewelMissed.setEnabled(false);
 
         deadRobot.setEnabled(false);
-        deadRobot.setText("Alive");
-        deadRobot.setTextOn("Alive");
-        deadRobot.setTextOff("DEAD");
+        deadRobot.setBackgroundColor(getResources().getColor(R.color.colorMainButtonDisabled));
+        deadRobot.setTextColor(getResources().getColor(R.color.colorMainButtonText));
 
         undo.setEnabled(false);
         teleOp.setEnabled(false);
@@ -130,6 +131,7 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
             public void onClick(View v) {
                 lockTeamIn();
                 AppSync.addEvent(0, "autonomous", "scored", "glyph", "glyph", AutoScoresHelper.glyphScored, "Scored Glyph");
+                glyphCryptokey.setEnabled(true);
                 refreshEventLog();
             }
         });
@@ -196,6 +198,19 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
                 jewelScored.setEnabled(false);
                 jewelMissed.setEnabled(false);
                 refreshEventLog();
+            }
+        });
+
+        // Dead Robot
+        deadRobot.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    deadRobot.setBackgroundColor(getResources().getColor(R.color.colorMainButton));
+                } else {
+                    deadRobot.setBackgroundColor(getResources().getColor(R.color.colorRed));
+
+                }
             }
         });
 
@@ -286,7 +301,7 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
     public void enableButtons() {
         glyphScored.setEnabled(true);
         glyphMissed.setEnabled(true);
-        glyphCryptokey.setEnabled(true);
+//        glyphCryptokey.setEnabled(true);
 
         parkingSafeZone.setEnabled(true);
         parkingMissed.setEnabled(true);
@@ -295,6 +310,7 @@ public class ScoutMatchAutonomousActivity extends AppCompatActivity {
         jewelMissed.setEnabled(true);
 
         deadRobot.setEnabled(true);
+        deadRobot.setBackgroundColor(getResources().getColor(R.color.colorMainButton));
 
         undo.setEnabled(true);
         teleOp.setEnabled(true);

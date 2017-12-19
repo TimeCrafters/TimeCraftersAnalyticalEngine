@@ -80,7 +80,7 @@ public class ScoutTeamTeleOpActivity extends AppCompatActivity {
                     }
 
                     scoutingData.put("can_score_in_cryptobox", glyphCanScoreGlyphs.isChecked());
-                    scoutingData.put("max_scorable_glyphs", Integer.parseInt(glyphMaxScorable.getText().toString()));
+                    scoutingData.put("max_glyphs_scorable", Integer.parseInt(glyphMaxScorable.getText().toString()));
                     scoutingData.put("can_complete_cipher", glyphCanCompleteCipher.isChecked());
 
                     scoutingData.put("can_score_relic", relicCanScoreRelic.isChecked());
@@ -161,7 +161,7 @@ public class ScoutTeamTeleOpActivity extends AppCompatActivity {
                 try {
                     if (data.getBoolean("can_score_in_cryptobox")) {
                         glyphCanScoreGlyphs.setChecked(true);
-                        glyphMaxScorable.setText("" + data.getInt("max_scorable_glyphs"));
+                        glyphMaxScorable.setText("" + data.getInt("max_glyphs_scorable"));
                         glyphMaxScorable.setEnabled(true);
                         glyphCanCompleteCipher.setEnabled(true);
                     }

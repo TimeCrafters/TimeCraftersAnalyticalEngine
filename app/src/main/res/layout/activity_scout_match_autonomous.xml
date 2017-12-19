@@ -174,12 +174,15 @@
 
             <ToggleButton
                 android:id="@+id/robot_dead"
+                style="@android:style/Widget.Material.Button.Colored"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_below="@+id/textView15"
                 android:checked="true"
-                android:textAppearance="@style/TextAppearance.AppCompat" />
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textOff="DEAD"
+                android:textOn="ALIVE" />
 
         </LinearLayout>
     </ScrollView>
