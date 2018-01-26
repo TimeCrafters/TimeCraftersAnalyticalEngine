@@ -126,7 +126,7 @@ public class TeamScoutingDataFragment extends Fragment {
             if (teleOp != null) {
                 if (teleOp.getBoolean("can_score_in_cryptobox")) {
                     canScoreInCryptobox.setText("Yes");
-                    maxGlyphsScorable.setText("" + teleOp.getInt("max_scorable_glyphs"));
+                    maxGlyphsScorable.setText("" + teleOp.getInt("max_glyphs_scorable"));
                     canScoreInCryptobox.setTextColor(greenColor);
                     maxGlyphsScorable.setTextColor(greenColor);
                 } else {
